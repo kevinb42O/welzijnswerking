@@ -1,7 +1,7 @@
 ---
 import { visibleSponsors, tiers } from '../data/sponsors';
 import { safeWebsite } from '../data/publication.mjs';
-import { historicPartners, historySources } from '../data/history';
+import { historicPartners } from '../data/history';
 import { event } from '../data/event';
 interface Props { previewCount?: number }
 const { previewCount = 0 } = Astro.props;
@@ -27,6 +27,5 @@ const supportingPartners = [historicPartners[0], ...historicPartners.slice(5)];
       <div class="culinary-credits"><h3 class="credit-category">Keukenpartners</h3><div class="culinary-grid">{foodPartners.map(partner=><article class="historic-partner"><h4>{partner.name}</h4><p>{partner.role}</p></article>)}</div></div>
       <div class="supporting-credits"><h3 class="credit-category">Achter de schermen</h3>{supportingPartners.map(partner=><article class="historic-partner"><h4>{partner.name}</h4><p>{partner.role}</p></article>)}</div>
     </div>
-    <div class="partner-sources"><p>Deze organisaties hielpen mee aan het kerstfeest van 2025.</p><p>Bronnen: <a href={historySources.origin} target="_blank" rel="noopener noreferrer">KW via Nieuwskoppen</a> · <a href={historySources.edition2025} target="_blank" rel="noopener noreferrer">Melinda FM</a></p></div>
   </div>
 </section>
