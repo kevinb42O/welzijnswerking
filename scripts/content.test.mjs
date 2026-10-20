@@ -36,3 +36,12 @@ test('ticketstatus gebruikt alleen bij beschikbare tickets een veilige echte URL
 test('externe website-links laten geen onveilige protocollen of credentials door', () => {
   for(const url of ['javascript:alert(1)','http://example.com','https://user:pass@example.com','onzin']) assert.equal(safeWebsite(url),null);
 });
+
+test('agendatijden gebruiken de Brusselse winter- en zomertijd', async () => {
+  const { eventInstant } = await import('../src/data/format.mjs');
+  assert.equal(eventInstant('2026-12-24', '17.00 uur', 'Europe/Brussels'), '2026-12-24T16:00:00.000Z');
+  assert.equal(eventInstant('2026-12-24', '21.30 uur', 'Europe/Brussels'), '2026-12-24T20:30:00.000Z');
+  assert.equal(eventInstant('2026-07-24', '17.00 uur', 'Europe/Brussels'), '2026-07-24T15:00:00.000Z');
+  assert.equal(eventInstant('2026-12-24', null, 'Europe/Brussels'), null);
+  assert.equal(eventInstant('2026-12-24', '25.00 uur', 'Europe/Brussels'), null);
+});

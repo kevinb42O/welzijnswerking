@@ -2,12 +2,14 @@
 import '../styles/tokens.css';
 import '../styles/global.css';
 import '../styles/campaign.css';
+import { eventInstant } from '../data/format.mjs';
 import { event, eventDate, price } from '../data/event';
 const title = `Kerstfeest ${event.year} in ${event.placeName} | Welzijnswerking Oostende`;
-const description = `Vier kerstavond op ${eventDate} met Welzijnswerking Oostende in het Kursaal. Een feestelijk meergangendiner voor ${price}. Praktische info op één plek.`;
+const description = `Vier kerstavond op ${eventDate} met Welzijnswerking Oostende in het Kursaal. ${event.eligibility || ''}${event.startTime && event.endTime ? ` Van ${event.startTime} tot ${event.endTime}.` : ''} Een feestelijk meergangendiner voor ${price}.`;
 const structuredData = {
   '@context': 'https://schema.org', '@type': 'Event', name: `Kerstfeest ${event.year} — Welzijnswerking Oostende`,
-  startDate: event.dateISO, description, url: 'https://welzijnswerking.be/',
+  startDate: eventInstant(event.dateISO, event.startTime, event.timezone) || event.dateISO,
+  ...(eventInstant(event.dateISO, event.endTime, event.timezone) ? { endDate: eventInstant(event.dateISO, event.endTime, event.timezone) } : {}), description, url: 'https://welzijnswerking.be/',
   location: { '@type': 'Place', name: event.placeName, address: event.address },
   organizer: { '@type': 'Organization', name: event.organizerName, url: 'https://welzijnswerking.be/' },
 };

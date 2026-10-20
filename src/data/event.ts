@@ -24,6 +24,8 @@ export const event = {
   menu: source.event.menuItems as string[],
   ticketsUrl: source.event.ticketUrl as string | null,
   ticketStatus: source.event.ticketSalesStatus as TicketStatus,
+  registrationMethod: source.event.registrationMethod as string | null,
+  menuNote: source.event.menuNote as string | null,
   ticketsInfoText: source.event.ticketsInfoText,
   organizerContactEmail: source.brand.organizationContactEmail as string | null,
   phone: source.brand.organizationContactPhone as string | null,

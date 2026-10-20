@@ -2,17 +2,22 @@
 import { event as sourceEvent, price, eventDate, routeUrl, accessibilityUrl } from '../data/event';
 interface Props { eventOverride?: typeof sourceEvent }
 const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eventOverride : sourceEvent;
+import { eventInstant } from '../data/format.mjs';
 import { ticketState } from '../data/publication.mjs';
 const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
 const detailGroups = [
   {title:'Uren en deelname', rows:[['Aanvang',event.startTime],['Deuren open',event.doorsTime],['Einde',event.endTime],['Voor wie',event.eligibility]]},
-  {title:'Aan tafel', rows:[['Menu',event.menu.join(' · ')],['Aantal gangen',event.courseCount],['Dranken',event.includedDrinks]]},
+  {title:'Aan tafel', rows:[['Op het menu',event.menu.join(' · ')],['Goed om te weten',event.menuNote],['Aantal gangen',event.courseCount],['Dranken',event.includedDrinks]]},
   {title:'Tijdens je bezoek', rows:[['Programma',event.entertainmentDetails],['Toegankelijkheid',event.accessibilityDetails],['Vervoer',event.transportDetails]]},
 ].map(group=>({...group,rows:group.rows.filter(([,value])=>Boolean(value))}));
 const icsEscape = (value: string) => value.replace(/\\/g, '\\\\').replace(/\r?\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
 const followingDay = new Date(`${event.dateISO}T12:00:00Z`);
 followingDay.setUTCDate(followingDay.getUTCDate() + 1);
-const calendarLines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Welzijnswerking Oostende//Kerstavond//NL', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:kerst${event.year}@welzijnswerking.be`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')}`, `DTSTART;VALUE=DATE:${event.dateISO.replaceAll('-', '')}`, `DTEND;VALUE=DATE:${followingDay.toISOString().slice(0, 10).replaceAll('-', '')}`, `SUMMARY:${icsEscape(`Kerstavond — ${event.organizerName}`)}`, `LOCATION:${icsEscape(`${event.placeName}, ${event.address}`)}`, `DESCRIPTION:${icsEscape(`Feestelijk meergangendiner voor ${price} per persoon. Raadpleeg welzijnswerking.be voor het aanvangsuur en de inschrijvingsinformatie. Dit is een datumherinnering en geen reservatie.`)}`, 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'];
+const startInstant = eventInstant(event.dateISO, event.startTime, event.timezone);
+const endInstant = eventInstant(event.dateISO, event.endTime, event.timezone);
+const timedCalendar = Boolean(startInstant && endInstant);
+const calendarStamp = (value: string) => value.replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+const calendarLines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Welzijnswerking Oostende//Kerstavond//NL', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:kerst${event.year}@welzijnswerking.be`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')}`, ...(timedCalendar ? [`DTSTART:${calendarStamp(startInstant!)}`, `DTEND:${calendarStamp(endInstant!)}`] : [`DTSTART;VALUE=DATE:${event.dateISO.replaceAll('-', '')}`, `DTEND;VALUE=DATE:${followingDay.toISOString().slice(0, 10).replaceAll('-', '')}`]), `SUMMARY:${icsEscape(`Kerstavond — ${event.organizerName}`)}`, `LOCATION:${icsEscape(`${event.placeName}, ${event.address}`)}`, `DESCRIPTION:${icsEscape(`Feestelijk meergangendiner voor ${price} per persoon. ${event.registrationMethod ? `${event.registrationMethod}. ` : ''}Raadpleeg welzijnswerking.be voor de laatste praktische informatie. Deze agendaherinnering is geen inschrijving.`)}`, 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'];
 // Fold at 75 UTF-8 bytes, as required by the iCalendar format.
 const calendar = calendarLines.map(line => {
   let result = '', bytes = 0;
@@ -25,7 +30,8 @@ const calendar = calendarLines.map(line => {
   <div class="container">
     <span class="small-label">Je bezoek</span><h2 id="practical-title">Praktisch voor je kerstavond</h2>
     <div class="practical-composition">
-              <div class="participation-note"><h3>{ticket.url ? 'Inschrijven voor het kerstfeest' : (event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed' ? ticket.label : event.ticketsInfoText)}</h3>{ticket.url && <a class="button" href={ticket.url} target="_blank" rel="noopener noreferrer">{ticket.label} <span aria-hidden="true">↗</span></a>}
+              <div class="participation-note"><h3>{ticket.url ? 'Inschrijven voor het kerstfeest' : (event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed' ? ticket.label : (event.registrationMethod || 'Inschrijven voor het kerstfeest'))}</h3>{ticket.url && <a class="button" href={ticket.url} target="_blank" rel="noopener noreferrer">{ticket.label} <span aria-hidden="true">↗</span></a>}
+          {event.ticketStatus !== 'sold_out' && event.ticketStatus !== 'closed' && <p>{event.ticketsInfoText}</p>}
           {(!event.startTime || !event.eligibility || !event.menu.length) && <p>Ook {[!event.startTime && 'het aanvangsuur', !event.menu.length && 'het menu', !event.eligibility && 'de deelnamevoorwaarden'].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' en $1')} {!event.eligibility || (!event.startTime && !event.menu.length) ? 'worden' : 'wordt'} voor {event.year} hier bekendgemaakt.</p>}
         </div>
       <div class="practical-content">
@@ -34,7 +40,7 @@ const calendar = calendarLines.map(line => {
         <div class="info-row"><h3>Maaltijd</h3><p>{event.mealDescription}<br /><strong>{price} per persoon</strong></p></div>
         {detailGroups.map(group => group.rows.length > 0 && <section class="detail-group" aria-label={group.title}><h3>{group.title}</h3><dl class="additional-details">{group.rows.map(([label,value])=><div><dt>{label}</dt><dd>{value}</dd></div>)}</dl></section>)}
 
-        <div class="agenda-note"><button class="calendar-download text-link" type="button" data-calendar={calendar} data-filename={`kerstavond-oostende-${event.year}.ics`}>Zet in mijn agenda <span aria-hidden="true">↓</span></button><p>Datumherinnering voor de hele dag, geen reservatie.</p></div>
+        <div class="agenda-note"><button class="calendar-download text-link" type="button" data-calendar={calendar} data-filename={`kerstavond-oostende-${event.year}.ics`}>Zet in mijn agenda <span aria-hidden="true">↓</span></button><p>{timedCalendar ? `Van ${event.startTime} tot ${event.endTime}. Deze herinnering is geen inschrijving.` : 'Datumherinnering voor de hele dag, geen reservatie.'}</p></div>
       </div>
     </div>
   </div>

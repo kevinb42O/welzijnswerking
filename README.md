@@ -125,3 +125,9 @@ De eerdere negen unieke pers-/archiefbeelden blijven bewaard onder `assets/fotos
 ## Deployment
 
 Volg `DEPLOY_MORGEN.md` om de informatie van 21 oktober in te vullen. `npm run release` vernieuwt deelbeeld en productiebuild, controleert inhoud en types, verwijdert ongebruikte beeldkopieën uitsluitend uit `dist/` en maakt `release/welzijnswerking-2026.zip`. Bronbeelden blijven in de beeldbank.
+
+### Bevestigde aanvulling van 20 oktober 2026
+
+Fabrice bevestigde via WhatsApp: 17.00–21.30 uur, alleenstaanden vanaf 50 jaar, € 5, inschrijving via de negen ontmoetingscentra, erwtensoep en garnaalkroketten, muziek van Patrick “Pulle” met een verrassingsgast. `event.registrationMethod` is de titel van de inschrijfuitleg; `ticketsInfoText` bevat de praktische toelichting. Dit maakt geen online ticketverkoop actief. `event.menuNote` verduidelijkt dat het menu nog onvolledig is.
+
+De agenda-download gebruikt bevestigde begin- en eindtijd in Europe/Brussels; bij ontbrekende tijden blijft het een datumherinnering. Beide zijn geen inschrijving. Deze actuele werking vervangt de eerdere beschrijving van de agenda als uitsluitend een herinnering voor de hele dag.

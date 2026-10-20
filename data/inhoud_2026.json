@@ -24,24 +24,29 @@
     "venueName": "Kursaal Oostende",
     "venueAddress": "Kursaal-Westhelling 12, 8400 Oostende",
     "priceEuro": 5,
-    "priceNote": "Deelnameprijs voor een meergangenetentje; voorwaarden en verdere praktische info volgen.",
+    "priceNote": "€ 5 per persoon voor een feestelijk meergangenetentje. Informatie over de inbegrepen dranken volgt.",
     "meal": "Feestelijk meergangenetentje",
-    "eventStartTime": null,
+    "eventStartTime": "17.00 uur",
     "doorsOpenTime": null,
-    "endTime": null,
+    "endTime": "21.30 uur",
     "room": null,
-    "eligibilityRules": null,
+    "eligibilityRules": "Voor alleenstaanden vanaf 50 jaar.",
     "courseCount": null,
-    "menuItems": [],
+    "menuItems": [
+      "Erwtensoep",
+      "Garnaalkroketten"
+    ],
     "drinksIncluded": null,
     "ticketUrl": null,
     "ticketSalesStatus": "not_confirmed",
-    "ticketsInfoText": "Inschrijfinformatie volgt.",
+    "ticketsInfoText": "Je inschrijving verloopt via een van de negen ontmoetingscentra (OC’s). Vanaf wanneer je kunt inschrijven, tot wanneer en hoe je betaalt, wordt hier nog bekendgemaakt.",
     "accessibilitySpecifics": null,
     "transportSpecifics": null,
-    "entertainmentDetails": null,
+    "entertainmentDetails": "Muziek van Patrick “Pulle” en een special guest die een verrassing blijft.",
     "volunteerSignupUrl": null,
-    "intro": "Een feestelijke maaltijd, een warme ontmoeting. Vier kerstavond samen in het Kursaal."
+    "intro": "Een feestelijke maaltijd, een warme ontmoeting. Vier kerstavond samen in het Kursaal.",
+    "menuNote": "Dit staat al vast. Het volledige menu en de inbegrepen dranken worden later bekendgemaakt.",
+    "registrationMethod": "Inschrijven via de negen ontmoetingscentra (OC’s)"
   },
   "history": {
     "story": "De traditie van Welzijnswerking brengt sinds de jaren negentig alleenstaande senioren in Oostende samen. Na een onderbreking vond op kerstavond 2025 opnieuw een feest plaats in het Kursaal.",
@@ -66,5 +71,5 @@
     "confirmed2026": [],
     "history2025NamesAreNotConfirmed2026": true
   },
-  "sourceOf2026Brief": "Opdrachtgever in chat, 18 oktober 2026"
+  "sourceOf2026Brief": "Opdrachtgever in chat, 18 oktober 2026; aanvullende evenementinformatie van Fabrice Goffin via WhatsApp, 20 oktober 2026."
 }

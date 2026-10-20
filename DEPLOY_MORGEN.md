@@ -1,3 +1,5 @@
+> Update 20 oktober: uren, doelgroep, inschrijving via de negen OC’s en een deel van menu en programma zijn inmiddels ingevuld op basis van Fabrices WhatsApp. De agenda gebruikt nu de bevestigde uren. Zie `CONTENT_TODO.md` voor wat nog ontbreekt. De eerdere melding dat er niets gedeployd is beschrijft de oorspronkelijke oplevering.
+
 # Klaarzetten voor livegang — 21 oktober 2026
 
 De hero met kaarslicht, verfijnde navigatie op mobiel en desktop, nieuwe footer met vzw-gegevens en Webaanzee-vermelding, zeven eventfoto's, de organisatiefoto met Fabrice Goffin en het deelbeeld zijn klaar. Er is niets gedeployd. De huidige versie toont eerlijk dat inschrijfinformatie nog volgt.
