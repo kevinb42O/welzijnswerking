@@ -24,7 +24,7 @@ try {
     if (width === 390 || width === 1440) await page.screenshot({ path: `qa/event-update-${width}.png`, fullPage: true });
     console.log(`Content, layout and accessibility OK: ${width}px`);
   }
-  const structured = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
+  const structured = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent())['@graph'].find(item => item['@type'] === 'Event');
   assert.equal(structured.startDate, '2026-12-24T16:00:00.000Z');
   assert.equal(structured.endDate, '2026-12-24T20:30:00.000Z');
   const downloadPromise = page.waitForEvent('download');

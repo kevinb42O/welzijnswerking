@@ -1,0 +1,194 @@
+{
+  "base": "http://127.0.0.1:4325/",
+  "viewports": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1000,
+      "height": 900,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1001,
+      "height": 900,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "axeViolations": 0,
+      "footerTargetsAtLeast44": true
+    }
+  ],
+  "engines": [
+    {
+      "engine": "chromium",
+      "registration": true,
+      "menuKeyboard": true,
+      "viewerNavigation": true,
+      "viewerFocus": true,
+      "viewerScrollRestore": true,
+      "viewerErrorRecovery": true,
+      "text200": true,
+      "reducedMotion": true,
+      "noJsCalendar": true,
+      "noJsImageLink": true
+    },
+    {
+      "engine": "webkit",
+      "registration": true,
+      "menuKeyboard": true,
+      "viewerNavigation": true,
+      "viewerFocus": true,
+      "viewerScrollRestore": true,
+      "viewerErrorRecovery": true,
+      "text200": true,
+      "reducedMotion": true,
+      "noJsCalendar": true,
+      "noJsImageLink": true
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "platformUnavailable": [
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "chromium",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    },
+    {
+      "engine": "webkit",
+      "url": "http://127.0.0.1:4325/_vercel/insights/script.js",
+      "status": 404
+    }
+  ]
+}

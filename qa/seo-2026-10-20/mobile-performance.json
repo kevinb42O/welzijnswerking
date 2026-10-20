@@ -1,0 +1,15 @@
+{
+  "measuredAt": "2026-10-20T11:07:56.481Z",
+  "conditions": "Single cold local production-preview run, Chromium 390×844, 150ms added latency, 1.6Mbps download, 4× CPU throttling. Indicative lab measurement; not live field data, not Lighthouse, no INP claim.",
+  "metrics": {
+    "lcp": 928,
+    "cls": 0
+  },
+  "fonts": [
+    {
+      "path": "/fonts/public-sans-latin-variable.woff2",
+      "bytes": 26636
+    }
+  ],
+  "hero": "http://127.0.0.1:4325/images/editorial/hero-kaarslicht-640.webp"
+}

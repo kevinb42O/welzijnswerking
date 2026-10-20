@@ -1,33 +1,37 @@
 ---
-import { event } from '../data/event';
+import { event, price } from '../data/event';
+import { ticketState } from '../data/publication.mjs';
+const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
+const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
 ---
 <section id="welkom" class="welcome section" aria-labelledby="welcome-title">
   <div class="container welcome-grid">
     <div class="welcome-intro">
-      <span class="small-label">Zin in gezelschap?</span>
-      <h2 id="welcome-title">Kom gerust alleen.<br/><em>We vieren samen.</em></h2>
-      <p>Liever niet alleen thuis op kerstavond? Kom mee eten in het Kursaal.</p>
+
+      <h2 id="welcome-title">Voor wie is het kerstfeest?</h2>
+      <p>{event.eligibility} Je mag gerust alleen komen, ook als je niemand kent.</p>
     </div>
     <div class="welcome-questions" role="group" aria-label="Veelgestelde vragen">
-      <details name="welcome-faq"><summary>Kan ik ook alleen komen?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>Ja, zeker. Je kan voor jezelf inschrijven, zonder iemand mee te brengen.</p></div></details>
-      <details name="welcome-faq"><summary>Ik ken daar niemand. Is dat erg?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>Helemaal niet. Je hoeft op voorhand niemand te kennen om mee te komen eten.</p></div></details>
+      <details name="welcome-faq"><summary>Kan ik komen als ik niemand ken?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>Ja. Je hoeft niemand te kennen of iemand mee te brengen. Je schrijft je gewoon voor jezelf in.</p></div></details>
       <details name="welcome-faq"><summary>Is dit feest voor mij?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>{event.eligibility ? event.eligibility : <>Bij de vorige edities kwamen alleenstaande senioren uit Oostende samen. Binnenkort lees je hier wie er in {event.year} kan inschrijven.</>}</p></div></details>
+      <details name="welcome-faq"><summary>Hoe schrijf ik me in?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>{registrationClosed ? ticket.label : event.ticketsInfoText}</p>{!registrationClosed && <a class="text-link" href={ticket.url || '#inschrijven'}>Bekijk de inschrijfinformatie</a>}</div></details>
+      <details name="welcome-faq"><summary>Wat kost het kerstfeest?<span class="faq-indicator" aria-hidden="true"></span></summary><div class="faq-answer"><p>Je betaalt {price} per persoon voor een feestelijk meergangendiner. {event.menuNote}</p></div></details>
     </div>
     {(event.organizerContactEmail || event.phone) && <p class="welcome-contact">Nog een vraag voor je inschrijft? {event.organizerContactEmail && <a href={`mailto:${event.organizerContactEmail}`}>Mail ons gerust</a>}{event.organizerContactEmail && event.phone && ' of '}{event.phone && <a href={`tel:${event.phone.replace(/\s/g, '')}`}>bel {event.phone}</a>}.</p>}
   </div>
 </section>
 <style>
-.welcome{background:var(--paper);padding-bottom:0}.welcome-grid{display:grid;gap:32px;padding-bottom:48px;border-bottom:1px solid var(--line)}.welcome-intro{max-width:440px}.welcome .small-label{font-size:11px;font-weight:400;letter-spacing:.09em;text-transform:uppercase;margin-bottom:18px}.welcome h2{font:400 clamp(44px,5vw,64px)/.98 var(--serif);letter-spacing:-.025em}.welcome h2 em{font-weight:400;color:var(--pine)}.welcome-intro>p{font-size:16px;line-height:1.7;margin-top:22px;color:var(--ink-soft);max-width:360px}.welcome-questions{align-self:start;border-top:1px solid var(--line)}
-.welcome-questions details{border-bottom:1px solid var(--line)}
-.welcome-questions summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding-block:20px;list-style:none;cursor:pointer;font-size:17px;line-height:1.4;font-weight:500;color:var(--pine);-webkit-tap-highlight-color:transparent;transition:color .2s}
-.welcome-questions summary::-webkit-details-marker{display:none}.welcome-questions summary:hover{color:var(--red)}
-.faq-indicator{position:relative;display:block;flex-shrink:0;width:30px;height:30px;border:1px solid #123e3438;border-radius:50%;transition:background .2s,border-color .2s,transform .25s}
-.faq-indicator::before,.faq-indicator::after{content:"";position:absolute;inset:14px 9px auto;height:1px;background:currentColor;transition:transform .25s}.faq-indicator::after{transform:rotate(90deg)}
-.welcome-questions details[open] .faq-indicator{background:var(--pine);border-color:var(--pine);color:var(--paper)}.welcome-questions details[open] .faq-indicator::after{transform:rotate(0)}
-.faq-answer{padding:0 48px 24px 0}.faq-answer p{font-size:16px;line-height:1.7;color:var(--ink-soft);max-width:570px;animation:faq-reveal .25s ease}
+.welcome{background:var(--page);padding-bottom:0}.welcome-grid{display:grid;gap:32px;padding-bottom:48px;border-bottom:1px solid var(--border)}.welcome-intro{max-width:440px}.welcome h2{font:600 clamp(1.875rem,3.2vw,2.5rem)/1.15 var(--display);letter-spacing:-.02em}.welcome h2 span{font-weight:600;color:var(--text)}.welcome-intro>p{font-size:1rem;line-height:1.7;margin-top:22px;color:var(--text-muted);max-width:360px}.welcome-questions{align-self:start;border-top:1px solid var(--border)}
+.welcome-questions details{border-bottom:1px solid var(--border)}
+.welcome-questions summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding-block:20px;list-style:none;cursor:pointer;font-size:1.0625rem;line-height:1.4;font-weight:500;color:var(--action);-webkit-tap-highlight-color:transparent;transition:color var(--duration-fast)}
+.welcome-questions summary::-webkit-details-marker{display:none}.welcome-questions summary:hover{color:var(--action)}
+.faq-indicator{position:relative;display:block;flex-shrink:0;width:30px;height:30px;border:1px solid var(--control-line);border-radius:50%;transition:background var(--duration-fast),border-color var(--duration-fast),transform var(--duration-detail)}
+.faq-indicator::before,.faq-indicator::after{content:"";position:absolute;inset:14px 9px auto;height:1px;background:currentColor;transition:transform var(--duration-detail)}.faq-indicator::after{transform:rotate(90deg)}
+.welcome-questions details[open] .faq-indicator{background:var(--action);border-color:var(--action);color:var(--page)}.welcome-questions details[open] .faq-indicator::after{transform:rotate(0)}
+.faq-answer{padding:0 48px 24px 0}.faq-answer p{font-size:1rem;line-height:1.7;color:var(--text-muted);max-width:570px;animation:faq-reveal var(--duration-detail) ease}
 @keyframes faq-reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-.welcome-contact{font-size:15px;line-height:1.7;grid-column:1/-1}.welcome-contact a{color:var(--pine)}
-@media(min-width:768px){.welcome-grid{grid-template-columns:1fr 1.25fr;gap:32px 72px;padding-bottom:64px}.welcome-questions{margin-top:2px}.welcome-intro>p{margin-top:24px}.welcome-questions summary{font-size:18px}.welcome-contact{margin-top:0}}
+.welcome-contact{font-size:0.9375rem;line-height:1.7;grid-column:1/-1}.welcome-contact a{color:var(--action)}
+@media(min-width:768px){.welcome-grid{grid-template-columns:1fr 1.25fr;gap:32px 72px;padding-bottom:64px}.welcome-questions{margin-top:2px}.welcome-intro>p{margin-top:24px}.welcome-questions summary{font-size:1.125rem}.welcome-contact{margin-top:0}}
 </style>
 
 <script>

@@ -1,0 +1,162 @@
+[
+  {
+    "antipattern": "italic-serif-display",
+    "name": "Italic serif display headline",
+    "description": "Oversized italic serif (Fraunces, Recoleta, Playfair, Newsreader-italic) as the primary hero headline reads as taste in isolation but has become the universal AI-startup landing page hero. Set roman, or move to a non-serif display face. Editorial / magazine register may legitimately want this — judge by context.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "italic serif h1 (instrument serif) at 52px \"Kerstavond.Samen aan tafel.\"",
+    "selector": "#hero-title"
+  },
+  {
+    "antipattern": "straggler",
+    "name": "Straggler",
+    "description": "The last line of this paragraph holds one word, which leaves a hole under the block. Set text-wrap: pretty on body copy (Chrome, Safari) to pull a word down beside it. Where a browser ignores it, edit the last sentence or bind the last two words with a no-break space. Keep it if the break is intended.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "\"volgt.\" alone on the last of 3 lines (14% of the measure)",
+    "advisory": true,
+    "selector": "section.detail-group:nth-of-type(2) > dl.additional-details > div > dd"
+  },
+  {
+    "antipattern": "straggler",
+    "name": "Straggler",
+    "description": "The last line of this paragraph holds one word, which leaves a hole under the block. Set text-wrap: pretty on body copy (Chrome, Safari) to pull a word down beside it. Where a browser ignores it, edit the last sentence or bind the last two words with a no-break space. Keep it if the break is intended.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "\"inschrijving.\" alone on the last of 2 lines (23% of the measure)",
+    "advisory": true,
+    "selector": "div.agenda-note > p"
+  },
+  {
+    "antipattern": "straggler",
+    "name": "Straggler",
+    "description": "The last line of this paragraph holds one word, which leaves a hole under the block. Set text-wrap: pretty on body copy (Chrome, Safari) to pull a word down beside it. Where a browser ignores it, edit the last sentence or bind the last two words with a no-break space. Keep it if the break is intended.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "\"maaltijd.\" alone on the last of 5 lines (20% of the measure)",
+    "advisory": true,
+    "selector": "div.story-copy > p:nth-of-type(1)"
+  },
+  {
+    "antipattern": "straggler",
+    "name": "Straggler",
+    "description": "The last line of this paragraph holds one word, which leaves a hole under the block. Set text-wrap: pretty on body copy (Chrome, Safari) to pull a word down beside it. Where a browser ignores it, edit the last sentence or bind the last two words with a no-break space. Keep it if the break is intended.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "\"kerstavond.\" alone on the last of 2 lines (27% of the measure)",
+    "advisory": true,
+    "selector": "div.venue-scene > p"
+  },
+  {
+    "antipattern": "straggler",
+    "name": "Straggler",
+    "description": "The last line of this paragraph holds one word, which leaves a hole under the block. Set text-wrap: pretty on body copy (Chrome, Safari) to pull a word down beside it. Where a browser ignores it, edit the last sentence or bind the last two words with a no-break space. Keep it if the break is intended.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "\"waarmaken.\" alone on the last of 4 lines (28% of the measure)",
+    "advisory": true,
+    "selector": "li:nth-of-type(2) > article > p"
+  },
+  {
+    "antipattern": "unbalanced-heading",
+    "name": "Unbalanced heading",
+    "description": "This heading wraps with its last line far shorter than the line above, often one word alone. Set text-wrap: balance on headings so the lines come out near even, or rewrite it to fit. Keep it if the break carries weight on purpose.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "last of 2 lines is 34% as wide as the line above",
+    "advisory": true,
+    "selector": "#partners-title"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "text #d0d9ce on bg #123e34",
+    "selector": "div.footer-identity > p"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "text #d0d9ce on bg #123e34",
+    "selector": "address"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "text #c0cdbd on bg #123e34",
+    "selector": "p.footer-number"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "text #c0cdbd on bg #123e34",
+    "selector": "div.footer-bottom > p:nth-of-type(1)"
+  },
+  {
+    "antipattern": "gray-on-color",
+    "name": "Gray text on colored background",
+    "description": "Gray text looks washed out on colored backgrounds. Use a darker shade of the background color instead, or white/near-white for contrast.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "text #c0cdbd on bg #123e34",
+    "selector": "p.maker-credit"
+  },
+  {
+    "antipattern": "kicker-above-heading",
+    "name": "Kicker / eyebrow label above heading",
+    "description": "A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "kicker \"Zin in gezelschap?\" above h2 \"Kom gerust alleen.We vieren samen.\"",
+    "selector": "div.welcome-intro > span.small-label"
+  },
+  {
+    "antipattern": "cream-palette",
+    "name": "Cream / beige palette",
+    "description": "A warm cream or beige page background has become the default \"tasteful\" AI surface, reached for by reflex. Choose a background that comes from a deliberate palette, not the safe warm off-white.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "http://127.0.0.1:4325/",
+    "line": 0,
+    "snippet": "cream/beige page background rgb(247, 244, 233)",
+    "selector": "body"
+  }
+]

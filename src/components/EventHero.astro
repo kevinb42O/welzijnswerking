@@ -17,14 +17,15 @@ const titleLines = event.title.split('\n');
       <p class="hero-label">Kerstfeest {event.year} <span aria-hidden="true">·</span> Kursaal Oostende</p>
       <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-last': index === titleLines.length - 1}}>{line}</span>)}</h1>
       <p class="hero-intro">{event.intro}</p>
+      {event.eligibility && <p class="hero-eligibility">{event.eligibility}</p>}
       <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Hoe schrijf ik me in?' : 'Praktische info & deelname')}{!ticket.url && <span aria-hidden="true">↓</span>}</a>
     </div>
   </div>
   <div class="hero-bottom">
     <dl class="container hero-facts">
-      <div class="hero-date"><dt>Een avond om te delen</dt><dd><time datetime={event.dateISO}>{eventDate}</time>{event.startTime && <span class="hero-hours">{event.startTime}{event.endTime && ` – ${event.endTime}`}</span>}</dd></div>
-      <div class="hero-location"><dt>Op een bijzondere plek</dt><dd>{event.placeName}</dd></div>
-      <div class="hero-price"><dt>Schuif mee aan</dt><dd>{price} <span>per persoon</span></dd></div>
+      <div class="hero-date"><dt>Datum en uur</dt><dd><time datetime={event.dateISO}>{eventDate}</time>{event.startTime && <span class="hero-hours">{event.startTime}{event.endTime && ` – ${event.endTime}`}</span>}</dd></div>
+      <div class="hero-location"><dt>Locatie</dt><dd>{event.placeName}</dd></div>
+      <div class="hero-price"><dt>Prijs</dt><dd>{price} <span>per persoon</span></dd></div>
     </dl>
   </div>
 </section>

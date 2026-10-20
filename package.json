@@ -8,10 +8,12 @@
     "build": "astro check && astro build",
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
-    "test": "node --test scripts/content.test.mjs",
+    "test": "node --test scripts/content.test.mjs scripts/seo.test.mjs",
+    "test:seo": "node scripts/seo-qa.mjs",
     "release": "node scripts/release.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "astro": "^7.4.0"
   },
   "devDependencies": {

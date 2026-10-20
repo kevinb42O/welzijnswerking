@@ -1,23 +1,15 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import '../styles/tokens.css';
 import '../styles/global.css';
 import '../styles/campaign.css';
-import { eventInstant } from '../data/format.mjs';
-import { event, eventDate, price, siteUrl } from '../data/event';
-const title = `Kerstfeest ${event.year} in ${event.placeName} | Welzijnswerking Oostende`;
-const description = `Vier kerstavond op ${eventDate} met Welzijnswerking Oostende in het Kursaal. ${event.eligibility || ''}${event.startTime && event.endTime ? ` Van ${event.startTime} tot ${event.endTime}.` : ''} Een feestelijk meergangendiner voor ${price}.`;
-const canonicalUrl = `${siteUrl}/`;
-const socialImage = new URL('/kerstfeest-2026-social.jpg', canonicalUrl).href;
-const socialImageAlt = 'Kerstavond. Samen aan tafel. 24 december 2026, 17–21.30 uur. Kursaal Oostende, € 5 per persoon. Welzijnswerking Oostende.';
-const structuredData = {
-  '@context': 'https://schema.org', '@type': 'Event', name: `Kerstfeest ${event.year} — Welzijnswerking Oostende`,
-  startDate: eventInstant(event.dateISO, event.startTime, event.timezone) || event.dateISO,
-  ...(eventInstant(event.dateISO, event.endTime, event.timezone) ? { endDate: eventInstant(event.dateISO, event.endTime, event.timezone) } : {}), description, url: canonicalUrl,
-  location: { '@type': 'Place', name: event.placeName, address: event.address },
-  organizer: { '@type': 'Organization', name: event.organizerName, url: canonicalUrl },
-};
+import source from '../../data/inhoud_2026.json';
+import { createSeo, serializeJsonLd } from '../data/seo.mjs';
+const { title, description, canonicalUrl, socialImage, socialImageAlt, structuredData } = createSeo(source, Astro.url.pathname);
+const isPreview = Astro.url.pathname.startsWith('/dev-preview/');
 ---
 <!doctype html>
-<html lang="nl-BE"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#123e34" /><title>{title}</title><meta name="description" content={description} /><link rel="preload" href="/fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin /><link rel="preload" href="/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin /><link rel="canonical" href={canonicalUrl} /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><meta property="og:type" content="website" /><meta property="og:locale" content="nl_BE" /><meta property="og:site_name" content="Welzijnswerking Oostende" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={socialImage} /><meta property="og:image:secure_url" content={socialImage} /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={socialImageAlt} /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={socialImage} /><meta name="twitter:image:alt" content={socialImageAlt} /><script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} /></head><body><a class="skip-link" href="#inhoud">Ga naar de inhoud</a><slot /></body></html>
+<html lang="nl-BE"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#fafaf9" /><title>{title}</title><meta name="description" content={description} />
+    {isPreview && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="preload" href="/fonts/public-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin /><link rel="canonical" href={canonicalUrl} /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><meta property="og:type" content="website" /><meta property="og:locale" content="nl_BE" /><meta property="og:site_name" content="Welzijnswerking Oostende" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={socialImage} /><meta property="og:image:secure_url" content={socialImage} /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={socialImageAlt} /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={socialImage} /><meta name="twitter:image:alt" content={socialImageAlt} /><script type="application/ld+json" set:html={serializeJsonLd(structuredData)} /></head><body><a class="skip-link" href="#inhoud">Ga naar de inhoud</a><slot /><Analytics /></body></html>

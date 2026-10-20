@@ -11,6 +11,7 @@ function run(command, args, cwd = root) {
 run('npm', ['test']);
 run(process.execPath, ['scripts/generate-social-card.mjs']);
 run('npm', ['run', 'build']);
+run('npm', ['run', 'test:seo']);
 function files(dir) { return readdirSync(dir, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? files(`${dir}/${entry.name}`) : [`${dir}/${entry.name}`]); }
 let output = files(`${root}/dist`);
 const html = readFileSync(`${root}/dist/index.html`, 'utf8');

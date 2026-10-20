@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-10-20T10:57:02.737Z",
+  "scope": "Public HTTP and HTML checks; no Search Console, field performance or Google index access.",
+  "records": [
+    {
+      "url": "https://www.welzijnswerking.be/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "xRobotsTag": null,
+      "title": "Kerstfeest 2026 in Kursaal Oostende | Welzijnswerking Oostende",
+      "canonical": "<link rel=\"canonical\" href=\"https://www.welzijnswerking.be/\">",
+      "meta": [
+        "<meta name=\"description\" content=\"Vier kerstavond op donderdag 24 december 2026 met Welzijnswerking Oostende in het Kursaal. Voor alleenstaanden vanaf 50 jaar. Van 17.00 uur tot 21.30 uur. Een feestelijk meergangendiner voor € 5.\">",
+        "<meta property=\"og:type\" content=\"website\">",
+        "<meta property=\"og:locale\" content=\"nl_BE\">",
+        "<meta property=\"og:site_name\" content=\"Welzijnswerking Oostende\">",
+        "<meta property=\"og:title\" content=\"Kerstfeest 2026 in Kursaal Oostende | Welzijnswerking Oostende\">",
+        "<meta property=\"og:description\" content=\"Vier kerstavond op donderdag 24 december 2026 met Welzijnswerking Oostende in het Kursaal. Voor alleenstaanden vanaf 50 jaar. Van 17.00 uur tot 21.30 uur. Een feestelijk meergangendiner voor € 5.\">",
+        "<meta property=\"og:url\" content=\"https://www.welzijnswerking.be/\">",
+        "<meta property=\"og:image\" content=\"https://www.welzijnswerking.be/kerstfeest-2026-social.jpg\">",
+        "<meta property=\"og:image:secure_url\" content=\"https://www.welzijnswerking.be/kerstfeest-2026-social.jpg\">",
+        "<meta property=\"og:image:type\" content=\"image/jpeg\">",
+        "<meta property=\"og:image:width\" content=\"1200\">",
+        "<meta property=\"og:image:height\" content=\"630\">",
+        "<meta property=\"og:image:alt\" content=\"Kerstavond. Samen aan tafel. 24 december 2026, 17–21.30 uur. Kursaal Oostende, € 5 per persoon. Welzijnswerking Oostende.\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+        "<meta name=\"twitter:title\" content=\"Kerstfeest 2026 in Kursaal Oostende | Welzijnswerking Oostende\">",
+        "<meta name=\"twitter:description\" content=\"Vier kerstavond op donderdag 24 december 2026 met Welzijnswerking Oostende in het Kursaal. Voor alleenstaanden vanaf 50 jaar. Van 17.00 uur tot 21.30 uur. Een feestelijk meergangendiner voor € 5.\">",
+        "<meta name=\"twitter:image\" content=\"https://www.welzijnswerking.be/kerstfeest-2026-social.jpg\">",
+        "<meta name=\"twitter:image:alt\" content=\"Kerstavond. Samen aan tafel. 24 december 2026, 17–21.30 uur. Kursaal Oostende, € 5 per persoon. Welzijnswerking Oostende.\">"
+      ],
+      "h1": [
+        "<span>Kerstavond.</span><span class=\"hero-title-last\">Samen aan tafel.</span>"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "Kerstfeest 2026 — Welzijnswerking Oostende",
+          "startDate": "2026-12-24T16:00:00.000Z",
+          "endDate": "2026-12-24T20:30:00.000Z",
+          "description": "Vier kerstavond op donderdag 24 december 2026 met Welzijnswerking Oostende in het Kursaal. Voor alleenstaanden vanaf 50 jaar. Van 17.00 uur tot 21.30 uur. Een feestelijk meergangendiner voor € 5.",
+          "url": "https://www.welzijnswerking.be/",
+          "location": {
+            "@type": "Place",
+            "name": "Kursaal Oostende",
+            "address": "Kursaal-Westhelling 12, 8400 Oostende"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "vzw Welzijnswerking Oostende",
+            "url": "https://www.welzijnswerking.be/"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.welzijnswerking.be/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "location": null,
+      "xRobotsTag": null,
+      "body": "User-agent: *\nAllow: /\nSitemap: https://www.welzijnswerking.be/sitemap.xml\n"
+    },
+    {
+      "url": "https://www.welzijnswerking.be/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "location": null,
+      "xRobotsTag": null,
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://www.welzijnswerking.be/</loc></url></urlset>\n"
+    },
+    {
+      "url": "https://www.welzijnswerking.be/kerstfeest-2026-social.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "location": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://www.welzijnswerking.be/onbestaande-seo-audit/",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "location": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://www.welzijnswerking.be/dev-preview/beeldenonderzoek",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "location": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://welzijnswerking.be/",
+      "status": 308,
+      "location": "https://www.welzijnswerking.be/"
+    },
+    {
+      "url": "http://welzijnswerking.be/",
+      "status": 308,
+      "location": "https://welzijnswerking.be/"
+    },
+    {
+      "url": "http://www.welzijnswerking.be/",
+      "status": 308,
+      "location": "https://www.welzijnswerking.be/"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+---
+interface Props { id?: string; initialSrc: string; label?: string }
+const { id = 'lightbox', initialSrc, label = 'Foto van een vorige editie' } = Astro.props;
+---
+<dialog id={id} class="lightbox" data-photo-viewer aria-label={label}>
+  <div class="lightbox-inner">
+    <form method="dialog"><button class="lightbox-close" aria-label="Sluit foto">Sluiten <span aria-hidden="true">×</span></button></form>
+    <figure>
+      <div class="photo-viewer-stage" aria-busy="false"><img id={`${id}-image`} src={initialSrc} alt="" width="1600" height="1200" loading="lazy" hidden /></div>
+      <p class="photo-viewer-status" role="status"></p>
+      <figcaption id={`${id}-caption`} class="photo-viewer-caption" aria-live="polite"></figcaption>
+    </figure>
+    <div class="lightbox-controls">
+      <button id={id === 'lightbox' ? 'previous-photo' : `${id}-previous`} type="button" data-photo-previous aria-label="Vorige foto">Vorige</button>
+      <button id={id === 'lightbox' ? 'next-photo' : `${id}-next`} type="button" data-photo-next aria-label="Volgende foto">Volgende</button>
+    </div>
+  </div>
+</dialog>
+<script>
+  document.querySelectorAll<HTMLDialogElement>('[data-photo-viewer]').forEach(dialog => {
+    if (typeof dialog.showModal !== 'function') return;
+    const gallery = dialog.closest('[data-photo-gallery]');
+    const triggers = [...(gallery?.querySelectorAll<HTMLElement>('[data-photo-open]') || [])];
+    const stage = dialog.querySelector<HTMLElement>('.photo-viewer-stage')!;
+    const image = stage.querySelector<HTMLImageElement>('img')!;
+    const caption = dialog.querySelector<HTMLElement>('.photo-viewer-caption')!;
+    const status = dialog.querySelector<HTMLElement>('.photo-viewer-status')!;
+    const previous = dialog.querySelector<HTMLButtonElement>('[data-photo-previous]')!;
+    const next = dialog.querySelector<HTMLButtonElement>('[data-photo-next]')!;
+    let current = 0, request = 0, scrollPosition = 0;
+    let opener: HTMLElement | null = null;
+
+    const restorePage = () => {
+      if (!document.body.classList.contains('modal-open')) return;
+      ++request;
+      document.body.classList.remove('modal-open');
+      document.body.style.removeProperty('--photo-scroll-offset');
+      window.scrollTo({ top: scrollPosition, behavior: 'instant' });
+      opener?.focus({ preventScroll: true });
+    };
+    const close = () => {
+      dialog.close();
+      // Native close events can arrive a frame later, notably in WebKit.
+      restorePage();
+    };
+
+    const show = async (index: number) => {
+      current = (index + triggers.length) % triggers.length;
+      const trigger = triggers[current];
+      const source = trigger instanceof HTMLAnchorElement ? trigger.href : trigger.dataset.src!;
+      const token = ++request;
+      image.hidden = true;
+      image.alt = trigger.dataset.alt || '';
+      caption.textContent = `${current + 1} / ${triggers.length} · ${trigger.dataset.caption || ''}`;
+      status.textContent = 'Foto laden…';
+      stage.setAttribute('aria-busy', 'true');
+      image.loading = 'eager';
+      image.src = source;
+      try {
+        await image.decode();
+        if (token !== request) return;
+        image.hidden = false;
+        status.textContent = '';
+      } catch {
+        if (token !== request) return;
+        status.textContent = 'Deze foto kan niet worden geladen. Kies een andere foto of sluit het venster.';
+      } finally {
+        if (token === request) stage.setAttribute('aria-busy', 'false');
+      }
+    };
+    triggers.forEach((trigger, index) => {
+      trigger.setAttribute('aria-haspopup', 'dialog');
+      trigger.setAttribute('aria-controls', dialog.id);
+      trigger.addEventListener('click', event => {
+        // Keep standard browser actions and the no-JavaScript link fallback.
+        if (event instanceof MouseEvent && (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
+        event.preventDefault();
+        opener = trigger;
+        scrollPosition = window.scrollY;
+        document.body.style.setProperty('--photo-scroll-offset', `-${scrollPosition}px`);
+        document.body.classList.add('modal-open');
+        void show(index);
+        dialog.showModal();
+        dialog.querySelector<HTMLButtonElement>('.lightbox-close')?.focus();
+      });
+    });
+    previous.hidden = next.hidden = triggers.length < 2;
+    previous.addEventListener('click', () => void show(current - 1));
+    next.addEventListener('click', () => void show(current + 1));
+    dialog.querySelector('form')?.addEventListener('submit', event => { event.preventDefault(); close(); });
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    dialog.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        void show(current + (event.key === 'ArrowLeft' ? -1 : 1));
+      }
+      if (event.key !== 'Tab') return;
+      const controls = [...dialog.querySelectorAll<HTMLButtonElement>('button')].filter(button => !button.hidden);
+      const first = controls[0], last = controls.at(-1)!;
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+    const outside = (event: PointerEvent) => {
+      const bounds = dialog.getBoundingClientRect();
+      return event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;
+    };
+    let startedOutside = false;
+    dialog.addEventListener('pointerdown', event => { startedOutside = outside(event); });
+    dialog.addEventListener('pointerup', event => {
+      if (startedOutside && outside(event)) close();
+      startedOutside = false;
+    });
+    dialog.addEventListener('pointercancel', () => { startedOutside = false; });
+    dialog.addEventListener('close', () => {
+      if (!dialog.open) restorePage();
+    });
+  });
+</script>

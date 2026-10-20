@@ -1,0 +1,44 @@
+[
+  {
+    "width": 390,
+    "footerHeight": 497.71875,
+    "font": "\"Public Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+    "footerColor": "rgb(250, 250, 249)",
+    "h1": "36px",
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:4325/fonts/public-sans-latin-variable.woff2",
+        "bytes": 26636
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 455,
+    "footerHeight": 465.328125,
+    "font": "\"Public Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+    "footerColor": "rgb(250, 250, 249)",
+    "h1": "40.95px",
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:4325/fonts/public-sans-latin-variable.woff2",
+        "bytes": 26636
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "footerHeight": 403.828125,
+    "font": "\"Public Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+    "footerColor": "rgb(250, 250, 249)",
+    "h1": "72px",
+    "fonts": [
+      {
+        "url": "http://127.0.0.1:4325/fonts/public-sans-latin-variable.woff2",
+        "bytes": 26636
+      }
+    ],
+    "overflow": false
+  }
+]

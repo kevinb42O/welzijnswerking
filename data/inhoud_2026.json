@@ -23,9 +23,15 @@
     "timezone": "Europe/Brussels",
     "venueName": "Kursaal Oostende",
     "venueAddress": "Kursaal-Westhelling 12, 8400 Oostende",
+    "venuePostalAddress": {
+      "streetAddress": "Kursaal-Westhelling 12",
+      "addressLocality": "Oostende",
+      "postalCode": "8400",
+      "addressCountry": "BE"
+    },
     "priceEuro": 5,
-    "priceNote": "€ 5 per persoon voor een feestelijk meergangenetentje. Informatie over de inbegrepen dranken volgt.",
-    "meal": "Feestelijk meergangenetentje",
+    "priceNote": "€ 5 per persoon voor een feestelijk meergangendiner. Informatie over de inbegrepen dranken volgt.",
+    "meal": "Feestelijk meergangendiner",
     "eventStartTime": "17.00 uur",
     "doorsOpenTime": null,
     "endTime": "21.30 uur",
@@ -39,9 +45,10 @@
     "ticketsInfoText": "Je schrijft je in via een van de negen ontmoetingscentra in Oostende. Hieronder vind je hun adressen en telefoonnummers. De startdatum, uiterste inschrijfdatum en betaalwijze worden hier nog bekendgemaakt.",
     "accessibilitySpecifics": null,
     "transportSpecifics": null,
-    "entertainmentDetails": "Muziek van Patrick “Pulle” en een special guest die een verrassing blijft.",
+    "entertainmentDetails": "Muziek van Patrick “Pulle” en een verrassingsgast.",
+    "performerName": "Patrick “Pulle”",
     "volunteerSignupUrl": null,
-    "intro": "Een feestelijke maaltijd, een warme ontmoeting. Vier kerstavond samen in het Kursaal.",
+    "intro": "Vier kerstavond mee in het Kursaal Oostende.",
     "menuNote": "Het menu wordt later bekendgemaakt. Informatie over de inbegrepen dranken volgt.",
     "registrationMethod": "Inschrijven via een ontmoetingscentrum",
     "registrationChannel": "meeting_centres"
@@ -52,7 +59,7 @@
     "edition2019GuestMinimum": 750,
     "edition2019VolunteerMinimum": 140,
     "historicalAudience": "Alleenstaande senioren van 65 jaar en ouder",
-    "historyNote": "Dit gaat over de vorige edities, NIET over de nog onbevestigde voorwaarden van 2026."
+    "historyNote": "Dit gaat over de vorige edities. De actuele voorwaarden voor 2026 staan onder event.eligibilityRules."
   },
   "images": {
     "heroDesktop": "/images/editorial/hero-kaarslicht-2200.webp",

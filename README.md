@@ -13,19 +13,19 @@ npm test
 npm run release
 ```
 
-`build` voert Astro/TypeScript-controle uit en schrijft uitsluitend de homepage naar `dist/`. Gebruik de door Astro afgedrukte lokale URL. De ontwikkeling gebruikt geen nieuwe UI- of animatiebibliotheek. Bricolage Grotesque en DM Sans staan lokaal in `public/fonts/`, inclusief OFL-licenties.
+`build` voert Astro/TypeScript-controle uit en schrijft de homepage en het downloadbare agendabestand naar `dist/`. Gebruik de door Astro afgedrukte lokale URL. De ontwikkeling gebruikt geen nieuwe UI- of animatiebibliotheek. De pagina gebruikt lokaal gehoste Public Sans, inclusief OFL-licentie in `public/fonts/`.
 
 ## Vormgeving en structuur
 
 De redesignfix uit `plans/REDESIGN_FIXPLAN.md` is lokaal geïmplementeerd. De pagina volgt nu: uitnodiging → praktische informatie → verhaal en locatie → historische tijdlijn → eventuele editiefoto’s → partners → compacte footer. Titel en intro komen uit de centrale evenementdata; datum en prijs gebruiken gedeelde formatters, ook voor het deelbeeld.
 
-De hero gebruikt een doorlopende illustratieve kersttafelfoto van Nicole Michalou (Pexels), met een centrale serif titel en een aparte lichte feitenstrook. De echte foto’s van de editie 2025 staan in het archief. De lichte navigatie en ruime donkergroene footer zijn opnieuw vormgegeven voor mobiel en desktop. De footer bevat de gecontroleerde vzw-gegevens en een bescheiden Webaanzee-vermelding als belangeloze bijdrage. De echte Kursaalfoto van Karelde uit 2025 ondersteunt het verhaal, met bron en CC0-licentie. Historische feiten en bijdragers blijven bij hun eigen editiejaar staan.
+De hero gebruikt een doorlopende illustratieve kersttafelfoto van Nicole Michalou (Pexels), met een links uitgelijnde Public Sans-titel en een aparte lichte feitenstrook. De echte foto’s van de editie 2025 staan in het archief. De op 20 oktober bevestigde visuele richting gebruikt neutraal wit, antraciet en één lettertype. De compacte lichte footer bevat de gecontroleerde vzw-gegevens en een bescheiden Webaanzee-vermelding als belangeloze bijdrage. De foto-viewer is neutraal donker. De echte Kursaalfoto van Karelde uit 2025 ondersteunt het verhaal, met bron en CC0-licentie. Historische feiten en bijdragers blijven bij hun eigen editiejaar staan.
 
 De stijlarchitectuur heeft drie lagen: `tokens.css` definieert fonts, kleuren en schalen; `global.css` bevat documentbasis en herbruikbare bediening; `campaign.css` groepeert actuele componenten en hun responsive regels. De menu-CSS en JS gebruiken dezelfde grens van 1001 px. Zonder JavaScript blijft zichtbare navigatie beschikbaar. Vergrote tekst kan ombreken. Het mobiele menu opent als modaal dialoogvenster met een vervaagde achtergrond, scrollvergrendeling en toetsenbordbediening. De veelgestelde vragen zijn standaard ingeklapt; bij het openen van een vraag sluit het vorige antwoord.
 
 Links gebruiken geen diagonale pijlen. Tekstlinks zijn onderstreept en krijgen bij hover een nadrukkelijkere onderstreping; actielinks behouden een duidelijke knopvorm. Toetsenbordfocus blijft zichtbaar. Vergrootbare foto's krijgen een tekstuele aanwijzing en een zoomcursor. Dit geldt ook voor bronverwijzingen, de footer en development-previews.
 
-Actuele bewijzen en beperkingen: `qa/CURRENT_DESIGN.md` en `qa/redesign-fix/VISUAL_REVIEW.md`. Voor-opnames staan apart in `qa/redesign-fix/before/`. Oudere QA-mappen zijn procesarchief en beschrijven eerdere versies.
+Actuele visuele richting: `plans/VISUELE_RICHTING_2026-10-20.md`. Bewijzen en beperkingen staan in `qa/neutral-design-2026-10-20/RESULTATEN.md`. Voor-opnames en oudere QA-mappen blijven procesarchief en beschrijven eerdere versies.
 
 ## Evenementinformatie aanpassen
 
@@ -58,7 +58,7 @@ Startdatum, uiterste inschrijfdatum en betaalwijze moeten nog door de organisati
 
 Controle: `node scripts/meeting-centres-qa.mjs` tegen de productiepreview (4325) en devserver (4323). Dit controleert vijf schermbreedtes, de toetsenbordroute, bel-/routelinks, aanraakvlakken, axe, 200% tekst, vijf OC-inschrijfstatussen en de werking zonder JavaScript. Bewijs: `qa/meeting-centres-report.json` en `qa/ONTMOETINGSCENTRA_REVIEW.md`.
 
-De agenda-knop downloadt een datumherinnering voor de hele dag, zonder reservering. Ook na bevestiging van tijden blijft dit bewust een datumherinnering; de zichtbare uren staan bij de praktische informatie.
+De agenda-link downloadt een tijdens de build gegenereerd `.ics`-bestand, ook zonder JavaScript. Bevestigde begin- en eindtijden worden naar UTC omgerekend vanuit Europe/Brussels. Als een tijd ontbreekt, blijft het een datumherinnering voor de hele dag. Beide zijn geen inschrijving.
 
 ## Foto's toevoegen
 
@@ -129,13 +129,21 @@ QA_URL=http://127.0.0.1:4325/ node scripts/creative-qa.mjs full-review
 
 `node scripts/generate-social-card.mjs` maakt zonder draaiende server het fotografische deelbeeld op 1200×630, met lokaal ingebedde fonts en dezelfde hero-foto. De zelfstandige SVG bevat de gerenderde kaart. Na wijziging van datum/prijs/titel/intro dit script uitvoeren vóór een nieuwe build. De JPEG is de webpreview; een losse SVG kan door fontfallback anders afbreken.
 
-Geen tracking of externe fonts. Canonical, sitemap en Event JSON-LD verwijzen naar `https://welzijnswerking.be/`. Structured data bevat geen onbevestigde tijd, aanbod of ticketbeschikbaarheid. Axe-resultaten zijn geen volledige WCAG-certificering.
+Vercel Web Analytics meet paginabezoeken; fonts blijven lokaal gehost. Canonical, sitemap en Event JSON-LD verwijzen naar `https://welzijnswerking.be/`. Structured data bevat geen onbevestigde tijd, aanbod of ticketbeschikbaarheid. Axe-resultaten zijn geen volledige WCAG-certificering.
 
 ## Beeldonderzoek van 20 oktober 2026
 
 De openbare Facebookpagina van Welzijnswerking Oostende bevat een fotobericht van 25 december 2025 met 38 foto's van de kerstavond. De volledige reeks staat lokaal in `assets/fotos-vorige-edities/facebook-2025/`, met foto-URLs, dimensies, hashes en selectiekeuze in `manifest.json`. `EventArchive.astro` gebruikt zeven geselecteerde beelden als responsive WebP. De gevraagde foto van de organisatie met Fabrice Goffin staat apart in `StorySection.astro`, expliciet als aankondiging van november 2025 en met namen uit de KW-bron. Er is niets gedeployd.
 
 De eerdere negen unieke pers-/archiefbeelden blijven bewaard onder `assets/fotos-vorige-edities/onderzoek-2026-10-20/`. Het verslag daar beschrijft de actuele selectie en het eerdere onderzoek. `/dev-preview/beeldenonderzoek` toont die eerdere persselectie; de hoofdpagina gebruikt nu de echte Facebook-reeks. `node scripts/image-research-qa.mjs` controleert de responsive weergave, beelden, toegankelijkheid en productiebuild.
+
+## Vercel Web Analytics
+
+`@vercel/analytics` is via de officiële Astro-component opgenomen in `src/layouts/BaseLayout.astro`. Hierdoor worden paginabezoeken automatisch gemeten op de website. In development gebruikt de SDK de debugmodus en worden geen bezoeken naar Vercel verstuurd.
+
+Activeer in het Vercel-dashboard voor dit project **Analytics → Enable** en deploy vervolgens de bijgewerkte code naar Vercel. Open daarna de website en controleer in het netwerkpaneel van de browser de requests onder `/_vercel/insights/`. Bezoekgegevens verschijnen vervolgens in het Analytics-dashboard. Er zijn geen API-sleutels of extra omgevingsvariabelen nodig voor de standaardintegratie. Een lokaal geopende build of een zip op andere hosting levert deze Vercel-endpoints niet.
+
+Documentatie: [Vercel Web Analytics voor Astro](https://vercel.com/docs/analytics/quickstart).
 
 ## Deployment
 
@@ -150,3 +158,19 @@ De agenda-download gebruikt bevestigde begin- en eindtijd in Europe/Brussels; bi
 ### Deelbeeld en publiek domein
 
 Het publieke adres is `https://www.welzijnswerking.be/`. Canonical, Open Graph, Twitter Cards, sitemap en robots verwijzen hiernaar. Het goedgekeurde ImageGen-deelbeeld staat in `assets/social/kerstfeest-2026-master.png`; de prompt en herkomst staan ernaast in `IMAGEGEN_PROMPT.md`. Het is een illustratieve kersttafel, geen evenementfoto. `scripts/generate-social-card.mjs` exporteert dit beeld naar `public/kerstfeest-2026-social.jpg` (1200×630) en vernieuwt de oudere bestandsnamen voor bestaande links. Een release bewaart dus het goedgekeurde ontwerp. Controle: `node scripts/social-card-qa.mjs`, of met `QA_URL=https://www.welzijnswerking.be/` tegen de live versie. Sociale platformen kunnen een eerder opgehaalde linkpreview tijdelijk bewaren.
+
+## UI-audit verwerkt — 20 oktober 2026
+
+De acht punten uit `qa/skill-audit-2026-10-20/AUDIT.md` zijn verwerkt. De hero heeft een donkerdere ondergrond voor voldoende tekstcontrast en toont de actuele doelgroep vóór de inschrijfknop. Het archief verwijst naar dezelfde actuele voorwaarden. Zelfstandige footerlinks hebben minimaal 44 px aanraakhoogte. Oppervlakkleuren en interactietimings staan samen in `tokens.css`; primaire knoppen hebben directe drukfeedback.
+
+`PhotoViewer.astro` verzorgt de vergroting voor zowel de editiebeelden als de optionele galerij. De viewer biedt bijschriften, vorige/volgende, pijltjestoetsen, Escape, laad- en foutfeedback, focusterugkeer en scrollherstel. Zonder JavaScript blijven gewone afbeeldingslinks werken. De kalender wordt centraal opgebouwd in `src/data/calendar.mjs` en als `/kerstavond-oostende-2026.ics` meegebouwd.
+
+Gerichte controle: `node scripts/audit-fixes-qa.mjs` (Chromium en WebKit) en `node scripts/hero-contrast-qa.mjs` (zeven breedtes). Bewijs en resultaten staan in `qa/skill-fixes-2026-10-20/`. Het oorspronkelijke auditrapport blijft bewaard als nulmeting.
+
+## SEO en Google — uitvoering 20 oktober 2026
+
+Zoektitel, beschrijving, deelbeeld-alt en gestructureerde gegevens worden opgebouwd in `src/data/seo.mjs` vanuit `data/inhoud_2026.json`. De JSON-LD bevat een gekoppelde Organization, WebSite, WebPage en Event. Het evenement heeft een gestructureerd Belgisch locatieadres, bevestigde tijden, een representatief zichtbaar sfeerbeeld, geplande status en het bevestigde optreden van Patrick “Pulle”. Er wordt geen online ticketaanbod verzonnen voor de inschrijving via ontmoetingscentra. `venuePostalAddress` moet overeenkomen met het zichtbare `venueAddress`; `performerName` moet ook in het zichtbare programma vermeld blijven.
+
+`npm test` controleert onder meer gesloten/uitverkochte inschrijvingen, jaar- en prijswijzigingen en veilige JSON-LD-inbedding. `npm run test:seo` controleert de werkelijk gebouwde HTML, robots, sitemap, social metadata, beeldformaat en leesbare deelname-informatie zonder JavaScript. Deze productiecontrole draait ook bij `npm run release`. Development-previews krijgen daarnaast `noindex, nofollow` en blijven afwezig in de productiebuild.
+
+In Google Search Console is de sitemap op 20 oktober succesvol verwerkt, met één ontdekte pagina. De homepage was bij inspectie nog niet geïndexeerd; de live test slaagde en het indexeringsverzoek werd geaccepteerd. Dit verzoek betreft de toenmalige live website en is geen bevestiging dat de lokale SEO-wijzigingen gepubliceerd zijn. Bewijs: `qa/seo-2026-10-20/`. Het uitvoeringsplan en de conceptteksten voor verspreiding staan in `plans/SEO_EN_VINDBAARHEID_2026-10-20.md` en `plans/DEELTEKSTEN_KERSTFEEST_2026.md`.
