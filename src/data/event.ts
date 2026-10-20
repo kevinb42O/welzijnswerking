@@ -42,3 +42,5 @@ export const routeUrl = `https://www.google.com/maps/search/?api=1&query=${encod
 export const accessibilityUrl = 'https://www.kursaaloostende.be/nl/praktisch/bereikbaarheid';
 // Historische onderzoeksgegevens blijven gescheiden en worden niet als 2026-inhoud gerenderd.
 export const historicalFacts = source.history;
+
+export const siteUrl = source.siteUrl;

@@ -1,0 +1,32 @@
+import { readFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import sharp from 'sharp';
+import { chromium } from '@playwright/test';
+const base = process.env.QA_URL || 'http://127.0.0.1:4325/';
+const canonical = 'https://www.welzijnswerking.be/';
+const browser = await chromium.launch();
+try {
+  const page = await browser.newPage();
+  const response = await page.goto(base);
+  assert.equal(response.status(), 200);
+  const meta = name => page.locator(`meta[property="${name}"],meta[name="${name}"]`).getAttribute('content');
+  assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), canonical);
+  assert.equal(await meta('og:url'), canonical);
+  const imageUrl = await meta('og:image');
+  assert.equal(imageUrl, `${canonical}kerstfeest-2026-social.jpg`);
+  assert.equal(await meta('og:image:secure_url'), imageUrl);
+  assert.equal(await meta('twitter:image'), imageUrl);
+  assert.equal(await meta('twitter:card'), 'summary_large_image');
+  assert.equal(await meta('og:image:width'), '1200');
+  assert.equal(await meta('og:image:height'), '630');
+  assert.ok((await meta('og:image:alt')).includes('24 december 2026'));
+  const imageResponse = await page.request.get(new URL(new URL(imageUrl).pathname, base).href);
+  assert.equal(imageResponse.status(), 200);
+  assert.match(imageResponse.headers()['content-type'], /image\/jpeg/);
+  const bytes = await imageResponse.body();
+  const info = await sharp(bytes).metadata();
+  assert.equal(info.width, 1200); assert.equal(info.height, 630);
+  assert.equal(info.format, 'jpeg'); assert.ok(bytes.length < 500000);
+  if (!process.env.QA_URL) assert.deepEqual(bytes, await readFile('public/kerstfeest-2026-social.jpg'));
+  console.log(`Share metadata and JPEG verified at ${base}: 1200×630, ${Math.round(bytes.length / 1024)} kB.`);
+} finally { await browser.close(); }
