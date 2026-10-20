@@ -21,7 +21,7 @@ De redesignfix uit `plans/REDESIGN_FIXPLAN.md` is lokaal geïmplementeerd. De pa
 
 De hero gebruikt een doorlopende illustratieve kersttafelfoto van Nicole Michalou (Pexels), met een centrale serif titel en een aparte lichte feitenstrook. De echte foto’s van de editie 2025 staan in het archief. De lichte navigatie en ruime donkergroene footer zijn opnieuw vormgegeven voor mobiel en desktop. De footer bevat de gecontroleerde vzw-gegevens en een bescheiden Webaanzee-vermelding als belangeloze bijdrage. De echte Kursaalfoto van Karelde uit 2025 ondersteunt het verhaal, met bron en CC0-licentie. Historische feiten en bijdragers blijven bij hun eigen editiejaar staan.
 
-De stijlarchitectuur heeft drie lagen: `tokens.css` definieert fonts, kleuren en schalen; `global.css` bevat documentbasis en herbruikbare bediening; `campaign.css` groepeert actuele componenten en hun responsive regels. De menu-CSS en JS gebruiken dezelfde grens van 1001 px. Zonder JavaScript blijft zichtbare navigatie beschikbaar. Vergrote tekst kan ombreken.
+De stijlarchitectuur heeft drie lagen: `tokens.css` definieert fonts, kleuren en schalen; `global.css` bevat documentbasis en herbruikbare bediening; `campaign.css` groepeert actuele componenten en hun responsive regels. De menu-CSS en JS gebruiken dezelfde grens van 1001 px. Zonder JavaScript blijft zichtbare navigatie beschikbaar. Vergrote tekst kan ombreken. Het mobiele menu opent als modaal dialoogvenster met een vervaagde achtergrond, scrollvergrendeling en toetsenbordbediening. De veelgestelde vragen zijn standaard ingeklapt; bij het openen van een vraag sluit het vorige antwoord.
 
 Actuele bewijzen en beperkingen: `qa/CURRENT_DESIGN.md` en `qa/redesign-fix/VISUAL_REVIEW.md`. Voor-opnames staan apart in `qa/redesign-fix/before/`. Oudere QA-mappen zijn procesarchief en beschrijven eerdere versies.
 
@@ -94,9 +94,12 @@ Start zowel de devserver op 4323 als de productiepreview op 4325, en voer uit:
 
 ```sh
 node scripts/browser-qa.mjs
+node scripts/navigation-qa.mjs
 node scripts/modules-qa.mjs
 node scripts/drawing-qa.mjs
 ```
+
+De gerichte `navigation-qa` controleert het mobiele menu en de FAQ, inclusief focus, achtergrondblur, scrollherstel, zes schermformaten en axe. Gebruik `QA_BROWSER=webkit` of `QA_BROWSER=firefox` voor dezelfde controles in die browser.
 
 Installeer zo nodig de bij Playwright passende Chromium-browser. Alternatieve servers: `QA_URL` (standaard productiepreview op 4325) en `DEV_QA_URL` (development op 4323). Controleer de server-URL: andere projecten kunnen de gebruikelijke poorten al bezetten.
 

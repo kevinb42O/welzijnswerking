@@ -1,26 +1,84 @@
 ---
-
+import { event } from '../data/event';
 ---
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#home" class="wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><span>welzijns<span class="brand-second-line">werking<span class="brand-dot">.</span></span></span><span class="wordmark-city">Oostende</span></a>
     <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a><a class="nav-participate" href="#praktisch">Praktisch & deelname <span aria-hidden="true">↗</span></a></nav>
-    
-    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open het menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Open het menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie" inert><p class="mobile-nav-label">Kerstavond in Oostende · 2026</p><a href="#welkom"><span>Voor wie?</span><span aria-hidden="true">01</span></a><a href="#edities"><span>Vorige edities</span><span aria-hidden="true">02</span></a><a href="#partners"><span>Partners</span><span aria-hidden="true">03</span></a><a href="#praktisch"><span>Praktisch & deelname</span><span aria-hidden="true">↗</span></a><p class="mobile-nav-note">Samen maken we er een warme avond van.</p></nav>
+  <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title">
+    <div class="mobile-menu-top"><span class="mobile-menu-brand">welzijnswerking<span>.</span></span><button class="mobile-menu-close" type="button" aria-label="Sluit het menu" autofocus><span>Sluiten</span><span class="menu-cross" aria-hidden="true"></span></button></div>
+    <div class="mobile-menu-intro"><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p><h2 id="mobile-menu-title">Een warme avond.<br /><em>Samen aan tafel.</em></h2></div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie">
+      <a href="#welkom"><span class="mobile-nav-number" aria-hidden="true">01</span><span>Voor wie?</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
+      <a href="#edities"><span class="mobile-nav-number" aria-hidden="true">02</span><span>Vorige edities</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
+      <a href="#partners"><span class="mobile-nav-number" aria-hidden="true">03</span><span>Partners</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
+      <a class="mobile-nav-participate" href="#praktisch"><span>Praktisch & deelname</span><span aria-hidden="true">↗</span></a>
+    </nav>
+    <p class="mobile-nav-note"><span aria-hidden="true">✳</span> Er is ook een plekje voor jou.</p>
+  </dialog>
   <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#praktisch">Praktisch</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
 </header>
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
-  const menu = document.querySelector<HTMLElement>('#mobile-nav');
+  const menu = document.querySelector<HTMLDialogElement>('#mobile-menu');
   if (toggle && menu) {
-    const menuLabel = toggle.querySelector('span');
-    const close = () => { if (menuLabel) menuLabel.textContent = 'Menu'; toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open het menu'); menu.inert = true; };
-    toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Sluit het menu' : 'Open het menu'); menu.inert = !open; if (menuLabel) menuLabel.textContent = open ? 'Sluit' : 'Menu'; });
-    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.inert) { close(); toggle.focus(); } });
-    document.addEventListener('click', e => { if (!menu.inert && e.target instanceof Node && !menu.contains(e.target) && !toggle.contains(e.target)) close(); });
-    matchMedia('(min-width: 1001px)').addEventListener('change', e => { if (e.matches) close(); });
+    let scrollPosition = 0;
+    const restorePage = () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      if (!document.body.classList.contains('menu-open')) return;
+      document.body.classList.remove('menu-open');
+      document.body.style.removeProperty('--menu-scroll-offset');
+      window.scrollTo({ top: scrollPosition, behavior: 'instant' });
+    };
+    const close = () => {
+      menu.close();
+      restorePage();
+      if (toggle.getClientRects().length) toggle.focus({ preventScroll: true });
+    };
+    toggle.addEventListener('click', () => {
+      if (menu.open) { close(); return; }
+      scrollPosition = window.scrollY;
+      document.body.style.setProperty('--menu-scroll-offset', `-${scrollPosition}px`);
+      document.body.classList.add('menu-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      menu.showModal();
+    });
+    menu.querySelector('.mobile-menu-close')?.addEventListener('click', close);
+    menu.querySelectorAll<HTMLAnchorElement>('a').forEach(link => link.addEventListener('click', () => {
+      close();
+      // Move keyboard focus to the destination after following the in-page link.
+      const target = document.querySelector<HTMLElement>(link.hash);
+      if (target) {
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+      }
+    }));
+    menu.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    menu.addEventListener('close', restorePage);
+    menu.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return;
+      const controls = [...menu.querySelectorAll<HTMLElement>('button, a[href]')];
+      const first = controls[0];
+      const last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    });
+    // A backdrop click targets the dialog; also check coordinates to keep panel padding clickable.
+    let pointerStartedOutside = false;
+    const outside = (event: PointerEvent) => {
+      const bounds = menu.getBoundingClientRect();
+      return event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;
+    };
+    menu.addEventListener('pointerdown', event => { pointerStartedOutside = outside(event); });
+    menu.addEventListener('pointerup', event => { if (pointerStartedOutside && outside(event)) close(); pointerStartedOutside = false; });
+    matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches && menu.open) close(); });
   }
 </script>
