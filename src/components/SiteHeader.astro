@@ -4,19 +4,18 @@ import { event } from '../data/event';
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#home" class="wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><span>welzijns<span class="brand-second-line">werking<span class="brand-dot">.</span></span></span><span class="wordmark-city">Oostende</span></a>
-    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a><a class="nav-participate" href="#praktisch">Praktisch & deelname <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a><a class="nav-participate" href="#praktisch">Praktisch & deelname</a></nav>
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Open het menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
   </div>
   <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title">
-    <div class="mobile-menu-top"><span class="mobile-menu-brand">welzijnswerking<span>.</span></span><button class="mobile-menu-close" type="button" aria-label="Sluit het menu" autofocus><span>Sluiten</span><span class="menu-cross" aria-hidden="true"></span></button></div>
-    <div class="mobile-menu-intro"><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p><h2 id="mobile-menu-title">Een warme avond.<br /><em>Samen aan tafel.</em></h2></div>
+    <div class="mobile-menu-top"><span class="mobile-menu-brand">welzijnswerking.</span><button class="mobile-menu-close" type="button" aria-label="Sluit het menu" autofocus>Sluiten</button></div>
+    <div class="mobile-menu-intro"><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p><h2 id="mobile-menu-title">Menu</h2></div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie">
-      <a href="#welkom"><span class="mobile-nav-number" aria-hidden="true">01</span><span>Voor wie?</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
-      <a href="#edities"><span class="mobile-nav-number" aria-hidden="true">02</span><span>Vorige edities</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
-      <a href="#partners"><span class="mobile-nav-number" aria-hidden="true">03</span><span>Partners</span><span class="mobile-nav-arrow" aria-hidden="true">↗</span></a>
-      <a class="mobile-nav-participate" href="#praktisch"><span>Praktisch & deelname</span><span aria-hidden="true">↗</span></a>
+      <a href="#welkom">Voor wie?</a>
+      <a href="#edities">Vorige edities</a>
+      <a href="#partners">Partners</a>
+      <a class="mobile-nav-participate" href="#praktisch">Praktisch & deelname</a>
     </nav>
-    <p class="mobile-nav-note">Er is ook een plekje voor jou.</p>
   </dialog>
   <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#praktisch">Praktisch</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
 </header>
