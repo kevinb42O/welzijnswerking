@@ -129,7 +129,7 @@ QA_URL=http://127.0.0.1:4325/ node scripts/creative-qa.mjs full-review
 
 `node scripts/generate-social-card.mjs` maakt zonder draaiende server het fotografische deelbeeld op 1200×630, met lokaal ingebedde fonts en dezelfde hero-foto. De zelfstandige SVG bevat de gerenderde kaart. Na wijziging van datum/prijs/titel/intro dit script uitvoeren vóór een nieuwe build. De JPEG is de webpreview; een losse SVG kan door fontfallback anders afbreken.
 
-Vercel Web Analytics meet paginabezoeken; fonts blijven lokaal gehost. Canonical, sitemap en Event JSON-LD verwijzen naar `https://welzijnswerking.be/`. Structured data bevat geen onbevestigde tijd, aanbod of ticketbeschikbaarheid. Axe-resultaten zijn geen volledige WCAG-certificering.
+Vercel Web Analytics meet paginabezoeken; fonts blijven lokaal gehost. Canonical, sitemap en Event JSON-LD verwijzen naar `https://www.welzijnswerking.be/`. Structured data bevat geen onbevestigde tijd, aanbod of ticketbeschikbaarheid. Axe-resultaten zijn geen volledige WCAG-certificering.
 
 ## Beeldonderzoek van 20 oktober 2026
 
@@ -174,3 +174,5 @@ Zoektitel, beschrijving, deelbeeld-alt en gestructureerde gegevens worden opgebo
 `npm test` controleert onder meer gesloten/uitverkochte inschrijvingen, jaar- en prijswijzigingen en veilige JSON-LD-inbedding. `npm run test:seo` controleert de werkelijk gebouwde HTML, robots, sitemap, social metadata, beeldformaat en leesbare deelname-informatie zonder JavaScript. Deze productiecontrole draait ook bij `npm run release`. Development-previews krijgen daarnaast `noindex, nofollow` en blijven afwezig in de productiebuild.
 
 In Google Search Console is de sitemap op 20 oktober succesvol verwerkt, met één ontdekte pagina. De homepage was bij inspectie nog niet geïndexeerd; de live test slaagde en het indexeringsverzoek werd geaccepteerd. Dit verzoek betreft de toenmalige live website en is geen bevestiging dat de lokale SEO-wijzigingen gepubliceerd zijn. Bewijs: `qa/seo-2026-10-20/`. Het uitvoeringsplan en de conceptteksten voor verspreiding staan in `plans/SEO_EN_VINDBAARHEID_2026-10-20.md` en `plans/DEELTEKSTEN_KERSTFEEST_2026.md`.
+
+De volledige website met deze SEO-wijzigingen is vervolgens gepubliceerd via commit `2401dda` op `main`. De live controles en Google-live-test na publicatie slagen. Search Console bevestigt inmiddels indexering van de homepage met de juiste canonical (indexcrawl 13.09.20 uur, vóór deze publicatie). De nieuwe metadata wordt bij een volgende indexcrawl verwerkt. Vercel Web Analytics is op het gratis Hobby-plan geactiveerd en toont de eerste ontvangen paginabezoeken; eigen controles kunnen daarin voorkomen.

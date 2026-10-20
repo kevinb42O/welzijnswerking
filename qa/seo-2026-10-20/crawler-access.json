@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-20T11:15:10.242Z",
+  "note": "User-agent HTTP checks; these do not validate platform caches or impersonate a verified Googlebot IP.",
+  "checks": [
+    {
+      "userAgent": "facebookexternalhit/1.1",
+      "status": 200,
+      "includesShareImage": true
+    },
+    {
+      "userAgent": "Twitterbot/1.0",
+      "status": 200,
+      "includesShareImage": true
+    },
+    {
+      "userAgent": "Googlebot",
+      "status": 200,
+      "includesShareImage": true
+    }
+  ]
+}

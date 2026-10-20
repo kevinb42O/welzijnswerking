@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-20T11:15:10.833Z",
+  "note": "Vercel uses its public rewritten analytics endpoint rather than /_vercel/insights in the live HTML.",
+  "script": "/066b2a2e591781f5/script.js",
+  "responses": [
+    {
+      "path": "/066b2a2e591781f5/script.js",
+      "status": 200,
+      "method": "GET"
+    }
+  ]
+}

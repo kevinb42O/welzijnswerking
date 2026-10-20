@@ -5,13 +5,14 @@ Audit en uitvoeringsplan, 20 oktober 2026. De nulmeting hieronder blijft histori
 ## Uitvoeringsstatus op 20 oktober 2026
 
 - Search Console-domeinproperty bestaat en is toegankelijk. De sitemap is na verversen **Succesvol**, laatst gelezen op 20 oktober, één ontdekte pagina. De aanvankelijke fout in de overzichtstabel was verouderde weergave; er is geen tweede sitemap ingediend.
-- Homepage-inspectie: nog niet geïndexeerd / URL onbekend bij Google. Live test op 20 oktober om 13.04 uur: beschikbaar voor Google, pagina kan worden geïndexeerd. Indexeringsverzoek is geaccepteerd en aan de prioriteitscrawlwachtrij toegevoegd. Dit is nog geen bevestiging van indexering.
+- Eerste homepage-inspectie: nog niet geïndexeerd / URL onbekend bij Google. Na een geslaagde live test en geaccepteerd indexeringsverzoek meldde Google tijdens dezelfde sessie **URL is geïndexeerd door Google**, laatste crawl 20 oktober om 13.09.20 uur, Googlebot smartphone, juiste canonical. Die indexcrawl ging vooraf aan de nieuwe publicatie; de nieuwe metadata moet bij een volgende indexcrawl worden bijgewerkt.
 - Geen handmatige acties en geen beveiligingsproblemen gedetecteerd in de betreffende Search Console-rapporten.
 - Lokale implementatie: doelgroepgerichte titel en beschrijving, gedeelde SEO-datamodule, dynamische deelbeeld-alt, graph met Organization/WebSite/WebPage/Event, PostalAddress, evenementstatus, bevestigd optreden, zichtbaar sfeerbeeld en `noindex` voor development-previews.
 - De FAQ bevat praktische uitleg over inschrijving en prijs. Vormgevings- en tekstwijzigingen uit de bestaande werkmap blijven behouden; de nulmeting is geen instructie om oudere vormgeving terug te zetten.
 - Nieuwe SEO-unitcontroles en productie-HTML-controle zijn opgenomen in de release. Bestaande browserchecks lezen nu het Event uit de graph en gebruiken de bevestigde tijden.
 - De lettertype-preloads waren bij de start van deze uitvoering al teruggebracht tot Public Sans; dit is behouden.
-- Publicatie van de lokale bronwijzigingen, echte Facebook/WhatsApp-previewcontrole en lokale vermeldingen blijven afzonderlijke opleverpunten. Het indexeringsverzoek is gedaan voor de huidige live website.
+- Volledige website gepubliceerd via commit `2401dda` op `main`; Vercel-productie staat Ready en de live controles slagen. Ook een Google-live-test na publicatie (13.14 uur) herkent één geldig evenement met alleen de optionele melding over `offers`. Echte Facebook/WhatsApp-previewcontrole en lokale vermeldingen blijven afzonderlijke taken.
+- Vercel Web Analytics geactiveerd op het bestaande gratis Hobby-plan; het dashboard ontvangt bezoekersgegevens. Eigen QA-bezoeken kunnen daarin voorkomen. Custom events vereisen volgens het dashboard Pro en zijn niet toegevoegd.
 - Bewijs en beperkingen: `qa/seo-2026-10-20/UITVOERING.md`. Conceptteksten voor verspreiding: `plans/DEELTEKSTEN_KERSTFEEST_2026.md`.
 
 ## Doel en uitgangspunt
