@@ -1,0 +1,70 @@
+{
+  "lang": "nl-BE",
+  "siteUrl": "https://welzijnswerking.be",
+  "brand": {
+    "name": "vzw Welzijnswerking Oostende",
+    "shortName": "Welzijnswerking",
+    "logo": null,
+    "organizationContactEmail": null,
+    "organizationContactPhone": null,
+    "legalEntityNumberResearchOnly": "BE 0456.164.274",
+    "registeredAddress": {
+      "street": "Voorzienigheidstraat 16",
+      "city": "8400 Oostende"
+    },
+    "enterpriseNumber": "0456.164.274",
+    "organizationDetailsSource": "https://www.companyweb.be/nl/0456164274/welzijnswerking-oostende"
+  },
+  "event": {
+    "title": "Kerstavond.\nSamen aan tafel.",
+    "subtitle": "Het kerstfeest van Welzijnswerking Oostende",
+    "year": 2026,
+    "date": "2026-12-24",
+    "timezone": "Europe/Brussels",
+    "venueName": "Kursaal Oostende",
+    "venueAddress": "Kursaal-Westhelling 12, 8400 Oostende",
+    "priceEuro": 5,
+    "priceNote": "Deelnameprijs voor een meergangenetentje; voorwaarden en verdere praktische info volgen.",
+    "meal": "Feestelijk meergangenetentje",
+    "eventStartTime": null,
+    "doorsOpenTime": null,
+    "endTime": null,
+    "room": null,
+    "eligibilityRules": null,
+    "courseCount": null,
+    "menuItems": [],
+    "drinksIncluded": null,
+    "ticketUrl": null,
+    "ticketSalesStatus": "not_confirmed",
+    "ticketsInfoText": "Inschrijfinformatie volgt.",
+    "accessibilitySpecifics": null,
+    "transportSpecifics": null,
+    "entertainmentDetails": null,
+    "volunteerSignupUrl": null,
+    "intro": "Een feestelijke maaltijd, een warme ontmoeting. Vier kerstavond samen in het Kursaal."
+  },
+  "history": {
+    "story": "De traditie van Welzijnswerking brengt sinds de jaren negentig alleenstaande senioren in Oostende samen. Na een onderbreking vond op kerstavond 2025 opnieuw een feest plaats in het Kursaal.",
+    "edition2025GuestEstimate": 650,
+    "edition2019GuestMinimum": 750,
+    "edition2019VolunteerMinimum": 140,
+    "historicalAudience": "Alleenstaande senioren van 65 jaar en ouder",
+    "historyNote": "Dit gaat over de vorige edities, NIET over de nog onbevestigde voorwaarden van 2026."
+  },
+  "images": {
+    "heroDesktop": "/images/editorial/hero-kaarslicht-2200.webp",
+    "heroMobile": "/images/editorial/hero-kaarslicht-640.webp",
+    "supportingImage": "/images/sfeerbeelden/sfeer-tafeldecoratie.webp",
+    "heroIsGeneratedMoodImage": false,
+    "galleryPreviousYears": [],
+    "galleryCaptionWhenEmpty": "Echte sfeerbeelden van vorige edities volgen binnenkort.",
+    "heroSource": "https://www.pexels.com/photo/elegant-table-set-up-for-christmas-6061882/",
+    "heroEdition": null,
+    "heroRole": "Illustratieve sfeerfoto van een kersttafel; Nicole Michalou / Pexels. Geen foto van het evenement."
+  },
+  "sponsors": {
+    "confirmed2026": [],
+    "history2025NamesAreNotConfirmed2026": true
+  },
+  "sourceOf2026Brief": "Opdrachtgever in chat, 18 oktober 2026"
+}

@@ -1,0 +1,7 @@
+@font-face{font-family:'Instrument Serif';src:url('/fonts/instrument-serif-regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url('/fonts/instrument-serif-italic.ttf') format('truetype');font-style:italic;font-weight:400;font-display:swap}
+@font-face{font-family:'Bricolage';src:url('/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');font-style:normal;font-weight:200 800;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans-latin-wght-normal.woff2') format('woff2');font-style:normal;font-weight:100 1000;font-display:swap}
+:root{--paper:#f7f4e9;--white:#fffdf7;--ink:#20372f;--ink-soft:#56645b;--pine:#123e34;--gold:#e9cb88;--red:#87323b;--blush:#edf0e7;--line:#b9c3b7;--line-dark:#789785;--serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',sans-serif;--heading:'Bricolage',sans-serif;--container:1200px;--h1:clamp(38px,5vw,72px);--h2:clamp(30px,3vw,42px);--h3:24px;--space-section:48px;--gutter:20px}
+@media(min-width:601px){:root{--space-section:64px;--gutter:32px}}
+@media(min-width:1100px){:root{--space-section:72px;--gutter:48px}}

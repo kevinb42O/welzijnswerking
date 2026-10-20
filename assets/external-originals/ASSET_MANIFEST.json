@@ -1,0 +1,114 @@
+{
+  "assets": [
+    {
+      "title": "Casino-Kurzaal Oostende",
+      "description": "Real photographic twilight view of Casino-Kursaal Oostende street facade with warm illuminated glazing. Current building, photographed in 2025.",
+      "author": "Karelde",
+      "dateCreated": "2025-08-02T22:03:28+02:00",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casino-Kurzaal_Oostende.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Casino-Kurzaal_Oostende.jpg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseEvidence": "Commons description page author Karelde, date 2 August 2025, Licensing section states CC0 1.0 Universal Public Domain Dedication. API extmetadata confirms LicenseShortName=CC0 and AttributionRequired=false.",
+      "credit": "Kursaal Oostende — Karelde, 2025 / Wikimedia Commons (CC0 1.0).",
+      "originalFile": "/Users/kevin/PROJECTS/Welzijnswerking_2026/assets/external-originals/kursaal-twilight-2025-karelde.jpg",
+      "originalDimensions": [
+        3648,
+        2736
+      ],
+      "originalSha256": "0dc41de5d6acdddfce3ec5f426b004c87e8f5eead3fb46c7d938507a7f794f6d",
+      "derivatives": [
+        {
+          "file": "/Users/kevin/PROJECTS/Welzijnswerking_2026/public/images/editorial/kursaal-twilight-2025.webp",
+          "dimensions": [
+            2400,
+            1800
+          ],
+          "alterations": "EXIF orientation applied, resized to 2400×1800, WebP quality 87. No generative edits."
+        },
+        {
+          "file": "/Users/kevin/PROJECTS/Welzijnswerking_2026/public/images/editorial/kursaal-twilight-2025-wide.webp",
+          "dimensions": [
+            2000,
+            1125
+          ],
+          "alterations": "EXIF orientation applied, cropped from original rectangle (0,250)–(3648,2302) to remove some sky and foreground, resized to 2000×1125, WebP quality 87. No generative edits."
+        }
+      ],
+      "inspected": true,
+      "inspectionNotes": "Full photo visually inspected: recognizable current Kursaal facade, deep twilight blue and orange interior light. Camera EXIF Huawei VOG-L29, 2 August 2025 22:03. Two small people present, no synthetic-looking content. Commercial use unrestricted by CC0.",
+      "retrievedOn": "2026-10-18"
+    },
+    {
+      "title": "Kersttafel",
+      "author": "Nicole Michalou",
+      "dateCreated": "2020-11-16",
+      "sourceUrl": "https://www.pexels.com/photo/elegant-table-set-up-for-christmas-6061882/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "generative": false,
+      "licenseEvidence": "Photographer and Nikon D850 metadata on the source page; photographed November 2020. Pexels license allows free use and modification.",
+      "localFile": "public/images/editorial/kersttafel.webp",
+      "alterations": "Resized and compressed to WebP; responsive crop via CSS. No generative editing.",
+      "role": "Illustrative editorial stock photography, never a photograph of a Welzijnswerking edition.",
+      "retrievedOn": "2026-10-18",
+      "currentUse": "Hero en deelbeeld; illustratief sfeerbeeld. De editiebeelden staan afzonderlijk in het archief.",
+      "heroDerivatives": [
+        {
+          "file": "public/images/editorial/hero-kaarslicht-640.webp",
+          "width": 640,
+          "alterations": "Uitsnede origineel: x=0, y=930, 2200×1460; verkleind en WebP kwaliteit 86. Geen generatieve bewerking."
+        },
+        {
+          "file": "public/images/editorial/hero-kaarslicht-1200.webp",
+          "width": 1200,
+          "alterations": "Uitsnede origineel: x=0, y=930, 2200×1460; verkleind en WebP kwaliteit 86. Geen generatieve bewerking."
+        },
+        {
+          "file": "public/images/editorial/hero-kaarslicht-1800.webp",
+          "width": 1800,
+          "alterations": "Uitsnede origineel: x=0, y=930, 2200×1460; verkleind en WebP kwaliteit 86. Geen generatieve bewerking."
+        },
+        {
+          "file": "public/images/editorial/hero-kaarslicht-2200.webp",
+          "width": 2200,
+          "alterations": "Uitsnede origineel: x=0, y=930, 2200×1460; verkleind en WebP kwaliteit 86. Geen generatieve bewerking."
+        }
+      ]
+    },
+    {
+      "title": "Kaarslicht",
+      "author": "Nicole Michalou",
+      "dateCreated": "2020-11-16",
+      "sourceUrl": "https://www.pexels.com/photo/elegant-table-set-up-for-christmas-6062024/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "generative": false,
+      "licenseEvidence": "Photographer and Nikon D850 metadata on the source page; photographed November 2020. Pexels license allows free use and modification.",
+      "localFile": "public/images/editorial/kaarslicht.webp",
+      "alterations": "Resized and compressed to WebP; responsive crop via CSS. No generative editing.",
+      "role": "Illustrative editorial stock photography, never a photograph of a Welzijnswerking edition.",
+      "retrievedOn": "2026-10-18"
+    },
+    {
+      "title": "Christmas Table Setting",
+      "author": "Nicole Michalou",
+      "datePublished": "2020-12-09",
+      "sourceUrl": "https://www.pexels.com/video/christmas-table-setting-6139586/",
+      "originalUrl": "https://videos.pexels.com/video-files/6139586/6139586-hd_720_1280_25fps.mp4",
+      "localFile": "public/media/kersttafel-nicole-michalou-720.mp4",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "durationSeconds": 15.6,
+      "bytes": 2614117,
+      "generative": false,
+      "alterations": "None; stock HD file hosted locally, cropped in browser. Muted playback.",
+      "role": "Illustrative stock film, not own event footage.",
+      "retrievedOn": "2026-10-18"
+    }
+  ]
+}

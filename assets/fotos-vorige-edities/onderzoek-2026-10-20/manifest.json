@@ -1,0 +1,273 @@
+{
+  "checkedOn": "2026-10-20",
+  "scope": "Negen unieke beelden, tien bronbestanden, inclusief twee aankondigingsbeelden en één locatiefoto. Echte edities en aankondigingen apart gedateerd.",
+  "assets": [
+    {
+      "file": "2025-vrijwilligers-videostill.jpg",
+      "url": "https://sterartiesten.be/wp-content/uploads/2025/12/Schermafbeelding-2025-12-25-123517.jpg",
+      "source": "https://sterartiesten.be/video-wendy-van-wanten-en-clement-laten-gouden-hart-zien-en-helpen-als-vrijwilligers-op-een-kerstfeest-voor-alleenstaanden-in-oostende/",
+      "edition": 2025,
+      "published": "2025-12-25",
+      "credit": "Videostill: Het Nieuwsblad, via Sterartiesten.be; individuele maker niet bevestigd",
+      "decision": "Alleen onderzoeksweergave: lager van kwaliteit dan de gevonden KW-persfoto; Nieuwsblad-logo intact.",
+      "width": 1156,
+      "height": 676,
+      "bytes": 122019,
+      "sha256": "694c813e3dbc8035054868d3a67a7350616e111037f6d784735e2b99cc817054",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "selectedForWebsite": false
+    },
+    {
+      "file": "2025-vrijwilligers-videostill-2.png",
+      "url": "https://sterartiesten.be/wp-content/uploads/2025/12/image-40.png",
+      "source": "https://sterartiesten.be/video-wendy-van-wanten-en-clement-laten-gouden-hart-zien-en-helpen-als-vrijwilligers-op-een-kerstfeest-voor-alleenstaanden-in-oostende/",
+      "edition": 2025,
+      "published": "2025-12-25",
+      "credit": "Videostill: Het Nieuwsblad, via Sterartiesten.be; individuele maker niet bevestigd",
+      "decision": "Niet in sitecompositie: spelerknoppen en lage resolutie. Alleen onderzoeksweergave.",
+      "width": 812,
+      "height": 452,
+      "bytes": 469022,
+      "sha256": "536134ab2d8a45af325f1a98c5cf2d7369722a1ca0311300465e3e4f4f02171d",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "selectedForWebsite": false
+    },
+    {
+      "file": "2025-aankondiging-stefaan-reuse.jpg",
+      "url": "https://www.hetnieuwsvandaag.be/media/3mvmzgce/dsc_0314-kopie-2-klein.jpg",
+      "source": "https://www.hetnieuwsvandaag.be/nl/nieuws/regio/kerstavond-voor-alleenstaanden-vanaf-65-jaar-in-kursaal-oostende/",
+      "edition": null,
+      "published": "2025-11-16",
+      "credit": "Stefaan Reuse, volgens artikelcredit",
+      "decision": "Niet in sitecompositie: locatiefoto; opnamedatum onbekend. Geen editiebeeld van december 2025.",
+      "width": 720,
+      "height": 480,
+      "bytes": 123013,
+      "sha256": "c741f4ae924c01f37b22ba84cec679575b34ba11da2eeaf132d4baf8a71bcc54",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "selectedForWebsite": false
+    },
+    {
+      "file": "2019-focus-origineel.jpg",
+      "url": "https://focus-wtv.be/public/import/kansarm.jpg",
+      "source": "https://focus-wtv.be/nieuws/kerstfeest-kursaal-voor-750-senioren-en-alleenstaanden",
+      "edition": 2019,
+      "published": "2019-12-24",
+      "credit": "Focus & WTV; individuele fotograaf/cameramaker niet vermeld",
+      "decision": "Vervangen in de hoofdpagina door de eigen Facebook-fotoreeks van de organisatie. Bronbestand blijft in de beeldbank.",
+      "width": 1000,
+      "height": 462,
+      "bytes": 85168,
+      "sha256": "e1ecd42b84ae405a319203071d4318a39f539868b361813ede893657e7487bc6",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "selectedForWebsite": false,
+      "publicationDecision": "Op uitdrukkelijk verzoek van de opdrachtgever op 20 oktober 2026 in de gewone pagina opgenomen, met bron en editiejaar. Dit is geen bewijs van een door de bron verleende licentie.",
+      "webVariants": [
+        {
+          "src": "/images/event/2019-zaal-1000.webp",
+          "bytes": 70552,
+          "sha256": "85b9869efa5c168c09d6a4625380dace44451dab6764a0109a8b2207a038c5a3"
+        },
+        {
+          "src": "/images/event/2019-zaal-640.webp",
+          "bytes": 37220,
+          "sha256": "ff8c430f3ef434d86374a862ab654480f7a7be3e1d3da25908f3303329eaa871"
+        }
+      ]
+    },
+    {
+      "file": "2019-focus-reportage.jpg",
+      "url": "https://focus-wtv.be/public/import/_1200x630_crop_center-center_82_none/kansarm.jpg?mtime=1687436297",
+      "source": "https://focus-wtv.be/nieuws/kerstfeest-kursaal-voor-750-senioren-en-alleenstaanden",
+      "edition": 2019,
+      "published": "2019-12-24",
+      "credit": "Focus & WTV; individuele maker niet vermeld",
+      "decision": "Dubbele bronvariant van hetzelfde beeld. Originele verhouding heeft voorkeur; geen extra unieke foto.",
+      "width": 1200,
+      "height": 630,
+      "bytes": 126093,
+      "sha256": "b020521171ce89ca0a6b225cfd597608490d3c677107572a49a5c96eb7faed4d",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "selectedForWebsite": false
+    },
+    {
+      "file": "2025-kw-vrijwilligers.jpg",
+      "url": "https://img.static-rmg.be/a/view/q75/w1600/h836/f50.00%2C50.00/7561362/img-2896-jpg.jpg",
+      "source": "https://kw.be/nieuws/samenleving/wendy-van-wanten-en-zoon-clement-dienen-op-tijdens-kerstfeest-voor-alleenstaanden-amai-wat-een-knappe-jongen-hij-lijkt-sprekend-op-zijn-vader/",
+      "edition": 2025,
+      "published": "2025-12-25",
+      "credit": "JRO, volgens foto-onderschrift bij KW; artikel van Jeffrey Roos",
+      "decision": "Vervangen in de hoofdpagina door de eigen Facebook-fotoreeks van de organisatie. Bronbestand blijft in de beeldbank.",
+      "width": 1600,
+      "height": 836,
+      "bytes": 172207,
+      "sha256": "ffc1f681168a2820fe319a37ad83fe5eb9f96bf45502eb550afa3d0bc603f56e",
+      "permissionReceived": false,
+      "permissionEvidence": null,
+      "publish": false,
+      "downloaded": "2026-10-20",
+      "downloadNote": "Openbare CDN-link: komma URL-gecodeerd als %2C, met normale browserheaders. De eerder ongecodeerde variant gaf 403. Geen account of betaalmuur omzeild.",
+      "selectedForWebsite": false,
+      "publicationDecision": "Op uitdrukkelijk verzoek van de opdrachtgever op 20 oktober 2026 in de gewone pagina opgenomen, met bron en editiejaar. Dit is geen bewijs van een door de bron verleende licentie.",
+      "webVariants": [
+        {
+          "src": "/images/event/2025-vrijwilligers-1200.webp",
+          "bytes": 105718,
+          "sha256": "e340962e41b85c0ac0f8e90d9fa3f98ac00303dd5e1b87a96bbd904c274fd7e0"
+        },
+        {
+          "src": "/images/event/2025-vrijwilligers-1600.webp",
+          "bytes": 151490,
+          "sha256": "b63a195cd69b6222a3df2ffdae24be52d5f14c32b53fdcba5fab4499085e36c5"
+        },
+        {
+          "src": "/images/event/2025-vrijwilligers-640.webp",
+          "bytes": 43446,
+          "sha256": "c339eba9e3359247e300e6cf4bcf2286afdd8c9d802e9bd960006fd3aef22364"
+        }
+      ]
+    },
+    {
+      "file": "2018-kw-vrijwilligers.jpg",
+      "url": "https://img.static-rmg.be/a/view/q75/w620/h465/2845441/4972071-jpg.jpg",
+      "source": "https://kw.be/nieuws/samenleving/meer-dan-700-alleenstaanden-vieren-kerstavond-in-kursaal-oostende/",
+      "published": "2018-12-25T07:33:04+00:00",
+      "sourceCaption": "Een groep vrijwilligers onder leiding van Diane Dulst en Vanessa Vens. © FRO",
+      "edition": 2018,
+      "permissionReceived": false,
+      "publish": false,
+      "sha256": "4a611b304fc1e14e5755bd4506fb89bab275ba862bf90cfc4697f5055a125304",
+      "bytes": 38786,
+      "downloaded": "2026-10-20",
+      "decision": "Vervangen in de hoofdpagina door de eigen Facebook-fotoreeks van de organisatie. Bronbestand blijft in de beeldbank.",
+      "selectedForWebsite": false,
+      "publicationDecision": "Op uitdrukkelijk verzoek van de opdrachtgever op 20 oktober 2026 in de gewone pagina opgenomen, met bron en editiejaar. Dit is geen bewijs van een door de bron verleende licentie.",
+      "webVariants": [
+        {
+          "src": "/images/event/2018-vrijwilligers-620.webp",
+          "bytes": 34052,
+          "sha256": "526e003349c2ead084e1c781b82deb4af4499c13d1c46495a6e0f74d109aea31"
+        }
+      ],
+      "width": 620,
+      "height": 465,
+      "credit": "FRO / KW"
+    },
+    {
+      "file": "2019-kw-aankondiging.jpg",
+      "url": "https://img.static-rmg.be/a/view/q75/w1000/h667/2763777/a50f4b6268c738887c48ebc4e5f0c6a3-jpg.jpg",
+      "source": "https://kw.be/nieuws/samenleving/kerstfeest-voor-alleenstaande-oostendenaars-vindt-voortaan-s-middags-plaats/",
+      "published": "2019-10-21T09:47:49+00:00",
+      "sourceCaption": "Het Kerstfeest voor Oostendenaars zit in een nieuw jasje. We zien v.l.n.r. Vanessa Vens, Bart Plasschaert, Diane D'Hulst, Bart Tommelein, Charlotte De Backer, Danick Minne en Nathalie Vervaecke. © GLO",
+      "edition": null,
+      "permissionReceived": false,
+      "publish": false,
+      "sha256": "d9f0ecdcd10b89026a4a3a515d9f46b34448912485791913feb084bf3c3c88ae",
+      "bytes": 108332,
+      "downloaded": "2026-10-20",
+      "decision": "Niet in de website: aankondigings-/organisatiefoto, geen opname van het feest zelf.",
+      "selectedForWebsite": false,
+      "width": 1000,
+      "height": 667,
+      "credit": "GLO / KW"
+    },
+    {
+      "file": "2025-kw-organisatie-aankondiging.jpg",
+      "url": "https://img.static-rmg.be/a/view/q75/w1600/h836/f50.00%2C50.00/7500961/46-oost-kerstfeest-ef2-1-jpg.jpg",
+      "source": "https://kw.be/nieuws/samenleving/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/",
+      "published": "2025-11-14T09:09:48+00:00",
+      "sourceCaption": "V.l.n.r. chef Sam Vancompenolle, Gwen Nys (Kursaal), Niko Geldhof, Rob Jonckheere, muzikale kerstman Jean-Pierre Severens, Diane D’Hulst, Fabrice Goffin en Danick Minne. (foto efo)",
+      "edition": null,
+      "permissionReceived": false,
+      "publish": true,
+      "sha256": "d06f53d04c819abfa9f17fbdcd51a79c6b1e3da1c6d81c80c684d6f95b71c07f",
+      "bytes": 216479,
+      "downloaded": "2026-10-20",
+      "decision": "Op uitdrukkelijk verzoek toegevoegd bij de organisatie, met namen uit brononderschrift. Aankondiging november 2025, geen avondopname.",
+      "selectedForWebsite": true,
+      "width": 1600,
+      "height": 836,
+      "credit": "EFO / KW",
+      "webVariants": [
+        {
+          "src": "/images/event/2025-organisatie-1200.webp",
+          "bytes": 137784,
+          "sha256": "3e0f2605c2967c0afb8edba496eb3275e5b52bb6f39627db6b762acb63e5aadf"
+        },
+        {
+          "src": "/images/event/2025-organisatie-1600.webp",
+          "bytes": 201440,
+          "sha256": "51058c5b8fad35e7d25a1408cd6926843b46c85ae84925dd2d0698876987bd50"
+        },
+        {
+          "src": "/images/event/2025-organisatie-640.webp",
+          "bytes": 52066,
+          "sha256": "dc2d87298c2079789ac76b81381eaa3fd0dcc7f16865644006e2c90734550820"
+        }
+      ]
+    },
+    {
+      "file": "2016-kw-kerstman.jpg",
+      "url": "https://img.static-rmg.be/a/view/q75/w620/h405/2726453/2444327-jpg.jpg",
+      "source": "https://kw.be/nieuws/samenleving/hartverwarmend-kerstreveillon-in-oostende/",
+      "published": "2016-12-24T21:43:09+00:00",
+      "sourceCaption": "Kerstman Marie-Louise Vanhooren met rond haar dochter Ghylène Sanders, zoon Mario Sanders, schoonzoon Benny Stalpaert en Diane D'hulst (organisatie Kerstreveillon). © FRO",
+      "edition": 2016,
+      "permissionReceived": false,
+      "publish": false,
+      "sha256": "c70daa90dffccfec850ed2bcdefb9b3cb6d439f7e8da84f4f313020639f018cc",
+      "bytes": 40646,
+      "downloaded": "2026-10-20",
+      "decision": "Vervangen in de hoofdpagina door de eigen Facebook-fotoreeks van de organisatie. Bronbestand blijft in de beeldbank.",
+      "selectedForWebsite": false,
+      "publicationDecision": "Op uitdrukkelijk verzoek van de opdrachtgever op 20 oktober 2026 in de gewone pagina opgenomen, met bron en editiejaar. Dit is geen bewijs van een door de bron verleende licentie.",
+      "webVariants": [
+        {
+          "src": "/images/event/2016-kerstfeest-620.webp",
+          "bytes": 39228,
+          "sha256": "c68a8267e74658adfbd5cc679dc530c533cf7637c23b96d92ac5fa4ce9392353"
+        }
+      ],
+      "width": 620,
+      "height": 405,
+      "credit": "FRO / KW"
+    }
+  ],
+  "unavailable": [
+    {
+      "source": "https://www.nieuwsblad.be/regio/west-vlaanderen/middenkust/oostende/wendy-van-wanten-en-zoon-clement-helpen-als-vrijwilligers-op-kerstfeest-voor-alleenstaanden-zelf-kerstfeest-met-gezin-een-dagje-verplaatst/117926953.html",
+      "downloadStatus": "Artikel HTTP 403. Twee afgeleide stills wel openbaar beschikbaar via Sterartiesten, met expliciete broncredit."
+    }
+  ],
+  "searchFollowup": {
+    "date": "2026-10-20",
+    "checked": [
+      "KW: openbare zoekfunctie en primaire reportages over 2016, 2018, aankondiging 2019, aankondiging 2025 en editie 2025.",
+      "De Plate: records DOC2014/0003 en DOC2013/0748 bevatten alleen een placeholder, geen publiek beeldbestand.",
+      "Officiële domein welzijnswerking.be: HTTP verwijst naar een Easyhost-parkeerpagina; HTTPS niet bereikbaar.",
+      "Zoekopdrachten gericht op Kursaal, Vesalius, vrijwilligers, Facebook, Instagram, lokale media en fotoalbums. Geen extra verifieerbaar openbaar album van het feest in december 2025 gevonden."
+    ],
+    "excluded": [
+      "Rosa Hotel: schenking voor Lege Brooddozen, niet dit kerstfeest.",
+      "De Schelpe 2022: kerstbrunch in ontmoetingscentrum, ander initiatief.",
+      "Sing Along 2025, kerstvariété en oudjaarsfeest: andere evenementen."
+    ],
+    "result": "Vier nieuwe beelden gedownload en visueel bekeken. Totaal negen unieke beelden, tien bronbestanden; vier geselecteerde eventbeelden in de gewone website."
+  },
+  "facebookFollowup": "Rechtstreeks op Facebook is op 20 oktober 2026 het openbare bericht van Welzijnswerking Oostende van 25 december 2025 gevonden: 38 foto’s. Zie ../facebook-2025/manifest.json. Zeven geselecteerde albumfoto’s vervangen de pers-/archiefcompositie; de gevraagde aankondigingsfoto met Fabrice Goffin staat apart bij de organisatie."
+}

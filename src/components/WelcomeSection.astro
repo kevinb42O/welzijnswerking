@@ -1,0 +1,22 @@
+---
+import { event } from '../data/event';
+---
+<section id="welkom" class="welcome section" aria-labelledby="welcome-title">
+  <div class="container welcome-grid">
+    <div class="welcome-intro">
+      <span class="small-label">Zin in gezelschap?</span>
+      <h2 id="welcome-title">Kom gerust alleen.<br/><em>We vieren samen.</em></h2>
+      <p>Liever niet alleen thuis op kerstavond? Kom mee eten in het Kursaal.</p>
+    </div>
+    <dl class="welcome-questions">
+      <div><dt>Kan ik ook alleen komen?</dt><dd>Ja, zeker. Je kan voor jezelf inschrijven, zonder iemand mee te brengen.</dd></div>
+      <div><dt>Ik ken daar niemand. Is dat erg?</dt><dd>Helemaal niet. Je hoeft op voorhand niemand te kennen om mee te komen eten.</dd></div>
+      <div><dt>Is dit feest voor mij?</dt><dd>{event.eligibility ? event.eligibility : <>Bij de vorige edities kwamen alleenstaande senioren uit Oostende samen. Binnenkort lees je hier wie er in {event.year} kan inschrijven.</>}</dd></div>
+    </dl>
+    {(event.organizerContactEmail || event.phone) && <p class="welcome-contact">Nog een vraag voor je inschrijft? {event.organizerContactEmail && <a href={`mailto:${event.organizerContactEmail}`}>Mail ons gerust</a>}{event.organizerContactEmail && event.phone && ' of '}{event.phone && <a href={`tel:${event.phone.replace(/\s/g, '')}`}>bel {event.phone}</a>}.</p>}
+  </div>
+</section>
+<style>
+.welcome{background:var(--paper);padding-bottom:0}.welcome-grid{display:grid;gap:32px;padding-bottom:48px;border-bottom:1px solid var(--line)}.welcome-intro{max-width:440px}.welcome .small-label{font-size:11px;font-weight:400;letter-spacing:.09em;text-transform:uppercase;margin-bottom:18px}.welcome h2{font:400 clamp(44px,5vw,64px)/.98 var(--serif);letter-spacing:-.025em}.welcome h2 em{font-weight:400;color:var(--pine)}.welcome-intro>p{font-size:16px;line-height:1.7;margin-top:22px;color:var(--ink-soft);max-width:360px}.welcome-questions{display:grid;gap:22px}.welcome-questions>div{padding-bottom:22px;border-bottom:1px solid #b9c3b780}.welcome-questions>div:last-child{padding-bottom:0;border-bottom:0}.welcome-questions dt{font-size:17px;line-height:1.4;font-weight:500;color:var(--pine)}.welcome-questions dd{font-size:16px;line-height:1.7;color:var(--ink-soft);margin-top:8px;max-width:570px}.welcome-contact{font-size:15px;line-height:1.7;grid-column:1/-1}.welcome-contact a{color:var(--pine)}
+@media(min-width:768px){.welcome-grid{grid-template-columns:1fr 1.25fr;gap:32px 72px;padding-bottom:64px}.welcome-questions{padding-top:2px;gap:24px}.welcome-questions>div{padding-bottom:24px}.welcome-intro>p{margin-top:24px}.welcome-questions dt{font-size:18px}.welcome-contact{margin-top:0}}
+</style>

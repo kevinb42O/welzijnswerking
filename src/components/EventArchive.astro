@@ -1,0 +1,24 @@
+---
+const album = 'https://www.facebook.com/permalink.php?story_fbid=pfbid02mnYXrpdC19N5fsG8AepACcd7QGvm1z3ucA3NtRZPXMGPviJKsGgHrPiZ4EnR3xyRl&id=100066480021669';
+const photos = [
+  { index: '17', label: 'Samen aan tafel', alt: 'Vrijwilligers bedienen gasten aan de lange gedekte tafels tijdens het kerstfeest van 2025.', position: '50% 50%' },
+  { index: '07', label: 'Helpende handen', alt: 'Vrijwilligers bij de warme maaltijd achter de schermen van het kerstfeest in 2025.', position: '50% 45%' },
+  { index: '34', label: 'Met zorg klaargemaakt', alt: 'Vrijwilligers werken een reeks dessertborden af voor het kerstfeest van 2025.', position: '50% 50%' },
+  { index: '31', label: 'Tijd om te dansen', alt: 'Gasten dansen samen in het Kursaal tijdens de kerstavond van 2025.', position: '50% 55%' },
+  { index: '01', label: 'Een avond in gezelschap', alt: 'Gasten zitten samen aan een lange feesttafel in het Kursaal tijdens het kerstfeest van 2025.', position: '50% 45%' },
+  { index: '37', label: 'Een feestelijk dessert', alt: 'Dessertborden staan klaar achter de schermen van het kerstfeest van 2025.', position: '50% 60%' },
+];
+---
+<section class="event-archive section" aria-labelledby="event-archive-title">
+  <div class="container">
+    <div class="event-archive-heading"><div><span class="small-label">Kerstavond 2025 in beeld</span><h2 id="event-archive-title">Aan tafel.<br />En er voor elkaar zijn.</h2></div><p>Een zaal vol gezelschap, vrijwilligers in de weer en muziek op de dansvloer. Dit was kerstavond 2025 in het Kursaal.</p></div>
+    <figure class="event-photo-lead"><a href="/images/event/2025-facebook-25-1600.webp" target="_blank" aria-label="Vergroot de zaalopname van kerstavond 2025"><img src="/images/event/2025-facebook-25-1600.webp" srcset="/images/event/2025-facebook-25-640.webp 640w, /images/event/2025-facebook-25-1200.webp 1200w, /images/event/2025-facebook-25-1600.webp 1600w" sizes="(max-width: 1240px) calc(100vw - 40px), 1200px" width="2048" height="1536" alt="De feestzaal van het Kursaal vol gasten aan gedekte tafels tijdens het kerstfeest van 24 december 2025." loading="lazy" /></a><figcaption><span>Kerstavond 2025 · Samen vieren in het Kursaal.</span><a href={album} target="_blank" rel="noopener noreferrer">Welzijnswerking Oostende / Facebook ↗</a></figcaption></figure>
+    <div class="event-photo-grid">{photos.map(photo => <figure><a class="archive-photo-frame" href={`/images/event/2025-facebook-${photo.index}-1536.webp`} target="_blank" aria-label={`Vergroot: ${photo.label}`}><img src={`/images/event/2025-facebook-${photo.index}-960.webp`} srcset={`/images/event/2025-facebook-${photo.index}-480.webp 480w, /images/event/2025-facebook-${photo.index}-960.webp 960w`} sizes="(max-width: 767px) calc(50vw - 28px), 380px" width="960" height="720" alt={photo.alt} loading="lazy" style={{objectPosition:photo.position}} /></a><figcaption><h3>{photo.label}</h3></figcaption></figure>)}</div>
+    <a class="text-link event-album-link" href={album} target="_blank" rel="noopener noreferrer">Bekijk alle 38 foto’s bij Welzijnswerking Oostende <span aria-hidden="true">↗</span></a>
+
+  </div>
+</section>
+<style>
+.event-archive{background:var(--paper);border-top:1px solid var(--line)}.event-archive-heading{display:grid;gap:24px;align-items:end;margin-bottom:32px}.event-archive-heading h2{max-width:650px}.event-archive-heading>p{max-width:440px}.event-photo-lead img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 55%}.event-photo-lead figcaption{display:flex;flex-wrap:wrap;gap:4px 24px;justify-content:space-between;padding-top:12px;font-size:14px;line-height:1.6;color:var(--ink-soft)}.event-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px;margin-top:36px}.event-photo-grid figure{min-width:0}.archive-photo-frame{display:block;aspect-ratio:4/3;overflow:hidden}.archive-photo-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%}.event-photo-grid figcaption{padding-top:16px}.archive-edition{font:600 17px/1.5 var(--heading);color:var(--red)}.event-photo-grid h3{font:500 17px/1.4 var(--sans);margin:0}.event-album-link{margin-top:32px}.event-photo-grid figcaption a{font-size:14px;line-height:1.6;color:var(--ink-soft)}
+@media(min-width:768px){.event-archive-heading{grid-template-columns:1.3fr 1fr;gap:64px}.event-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}}
+</style>

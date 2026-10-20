@@ -1,0 +1,214 @@
+{
+  "results": [
+    {
+      "photos": 0,
+      "count": 0,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 0,
+      "count": 0,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 0,
+      "count": 0,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 1,
+      "count": 1,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 1,
+      "count": 1,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 1,
+      "count": 1,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 2,
+      "count": 3,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 2,
+      "count": 3,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 2,
+      "count": 3,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 3,
+      "count": 4,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 3,
+      "count": 4,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 3,
+      "count": 4,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 4,
+      "count": 12,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 4,
+      "count": 12,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 4,
+      "count": 12,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 10,
+      "count": 24,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 10,
+      "count": 24,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 10,
+      "count": 24,
+      "width": 768,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 20,
+      "count": 40,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 20,
+      "count": 40,
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 20,
+      "count": 40,
+      "width": 768,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    },
+    {
+      "photos": 20,
+      "count": 40,
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "demoYears": false,
+      "accessibilityViolations": []
+    }
+  ],
+  "errors": [],
+  "lightbox": {
+    "arrows": true,
+    "wrap": true,
+    "escape": true,
+    "focusTrap": true,
+    "focusRestore": true,
+    "closeButton": true,
+    "buttonNavigation": true,
+    "axeViolations": 0
+  },
+  "previewInProduction": false
+}

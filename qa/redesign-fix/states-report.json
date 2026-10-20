@@ -1,0 +1,93 @@
+[
+  {
+    "state": "start",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "full",
+    "width": 320,
+    "note": "Inschrijfinformatie volgt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "full",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "full",
+    "width": 1440,
+    "note": "Inschrijfinformatie volgt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "available",
+    "width": 390,
+    "note": "Inschrijven voor het kerstfeest\nReserveer je plaats\n↗\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "invalid",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "missing-link",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "sold-out",
+    "width": 390,
+    "note": "Het kerstfeest is uitverkocht.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "closed",
+    "width": 390,
+    "note": "De inschrijvingen zijn afgesloten.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "contact",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "menu-only",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het aanvangsuur en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "eligibility-only",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het aanvangsuur en het menu worden voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  },
+  {
+    "state": "only-menu-missing",
+    "width": 390,
+    "note": "Inschrijfinformatie volgt.\n\nOok het menu wordt voor 2026 hier bekendgemaakt.",
+    "axeViolations": 0,
+    "overflow": false
+  }
+]

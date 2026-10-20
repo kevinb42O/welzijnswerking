@@ -1,0 +1,29 @@
+
+> welzijnswerking-oostende@1.0.0 build
+> astro check && astro build
+
+22:31:48 [types] Generated 59ms
+22:31:48 [check] Getting diagnostics for Astro files in /Users/kevin/PROJECTS/Welzijnswerking_2026...
+Result (29 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+22:31:53 [types] Generated 34ms
+22:31:53 [build] output: "static"
+22:31:53 [build] mode: "static"
+22:31:53 [build] directory: /Users/kevin/PROJECTS/Welzijnswerking_2026/dist/
+22:31:53 [build] Collecting build info...
+22:31:53 [build] ✓ Completed in 71ms.
+22:31:53 [build] Building static entrypoints...
+22:31:53 [vite] ✓ built in 175ms
+22:31:53 [vite] ✓ built in 45ms
+22:31:53 [build] Rearranging server assets...
+
+ generating static routes 
+22:31:53   ├─ /index.html (+12ms) 
+22:31:53 ✓ Completed in 35ms.
+
+22:31:53 [build] ✓ Completed in 287ms.
+22:31:53 [build] 1 page(s) built in 366ms
+22:31:53 [build] Complete!

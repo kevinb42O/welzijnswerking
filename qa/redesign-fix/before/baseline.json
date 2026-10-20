@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-18T20:22:37.047Z",
+  "url": "http://127.0.0.1:4323",
+  "commit": null,
+  "status": "?? .gitignore\n?? 01_START_HIER.md\n?? 02_CODEX_MASTERPROMPT.md\n?? 03_ONDERZOEK_EN_BRONNEN.md\n?? 04_BEELDBANK_EN_RECHTEN.md\n?? 05_PUBLICATIE_CHECKLIST.md\n?? CONTENT_TODO.md\n?? README.md\n?? Welzijnswerking_Redesign_Codex/\n?? assets/\n?? astro.config.mjs\n?? data/\n?? package-lock.json\n?? package.json\n?? plans/\n?? public/\n?? qa/\n?? scripts/\n?? src/\n?? tsconfig.json\n",
+  "assets": [
+    {
+      "src": "/images/editorial/kursaal-twilight-2025-wide.webp",
+      "bytes": null
+    }
+  ]
+}

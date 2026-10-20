@@ -1,0 +1,344 @@
+{
+  "generatedAt": "2026-10-18T20:34:34.149Z",
+  "productionUrl": "http://127.0.0.1:4325/",
+  "developmentUrl": "http://127.0.0.1:4323/",
+  "files": [
+    {
+      "path": "src/components/CandleDrawing.astro",
+      "bytes": 1856,
+      "sha256": "e8a243de23aaa286c0300aafe2b98d27c0457aa88c4cbd2504c39ceafe546d48"
+    },
+    {
+      "path": "src/components/EventHero.astro",
+      "bytes": 1459,
+      "sha256": "ac3879e4c672c0a5b33345c0b37597610067fd390d300e9f99eb1d4a1dc3abb2"
+    },
+    {
+      "path": "src/components/HistorySection.astro",
+      "bytes": 1738,
+      "sha256": "9154f83779e2e5b94bdb5439b298ba5e97899e6fbbeafcfd7b391d1485ca0b92"
+    },
+    {
+      "path": "src/components/Icon.astro",
+      "bytes": 886,
+      "sha256": "799df702d3b2ac58e708fc2b74841be89c6df0956aeab3bfbbaaef5fd05b4f03"
+    },
+    {
+      "path": "src/components/PhotoGallery.astro",
+      "bytes": 6035,
+      "sha256": "e2a5849f15791b761a59297fbc92d5d23382e426eab3b52e3a30bc2c27a46bb3"
+    },
+    {
+      "path": "src/components/PracticalInfo.astro",
+      "bytes": 5287,
+      "sha256": "fb43990c4234e5829401932cace959b46dbfb144f6ccc6292a05fdda5604eee1"
+    },
+    {
+      "path": "src/components/SiteFooter.astro",
+      "bytes": 1401,
+      "sha256": "9848775562c790eb18f3b89ee6ae3fdc30892724694556d809d8e9bd8752fa74"
+    },
+    {
+      "path": "src/components/SiteHeader.astro",
+      "bytes": 2328,
+      "sha256": "56b5613cfa726d4f9c2bb7d25819c89e422689c4e8c44499f4dfd90eb43c0942"
+    },
+    {
+      "path": "src/components/SponsorGrid.astro",
+      "bytes": 3715,
+      "sha256": "88ade31f8bed9390ef3f96099aa75805fddb753ea287deaec6aa23c72ad71c9d"
+    },
+    {
+      "path": "src/components/StorySection.astro",
+      "bytes": 1519,
+      "sha256": "e05306cc1811b35a1385975c78067f2e362d887870dd04235d87018e3b512d51"
+    },
+    {
+      "path": "src/data/event.ts",
+      "bytes": 2180,
+      "sha256": "c90b906c76325774f2ff9f8c7efefbfbd4df777b34cacea4eb7df436531e258b"
+    },
+    {
+      "path": "src/data/format.mjs",
+      "bytes": 288,
+      "sha256": "2d2caf6c4a51c93dc9522de5fdbfe36a0e1060de3ea7c8e3ac80dbf5bf234b0a"
+    },
+    {
+      "path": "src/data/gallery.ts",
+      "bytes": 504,
+      "sha256": "c737cbf429be0ad65d631f3c84a948668c1634e7ababf857b7ac06040666ce94"
+    },
+    {
+      "path": "src/data/history.ts",
+      "bytes": 1382,
+      "sha256": "49e42486f90043fb70f18e0306e0b342790178f03c8e020d9e6fcda08e456aa8"
+    },
+    {
+      "path": "src/data/publication.mjs",
+      "bytes": 2336,
+      "sha256": "7a04c8da30e8508d12c4e04233ee2c4c37c34e78c154913466e208d0fdb7c069"
+    },
+    {
+      "path": "src/data/sponsors.ts",
+      "bytes": 845,
+      "sha256": "8318465779f02f7bd87f910c9a69c1b988ec403905ab65ac504da957168d9a2d"
+    },
+    {
+      "path": "src/layouts/BaseLayout.astro",
+      "bytes": 2502,
+      "sha256": "dc72dd6db3d791f7248c89e29d35561d6c0055d86ba43216d6aeb1031c27ad94"
+    },
+    {
+      "path": "src/pages/dev-preview/[mode].astro",
+      "bytes": 2662,
+      "sha256": "993217aa0d9a20712a77771d8d477d26f93bfad59617d72d55b603259f47b9aa"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "bytes": 715,
+      "sha256": "f6f0d859cb0a10fb9606ed4652e8f7aeee2dc8580cd09472b399c984b3e1959e"
+    },
+    {
+      "path": "src/styles/campaign.css",
+      "bytes": 13015,
+      "sha256": "28c791117b569c4285de53ca3eef5987a48d8413b8985689faf5aef207c8a1ad"
+    },
+    {
+      "path": "src/styles/global.css",
+      "bytes": 1955,
+      "sha256": "02a970904d8ef667a5c2da17e8a2485bdf44002ed9dc5be8fa982d66002e550c"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "bytes": 806,
+      "sha256": "fc8d042318acf8235de3e842aa4de6de701d25b232e4b6d40b5221c6cdfb599b"
+    },
+    {
+      "path": "data/inhoud_2026.json",
+      "bytes": 2432,
+      "sha256": "cc72a1ba9420d231a8f0bf30b5def2e6d248748a79b1b749a8c21eb5967387cc"
+    },
+    {
+      "path": "data/partners_2025_onderzoek.csv",
+      "bytes": 2290,
+      "sha256": "f5dfe7aa91ac67d126903a2dc4362d48c16eb77410ee08b92634935e785decd1"
+    },
+    {
+      "path": "data/sponsors_2026.template.json",
+      "bytes": 978,
+      "sha256": "0fe4d0992e8899c3573308e0cca477f97e4aac139954a41e47bcc80c8eb98936"
+    },
+    {
+      "path": "scripts/browser-qa.mjs",
+      "bytes": 9159,
+      "sha256": "93142f77e07d42fa39e9c2947f45c0f256b889b870ae6acde009056ae19d347e"
+    },
+    {
+      "path": "scripts/content.test.mjs",
+      "bytes": 2857,
+      "sha256": "32bdeb8a606cb6d2c3631246b56b0a79e7db0cf91f575a6f777e080cf425a34d"
+    },
+    {
+      "path": "scripts/creative-qa.mjs",
+      "bytes": 1112,
+      "sha256": "209062bdaf5e47a72448cd499bfa69e81080e7dde523b092b405297e4bfc9d00"
+    },
+    {
+      "path": "scripts/drawing-qa.mjs",
+      "bytes": 1833,
+      "sha256": "e11bc10dbfb57edf297d9642700a5a0df01cfe0691100fbbb3bdb5f38b4de628"
+    },
+    {
+      "path": "scripts/generate-social-card.mjs",
+      "bytes": 3599,
+      "sha256": "bd4180080d613b1d7010b074e985bd5aea0c92ca122daa13beaf0d082b7a1d2d"
+    },
+    {
+      "path": "scripts/modules-qa.mjs",
+      "bytes": 4625,
+      "sha256": "447b9d6e590433a68719209fcbe4bd6dc474bc282088c60cd1cd08fdb12a119e"
+    },
+    {
+      "path": "scripts/performance-qa.mjs",
+      "bytes": 2112,
+      "sha256": "84c2c066ac07a2461946a70f491969a6a9caed197a3da70d78f5f5df68f5830f"
+    },
+    {
+      "path": "scripts/states-qa.mjs",
+      "bytes": 2669,
+      "sha256": "0f26a2cc4eb00d6325a738e13efdcec2f2a0922a8ab67ccca2a057b3f7083938"
+    },
+    {
+      "path": "dist/_astro/SiteFooter.GTcQ7Mj6.css",
+      "bytes": 15003,
+      "sha256": "5afa99d0ce686857ea4a136ae096ccc6869fbfc795e9e684ea5805686be81f0c"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 249,
+      "sha256": "094049a40809150a6f1c7c7e03c434947d3bc6a25b636ceff756889e53953bf3"
+    },
+    {
+      "path": "dist/fonts/LICENSE-bricolage.txt",
+      "bytes": 4401,
+      "sha256": "923f4ddf0fd39f9b7794ab0df7332f3d95dc43e8ad7ec2289d6d9e8491177f51"
+    },
+    {
+      "path": "dist/fonts/LICENSE-dm-sans.txt",
+      "bytes": 4502,
+      "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+    },
+    {
+      "path": "dist/fonts/bricolage-grotesque-latin-wght-normal.woff2",
+      "bytes": 41344,
+      "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+    },
+    {
+      "path": "dist/fonts/dm-sans-latin-wght-normal.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "dist/images/decoratie/sparkle.svg",
+      "bytes": 300,
+      "sha256": "d8a3932a7ccfc32270fd128c06d49f03f2882e26261f08e9e7413c2fc539340e"
+    },
+    {
+      "path": "dist/images/decoratie/takje.svg",
+      "bytes": 546,
+      "sha256": "48f1bf0c5c5794069439189a9dd64bcf234c2355e7f1da74a9abaab578f0aaab"
+    },
+    {
+      "path": "dist/images/design/feestlicht.svg",
+      "bytes": 1845,
+      "sha256": "2062460921e84b8011b5ea18c7a6c9aae812de2b9db1e7a375891362c511a9c1"
+    },
+    {
+      "path": "dist/images/editorial/kaarslicht.webp",
+      "bytes": 133982,
+      "sha256": "deed84d34cfe04f25b4a561452a66d2c1e41ab0acd316c0687ab529283ec6a8c"
+    },
+    {
+      "path": "dist/images/editorial/kersttafel-800.webp",
+      "bytes": 100300,
+      "sha256": "07dde491cc52f8f1fcc5237d89a3c7ffad7e70768481bf9578eab7f19f24f081"
+    },
+    {
+      "path": "dist/images/editorial/kersttafel.webp",
+      "bytes": 304816,
+      "sha256": "15252f85fdaf676222fcb7ec9fe6f09e4d22beb585ba0186abe6403d6f6ba2fe"
+    },
+    {
+      "path": "dist/images/editorial/kursaal-twilight-2025-1000.webp",
+      "bytes": 81398,
+      "sha256": "ea56c3d6b8f6a834d0518ea931b2da6447fc874f16bb09c9bd184557f96153a7"
+    },
+    {
+      "path": "dist/images/editorial/kursaal-twilight-2025-640.webp",
+      "bytes": 40872,
+      "sha256": "f8d6409f1c326c3fb9286af3336ddb13469016e976946d14fcf9f79edd2a37a2"
+    },
+    {
+      "path": "dist/images/editorial/kursaal-twilight-2025-wide.webp",
+      "bytes": 267274,
+      "sha256": "036b60cfcae5cc905f106f1cf9f9b513e3470de8f3c4c4e48cb36c6ca6f8d178"
+    },
+    {
+      "path": "dist/images/editorial/kursaal-twilight-2025.webp",
+      "bytes": 436188,
+      "sha256": "a49539693b901eb10a8eb6249db6afc67a3e9cdeff1fa10711b0f58b0f94c180"
+    },
+    {
+      "path": "dist/images/sfeerbeelden/hero-kerstdiner-desktop.webp",
+      "bytes": 141062,
+      "sha256": "dd79a5c96acf6de6d6bec4efdd8f6f9ce88d835eae5ae733e4e313a996ae9be2"
+    },
+    {
+      "path": "dist/images/sfeerbeelden/hero-kerstdiner-mobile.webp",
+      "bytes": 99236,
+      "sha256": "f4be069c7b999660bed9f64906a3585a70997b3b05cd87ad081c9c8efd2f3afb"
+    },
+    {
+      "path": "dist/images/sfeerbeelden/sfeer-tafeldecoratie.webp",
+      "bytes": 95020,
+      "sha256": "913d9ad9adf5896c868f12877c711cfa8680f3a9d45f84cad9d14bd5f72ddb33"
+    },
+    {
+      "path": "dist/images/sfeerbeelden/sfeer-zaal.webp",
+      "bytes": 137584,
+      "sha256": "14e0a11d0dff7b1cc724e925d69e83a69fd6a1db7237d0ee46ab3ec3723588d4"
+    },
+    {
+      "path": "dist/images/sfeerbeelden/social-preview.jpg",
+      "bytes": 230740,
+      "sha256": "d378cc43f5f9440b9727bb887edf9cf273768aa8eb287e806a9b0edda29f53dc"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 19694,
+      "sha256": "0253684ca0943651101eca43d8b9f2c4544f213c83de6178b0570e24caec3740"
+    },
+    {
+      "path": "dist/og-image.jpg",
+      "bytes": 82913,
+      "sha256": "8c9235bcf6966153964051af6a30628c88c4a22ab95a4d22349ab6081013495d"
+    },
+    {
+      "path": "dist/robots.txt",
+      "bytes": 71,
+      "sha256": "423fae5d6cef4065fca3b6e6e5e370af5effb92d21f0f87aa64d2037906bb46d"
+    },
+    {
+      "path": "dist/sitemap.xml",
+      "bytes": 158,
+      "sha256": "e17c64a2c344d669ee0ba764f4302a8c9865ba1970a60cd74f689d342a02811c"
+    },
+    {
+      "path": "dist/social-card.svg",
+      "bytes": 3229,
+      "sha256": "15afa7f7ed0746f8cfc11ad43de0ac286a9703e3f5f41c23df3071e56dfbc2a7"
+    },
+    {
+      "path": "public/og-image.jpg",
+      "bytes": 82913,
+      "sha256": "8c9235bcf6966153964051af6a30628c88c4a22ab95a4d22349ab6081013495d"
+    },
+    {
+      "path": "public/social-card.svg",
+      "bytes": 3229,
+      "sha256": "15afa7f7ed0746f8cfc11ad43de0ac286a9703e3f5f41c23df3071e56dfbc2a7"
+    },
+    {
+      "path": "package.json",
+      "bytes": 542,
+      "sha256": "183996e6cb9c393eb86db50d24218674d8db8a6d8e7aa4657194c936f425ce7a"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 171397,
+      "sha256": "9205f590c2060340ecd5f45c1f373128e1da7bdc4bbc381792a9f48fc6046a0c"
+    }
+  ],
+  "reports": [
+    {
+      "path": "qa/redesign-fix/browser-report.json",
+      "sha256": "4be27a630128db096b0bc4a5c1a0a4485fee1eaec3e203ad1da23ccd1b42b270"
+    },
+    {
+      "path": "qa/redesign-fix/modules-report.json",
+      "sha256": "78387465107e1d75cf2a228492df5195a512faeea804cf0e37af743c053b1308"
+    },
+    {
+      "path": "qa/redesign-fix/states-report.json",
+      "sha256": "d041b2ec43e1dcfb9b9f19418a0c4e440d0094039fdaef69aa04cc97fb528d10"
+    },
+    {
+      "path": "qa/redesign-fix/drawing-report.json",
+      "sha256": "ce591c544afb3c46e549e33b924b5f589191982bd22856b18d65de6efc5fe9fa"
+    },
+    {
+      "path": "qa/redesign-fix/performance-report.json",
+      "sha256": "b7bab3f12cd46474b57ad6e2f276a5e8e10211f8dc068027100a7879985f8b65"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+---
+import { historySources } from '../data/history';
+import { historicalFacts } from '../data/event';
+---
+<section id="edities" class="history section" aria-labelledby="history-title">
+  <div class="container"><span class="small-label">Uit het Oostendse archief</span><h2 id="history-title">Een traditie die mensen samenbrengt.</h2>
+    <ol class="timeline">
+      <li><time datetime="2019-12-24">2019 <span>25ste editie</span></time><article><h3>Kerst in de namiddag.</h3><p>Op 24 december kwamen meer dan {historicalFacts.edition2019GuestMinimum} senioren samen in het Kursaal. Voor het eerst vond het feest ’s middags plaats. Ruim {historicalFacts.edition2019VolunteerMinimum} vrijwilligers hielpen mee.</p><a class="text-link" href={historySources.edition2019} target="_blank" rel="noopener noreferrer">De reportage van Focus & WTV <span aria-hidden="true">↗</span></a></article></li>
+      <li><time datetime="2025-12-24">2025 <span>26ste editie</span></time><article><h3>Terug op kerstavond.</h3><p>Na de onderbreking schoven opnieuw circa {historicalFacts.edition2025GuestEstimate} gasten aan. Lokale keukens, vrijwilligers en leerlingen hielpen het feest waarmaken.</p><a class="text-link" href={historySources.edition2025} target="_blank" rel="noopener noreferrer">De terugblik van Melinda FM <span aria-hidden="true">↗</span></a><div class="archive-reportages"><a class="text-link" href={historySources.edition2025Press} target="_blank" rel="noopener noreferrer">De reportage bij KW <span aria-hidden="true">↗</span></a><a class="text-link" href={historySources.edition2025Video} target="_blank" rel="noopener noreferrer">Vrijwilligers in beeld bij Sterartiesten <span aria-hidden="true">↗</span></a></div></article></li>
+    </ol>
+    <div class="archive-footnote"><p>Het initiatief gaat terug tot de jaren negentig. <a href={historySources.origin} target="_blank" rel="noopener noreferrer">Lees het verhaal over de herstart bij KW via Nieuwskoppen ↗</a></p><p>De editie 2025 was voor alleenstaande 65-plussers. De voorwaarden voor 2026 worden apart bekendgemaakt.</p></div>
+  </div>
+</section>
+
+<style>.archive-reportages{display:flex;flex-wrap:wrap;gap:0 28px}</style>

@@ -1,0 +1,184 @@
+{
+  "conditions": "Local Chromium, cold context, no network/CPU throttling; indicative only. Baseline resource transfer/LCP/CLS not captured, so no before/after timing claim.",
+  "baselineVenueImageBytes": 267274,
+  "results": [
+    {
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "lcp": 360,
+        "cls": 0
+      },
+      "resources": [
+        {
+          "name": "/fonts/instrument-serif-regular.ttf",
+          "type": "link",
+          "bytes": 62284
+        },
+        {
+          "name": "/fonts/instrument-serif-italic.ttf",
+          "type": "link",
+          "bytes": 64208
+        },
+        {
+          "name": "/fonts/bricolage-grotesque-latin-wght-normal.woff2",
+          "type": "link",
+          "bytes": 41344
+        },
+        {
+          "name": "/fonts/dm-sans-latin-wght-normal.woff2",
+          "type": "link",
+          "bytes": 36932
+        },
+        {
+          "name": "/images/editorial/hero-kaarslicht-640.webp",
+          "type": "img",
+          "bytes": 58954
+        },
+        {
+          "name": "/_astro/EventArchive.BHc-mHO-.css",
+          "type": "link",
+          "bytes": 21315
+        },
+        {
+          "name": "/images/event/2025-facebook-25-640.webp",
+          "type": "img",
+          "bytes": 54298
+        },
+        {
+          "name": "/images/event/2025-facebook-17-480.webp",
+          "type": "img",
+          "bytes": 33370
+        },
+        {
+          "name": "/images/event/2025-facebook-34-480.webp",
+          "type": "img",
+          "bytes": 37608
+        },
+        {
+          "name": "/images/event/2025-facebook-07-480.webp",
+          "type": "img",
+          "bytes": 24762
+        },
+        {
+          "name": "/images/event/2025-facebook-31-480.webp",
+          "type": "img",
+          "bytes": 34562
+        },
+        {
+          "name": "/images/event/2025-facebook-01-480.webp",
+          "type": "img",
+          "bytes": 61806
+        },
+        {
+          "name": "/images/editorial/kursaal-twilight-2025-640.webp",
+          "type": "img",
+          "bytes": 40872
+        },
+        {
+          "name": "/images/event/2025-facebook-37-480.webp",
+          "type": "img",
+          "bytes": 46032
+        },
+        {
+          "name": "/images/event/2025-organisatie-640.webp",
+          "type": "img",
+          "bytes": 52066
+        }
+      ],
+      "htmlBytes": 26791,
+      "selectedVenueImage": "/images/editorial/kursaal-twilight-2025-640.webp",
+      "selectedVenueImageBytes": 40872,
+      "partnersHeight": 916.3125
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "metrics": {
+        "lcp": 184,
+        "cls": 0
+      },
+      "resources": [
+        {
+          "name": "/fonts/instrument-serif-regular.ttf",
+          "type": "link",
+          "bytes": 62284
+        },
+        {
+          "name": "/fonts/instrument-serif-italic.ttf",
+          "type": "link",
+          "bytes": 64208
+        },
+        {
+          "name": "/fonts/bricolage-grotesque-latin-wght-normal.woff2",
+          "type": "link",
+          "bytes": 41344
+        },
+        {
+          "name": "/_astro/EventArchive.BHc-mHO-.css",
+          "type": "link",
+          "bytes": 21315
+        },
+        {
+          "name": "/images/editorial/hero-kaarslicht-1800.webp",
+          "type": "img",
+          "bytes": 266538
+        },
+        {
+          "name": "/fonts/dm-sans-latin-wght-normal.woff2",
+          "type": "link",
+          "bytes": 36932
+        },
+        {
+          "name": "/images/event/2025-facebook-25-1200.webp",
+          "type": "img",
+          "bytes": 130890
+        },
+        {
+          "name": "/images/event/2025-facebook-34-480.webp",
+          "type": "img",
+          "bytes": 37608
+        },
+        {
+          "name": "/images/event/2025-facebook-17-480.webp",
+          "type": "img",
+          "bytes": 33370
+        },
+        {
+          "name": "/images/event/2025-facebook-07-480.webp",
+          "type": "img",
+          "bytes": 24762
+        },
+        {
+          "name": "/images/event/2025-facebook-31-480.webp",
+          "type": "img",
+          "bytes": 34562
+        },
+        {
+          "name": "/images/event/2025-facebook-01-480.webp",
+          "type": "img",
+          "bytes": 61806
+        },
+        {
+          "name": "/images/event/2025-facebook-37-480.webp",
+          "type": "img",
+          "bytes": 46032
+        },
+        {
+          "name": "/images/editorial/kursaal-twilight-2025-640.webp",
+          "type": "img",
+          "bytes": 40872
+        },
+        {
+          "name": "/images/event/2025-organisatie-1200.webp",
+          "type": "img",
+          "bytes": 137784
+        }
+      ],
+      "htmlBytes": 26791,
+      "selectedVenueImage": "/images/editorial/kursaal-twilight-2025-640.webp",
+      "selectedVenueImageBytes": 40872,
+      "partnersHeight": 456.640625
+    }
+  ]
+}

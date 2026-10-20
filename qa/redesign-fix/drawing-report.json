@@ -1,0 +1,98 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 32,
+    "copyOverlap": false
+  },
+  {
+    "width": 1440,
+    "height": 700,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 28,
+    "copyOverlap": false
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 390,
+    "height": 667,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "reducedMotion": "no-preference",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 32,
+    "copyOverlap": false
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 32,
+    "copyOverlap": false
+  },
+  {
+    "width": 1440,
+    "height": 700,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 28,
+    "copyOverlap": false
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 390,
+    "height": 667,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 16,
+    "copyOverlap": false
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "reducedMotion": "reduce",
+    "runningAnimations": 0,
+    "drawingToFactsGap": 32,
+    "copyOverlap": false
+  }
+]

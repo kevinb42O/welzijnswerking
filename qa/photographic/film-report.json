@@ -1,0 +1,74 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "initial": {
+        "width": 720,
+        "height": 1280,
+        "duration": 15.6,
+        "muted": true,
+        "paused": false,
+        "src": "http://127.0.0.1:4323/media/kersttafel-nicole-michalou-720.mp4",
+        "currentTime": 1.8446
+      },
+      "pause": true,
+      "resume": true,
+      "offscreenPause": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "initial": {
+        "width": 720,
+        "height": 1280,
+        "duration": 15.6,
+        "muted": true,
+        "paused": false,
+        "src": "http://127.0.0.1:4323/media/kersttafel-nicole-michalou-720.mp4",
+        "currentTime": 1.6946
+      },
+      "pause": true,
+      "resume": true,
+      "offscreenPause": true
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "initial": {
+        "width": 720,
+        "height": 1280,
+        "duration": 15.6,
+        "muted": true,
+        "paused": false,
+        "src": "http://127.0.0.1:4323/media/kersttafel-nicole-michalou-720.mp4",
+        "currentTime": 1.6811
+      },
+      "pause": true,
+      "resume": true,
+      "offscreenPause": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "initial": {
+        "width": 720,
+        "height": 1280,
+        "duration": 15.6,
+        "muted": true,
+        "paused": false,
+        "src": "http://127.0.0.1:4323/media/kersttafel-nicole-michalou-720.mp4",
+        "currentTime": 1.7607
+      },
+      "pause": true,
+      "resume": true,
+      "offscreenPause": true
+    }
+  ],
+  "reducedMotion": {
+    "src": null,
+    "paused": true,
+    "display": "none"
+  },
+  "errors": []
+}

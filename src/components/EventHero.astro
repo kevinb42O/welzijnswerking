@@ -1,0 +1,28 @@
+---
+import { event as sourceEvent, price, eventDate } from '../data/event';
+import { ticketState } from '../data/publication.mjs';
+interface Props { eventOverride?: typeof sourceEvent }
+const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eventOverride : sourceEvent;
+const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
+const titleLines = event.title.split('\n');
+---
+<section id="home" class="hero" aria-labelledby="hero-title">
+  <div class="hero-invitation">
+    <picture class="hero-photo">
+      <img src="/images/editorial/hero-kaarslicht-1200.webp" srcset="/images/editorial/hero-kaarslicht-640.webp 640w, /images/editorial/hero-kaarslicht-1200.webp 1200w, /images/editorial/hero-kaarslicht-1800.webp 1800w, /images/editorial/hero-kaarslicht-2200.webp 2200w" sizes="100vw" width="2200" height="1460" alt="Sfeerbeeld van een feestelijk gedekte kersttafel, met kaarslicht, dennengroen en glazen." loading="eager" fetchpriority="high" />
+    </picture>
+    <div class="container hero-inner">
+      <p class="hero-label">Kerstfeest {event.year} <span aria-hidden="true">·</span> Kursaal Oostende</p>
+      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-last': index === titleLines.length - 1}}>{line}</span>)}</h1>
+      <p class="hero-intro">{event.intro}</p>
+      <a class="button" href={ticket.url || '#praktisch'} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : 'Praktische info & deelname'}<span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <dl class="container hero-facts">
+      <div class="hero-date"><dt>Een avond om te delen</dt><dd><time datetime={event.dateISO}>{eventDate}</time></dd></div>
+      <div class="hero-location"><dt>Op een bijzondere plek</dt><dd>{event.placeName}</dd></div>
+      <div class="hero-price"><dt>Schuif mee aan</dt><dd>{price} <span>per persoon</span></dd></div>
+    </dl>
+  </div>
+</section>

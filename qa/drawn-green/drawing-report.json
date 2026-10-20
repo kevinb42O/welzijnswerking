@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "background": "rgb(18, 62, 52)",
+      "runningAnimations": 0,
+      "images": [
+        "/images/editorial/kursaal-twilight-2025-wide.webp"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "background": "rgb(18, 62, 52)",
+      "runningAnimations": 0,
+      "images": [
+        "/images/editorial/kursaal-twilight-2025-wide.webp"
+      ]
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "background": "rgb(18, 62, 52)",
+      "runningAnimations": 0,
+      "images": [
+        "/images/editorial/kursaal-twilight-2025-wide.webp"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "background": "rgb(18, 62, 52)",
+      "runningAnimations": 0,
+      "images": [
+        "/images/editorial/kursaal-twilight-2025-wide.webp"
+      ]
+    }
+  ],
+  "reducedMotionRunningAnimations": 0,
+  "errors": []
+}

@@ -1,0 +1,17 @@
+
+> welzijnswerking-oostende@1.0.0 test
+> node --test scripts/content.test.mjs
+
+✔ foto’s vereisen expliciete toestemming, jaar, bewijs en een lokaal bestand (2.538042ms)
+✔ sponsors vereisen actuele bevestiging, verificatie en goedgekeurd bestaand logo (2.4815ms)
+✔ afbeeldingspaden kunnen niet buiten de publieke beeldmap gaan (0.34375ms)
+✔ ticketstatus gebruikt alleen bij beschikbare tickets een veilige echte URL (0.522709ms)
+✔ externe website-links laten geen onveilige protocollen of credentials door (0.24175ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 156.843

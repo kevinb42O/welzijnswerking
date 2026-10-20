@@ -1,0 +1,29 @@
+{
+  "edition": 2026,
+  "updatedAt": "2026-10-18",
+  "verifiedWithOrganizer": false,
+  "note": "Er is nog geen volledige, goedgekeurde 2026-sponsorlijst. Voeg uitsluitend schriftelijk bevestigde partners toe aan confirmedSponsors.",
+  "confirmedSponsors": [],
+  "recommendedSchema": {
+    "id": "slug-zonder-spaties",
+    "name": "Exacte handelsnaam",
+    "role": "Hoofdpartner | Partner | Steunende partner | Leverancier | Vrijwilligerspartner",
+    "tier": "main | partner | support | in_kind",
+    "website": "https://echt-en-officieel-domein.be/",
+    "logo": "/images/sponsors/slug.svg",
+    "logoAlt": "Logo van Exacte handelsnaam",
+    "confirmedFor2026": true,
+    "logoUsageApproved": true,
+    "displayOrder": 10,
+    "verified": false
+  },
+  "historic2025CandidatesNotForAutomaticPublication": [
+    "Stad Oostende",
+    "Revi Food",
+    "Restaurant North",
+    "Rederij Desmit",
+    "Gastrobar Sam",
+    "GO! Vesaliusinstituut Oostende",
+    "Kursaal Oostende"
+  ]
+}

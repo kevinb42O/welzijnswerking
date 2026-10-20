@@ -1,0 +1,32 @@
+---
+import { visibleSponsors, tiers } from '../data/sponsors';
+import { safeWebsite } from '../data/publication.mjs';
+import { historicPartners, historySources } from '../data/history';
+import { event } from '../data/event';
+interface Props { previewCount?: number }
+const { previewCount = 0 } = Astro.props;
+const demo = import.meta.env.DEV && previewCount > 0;
+const demoLogo = (index: number) => {
+  const [w, h] = [[360, 90], [120, 160], [180, 180]][index % 3];
+  return `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"><rect x="2" y="2" width="${w - 4}" height="${h - 4}" fill="#e9eee8" stroke="#53625c" stroke-width="2"/><text x="${w / 2}" y="${h / 2 + 7}" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#173b34">DEMO ${index + 1}</text></svg>`)}`;
+};
+const recordsToShow = demo ? Array.from({ length: previewCount }, (_, i) => ({ id: `demo-${i}`, name: `Demo ${String(i + 1).padStart(2, '0')}`, tier: ['main','partner','support','in_kind'][i % 4], logo: demoLogo(i), logoAlt: `Demologo ${i + 1}, geen echte sponsor`, website: '', description: '', displayOrder: i })) : visibleSponsors;
+
+const foodPartners = [historicPartners[1], historicPartners[4], historicPartners[2], historicPartners[3]];
+const supportingPartners = [historicPartners[0], ...historicPartners.slice(5)];
+---
+
+<section id="partners" class="partners section" aria-labelledby="partners-title">
+  <div class="container">
+    {recordsToShow.length > 0 && <div class="current-sponsors"><span class="small-label">De huidige editie</span><h2>Partners van {event.year}</h2>{demo && <p class="demo-banner">DEMO · Uitsluitend layouttest, geen echte sponsors</p>}<div class:list={['sponsor-tiers',{sparse:recordsToShow.length<=4}]}>{tiers.map(tier=>{const records=recordsToShow.filter(s=>s.tier===tier.key);return records.length>0 && <div class:list={['sponsor-tier',{'main-tier':tier.key==='main'}]}><h3>{tier.label}</h3><div class="sponsor-grid" style={{'--sponsor-columns': Math.min(records.length, records.length > 4 && records.length % 3 === 0 ? 3 : 4)}}>{records.map(sponsor=><div class="sponsor">
+      {safeWebsite(sponsor.website) ? <a href={safeWebsite(sponsor.website)!} target="_blank" rel="noopener noreferrer"><img src={sponsor.logo} alt={sponsor.logoAlt} width="240" height="120" loading="lazy" /><span>{sponsor.name}</span></a> : <><img src={sponsor.logo} alt={sponsor.logoAlt} width="240" height="120" loading="lazy" /><span>{sponsor.name}</span></>}
+      {demo && <span class="demo-logo-label">DEMO · GEEN SPONSOR</span>}{sponsor.description && <p>{sponsor.description}</p>}
+    </div>)}</div></div>})}</div></div>}
+    <div class="credits-heading"><h2 id="partners-title">Met dank aan de bijdragers van 2025</h2></div>
+    <div class="credits-composition">
+      <div class="culinary-credits"><h3 class="credit-category">Uit de lokale keukens</h3><div class="culinary-grid">{foodPartners.map(partner=><article class="historic-partner"><h4>{partner.name}</h4><p>{partner.role}</p></article>)}</div></div>
+      <div class="supporting-credits"><h3 class="credit-category">Achter de schermen</h3>{supportingPartners.map(partner=><article class="historic-partner"><h4>{partner.name}</h4><p>{partner.role}</p></article>)}</div>
+    </div>
+    <div class="partner-sources"><p>Historische erkenning voor 2025. Dit is geen sponsorlijst voor 2026.</p><p>Bronnen: <a href={historySources.origin} target="_blank" rel="noopener noreferrer">KW via Nieuwskoppen <span aria-hidden="true">↗</span></a> · <a href={historySources.edition2025} target="_blank" rel="noopener noreferrer">Melinda FM <span aria-hidden="true">↗</span></a></p></div>
+  </div>
+</section>

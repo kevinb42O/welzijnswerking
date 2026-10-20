@@ -1,0 +1,252 @@
+{
+  "viewports": [
+    {
+      "width": 1000,
+      "height": 900,
+      "scrollWidth": 1000,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 1001,
+      "height": 900,
+      "scrollWidth": 1001,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "scrollWidth": 600,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 601,
+      "height": 800,
+      "scrollWidth": 601,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 767,
+      "height": 1024,
+      "scrollWidth": 767,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 769,
+      "height": 1024,
+      "scrollWidth": 769,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "scrollWidth": 360,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 390,
+      "height": 667,
+      "scrollWidth": 390,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    },
+    {
+      "width": 1440,
+      "height": 700,
+      "scrollWidth": 1440,
+      "accessibilityViolations": [],
+      "heroFactsAboveFold": true,
+      "heroCtaAboveFold": true
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "interactions": {
+    "desktopAnchors": [
+      {
+        "href": "#home",
+        "text": "welzijnswerking.Oostende",
+        "works": true
+      },
+      {
+        "href": "#praktisch",
+        "text": "Praktisch",
+        "works": true
+      },
+      {
+        "href": "#verhaal",
+        "text": "Het kerstfeest",
+        "works": true
+      },
+      {
+        "href": "#edities",
+        "text": "Vorige edities",
+        "works": true
+      },
+      {
+        "href": "#partners",
+        "text": "Partners",
+        "works": true
+      },
+      {
+        "href": "#praktisch",
+        "text": "Praktische info & deelname↓",
+        "works": true
+      },
+      {
+        "href": "#edities",
+        "text": "Ontdek de vorige edities ↓",
+        "works": true
+      },
+      {
+        "href": "#home",
+        "text": "welzijnswerking.Oostende",
+        "works": true
+      },
+      {
+        "href": "#home",
+        "text": "Terug naar boven ↑",
+        "works": true
+      }
+    ],
+    "mobileAnchors": [
+      "#verhaal",
+      "#edities",
+      "#praktisch",
+      "#partners"
+    ],
+    "skipLink": true,
+    "menuKeyboardEscapeFocus": true,
+    "menuOutsideClick": true,
+    "menuResize": true,
+    "calendarDownload": true,
+    "routePopups": true
+  },
+  "externalResults": [
+    {
+      "url": "https://www.kursaaloostende.be/nl/praktisch/bereikbaarheid",
+      "status": 200,
+      "finalUrl": "https://www.kursaaloostende.be/nl/praktisch/bereikbaarheid"
+    },
+    {
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "status": 200,
+      "finalUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mnYXrpdC19N5fsG8AepACcd7QGvm1z3ucA3NtRZPXMGPviJKsGgHrPiZ4EnR3xyRl&id=100066480021669",
+      "status": 400,
+      "finalUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mnYXrpdC19N5fsG8AepACcd7QGvm1z3ucA3NtRZPXMGPviJKsGgHrPiZ4EnR3xyRl&id=100066480021669"
+    },
+    {
+      "url": "https://focus-wtv.be/nieuws/kerstfeest-kursaal-voor-750-senioren-en-alleenstaanden",
+      "status": 200,
+      "finalUrl": "https://focus-wtv.be/nieuws/kerstfeest-kursaal-voor-750-senioren-en-alleenstaanden"
+    },
+    {
+      "url": "https://melindafm.be/regionaal-nieuws-vrijdag-26-december-2025/",
+      "status": 200,
+      "finalUrl": "https://melindafm.be/regionaal-nieuws-vrijdag-26-december-2025/"
+    },
+    {
+      "url": "https://sterartiesten.be/video-wendy-van-wanten-en-clement-laten-gouden-hart-zien-en-helpen-als-vrijwilligers-op-een-kerstfeest-voor-alleenstaanden-in-oostende/",
+      "status": 200,
+      "finalUrl": "https://sterartiesten.be/video-wendy-van-wanten-en-clement-laten-gouden-hart-zien-en-helpen-als-vrijwilligers-op-een-kerstfeest-voor-alleenstaanden-in-oostende/"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Casino-Kurzaal_Oostende.jpg",
+      "status": 200,
+      "finalUrl": "https://commons.wikimedia.org/wiki/File:Casino-Kurzaal_Oostende.jpg"
+    },
+    {
+      "url": "https://www.nieuwskoppen.be/2025/11/14/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/",
+      "status": 200,
+      "finalUrl": "https://www.nieuwskoppen.be/2025/11/14/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Kursaal%20Oostende%2C%20Kursaal-Westhelling%2012%2C%208400%20Oostende",
+      "status": 200,
+      "finalUrl": "https://consent.google.com/m?continue=https://www.google.com/maps/search/?api%3D1%26query%3DKursaal%2520Oostende%252C%2520Kursaal-Westhelling%252012%252C%25208400%2520Oostende&gl=BE&m=0&pc=m&uxe=eomtm&cm=2&hl=nl&src=1"
+    },
+    {
+      "url": "https://kw.be/nieuws/samenleving/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/",
+      "status": 200,
+      "finalUrl": "https://kw.be/nieuws/samenleving/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/"
+    },
+    {
+      "url": "https://kw.be/nieuws/samenleving/wendy-van-wanten-en-zoon-clement-dienen-op-tijdens-kerstfeest-voor-alleenstaanden-amai-wat-een-knappe-jongen-hij-lijkt-sprekend-op-zijn-vader/",
+      "status": 200,
+      "finalUrl": "https://kw.be/nieuws/samenleving/wendy-van-wanten-en-zoon-clement-dienen-op-tijdens-kerstfeest-voor-alleenstaanden-amai-wat-een-knappe-jongen-hij-lijkt-sprekend-op-zijn-vader/"
+    }
+  ]
+}

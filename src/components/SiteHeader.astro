@@ -1,0 +1,26 @@
+---
+
+---
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#home" class="wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><span>welzijns<span class="brand-second-line">werking<span class="brand-dot">.</span></span></span><span class="wordmark-city">Oostende</span></a>
+    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a><a class="nav-participate" href="#praktisch">Praktisch & deelname <span aria-hidden="true">↗</span></a></nav>
+    
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open het menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie" inert><p class="mobile-nav-label">Kerstavond in Oostende · 2026</p><a href="#welkom"><span>Voor wie?</span><span aria-hidden="true">01</span></a><a href="#edities"><span>Vorige edities</span><span aria-hidden="true">02</span></a><a href="#partners"><span>Partners</span><span aria-hidden="true">03</span></a><a href="#praktisch"><span>Praktisch & deelname</span><span aria-hidden="true">↗</span></a><p class="mobile-nav-note">Samen maken we er een warme avond van.</p></nav>
+  <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#praktisch">Praktisch</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.querySelector<HTMLElement>('#mobile-nav');
+  if (toggle && menu) {
+    const menuLabel = toggle.querySelector('span');
+    const close = () => { if (menuLabel) menuLabel.textContent = 'Menu'; toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open het menu'); menu.inert = true; };
+    toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Sluit het menu' : 'Open het menu'); menu.inert = !open; if (menuLabel) menuLabel.textContent = open ? 'Sluit' : 'Menu'; });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.inert) { close(); toggle.focus(); } });
+    document.addEventListener('click', e => { if (!menu.inert && e.target instanceof Node && !menu.contains(e.target) && !toggle.contains(e.target)) close(); });
+    matchMedia('(min-width: 1001px)').addEventListener('change', e => { if (e.matches) close(); });
+  }
+</script>

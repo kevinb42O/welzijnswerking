@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": [],
+      "axe": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "axe": []
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "brokenImages": [],
+      "axe": []
+    }
+  ],
+  "researchImages": 9,
+  "homepageResearchImages": 0,
+  "homepageEventPhotos": 7,
+  "pressLinks": 2,
+  "unknownImageStatus": 404,
+  "productionHasResearchRoutes": false,
+  "productionHasResearchImageHashes": false,
+  "errors": []
+}

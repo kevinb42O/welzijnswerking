@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhotoGallery from '../../components/PhotoGallery.astro';
+import SponsorGrid from '../../components/SponsorGrid.astro';
+import EventHero from '../../components/EventHero.astro';
+import PracticalInfo from '../../components/PracticalInfo.astro';
+import WelcomeSection from '../../components/WelcomeSection.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { event } from '../../data/event';
+import SiteHeader from '../../components/SiteHeader.astro';
+import StorySection from '../../components/StorySection.astro';
+import HistorySection from '../../components/HistorySection.astro';
+import EventArchive from '../../components/EventArchive.astro';
+import ResearchArchive from '../../components/ResearchArchive.astro';
+interface Props { photos: number; sponsors: number; state: string | null; research?: string }
+export function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  const modules = [[0,0],[1,1],[2,3],[3,4],[4,12],[10,24],[20,40],[20,24],[4,4],[10,12],[20,24]];
+  const states = ['start','full','available','invalid','missing-link','sold-out','closed','contact','menu-only','eligibility-only','only-menu-missing'];
+  return [...['beeldenonderzoek','fotoselectie'].map(mode => ({params:{mode},props:{photos:0,sponsors:0,state:null,research:mode}})), ...new Map(modules.map(([photos,sponsors]) => [`modules-${photos}-${sponsors}`,{params:{mode:`modules-${photos}-${sponsors}`},props:{photos,sponsors,state:null}}])).values(), ...states.map(state => ({params:{mode:`state-${state}`},props:{photos:0,sponsors:0,state}}))];
+}
+const {photos,sponsors,state,research}=Astro.props;
+const patches: Record<string, Partial<typeof event>> = {
+  start:{startTime:'18.00 uur'},
+  full:{startTime:'18.00 uur',doorsTime:'17.30 uur',endTime:'22.00 uur',room:'DEMO-zaal',eligibility:'DEMO-voorwaarden voor test',menu:['DEMO-voorgerecht','DEMO-hoofdgerecht','DEMO-dessert'],courseCount:3,includedDrinks:'DEMO-dranken',entertainmentDetails:'DEMO-programma',accessibilityDetails:'DEMO-toegankelijkheid',transportDetails:'DEMO-vervoer'},
+  available:{ticketStatus:'available',ticketsUrl:'https://example.com/tickets'},
+  invalid:{ticketStatus:'available',ticketsUrl:'javascript:alert(1)'},
+  'missing-link':{ticketStatus:'available',ticketsUrl:null},
+  'sold-out':{ticketStatus:'sold_out'},closed:{ticketStatus:'closed'},
+  contact:{organizerContactEmail:'demo@example.com',phone:'+32 59 00 00 00'},
+  'menu-only':{menu:['DEMO-menu']},'eligibility-only':{eligibility:'DEMO-voorwaarden'},
+  'only-menu-missing':{startTime:'18.00 uur',eligibility:'DEMO-voorwaarden'},
+};
+const fixture={...event,...(state ? patches[state] : {})};
+---
+<BaseLayout>{research && <SiteHeader />}<main id="inhoud"><div class="container preview-intro">{research ? (research === 'beeldenonderzoek' ? <h1>Beeldonderzoek · vorige edities</h1> : <p>Fotoselectie in de website</p>) : state ? <p>Development-preview</p> : <h1>Development-preview</h1>}<p class="demo-banner">{research ? 'Beeldselectie met echte eventfoto’s, editiejaar en bron. De geselecteerde eventfoto’s staan ook op de hoofdpagina.' : 'DEMO · Geen echte evenementgegevens, editiefoto’s of sponsors. Deze route wordt niet gebouwd voor productie.'}</p><a href="/">Terug naar de website</a></div>{research ? <>{research === 'fotoselectie' && <><EventHero /><WelcomeSection /><PracticalInfo /></>}{research === 'beeldenonderzoek' ? <ResearchArchive audit /> : <EventArchive />}{research === 'fotoselectie' && <><StorySection /><HistorySection /><SponsorGrid /></>}</> : state ? <><EventHero eventOverride={fixture} /><PracticalInfo eventOverride={fixture} /></> : <><PhotoGallery previewCount={photos} /><SponsorGrid previewCount={sponsors} /></>}</main>{(state || research) && <SiteFooter eventOverride={fixture} />}</BaseLayout>
