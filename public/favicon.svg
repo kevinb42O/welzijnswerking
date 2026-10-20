@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#292929"/><text x="32" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="43" font-weight="bold" fill="#fafaf9">w</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Public Sans 650: the initial and full stop of the existing wordmark. -->
+  <rect width="64" height="64" rx="8" fill="#292929"/>
+  <path fill="#fafaf9" d="M16.373 45.0 8.0 18.877H14.033L19.25 35.961H19.487L24.536 18.877H29.408L34.553 35.952H34.8L39.849 18.877H46.0L37.564 45.0H31.976L26.861 28.39L21.816 45.0Z M49.5 45.0V37.445H57.006V45.0Z"/>
+</svg>
