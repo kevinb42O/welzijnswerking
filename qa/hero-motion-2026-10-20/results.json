@@ -1,0 +1,326 @@
+[
+  {
+    "name": "chromium",
+    "width": 320,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 38.7062)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n \nkerstavond\n \nsamen\nin\n \nhet\n \nKursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 20,
+          "right": 74.625,
+          "clip": "clip"
+        },
+        {
+          "left": 80.65625,
+          "right": 235.78125,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 113.125,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 44.203125,
+          "clip": "clip"
+        },
+        {
+          "left": 50.234375,
+          "right": 96.875,
+          "clip": "clip"
+        },
+        {
+          "left": 102.90625,
+          "right": 211.171875,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  },
+  {
+    "name": "chromium",
+    "width": 390,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 45.7703)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n \nkerstavond\n \nsamen\nin\n \nhet\n \nKursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 20,
+          "right": 84.84375,
+          "clip": "clip"
+        },
+        {
+          "left": 92.046875,
+          "right": 276.09375,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 130.421875,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 48.75,
+          "clip": "clip"
+        },
+        {
+          "left": 55.953125,
+          "right": 111.296875,
+          "clip": "clip"
+        },
+        {
+          "left": 118.5,
+          "right": 247.015625,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  },
+  {
+    "name": "chromium",
+    "width": 1440,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 96.8)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n \nkerstavond\n \nsamen\nin\n \nhet\n \nKursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 120,
+          "right": 258,
+          "clip": "clip"
+        },
+        {
+          "left": 273.4375,
+          "right": 664.84375,
+          "clip": "clip"
+        },
+        {
+          "left": 120,
+          "right": 354.609375,
+          "clip": "clip"
+        },
+        {
+          "left": 120,
+          "right": 181.234375,
+          "clip": "clip"
+        },
+        {
+          "left": 196.671875,
+          "right": 314.359375,
+          "clip": "clip"
+        },
+        {
+          "left": 329.796875,
+          "right": 603.34375,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  },
+  {
+    "name": "webkit",
+    "width": 320,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 38.706249)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n kerstavond\nsamen\nin\n het\n Kursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 20,
+          "right": 74.625,
+          "clip": "clip"
+        },
+        {
+          "left": 80.640625,
+          "right": 235.765625,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 113.125,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 44.203125,
+          "clip": "clip"
+        },
+        {
+          "left": 50.21875,
+          "right": 96.859375,
+          "clip": "clip"
+        },
+        {
+          "left": 102.890625,
+          "right": 211.15625,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  },
+  {
+    "name": "webkit",
+    "width": 390,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 45.770313)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n kerstavond\nsamen\nin\n het\n Kursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 20,
+          "right": 84.84375,
+          "clip": "clip"
+        },
+        {
+          "left": 92.03125,
+          "right": 276.078125,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 130.421875,
+          "clip": "clip"
+        },
+        {
+          "left": 20,
+          "right": 48.75,
+          "clip": "clip"
+        },
+        {
+          "left": 55.9375,
+          "right": 111.28125,
+          "clip": "clip"
+        },
+        {
+          "left": 118.46875,
+          "right": 246.984375,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  },
+  {
+    "name": "webkit",
+    "width": 1440,
+    "count": 6,
+    "moving": {
+      "transform": "matrix(1, 0, 0, 1, 0, 96.800003)",
+      "opacity": "0.15"
+    },
+    "layout": {
+      "text": "Vier\n kerstavond\nsamen\nin\n het\n Kursaal.",
+      "overflow": false,
+      "words": [
+        {
+          "left": 120,
+          "right": 258,
+          "clip": "clip"
+        },
+        {
+          "left": 273.421875,
+          "right": 664.828125,
+          "clip": "clip"
+        },
+        {
+          "left": 120,
+          "right": 354.609375,
+          "clip": "clip"
+        },
+        {
+          "left": 120,
+          "right": 181.234375,
+          "clip": "clip"
+        },
+        {
+          "left": 196.65625,
+          "right": 314.34375,
+          "clip": "clip"
+        },
+        {
+          "left": 329.78125,
+          "right": 603.328125,
+          "clip": "clip"
+        }
+      ]
+    },
+    "delays": [
+      140,
+      225.00000000000003,
+      310.00000000000006,
+      395,
+      480.00000000000006,
+      565.0000000000001
+    ],
+    "passed": true
+  }
+]

@@ -1,0 +1,954 @@
+[
+  {
+    "width": 320,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "13px",
+    "sampledGlyphPixels": 187,
+    "minContrast": 10.146458424673096,
+    "point": {
+      "x": 35,
+      "y": 370,
+      "bg": [
+        60,
+        59,
+        63
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "24px",
+    "sampledGlyphPixels": 561,
+    "minContrast": 11.15655370906725,
+    "point": {
+      "x": 85,
+      "y": 246,
+      "bg": [
+        64,
+        58,
+        57
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "32px",
+    "sampledGlyphPixels": 883,
+    "minContrast": 11.482996041112301,
+    "point": {
+      "x": 41,
+      "y": 296,
+      "bg": [
+        60,
+        57,
+        53
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "32px",
+    "sampledGlyphPixels": 1335,
+    "minContrast": 10.018290113205259,
+    "point": {
+      "x": 119,
+      "y": 320,
+      "bg": [
+        64,
+        66,
+        74
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 1324,
+    "minContrast": 10.862032966325472,
+    "point": {
+      "x": 232,
+      "y": 421,
+      "bg": [
+        58,
+        61,
+        69
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 11.37387208085671,
+    "point": {
+      "x": 117,
+      "y": 504,
+      "bg": [
+        55,
+        58,
+        66
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "13px",
+    "sampledGlyphPixels": 230,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 37,
+      "y": 563,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 10.39245306930238,
+    "point": {
+      "x": 54,
+      "y": 415,
+      "bg": [
+        61,
+        57,
+        58
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "24px",
+    "sampledGlyphPixels": 561,
+    "minContrast": 11.328644712758928,
+    "point": {
+      "x": 113,
+      "y": 274,
+      "bg": [
+        63,
+        57,
+        56
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "37.83px",
+    "sampledGlyphPixels": 1256,
+    "minContrast": 10.425609288210486,
+    "point": {
+      "x": 25,
+      "y": 320,
+      "bg": [
+        63,
+        64,
+        62
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "37.83px",
+    "sampledGlyphPixels": 1954,
+    "minContrast": 10.088274039406945,
+    "point": {
+      "x": 151,
+      "y": 362,
+      "bg": [
+        63,
+        66,
+        71
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 11.02407860801134,
+    "point": {
+      "x": 275,
+      "y": 472,
+      "bg": [
+        58,
+        60,
+        66
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 11.388297575090768,
+    "point": {
+      "x": 147,
+      "y": 552,
+      "bg": [
+        55,
+        58,
+        65
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 255,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 43,
+      "y": 614,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 10.576141144435805,
+    "point": {
+      "x": 194,
+      "y": 435,
+      "bg": [
+        59,
+        56,
+        58
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "27.3px",
+    "sampledGlyphPixels": 752,
+    "minContrast": 11.328644712758928,
+    "point": {
+      "x": 150,
+      "y": 267,
+      "bg": [
+        63,
+        57,
+        56
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "44.135px",
+    "sampledGlyphPixels": 1752,
+    "minContrast": 10.124828362858446,
+    "point": {
+      "x": 188,
+      "y": 353,
+      "bg": [
+        63,
+        66,
+        68
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "44.135px",
+    "sampledGlyphPixels": 2696,
+    "minContrast": 10.124828362858446,
+    "point": {
+      "x": 188,
+      "y": 353,
+      "bg": [
+        63,
+        66,
+        68
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1376,
+    "minContrast": 11.05854263793275,
+    "point": {
+      "x": 195,
+      "y": 512,
+      "bg": [
+        57,
+        60,
+        66
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 11.498246209047066,
+    "point": {
+      "x": 209,
+      "y": 570,
+      "bg": [
+        55,
+        57,
+        66
+      ]
+    }
+  },
+  {
+    "width": 455,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 255,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 43,
+      "y": 632,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 10.483297506231338,
+    "point": {
+      "x": 181,
+      "y": 493,
+      "bg": [
+        57,
+        57,
+        62
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "32px",
+    "sampledGlyphPixels": 1045,
+    "minContrast": 17.0994518106319,
+    "point": {
+      "x": 63,
+      "y": 314,
+      "bg": [
+        28,
+        27,
+        33
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "57.6px",
+    "sampledGlyphPixels": 3099,
+    "minContrast": 10.17600185552205,
+    "point": {
+      "x": 191,
+      "y": 378,
+      "bg": [
+        63,
+        65,
+        73
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "57.6px",
+    "sampledGlyphPixels": 4855,
+    "minContrast": 10.335862135667583,
+    "point": {
+      "x": 187,
+      "y": 408,
+      "bg": [
+        62,
+        64,
+        72
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 11.03065198322027,
+    "point": {
+      "x": 139,
+      "y": 546,
+      "bg": [
+        57,
+        60,
+        68
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 11.72354069099287,
+    "point": {
+      "x": 250,
+      "y": 605,
+      "bg": [
+        55,
+        56,
+        59
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "15px",
+    "sampledGlyphPixels": 288,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 55,
+      "y": 669,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 10.531997523660927,
+    "point": {
+      "x": 243,
+      "y": 526,
+      "bg": [
+        58,
+        57,
+        55
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "32px",
+    "sampledGlyphPixels": 1045,
+    "minContrast": 12.62750732365145,
+    "point": {
+      "x": 62,
+      "y": 303,
+      "bg": [
+        55,
+        50,
+        49
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "72px",
+    "sampledGlyphPixels": 4931,
+    "minContrast": 10.355100380942824,
+    "point": {
+      "x": 324,
+      "y": 397,
+      "bg": [
+        61,
+        64,
+        73
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "72px",
+    "sampledGlyphPixels": 7742,
+    "minContrast": 10.524433024595428,
+    "point": {
+      "x": 408,
+      "y": 447,
+      "bg": [
+        61,
+        63,
+        69
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 11.04470017970982,
+    "point": {
+      "x": 269,
+      "y": 576,
+      "bg": [
+        57,
+        60,
+        67
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 12.957507180982724,
+    "point": {
+      "x": 233,
+      "y": 642,
+      "bg": [
+        54,
+        48,
+        47
+      ]
+    }
+  },
+  {
+    "width": 1000,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "15px",
+    "sampledGlyphPixels": 288,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 55,
+      "y": 701,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 276,
+    "minContrast": 10.960293446608231,
+    "point": {
+      "x": 115,
+      "y": 394,
+      "bg": [
+        55,
+        54,
+        57
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "36px",
+    "sampledGlyphPixels": 1386,
+    "minContrast": 16.358199745423956,
+    "point": {
+      "x": 203,
+      "y": 177,
+      "bg": [
+        33,
+        31,
+        34
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "64px",
+    "sampledGlyphPixels": 3908,
+    "minContrast": 10.989217130413618,
+    "point": {
+      "x": 267,
+      "y": 294,
+      "bg": [
+        63,
+        60,
+        54
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "64px",
+    "sampledGlyphPixels": 6048,
+    "minContrast": 7.1597299776769185,
+    "point": {
+      "x": 463,
+      "y": 352,
+      "bg": [
+        104,
+        84,
+        65
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 6.397172198437448,
+    "point": {
+      "x": 481,
+      "y": 444,
+      "bg": [
+        109,
+        92,
+        75
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 10.050151836723483,
+    "point": {
+      "x": 277,
+      "y": 516,
+      "bg": [
+        63,
+        66,
+        74
+      ]
+    }
+  },
+  {
+    "width": 1001,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "15px",
+    "sampledGlyphPixels": 288,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 55,
+      "y": 570,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 11.279447689146695,
+    "point": {
+      "x": 141,
+      "y": 432,
+      "bg": [
+        55,
+        52,
+        50
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "36px",
+    "sampledGlyphPixels": 1386,
+    "minContrast": 15.171798226883888,
+    "point": {
+      "x": 123,
+      "y": 204,
+      "bg": [
+        40,
+        37,
+        39
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "80px",
+    "sampledGlyphPixels": 6218,
+    "minContrast": 10.847362500820543,
+    "point": {
+      "x": 384,
+      "y": 293,
+      "bg": [
+        63,
+        61,
+        56
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "80px",
+    "sampledGlyphPixels": 9652,
+    "minContrast": 7.4000855142314235,
+    "point": {
+      "x": 621,
+      "y": 376,
+      "bg": [
+        91,
+        85,
+        72
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 10.298300860502364,
+    "point": {
+      "x": 482,
+      "y": 510,
+      "bg": [
+        65,
+        64,
+        67
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 11.317554020763584,
+    "point": {
+      "x": 307,
+      "y": 550,
+      "bg": [
+        57,
+        58,
+        65
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "15px",
+    "sampledGlyphPixels": 288,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 143,
+      "y": 605,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-label",
+    "color": "rgb(240, 245, 252)",
+    "fontSize": "14px",
+    "sampledGlyphPixels": 277,
+    "minContrast": 9.878932389824008,
+    "point": {
+      "x": 568,
+      "y": 431,
+      "bg": [
+        64,
+        61,
+        55
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(1)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "36px",
+    "sampledGlyphPixels": 1386,
+    "minContrast": 16.993006260779598,
+    "point": {
+      "x": 365,
+      "y": 184,
+      "bg": [
+        27,
+        28,
+        34
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(2)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "80px",
+    "sampledGlyphPixels": 6218,
+    "minContrast": 10.002975590024423,
+    "point": {
+      "x": 655,
+      "y": 264,
+      "bg": [
+        66,
+        66,
+        70
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-title-last",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "80px",
+    "sampledGlyphPixels": 9652,
+    "minContrast": 6.901366372752895,
+    "point": {
+      "x": 906,
+      "y": 377,
+      "bg": [
+        104,
+        87,
+        71
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-intro",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "17px",
+    "sampledGlyphPixels": 1387,
+    "minContrast": 8.620814270770815,
+    "point": {
+      "x": 785,
+      "y": 481,
+      "bg": [
+        80,
+        75,
+        70
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-eligibility",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "sampledGlyphPixels": 873,
+    "minContrast": 10.701614376474765,
+    "point": {
+      "x": 596,
+      "y": 551,
+      "bg": [
+        63,
+        61,
+        68
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "selector": ".hero .button",
+    "color": "rgb(39, 58, 124)",
+    "fontSize": "15px",
+    "sampledGlyphPixels": 288,
+    "minContrast": 10.248729493178782,
+    "point": {
+      "x": 383,
+      "y": 605,
+      "bg": [
+        253,
+        251,
+        247
+      ]
+    }
+  }
+]

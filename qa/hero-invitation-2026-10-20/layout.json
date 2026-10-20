@@ -1,0 +1,202 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "24px",
+        "height": 27.59375,
+        "lineHeight": "27.6px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "32px",
+        "height": 33.265625,
+        "lineHeight": "33.28px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "32px",
+        "height": 33.265625,
+        "lineHeight": "33.28px"
+      }
+    ],
+    "cta": 611.453125
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "24px",
+        "height": 27.59375,
+        "lineHeight": "27.6px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "37.83px",
+        "height": 39.328125,
+        "lineHeight": "39.3432px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "37.83px",
+        "height": 39.328125,
+        "lineHeight": "39.3432px"
+      }
+    ],
+    "cta": 638.203125
+  },
+  {
+    "width": 455,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "27.3px",
+        "height": 31.390625,
+        "lineHeight": "31.395px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "44.135px",
+        "height": 45.90625,
+        "lineHeight": "45.9004px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "44.135px",
+        "height": 45.90625,
+        "lineHeight": "45.9004px"
+      }
+    ],
+    "cta": 655.15625
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "32px",
+        "height": 36.796875,
+        "lineHeight": "36.8px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "57.6px",
+        "height": 59.890625,
+        "lineHeight": "59.904px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "57.6px",
+        "height": 59.890625,
+        "lineHeight": "59.904px"
+      }
+    ],
+    "cta": 691.34375
+  },
+  {
+    "width": 1000,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "32px",
+        "height": 36.796875,
+        "lineHeight": "36.8px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "72px",
+        "height": 74.875,
+        "lineHeight": "74.88px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "72px",
+        "height": 74.875,
+        "lineHeight": "74.88px"
+      }
+    ],
+    "cta": 721.3125
+  },
+  {
+    "width": 1001,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "36px",
+        "height": 41.390625,
+        "lineHeight": "41.4px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "64px",
+        "height": 66.546875,
+        "lineHeight": "66.56px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "64px",
+        "height": 66.546875,
+        "lineHeight": "66.56px"
+      }
+    ],
+    "cta": 618.4375
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "36px",
+        "height": 41.390625,
+        "lineHeight": "41.4px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "80px",
+        "height": 83.1875,
+        "lineHeight": "83.2px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "80px",
+        "height": 83.1875,
+        "lineHeight": "83.2px"
+      }
+    ],
+    "cta": 651.71875
+  },
+  {
+    "width": 1920,
+    "overflow": false,
+    "title": [
+      {
+        "text": "Kerstavond.",
+        "size": "36px",
+        "height": 41.390625,
+        "lineHeight": "41.4px"
+      },
+      {
+        "text": "Kom erbij.",
+        "size": "80px",
+        "height": 83.1875,
+        "lineHeight": "83.2px"
+      },
+      {
+        "text": "Schuif mee aan.",
+        "size": "80px",
+        "height": 83.1875,
+        "lineHeight": "83.2px"
+      }
+    ],
+    "cta": 651.71875
+  }
+]

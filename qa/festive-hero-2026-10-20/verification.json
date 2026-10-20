@@ -1,0 +1,72 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "ctaBottom": 576.921875,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "ctaBottom": 576.96875,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 455,
+    "overflow": false,
+    "ctaBottom": 561.015625,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 600,
+    "overflow": false,
+    "ctaBottom": 570.3125,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 601,
+    "overflow": false,
+    "ctaBottom": 602.609375,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "ctaBottom": 604.265625,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 1000,
+    "overflow": false,
+    "ctaBottom": 619.25,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 1001,
+    "overflow": false,
+    "ctaBottom": 497.515625,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "ctaBottom": 514.15625,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  },
+  {
+    "width": 1920,
+    "overflow": false,
+    "ctaBottom": 514.15625,
+    "heroAccessibilityViolations": 0,
+    "registrationLink": true
+  }
+]

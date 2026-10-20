@@ -26,7 +26,7 @@ Behoud de centrumgegevens, telefoon- en routelinks, de agenda met Brusselse tijd
 
 ## Brand Commitments
 
-Naam: Welzijnswerking Oostende. Stem: gewoon Nederlands, warm, direct en uitnodigend. De gebruiker heeft op 20 oktober 2026 een lichte, rustige richting bevestigd met neutraal wit, antraciet, één helder sans-seriflettertype, een compacte footer en een neutraal donkere foto-viewer. Het eerdere groen en de decoratieve serif/cursieve titels zijn expliciet afgewezen.
+Naam: Welzijnswerking Oostende. Stem: gewoon Nederlands, warm, direct en uitnodigend. De gebruiker heeft op 20 oktober 2026 de Oostendse huisstijl en daarna een zachtere, organische verfijning goedgekeurd: warme lichte oppervlakken, donkere koppen in gewone schrijfwijze met rustiger gewicht, echte mensen vroeg in de pagina, zachte hoeken en een natuurlijker fotografisch ritme. De Oostendse identiteit blijft herkenbaar in donkerblauwe identiteit en acties, de blauwe welkomstkop, leesbaar linkblauw en lokaal gehoste Cooper Hewitt Book, Medium en Semibold. Dit verfijnt de Oostendse wereld en vervangt de eerdere antraciet/Public Sans-keuze. Licht, rustig en leesbaar, de compacte footer en de neutraal donkere foto-viewer blijven gelden. Groen als oppervlak en decoratieve serif/cursieve titels blijven expliciet afgewezen.
 
 ## Evidence on Hand
 

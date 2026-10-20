@@ -1,0 +1,114 @@
+[
+  {
+    "id": "17",
+    "source": "assets/fotos-vorige-edities/facebook-2025/2025-17.jpg",
+    "reference": "assets/fotos-vorige-edities/restored-2026-10-20/2025-17-ai-reference.png",
+    "master": "assets/fotos-vorige-edities/restored-2026-10-20/2025-17-restored.png",
+    "width": 2048,
+    "height": 1536,
+    "coefficients": [
+      [
+        0.024247758027617253,
+        0.9215003473806315,
+        0.6256306534151238,
+        -0.7194660183715234
+      ],
+      [
+        -0.004446440832237164,
+        0.49139281622952957,
+        1.3330023024954853,
+        -0.5316604480649302
+      ],
+      [
+        0.03606215998372914,
+        0.390724145608335,
+        0.6166011740815699,
+        0.49647381784055955
+      ]
+    ],
+    "framing": {
+      "rotation": 0,
+      "crop": null
+    },
+    "correctionStrength": 0.38,
+    "contentPreservation": "Original photographic pixels with restrained colour correction and sharpening. Hall and dance photographs rotated/cropped; no generated subjects or compositing."
+  },
+  {
+    "id": "25",
+    "source": "assets/fotos-vorige-edities/facebook-2025/2025-25.jpg",
+    "reference": "assets/fotos-vorige-edities/restored-2026-10-20/2025-25-ai-reference.png",
+    "master": "assets/fotos-vorige-edities/restored-2026-10-20/2025-25-restored.png",
+    "width": 1900,
+    "height": 1000,
+    "coefficients": [
+      [
+        0.10597391442205181,
+        0.8674135550850308,
+        1.1050616395323583,
+        -1.237984685907893
+      ],
+      [
+        0.0303735507931783,
+        0.7080631464715409,
+        1.017426184593055,
+        -0.8231040396585189
+      ],
+      [
+        0.05323105097416872,
+        0.49971510114048845,
+        0.3642172369618785,
+        0.08150275720176453
+      ]
+    ],
+    "framing": {
+      "rotation": -3,
+      "crop": {
+        "left": 100,
+        "top": 320,
+        "width": 1900,
+        "height": 1000
+      }
+    },
+    "correctionStrength": 0.38,
+    "contentPreservation": "Original photographic pixels with restrained colour correction and sharpening. Hall and dance photographs rotated/cropped; no generated subjects or compositing."
+  },
+  {
+    "id": "31",
+    "source": "assets/fotos-vorige-edities/facebook-2025/2025-31.jpg",
+    "reference": "assets/fotos-vorige-edities/restored-2026-10-20/2025-31-ai-reference.png",
+    "master": "assets/fotos-vorige-edities/restored-2026-10-20/2025-31-restored.png",
+    "width": 2000,
+    "height": 1480,
+    "coefficients": [
+      [
+        0.1236367622838541,
+        0.6844951417034773,
+        0.5518670598716138,
+        -0.5136124130556625
+      ],
+      [
+        0.0028365708446958697,
+        0.48097130053740184,
+        0.9497312119326323,
+        -0.45115200829714003
+      ],
+      [
+        0.007689221875194484,
+        0.5058097847807541,
+        0.004284891799559487,
+        0.624897145935633
+      ]
+    ],
+    "framing": {
+      "rotation": -1,
+      "crop": {
+        "left": 40,
+        "top": 40,
+        "width": 2000,
+        "height": 1480
+      }
+    },
+    "correctionStrength": 0.38,
+    "contentPreservation": "Original photographic pixels with restrained colour correction and sharpening. Hall and dance photographs rotated/cropped; no generated subjects or compositing."
+  }
+]

@@ -42,7 +42,7 @@ try {
     assert.equal(layout.documentOverflow, false);
     assert.equal(layout.modal, true);
     // Wait until the entrance animation has reached its final blur.
-    await expect.poll(() => menu.evaluate(dialog => getComputedStyle(dialog, '::backdrop').backdropFilter)).toBe('blur(14px)');
+    await expect.poll(() => menu.evaluate(dialog => getComputedStyle(dialog, '::backdrop').backdropFilter)).toBe('blur(6px)');
     await page.keyboard.press('Shift+Tab');
     await expect(page.locator('.mobile-nav-participate')).toBeFocused();
     await page.keyboard.press('Tab');
@@ -80,16 +80,17 @@ try {
   assert.equal(await page.locator('body').evaluate(body => getComputedStyle(body).position), 'fixed');
   await page.mouse.wheel(0, 400);
   await close.click();
+  await expect(menu).not.toBeVisible();
   assert.equal(await page.evaluate(() => scrollY), scrollBefore);
 
-  for (const href of ['#welkom', '#edities', '#partners', '#praktisch']) {
+  for (const href of ['#welkom', '#praktisch', '#edities', '#inschrijven']) {
     await page.goto(base);
     await toggle.click();
     await page.locator(`#mobile-nav a[href="${href}"]`).click();
     await expect(menu).not.toBeVisible();
     await expect(page).toHaveURL(new RegExp(`${href}$`));
     await expect(page.locator(href)).toBeFocused();
-    await expect.poll(() => page.locator(href).evaluate(target => Math.abs(target.getBoundingClientRect().top - 24))).toBeLessThan(2);
+    await expect.poll(() => page.locator(href).evaluate(target => Math.abs(target.getBoundingClientRect().top - 24 - (parseFloat(getComputedStyle(target).scrollMarginTop) || 0)))).toBeLessThan(2);
   }
 
   await page.goto(base);

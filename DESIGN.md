@@ -1,87 +1,109 @@
 ---
 name: "Welzijnswerking Oostende"
-description: "Licht, rustig en leesbaar; neutrale oppervlakken en één sans-seriflettertype."
+description: "Warme Oostendse uitnodiging met Cooper Hewitt, zachte oppervlakken en echte fotografie."
 colors:
-  page: "#fafaf9"
-  surface: "#ffffff"
-  surface-soft: "#f0f0ed"
-  text: "#242424"
-  text-muted: "#5e5e5a"
-  action: "#292929"
-  border: "#d5d5d0"
-  control-border: "#969691"
-  focus: "#245cb2"
+  page: "#fdfbf7"
+  surface: "#fdfbf7"
+  surface-soft: "#f3efe7"
+  brand: "#273a7c"
+  accent: "#187ac9"
+  link: "#2369a2"
+  action-hover: "#1c2b60"
+  surface-tint: "#ede3d2"
+  text: "#343936"
+  text-muted: "#646760"
+  action: "#273a7c"
+  border: "#dddcd4"
+  control-border: "#7d8ba2"
+  focus: "#2369a2"
   focus-on-dark: "#ffffff"
-  overlay: "rgb(22 22 22 / .28)"
-  overlay-clear: "rgb(22 22 22 / 0)"
-  overlay-shadow: "rgb(22 22 22 / .12)"
+  overlay: "rgb(30 29 27 / .22)"
+  overlay-clear: "rgb(30 29 27 / 0)"
+  overlay-shadow: "rgb(30 29 27 / .12)"
   viewer-surface: "#181818"
   viewer-overlay: "rgb(15 15 15 / .96)"
   viewer-text: "#f5f5f3"
-  viewer-border: "#505050"
-  viewer-hover: "#303030"
-  hero-base: "#302b26"
-  hero-shade: "rgb(27 25 22 / .70)"
-  hero-shade-edge: "rgb(27 25 22 / .76)"
-  hero-label: "#f3f3ee"
-  hero-copy: "#fffef8"
-  action-line: "#a8a8a2"
-  control-line: "#bdbdb7"
+  viewer-border: "#858585"
+  viewer-hover: "#363636"
+  viewer-control: "#242424"
+  hero-base: "#2b241e"
+  hero-shade: "rgb(30 26 22 / .70)"
+  hero-shade-edge: "rgb(30 26 22 / .80)"
+  hero-label: "#f8f3eb"
+  hero-copy: "#ffffff"
+  action-line: "#7d8ba2"
+  control-line: "#7d8ba2"
 typography:
   display:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    fontSize: "clamp(2.25rem, 9vw, 3.375rem)"
-    fontWeight: 600
-    lineHeight: 1.1
-    letterSpacing: "-.025em"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontSize: "clamp(1.5rem, 6vw, 1.875rem)"
+    fontWeight: 500
+    lineHeight: 1.15
+    letterSpacing: "-.015em"
   display-wide:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    fontSize: "clamp(3.375rem, 5.5vw, 4.5rem)"
-    fontWeight: 600
-    lineHeight: 1.08
-    letterSpacing: "-.025em"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontSize: "2.25rem"
+    fontWeight: 500
+    lineHeight: 1.15
+    letterSpacing: "-.015em"
+  invitation:
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontSize: "clamp(2rem, 9.7vw, 3.5rem)"
+    fontWeight: 500
+    lineHeight: 1.1
+    letterSpacing: "-.015em"
+  invitation-wide:
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontSize: "clamp(4rem, 5.8vw, 5rem)"
+    fontWeight: 500
+    lineHeight: 1.1
+    letterSpacing: "-.015em"
   headline:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "clamp(1.75rem,2.8vw,2.25rem)"
-    fontWeight: 600
-    lineHeight: 1.12
+    fontWeight: 500
+    lineHeight: 1.18
     letterSpacing: "-.02em"
   welcome-headline:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "clamp(1.875rem, 3.2vw, 2.5rem)"
-    fontWeight: 600
+    fontWeight: 500
     lineHeight: 1.15
     letterSpacing: "-.02em"
   title:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "1.375rem"
-    fontWeight: 600
-    lineHeight: 1.12
-    letterSpacing: "-.02em"
+    fontWeight: 500
+    lineHeight: 1.18
+    letterSpacing: "-.015em"
   body:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: 1.7
   body-compact:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    fontSize: "1rem"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.7
   label:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: ".875rem"
     fontWeight: 400
     lineHeight: 1.6
   button:
-    fontFamily: "Public Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "1rem"
-    fontWeight: 550
-    lineHeight: 1.6
+    fontWeight: 500
+    lineHeight: 1.7
 rounded:
-  control: "6px"
-  panel: "8px"
-  menu: "22px"
+  control: "10px"
+  panel: "16px"
+  menu: "20px"
+  photo: "12px"
+  welcome-photo: "12px 32px 12px 12px"
+  archive-lead: "32px 12px 12px 12px"
+  archive-lead-wide: "48px 12px 12px 12px"
   circle: "50%"
 spacing:
   "4": "4px"
@@ -104,23 +126,26 @@ components:
     typography: "{typography.button}"
     rounded: "{rounded.control}"
     padding: "12px 18px"
+  button-primary-hover:
+    backgroundColor: "{colors.action-hover}"
+    textColor: "{colors.page}"
   button-inverse:
     backgroundColor: "{colors.page}"
     textColor: "{colors.action}"
     rounded: "{rounded.control}"
     padding: "12px 22px"
   participation-note:
-    backgroundColor: "{colors.surface-soft}"
+    backgroundColor: "{colors.surface-tint}"
     textColor: "{colors.text}"
     rounded: "{rounded.panel}"
-    padding: "24px"
+    padding: "28px"
   viewer:
     backgroundColor: "{colors.viewer-surface}"
     textColor: "{colors.viewer-text}"
     rounded: "{rounded.panel}"
     padding: "16px"
   viewer-control:
-    backgroundColor: "transparent"
+    backgroundColor: "{colors.viewer-control}"
     textColor: "{colors.viewer-text}"
     rounded: "{rounded.control}"
     padding: "8px 16px"
@@ -129,7 +154,7 @@ components:
     textColor: "{colors.viewer-text}"
   mobile-menu:
     backgroundColor: "{colors.page}"
-    textColor: "{colors.text}"
+    textColor: "{colors.brand}"
     rounded: "{rounded.menu}"
     padding: "24px"
   faq-indicator-open:
@@ -149,67 +174,73 @@ components:
 
 **Creative North Star: "Licht, rustig en leesbaar"**
 
-De bevestigde richting is licht en rustig: neutraal wit, antraciet en één helder sans-seriflettertype. Leesbaarheid en duidelijke bediening dragen het vertrouwen, met ruimte voor fotografie en gewone Nederlandse taal. “Licht, rustig en leesbaar” is hier een beschrijvende samenvatting van die bevestigde richting, geen apart gekozen metafoor.
+De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, rustiger koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en de welkomstkop; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.
 
-De pagina gebruikt rustige lichte vlakken, dunne scheidingslijnen en compacte functionele onderdelen. Het fotografische hero-oppervlak en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels zijn expliciet afgewezen.
+Zachte hoeken, dunne scheidingslijnen en afwisselende fotocomposities geven de inhoud een natuurlijker ritme. De fotografische hero en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels blijven expliciet afgewezen.
 
 **Key Characteristics:**
-- Eén lokaal gehoste Public Sans-familie voor koppen, tekst en bediening.
-- Lichte neutrale vlakken, antraciete acties en dunne grijze scheidingen.
-- Leesbare tekst, zichtbare focus en ruime aanraakvlakken.
+- Eén lokaal gehoste Cooper Hewitt-familie voor koppen, tekst en bediening.
+- Warme lichte vlakken, donkere koppen, gerichte blauwe accenten en dunne scheidingen.
+- Leesbare tekst, zachte hoeken, zichtbare focus en ruime aanraakvlakken.
 - Een compacte doorlopende footer en een neutraal donkere foto-viewer.
 
-Dit document beschrijft de geïmplementeerde gerichte verfijning van 20 oktober 2026. De bron is `src/styles/tokens.css`, `global.css`, `campaign.css` en de gebruikte Astro-componenten in `src/pages/index.astro`. `PRODUCT.md` en `plans/VISUELE_RICHTING_2026-10-20.md` leggen de bevestigde richting vast. De frontmatter bevat de normatieve waarden; de onderstaande tekst beschrijft hun toepassing. De sidecar bevat daarnaast gesynthetiseerde OKLCH-kleurstroken voor het paneel; deze zijn geen extra paletwaarden voor de website.
+Dit document beschrijft de goedgekeurde organische verfijning van de Oostendse wereld op 20 oktober 2026. Bronnen zijn `src/styles/{tokens,global,campaign,motion}.css` en de gebruikte Astro-componenten; richting en review staan in `qa/organic-2026-10-20/`. De frontmatter bevat de normatieve waarden; de sidecar vult componentuitsneden, motion en metadata aan. Fontbronnen en licentie staan in `public/fonts/FONT_SOURCES.md`. Het eigen woordmerk blijft de afzender; er is geen stadslogo of penseelstreek toegevoegd.
 
 ## Colors
 
-Een ingetogen neutraal palet houdt informatie helder en laat kleur hoofdzakelijk uit de foto's komen.
+De sidecar bevat afgeleide OKLCH-kleurstroken voor de ontwerpweergave. Deze zijn uitsluitend presentatiehulpen; de frontmatter en CSS-tokens blijven de paletbron.
+
+Warme papier- en zandtinten verzachten de bevestigde Oostendse blauwrollen.
 
 ### Primary
 
-- **Antraciete actie** (`action`): primaire knoppen, interactief accent en geselecteerde FAQ-bediening.
-- **Functioneel focusblauw** (`focus`): de zichtbare toetsenbordfocus op lichte ondergrond; geen decoratieve accentkleur.
+- **Oostends donkerblauw** (`brand`, `action`): identiteit, primaire knoppen, navigatie, de welkomstkop en geopende FAQ-indicator. `action-hover` verdiept de primaire actie bij hover.
+- **Helder Oostends blauw** (`accent`): behouden accenttoken; geen algemene kleur voor de huidige sectiekoppen.
+- **Leesbaar linkblauw** (`link`, `focus`): kleine tekstlinks en toetsenbordfocus op licht. Dit donkerdere blauw bewaart de leesbaarheid van kleine tekst.
 
 ### Neutral
 
-- **Licht pagina-wit** (`page`) en **zuiver oppervlak-wit** (`surface`): de pagina, header en footer tegenover de witte verhaal- en geschiedenisvlakken.
-- **Zacht neutraal grijs** (`surface-soft`): deelnamekaart, centrumlijst en historische erkenning.
-- **Donker antraciet** (`text`) en **gedempt grijs** (`text-muted`): hoofdtekst tegenover toelichting en metadata.
-- **Rustige scheidingslijn** (`border`): horizontale inhoudsscheidingen. `control-border`, `control-line` en `action-line` geven specifieke controls en de desktopactie hun contour.
-- **Neutraal donker** (`viewer-surface`, `viewer-overlay`) en **licht viewer-wit** (`viewer-text`): foto-viewer en achterliggende verduistering. `viewer-border` en `viewer-hover` houden de bediening herkenbaar.
-- **Doorzichtig donker** (`overlay`, `overlay-clear`, `overlay-shadow`): achtergrond, animatiestart en diffuse schaduw van het mobiele menu.
-- **Warm fotografisch donker** (`hero-base`, `hero-shade`, `hero-shade-edge`): uitsluitend het bestaande fotografische hero-oppervlak. `hero-label` en `hero-copy` verzorgen de lichte tekst daarop.
-- **Witte focus op donker** (`focus-on-dark`): focus op hero en viewer; het mobiele menu gebruikt de huidige tekstkleur voor zijn focusrand.
+- **Warm papier** (`page`): pagina, header, footer en welkom. **Warm papier** (`surface`, alias van `page`): verhaal, geschiedenis en eventfotoarchief.
+- **Zacht zand** (`surface-soft`): centrumlijst en historische erkenning. **Warme inschrijftint** (`surface-tint`): deelnamekaart. De feitenstrook gebruikt `surface-soft`.
+- **Donkere hoofdtekst** (`text`) en **gedempt grijs** (`text-muted`): lopende tekst tegenover toelichting en metadata.
+- **Rustige scheidingslijn** (`border`): horizontale inhoudsscheidingen. `control-border`, `control-line` en `action-line` geven bediening een herkenbare contour.
+- **Neutraal donker** (`viewer-surface`, `viewer-overlay`) en **licht viewer-wit** (`viewer-text`): foto-viewer en backdrop. `viewer-border` en `viewer-hover` maken bediening herkenbaar.
+- **Transparant navy** (`overlay`, `overlay-clear`, `overlay-shadow`): backdrop, animatiestart en diffuse schaduw van het mobiele menu.
+- **Warm fotografisch donker** (`hero-base`, `hero-shade`, `hero-shade-edge`): verduistering over de warme hero-foto. `hero-label` en `hero-copy` verzorgen de lichte tekst daarop.
+- **Witte focus op donker** (`focus-on-dark`): hero en viewer; het warme lichte mobiele menu gebruikt focusblauw.
 
-**The Neutral Surface Rule.** Gebruik de lichte neutrale oppervlakrollen voor de pagina en antraciet voor acties; de blauwe focuskleur dient de bediening.
+**The Oostende Blue Rule.** Gebruik donkerblauw voor identiteit, acties en de welkomstkop; gebruik linkblauw voor kleine links en donkere tekst voor gewone koppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.
 
 ## Typography
 
-**Display Font:** Public Sans, met de systeem-sans-stack uit de frontmatter als fallback.  
-**Body Font:** dezelfde Public Sans-familie, lokaal gehost als variabel WOFF2-lettertype.
+**Display Font:** Cooper Hewitt, met de systeem-sans-stack uit de frontmatter als fallback.
+**Body Font:** dezelfde Cooper Hewitt-familie, lokaal gehost als drie statische WOFF2-bestanden: Book (400), Medium (500) en Semibold (600). Book en Semibold worden vooraf geladen; Medium laadt wanneer nodig. Gewone primaire acties gebruiken Medium (500). Enkele lokale regels, zoals de mobiele menuactie en footer, vragen 550; bij deze statische set kiest de browser daarvoor Semibold (600). Er is geen variabele 550-fontface.
 
-**Character:** helder en direct, zonder decoratieve lettertypewisseling. Koppen zijn rechtop, doorgaans halfvet en licht aangespatieerd naar binnen; lopende tekst blijft normaal van gewicht.
+**Character:** helder en direct, zonder decoratieve lettertypewisseling. Koppen zijn rechtop, doorgaans Medium (500), donker en in gewone schrijfwijze met lichte negatieve tracking. De welkomstkop blijft bewust donkerblauw. Lopende tekst gebruikt Book.
 
 ### Hierarchy
 
-- **Display**: de hero gebruikt `display` op mobiel en `display-wide` vanaf het eerste brede breakpoint; vanaf het grote desktopbreakpoint is de kop vast op de bovengrens van die schaal. De bron gebruikt hier eigen waarden in plaats van het ongebruikte algemene `--h1`-token.
-- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant.
+- **Display en invitation**: “Kerstavond.” gebruikt de kleinere displayrol; “Kom erbij.” en “Schuif mee aan.” krijgen de grotere invitationrol op twee regels. Vanaf 601px zijn de tussenstappen respectievelijk 2rem en `clamp(3.5rem, 7.5vw, 4.5rem)`; vanaf 1001px gelden display-wide en invitation-wide. Beide blijven Cooper Hewitt, rechtop en Medium (500).
+- **Hero-fotografie**: de verfijning van 20 oktober 2026 laat op mobiel boven de tekst circa 140–200px foto vrij. Een verticaal warm donker verloop beschermt de witte tekst eronder. De event-/locatiecontext staat onder de h1. Vanaf 1001px loopt de verduistering van links naar rechts af, zodat kaarslicht en glazen rechts helder blijven. De lichte feitenstrook en bestaande inhoud blijven behouden.
+- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant. Globale h2-koppen zijn donker, sentence-case, Medium (500), met regelhoogte (1.18) en tracking (-.02em). Welkom gebruikt donkerblauw en regelhoogte (1.15); het eventarchief gebruikt een grotere lokale kop (`clamp(2rem,4vw,3.25rem)`, regelhoogte 1.12).
 - **Title**: gewone tussenkoppen gebruiken `title`. Praktische rijen en fotobijschriften hebben kleinere, contextgebonden varianten; centrumnamen hebben een grotere lokale variant.
-- **Body**: standaardtekst gebruikt `body`; inleiding en FAQ-antwoorden gebruiken `body-compact`. Verhaaltekst en tijdlijnparagrafen zijn waar ingesteld begrensd tot (65ch).
+- **Body**: standaardtekst gebruikt `body` (18px/1.7); de welkomstinleiding houdt die maat en FAQ-antwoorden gebruiken `body-compact` (17px/1.7). Verhaaltekst en tijdlijnparagrafen zijn waar ingesteld begrensd tot (65ch).
 - **Label**: de `label`-rol beschrijft kleine gewone tekst zoals bronregels en bijschriften, niet een decoratieve bovenkop. Footer- en juridische metadata hebben compactere contextvarianten.
 - **Button**: het normale actiegewicht is vastgelegd in `button`; de lichte heroactie gebruikt een rustiger lokaal gewicht.
 
 Koppen gebruiken gebalanceerde regels; paragrafen krijgen `text-wrap: pretty` waar ondersteund. Behoud de volledige tekst bij zoom en smalle vensters.
 
-**The One Family Rule.** Gebruik Public Sans voor koppen, lopende tekst en bediening; maak hiërarchie met grootte, gewicht en ruimte.
+**The One Family Rule.** Gebruik Cooper Hewitt voor koppen, lopende tekst en bediening; maak hiërarchie met grootte, gewicht en ruimte.
 
 ## Layout
 
 De gecentreerde inhoudsbreedte heeft een maximum van (1200px). De zijmarges zijn (20px) op mobiel, (32px) vanaf (601px) en (48px) vanaf (1100px). De sectieruimte volgt dezelfde grenzen: (48px), (64px), (72px). De spacing-waarden in de frontmatter zijn herhaalde bouwstenen uit de implementatie, geen verplichte universele rastereenheid.
 
-Inhoud stapelt op smalle schermen. Vanaf (768px) ontstaan twee kolommen voor onder meer praktische informatie, verhaal, centrumlijst en archiefintroducties. Het eventfotoarchief gaat dan van twee naar drie kolommen; de optionele galerij heeft daarnaast aantalsafhankelijke rijen vanaf (601px). De desktopnavigatie verschijnt vanaf (1001px), met een bijbehorende JavaScript-grens. Houd beide gelijk bij wijzigingen.
+Inhoud stapelt op smalle schermen. Vanaf (768px) ontstaan twee kolommen voor onder meer praktische informatie, welkom, verhaal en centrumlijst. Het eventfotoarchief gebruikt vanaf (768px) een twaalfkolomsraster met achtereenvolgens paren van (7/5), (5/7) en (6/6) kolommen. De tweede foto staat (72px) lager en krijgt een (4:5)-kader; de vierde gebruikt (3:2), de zesde staat (48px) lager. Op mobiel zijn de eerste en vierde vervolgfoto breed over beide kolommen. Vanaf (1001px) staat de dansfoto naast de introductie in een (.85fr/1.4fr)-verdeling met (72px) tussenruimte. De optionele galerij behoudt aantalsafhankelijke rijen vanaf (601px). De desktopnavigatie verschijnt vanaf (1001px), met een bijbehorende JavaScript-grens. Houd beide gelijk bij wijzigingen.
 
-De footer gebruikt eerst twee inhoudskolommen, met de identiteit erboven, en vanaf (768px) drie kolommen. Onder (360px) stapelt de inhoud opnieuw. De footer blijft onderdeel van het lichte paginavlak, met een bovenlijn en een kleine juridische afsluiting.
+De aanvullende praktische gegevens staan onder de hoofdgegevens in een gecentreerd blok van maximaal (960px), met één bovenlijn. De agendalink en bijbehorende toelichting staan gecentreerd tussen de hoofdgegevens en dit detailblok, met (32px) ruimte erboven en (32px) eronder, (40px) eronder vanaf (768px). Vanaf (768px) staan uren en doelgroep links, menu en bezoekinformatie rechts met (64px) kolomruimte. De menutoelichting is een gewone paragraaf. Detailgroepen hebben geen afzonderlijke rijlijnen; onder (20rem) groepsbreedte, ook bij tekstvergroting, staan labels boven hun waarden.
+
+De footer gebruikt eerst twee inhoudskolommen, met de identiteit erboven, en vanaf (768px) drie kolommen. Onder (360px) stapelt de inhoud opnieuw. De footer gebruikt het lichte zandvlak (`surface-soft`), met een bovenlijn en een kleine juridische afsluiting.
 
 ## Elevation & Depth
 
@@ -217,37 +248,41 @@ De gewone inhoud is vlak: scheidingslijnen en lichte oppervlakverschillen maken 
 
 ### Shadow Vocabulary
 
-- **Mobiel navigatievenster**: (`box-shadow: 0 32px 100px var(--overlay-shadow)`). De backdrop gebruikt daarnaast (`backdrop-filter: blur(14px)`). Deze overlaybehandeling hoort bij het modale menu.
+- **Mobiel navigatievenster**: (`box-shadow: 0 32px 100px var(--overlay-shadow)`). De backdrop gebruikt daarnaast (`backdrop-filter: blur(6px)`). Deze overlaybehandeling hoort bij het modale menu.
 
-Menu- en detailovergangen gebruiken de bestaande korte duurwaarden en reveal-curve in de sidecar. De globale reduced-motion-regel verwijdert animaties en transitions en schakelt vloeiend scrollen uit.
+De onepager heeft een korte fotografische introductie: de hero-foto komt tot rust en de titelregels bewegen met een klein ritme naar hun positie. De grote archieffoto heeft één bescheiden binnenkomst. De overige inhoud blijft direct zichtbaar. Motion voor JavaScript (`motion/mini`) verzorgt de gedeelde overgangen zonder React-integratie. Menu en foto-viewer openen en sluiten vloeiend; FAQ en centrumlijst animeren hun gemeten hoogte. Knoppen en fotolinks geven beperkte hover- en drukfeedback. Reduced motion slaat de ruimtelijke beweging over, ook bij een live voorkeurwijziging. Native dialogs, toetsenbordfocus, ankers en de werking zonder JavaScript blijven de basis. Specificatie en verificatie staan in `plans/MOTION_2026-10-20.md`. De globale reduced-motion-regel verwijdert animaties en transitions en schakelt vloeiend scrollen uit. De CSS schakelt de oudere menu-keyframes en FAQ-paragraafanimatie uit voor de gedeelde Motion-aansturing. Hover op fijne pointers vergroot foto’s tot (1.025), verplaatst pijlen (3px) en drukfeedback schaalt controls tot (.98); reduced motion verwijdert transforms. Reduced transparency verwijdert de menublur en maakt de backdrop dekkender.
 
 **The Quiet Depth Rule.** Houd gewone inhoud vlak; reserveer de diffuse schaduw en achtergrondvervaging voor het mobiele navigatievenster.
 
 ## Shapes
 
-Controls hebben een kleine hoekafronding (`control`), deelnamekaart en viewer een iets ruimere (`panel`), en het mobiele menu een uitgesprokener (`menu`). De FAQ- en centrumindicatoren zijn cirkels (`circle`) met een uit CSS-lijnen opgebouwd plus/minteken. Fotokaders blijven eenvoudig en rechthoekig; fotoarchieven gebruiken voornamelijk een liggende verhouding. Randen zijn dun en functioneel, zonder sierkaders.
+Controls gebruiken zachte hoeken (`control`: 10px), deelnamekaart en viewer ruimere hoeken (`panel`: 16px), en het mobiele menu 20px (`menu`). De FAQ- en centrumindicatoren zijn cirkels (`circle`) met een uit CSS-lijnen opgebouwd plus/minteken. Storyfoto’s volgen de panelafronding. De welkomstfoto heeft (12px 32px 12px 12px); archiefkaders (12px), de dansfoto (32px 12px 12px 12px) en vanaf (1001px) (48px 12px 12px 12px). Deze gerichte foto-uitzonderingen vormen geen algemene controlradius. Archiefbeelden wisselen liggende en portretverhoudingen af. Randen zijn dun en functioneel, zonder sierkaders.
 
 ## Components
 
 ### Buttons
 
-Rustige, duidelijk herkenbare acties. De primaire actie gebruikt antraciet met lichte tekst en de `button-primary`-tokens; minimale hoogte (50px). De hero gebruikt de lichte `button-inverse`-variant. Hover verhoogt de helderheid licht en onderstreept de tekst; active verlaagt de helderheid. Zichtbare focus is een omlijning van (3px) met een afstand van (5px), wit op hero en viewer.
+Rustige, duidelijk herkenbare acties. De primaire actie gebruikt donkerblauw met lichte tekst en de `button-primary`-tokens; minimale hoogte (50px). De hero gebruikt de lichte `button-inverse`-variant. Hover gebruikt `action-hover` en onderstreept de tekst; de lichte heroactie gebruikt `surface-soft`. Active verlaagt de helderheid. Zichtbare focus is een omlijning van (3px) met een afstand van (5px), wit op hero en viewer.
 
 ### Text links
 
-Een onderstreept label met een bruikbaar aanraakvlak van minimaal (44px) hoog. Hover verdikt de onderstreping. Telefoon-, route- en informatieacties blijven tekstlinks; hun betekenis komt uit het label.
+Een onderstreept label in `link` met een bruikbaar aanraakvlak van minimaal (44px) hoog. Hover verdikt de onderstreping en gebruikt `action`. Telefoon-, route- en informatieacties blijven tekstlinks; hun betekenis komt uit het label.
 
 ### Cards / Containers
 
-De deelnamekaart is het zachte neutrale vlak met dunne rand, `panel`-afronding en de padding uit `participation-note`. Centrumgegevens zijn open rijen met een bovenlijn, geen afzonderlijke zwevende kaarten. Voer geen algemene schaduwkaart in op basis van de menu-overlay.
+De deelnamekaart is het warme getinte vlak zonder rand, `panel`-afronding en de padding uit `participation-note`. Centrumgegevens zijn open rijen met een bovenlijn, geen afzonderlijke zwevende kaarten. Voer geen algemene schaduwkaart in op basis van de menu-overlay.
 
 ### Disclosures
 
-De FAQ gebruikt native `details`/`summary`, gescheiden door lijnen en met een ronde indicator. De indicator vult antraciet wanneer open; de verticale lijn draait weg. De centrumlijst heeft een eigen groter disclosure met dezelfde lijnentaal. De samenvattingen bieden ruime volledige klikvlakken; de inhoud blijft leesbaar zonder JavaScript. Het exclusieve FAQ-gedrag is ook voor oudere browsers aangevuld.
+De FAQ gebruikt native `details`/`summary`, gescheiden door lijnen en met een ronde indicator. De indicator vult donkerblauw wanneer open; de verticale lijn draait weg. De centrumlijst heeft een eigen groter disclosure met dezelfde lijnentaal. De samenvattingen bieden ruime volledige klikvlakken; de inhoud blijft leesbaar zonder JavaScript. Het exclusieve FAQ-gedrag is ook voor oudere browsers aangevuld.
 
 ### Navigation
 
-De header is licht, met het compacte tweeregelige woordmerk. Desktoplinks krijgen bij hover een fijne lijn; de praktische actie heeft een omlijnd vlak dat bij hover donker vult. Op mobiel opent een native dialog met grote tekstlinks, een zichtbare sluitactie en behoud van toetsenbordfocus en scrollpositie. Zonder JavaScript blijft een gewone navigatielijst beschikbaar.
+De header volgt de warme paginaondergrond, zonder bovenlijn, met het compacte tweeregelige eigen woordmerk. Desktoplinks zijn 1rem groot en krijgen bij hover een fijne lijn. De volgorde is Voor wie?, Praktische info, Vorige edities en Hoe inschrijven?. De inschrijfactie verwijst naar #inschrijven en gebruikt de donkerblauwe button-primary-vorm met 10px afronding, minimaal 50px hoogte en 12px 22px binnenruimte. Partners blijven bereikbaar via de footer. Het mobiele menu volgt dezelfde volgorde met een afzonderlijke donkerblauwe inschrijfknop; de trigger heet Menu en heeft een dunne rand. Op mobiel opent een native dialog met grote tekstlinks, een zichtbare sluitactie en behoud van toetsenbordfocus en scrollpositie. De titel “Navigatie” leidt; de eventcontext staat eronder. Zonder JavaScript blijft een gewone navigatielijst beschikbaar.
+
+### Fotografie
+
+De vrijwilligersfoto (`2025-facebook-07`) staat vroeg onder de doelgroeptekst, met zichtbaar editiejaar 2025 en bronlink. Het eventarchief begint met dansende gasten (`31`) en behoudt alle zeven oorspronkelijke beelden in de viewer: 31, 07, 01, 34, 17, 37 en 25. De zes vervolgbeelden volgen de compositie uit Layout; zichtbare historische context en bron blijven bij de beelden horen. De viewer toont het volledige beeld met `object-fit: contain`.
 
 ### Photo viewer
 
@@ -262,7 +297,7 @@ Er zijn geen eigen invoervelden of chips op de publieke pagina; dit document sch
 ## Do's and Don'ts
 
 ### Do:
-- **Do** gebruik de bestaande lichte oppervlakrollen en antraciete acties.
+- **Do** gebruik de warme oppervlakrollen, donkere gewone koppen, donkerblauwe acties en blauwe welkomstkop.
 - **Do** houd tekstlinks herkenbaar door onderstreping en geef alle bediening zichtbare toetsenbordfocus.
 - **Do** behoud de leesbare tekstgroottes, regelafstand en responsieve ruimte; controleer ook tekstvergroting.
 - **Do** houd de footer compact, met dezelfde ondergrond als de pagina en leesbare navigatie- en verenigingsgegevens.
@@ -272,8 +307,23 @@ Er zijn geen eigen invoervelden of chips op de publieke pagina; dit document sch
 ### Don't:
 - **Don't** herstel groene oppervlakvlakken of decoratieve serif- en cursieve titels.
 - **Don't** verander de foto-viewer in een gekleurd decoratief kader; gebruik de neutraal donkere rollen.
-- **Don't** gebruik focusblauw als decoratief merkaccent.
-- **Don't** maak van de kleine bestaande tekstlabels boven titels een nieuw herbruikbaar kickerpatroon.
+- **Don't** plaats decoratieve kickers boven koppen; de hero-context volgt de h1 en de menucontext volgt de h2.
 - **Don't** leid een perfecte esthetische score of volledige toegankelijkheidscertificering af uit deze documentatie of automatische checks.
 
-Niet gecanoniseerd: de bestaande kleine labels boven de hero- en menutitel en de retorische labels in de feitenstrook zijn overgeërfde pagina-inhoud; ze vormen geen nieuw voorschrift voor decoratieve kickers. Dit document verandert geen UI en bevestigt geen esthetische 20/20-score. Screenshotbewijs onder `qa/neutral-design-2026-10-20/` onderbouwt de gerichte verfijning; enkele tekstregels kunnen na die captures zijn bijgewerkt, dus de huidige bron blijft leidend.
+Bewijs staat onder `qa/organic-2026-10-20/`: vijf viewports (320, 390, 768, 1001 en 1440px), interactiestaten, no-JS, 200% tekst en reduced motion. `RESULTATEN.md` rapporteert een geslaagde build, 11 bestaande tests en geen axe-bevindingen in de geteste staten. De 56 hero-contrastmetingen hebben een minimum van 6,397:1. `FINISH_REVIEW.md` geeft disposition ship zonder materiële fixes; detectoradviezen over typografie en hoeken betroffen de vorige documentatie. Dit is aangeleverd bewijs, geen hier herhaalde controle of volledige toegankelijkheidscertificering.
+
+
+## Motion — 20 oktober 2026
+
+De hero-titel komt woord voor woord uit afzonderlijke tekstmaskers omhoog, met 85 ms onderling ritme en zonder rotatie. Woordkaders volgen de natuurlijke regelafbreking; de circa 1,65 seconden lange openingssequentie blijft zo herkenbaar op desktop en mobiel. De hero-foto beweegt pas na decoderen. Elke inhoudsfoto heeft een stilstaand `data-motion-frame`; alleen haar binnenste beeld beweegt, vanaf een startlijn op 82% schermhoogte én minimaal 30% zichtbaar beeld. De positie wordt na laden opnieuw beoordeeld. Kaders en bijschriften blijven stilstaan, terugscrollen herhaalt niets, hover verandert helderheid in plaats van met de entreetransform te concurreren. Opstarten neemt reeds zichtbare beelden niet weg. Reduced motion, toetsenbordfocus, rotatie en scrollvergrendeling hebben expliciete afhandelingspaden. De viewer houdt zijn huidige foto vast terwijl de volgende decodeert; beeldruimte en statusregel hebben een stabiele hoogte. De specificatie en verificatie staan in `plans/MOTION_2026-10-20.md`.
+
+
+## Kleurverfijning — 20 oktober 2026
+
+Na de kleuraudit heeft de gebruiker de verfijning goedgekeurd. Drie lichte rollen vormen de basis: papier (`page` en alias `surface`), zacht zand (`surface-soft`, feitenstrook, centra en footer) en een duidelijker warme inschrijftint (`surface-tint`, uitsluitend de deelnamekaart). De gewone inhoud wisselt niet meer tussen wit en papier.
+
+Essentiële doelgroeptekst en FAQ-antwoorden gebruiken `text`; bijschriften en metadata behouden `text-muted`. De blauwe welkomstkop blijft behouden. Gewone contactlinks gebruiken `link`; historische tijdlijnjaren gebruiken `text`.
+
+De hero gebruikt een warmer bruin-neutraal verloop met 70–80% dekking in het tekstgebied en een lichtere bovenkant op mobiel. Het mobiele menu gebruikt een neutrale scrim van 22% en 6px blur. Reduced transparency behoudt een dekkender neutrale backdrop zonder blur. De viewer behoudt neutraal donker, met permanente controlvulling `#242424`, rand `#858585` en hover `#363636`.
+
+Nieuwe contrastmetingen en detectorresultaat staan in `qa/color-refinement-2026-10-20/`. De vroegere organic-captures documenteren de vorige kleurwaarden.

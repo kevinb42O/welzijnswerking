@@ -17,8 +17,11 @@ const { id = 'lightbox', initialSrc, label = 'Foto van een vorige editie' } = As
   </div>
 </dialog>
 <script>
+  import { dialogMotion, move } from '../scripts/motion';
   document.querySelectorAll<HTMLDialogElement>('[data-photo-viewer]').forEach(dialog => {
     if (typeof dialog.showModal !== 'function') return;
+    const motion = dialogMotion(dialog);
+    let imageMotion: ReturnType<typeof move> | undefined;
     const gallery = dialog.closest('[data-photo-gallery]');
     const triggers = [...(gallery?.querySelectorAll<HTMLElement>('[data-photo-open]') || [])];
     const stage = dialog.querySelector<HTMLElement>('.photo-viewer-stage')!;
@@ -39,9 +42,12 @@ const { id = 'lightbox', initialSrc, label = 'Foto van een vorige editie' } = As
       opener?.focus({ preventScroll: true });
     };
     const close = () => {
-      dialog.close();
-      // Native close events can arrive a frame later, notably in WebKit.
-      restorePage();
+      ++request;
+      motion.close(() => {
+        dialog.close();
+        // Native close events can arrive a frame later, notably in WebKit.
+        restorePage();
+      });
     };
 
     const show = async (index: number) => {
@@ -49,17 +55,20 @@ const { id = 'lightbox', initialSrc, label = 'Foto van een vorige editie' } = As
       const trigger = triggers[current];
       const source = trigger instanceof HTMLAnchorElement ? trigger.href : trigger.dataset.src!;
       const token = ++request;
-      image.hidden = true;
-      image.alt = trigger.dataset.alt || '';
-      caption.textContent = `${current + 1} / ${triggers.length} · ${trigger.dataset.caption || ''}`;
+      // Keep the current image on screen while the next one loads.
       status.textContent = 'Foto laden…';
       stage.setAttribute('aria-busy', 'true');
-      image.loading = 'eager';
-      image.src = source;
+      const incoming = new Image();
+      incoming.src = source;
       try {
-        await image.decode();
-        if (token !== request) return;
+        await incoming.decode();
+        if (token !== request || !dialog.open) return;
+        imageMotion?.stop();
+        image.src = source;
+        image.alt = trigger.dataset.alt || '';
         image.hidden = false;
+        caption.textContent = `${current + 1} / ${triggers.length} · ${trigger.dataset.caption || ''}`;
+        imageMotion = move(image, { opacity: [.65, 1] }, { duration: .24 });
         status.textContent = '';
       } catch {
         if (token !== request) return;
@@ -81,6 +90,7 @@ const { id = 'lightbox', initialSrc, label = 'Foto van een vorige editie' } = As
         document.body.classList.add('modal-open');
         void show(index);
         dialog.showModal();
+        motion.enter();
         dialog.querySelector<HTMLButtonElement>('.lightbox-close')?.focus();
       });
     });

@@ -1,0 +1,282 @@
+[
+  {
+    "width": 320,
+    "selector": ".hero-label",
+    "minContrast": 10.778662293276994
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.563244942179088
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 11.700010923203477
+  },
+  {
+    "width": 320,
+    "selector": ".hero-title-last",
+    "minContrast": 10.499981664403577
+  },
+  {
+    "width": 320,
+    "selector": ".hero-intro",
+    "minContrast": 11.334580295731467
+  },
+  {
+    "width": 320,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.995896401211557
+  },
+  {
+    "width": 320,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 390,
+    "selector": ".hero-label",
+    "minContrast": 10.927340840808967
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.739460533278109
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.88711377588109
+  },
+  {
+    "width": 390,
+    "selector": ".hero-title-last",
+    "minContrast": 10.66293078386282
+  },
+  {
+    "width": 390,
+    "selector": ".hero-intro",
+    "minContrast": 11.670300626742208
+  },
+  {
+    "width": 390,
+    "selector": ".hero-eligibility",
+    "minContrast": 12.016040640012402
+  },
+  {
+    "width": 390,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 455,
+    "selector": ".hero-label",
+    "minContrast": 11.074690833211239
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.722491520651285
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.616513333375142
+  },
+  {
+    "width": 455,
+    "selector": ".hero-title-last",
+    "minContrast": 10.6339682907185
+  },
+  {
+    "width": 455,
+    "selector": ".hero-intro",
+    "minContrast": 11.662429254243618
+  },
+  {
+    "width": 455,
+    "selector": ".hero-eligibility",
+    "minContrast": 12.016040640012402
+  },
+  {
+    "width": 455,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 768,
+    "selector": ".hero-label",
+    "minContrast": 11.006931314091737
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 16.72726854324264
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.66293078386282
+  },
+  {
+    "width": 768,
+    "selector": ".hero-title-last",
+    "minContrast": 10.947304874123114
+  },
+  {
+    "width": 768,
+    "selector": ".hero-intro",
+    "minContrast": 11.662429254243618
+  },
+  {
+    "width": 768,
+    "selector": ".hero-eligibility",
+    "minContrast": 12.262461590103527
+  },
+  {
+    "width": 768,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-label",
+    "minContrast": 11.03739975055262
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 13.0008406284489
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.680293700238657
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-title-last",
+    "minContrast": 10.82789969826686
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-intro",
+    "minContrast": 11.662429254243618
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-eligibility",
+    "minContrast": 13.396707114961158
+  },
+  {
+    "width": 1000,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-label",
+    "minContrast": 11.45123603202274
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 16.106820276223303
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 14.037527065663715
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-title-last",
+    "minContrast": 7.103009379912214
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-intro",
+    "minContrast": 6.868143969292984
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-eligibility",
+    "minContrast": 10.66293078386282
+  },
+  {
+    "width": 1001,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-label",
+    "minContrast": 11.658870637545464
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 15.161098409400605
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 11.39927921065417
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-title-last",
+    "minContrast": 7.327527180493538
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-intro",
+    "minContrast": 10.776090927736044
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.807828049995567
+  },
+  {
+    "width": 1440,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-label",
+    "minContrast": 10.37422145976006
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 16.679373272886043
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.409740055121732
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-title-last",
+    "minContrast": 6.967976357879219
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-intro",
+    "minContrast": 9.081981163150457
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.197519003253904
+  },
+  {
+    "width": 1920,
+    "selector": ".hero .button",
+    "minContrast": 10.592490352060004
+  }
+]

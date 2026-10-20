@@ -1,217 +1,287 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-20T11:07:49.476028+00:00",
+  "generatedAt": "2026-10-20T12:07:51.005207+00:00",
   "title": "Design System: Welzijnswerking Oostende",
   "extensions": {
     "colorMeta": {
       "page": {
         "role": "neutral",
-        "displayName": "Page",
+        "displayName": "Warm papier",
         "tonalRamp": [
-          "oklch(15% 0.00132 106.42)",
-          "oklch(26% 0.00132 106.42)",
-          "oklch(38% 0.00132 106.42)",
-          "oklch(49% 0.00132 106.42)",
-          "oklch(61% 0.00132 106.42)",
-          "oklch(72% 0.00132 106.42)",
-          "oklch(84% 0.00132 106.42)",
-          "oklch(95% 0.00132 106.42)"
+          "oklch(15% 0.00570 84.57)",
+          "oklch(26% 0.00570 84.57)",
+          "oklch(38% 0.00570 84.57)",
+          "oklch(49% 0.00570 84.57)",
+          "oklch(61% 0.00570 84.57)",
+          "oklch(72% 0.00570 84.57)",
+          "oklch(84% 0.00570 84.57)",
+          "oklch(95% 0.00570 84.57)"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Surface",
+        "displayName": "Wit",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "surface-soft": {
         "role": "neutral",
-        "displayName": "Surface soft",
+        "displayName": "Zacht zand",
         "tonalRamp": [
-          "oklch(15% 0.00399 106.47)",
-          "oklch(26% 0.00399 106.47)",
-          "oklch(38% 0.00399 106.47)",
-          "oklch(49% 0.00399 106.47)",
-          "oklch(61% 0.00399 106.47)",
-          "oklch(72% 0.00399 106.47)",
-          "oklch(84% 0.00399 106.47)",
-          "oklch(95% 0.00399 106.47)"
+          "oklch(15% 0.01148 84.58)",
+          "oklch(26% 0.01148 84.58)",
+          "oklch(38% 0.01148 84.58)",
+          "oklch(49% 0.01148 84.58)",
+          "oklch(61% 0.01148 84.58)",
+          "oklch(72% 0.01148 84.58)",
+          "oklch(84% 0.01148 84.58)",
+          "oklch(95% 0.01148 84.58)"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Brand",
+        "tonalRamp": [
+          "oklch(15% 0.11445 268.30)",
+          "oklch(26% 0.11445 268.30)",
+          "oklch(38% 0.11445 268.30)",
+          "oklch(49% 0.11445 268.30)",
+          "oklch(61% 0.11445 268.30)",
+          "oklch(72% 0.11445 268.30)",
+          "oklch(84% 0.11445 268.30)",
+          "oklch(95% 0.11445 268.30)"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15% 0.14795 249.26)",
+          "oklch(26% 0.14795 249.26)",
+          "oklch(38% 0.14795 249.26)",
+          "oklch(49% 0.14795 249.26)",
+          "oklch(61% 0.14795 249.26)",
+          "oklch(72% 0.14795 249.26)",
+          "oklch(84% 0.14795 249.26)",
+          "oklch(95% 0.14795 249.26)"
+        ]
+      },
+      "link": {
+        "role": "secondary",
+        "displayName": "Link",
+        "tonalRamp": [
+          "oklch(15% 0.11363 247.35)",
+          "oklch(26% 0.11363 247.35)",
+          "oklch(38% 0.11363 247.35)",
+          "oklch(49% 0.11363 247.35)",
+          "oklch(61% 0.11363 247.35)",
+          "oklch(72% 0.11363 247.35)",
+          "oklch(84% 0.11363 247.35)",
+          "oklch(95% 0.11363 247.35)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action hover",
+        "tonalRamp": [
+          "oklch(15% 0.09610 268.39)",
+          "oklch(26% 0.09610 268.39)",
+          "oklch(38% 0.09610 268.39)",
+          "oklch(49% 0.09610 268.39)",
+          "oklch(61% 0.09610 268.39)",
+          "oklch(72% 0.09610 268.39)",
+          "oklch(84% 0.09610 268.39)",
+          "oklch(95% 0.09610 268.39)"
+        ]
+      },
+      "surface-tint": {
+        "role": "neutral",
+        "displayName": "Warme inschrijftint",
+        "tonalRamp": [
+          "oklch(15% 0.01476 80.71)",
+          "oklch(26% 0.01476 80.71)",
+          "oklch(38% 0.01476 80.71)",
+          "oklch(49% 0.01476 80.71)",
+          "oklch(61% 0.01476 80.71)",
+          "oklch(72% 0.01476 80.71)",
+          "oklch(84% 0.01476 80.71)",
+          "oklch(95% 0.01476 80.71)"
         ]
       },
       "text": {
         "role": "neutral",
-        "displayName": "Text",
+        "displayName": "Donkere hoofdtekst",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00855 159.64)",
+          "oklch(26% 0.00855 159.64)",
+          "oklch(38% 0.00855 159.64)",
+          "oklch(49% 0.00855 159.64)",
+          "oklch(61% 0.00855 159.64)",
+          "oklch(72% 0.00855 159.64)",
+          "oklch(84% 0.00855 159.64)",
+          "oklch(95% 0.00855 159.64)"
         ]
       },
       "text-muted": {
         "role": "neutral",
-        "displayName": "Text muted",
+        "displayName": "Gedempte tekst",
         "tonalRamp": [
-          "oklch(15% 0.00629 106.63)",
-          "oklch(26% 0.00629 106.63)",
-          "oklch(38% 0.00629 106.63)",
-          "oklch(49% 0.00629 106.63)",
-          "oklch(61% 0.00629 106.63)",
-          "oklch(72% 0.00629 106.63)",
-          "oklch(84% 0.00629 106.63)",
-          "oklch(95% 0.00629 106.63)"
+          "oklch(15% 0.01145 125.85)",
+          "oklch(26% 0.01145 125.85)",
+          "oklch(38% 0.01145 125.85)",
+          "oklch(49% 0.01145 125.85)",
+          "oklch(61% 0.01145 125.85)",
+          "oklch(72% 0.01145 125.85)",
+          "oklch(84% 0.01145 125.85)",
+          "oklch(95% 0.01145 125.85)"
         ]
       },
       "action": {
         "role": "primary",
         "displayName": "Action",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.11445 268.30)",
+          "oklch(26% 0.11445 268.30)",
+          "oklch(38% 0.11445 268.30)",
+          "oklch(49% 0.11445 268.30)",
+          "oklch(61% 0.11445 268.30)",
+          "oklch(72% 0.11445 268.30)",
+          "oklch(84% 0.11445 268.30)",
+          "oklch(95% 0.11445 268.30)"
         ]
       },
       "border": {
         "role": "neutral",
-        "displayName": "Border",
+        "displayName": "Warme scheidingslijn",
         "tonalRamp": [
-          "oklch(15% 0.00679 106.54)",
-          "oklch(26% 0.00679 106.54)",
-          "oklch(38% 0.00679 106.54)",
-          "oklch(49% 0.00679 106.54)",
-          "oklch(61% 0.00679 106.54)",
-          "oklch(72% 0.00679 106.54)",
-          "oklch(84% 0.00679 106.54)",
-          "oklch(95% 0.00679 106.54)"
+          "oklch(15% 0.01084 100.84)",
+          "oklch(26% 0.01084 100.84)",
+          "oklch(38% 0.01084 100.84)",
+          "oklch(49% 0.01084 100.84)",
+          "oklch(61% 0.01084 100.84)",
+          "oklch(72% 0.01084 100.84)",
+          "oklch(84% 0.01084 100.84)",
+          "oklch(95% 0.01084 100.84)"
         ]
       },
       "control-border": {
         "role": "neutral",
         "displayName": "Control border",
         "tonalRamp": [
-          "oklch(15% 0.00724 106.59)",
-          "oklch(26% 0.00724 106.59)",
-          "oklch(38% 0.00724 106.59)",
-          "oklch(49% 0.00724 106.59)",
-          "oklch(61% 0.00724 106.59)",
-          "oklch(72% 0.00724 106.59)",
-          "oklch(84% 0.00724 106.59)",
-          "oklch(95% 0.00724 106.59)"
+          "oklch(15% 0.03832 260.34)",
+          "oklch(26% 0.03832 260.34)",
+          "oklch(38% 0.03832 260.34)",
+          "oklch(49% 0.03832 260.34)",
+          "oklch(61% 0.03832 260.34)",
+          "oklch(72% 0.03832 260.34)",
+          "oklch(84% 0.03832 260.34)",
+          "oklch(95% 0.03832 260.34)"
         ]
       },
       "focus": {
-        "role": "primary",
+        "role": "secondary",
         "displayName": "Focus",
         "tonalRamp": [
-          "oklch(15% 0.14903 259.05)",
-          "oklch(26% 0.14903 259.05)",
-          "oklch(38% 0.14903 259.05)",
-          "oklch(49% 0.14903 259.05)",
-          "oklch(61% 0.14903 259.05)",
-          "oklch(72% 0.14903 259.05)",
-          "oklch(84% 0.14903 259.05)",
-          "oklch(95% 0.14903 259.05)"
+          "oklch(15% 0.11363 247.35)",
+          "oklch(26% 0.11363 247.35)",
+          "oklch(38% 0.11363 247.35)",
+          "oklch(49% 0.11363 247.35)",
+          "oklch(61% 0.11363 247.35)",
+          "oklch(72% 0.11363 247.35)",
+          "oklch(84% 0.11363 247.35)",
+          "oklch(95% 0.11363 247.35)"
         ]
       },
       "focus-on-dark": {
         "role": "neutral",
         "displayName": "Focus on dark",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "overlay": {
         "role": "neutral",
         "displayName": "Overlay",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88 / .28)",
-          "oklch(26% 0.00000 89.88 / .28)",
-          "oklch(38% 0.00000 89.88 / .28)",
-          "oklch(49% 0.00000 89.88 / .28)",
-          "oklch(61% 0.00000 89.88 / .28)",
-          "oklch(72% 0.00000 89.88 / .28)",
-          "oklch(84% 0.00000 89.88 / .28)",
-          "oklch(95% 0.00000 89.88 / .28)"
+          "oklch(15% 0.06902 266.90)",
+          "oklch(26% 0.06902 266.90)",
+          "oklch(38% 0.06902 266.90)",
+          "oklch(49% 0.06902 266.90)",
+          "oklch(61% 0.06902 266.90)",
+          "oklch(72% 0.06902 266.90)",
+          "oklch(84% 0.06902 266.90)",
+          "oklch(95% 0.06902 266.90)"
         ]
       },
       "overlay-clear": {
         "role": "neutral",
         "displayName": "Overlay clear",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88 / 0)",
-          "oklch(26% 0.00000 89.88 / 0)",
-          "oklch(38% 0.00000 89.88 / 0)",
-          "oklch(49% 0.00000 89.88 / 0)",
-          "oklch(61% 0.00000 89.88 / 0)",
-          "oklch(72% 0.00000 89.88 / 0)",
-          "oklch(84% 0.00000 89.88 / 0)",
-          "oklch(95% 0.00000 89.88 / 0)"
+          "oklch(15% 0.06902 266.90)",
+          "oklch(26% 0.06902 266.90)",
+          "oklch(38% 0.06902 266.90)",
+          "oklch(49% 0.06902 266.90)",
+          "oklch(61% 0.06902 266.90)",
+          "oklch(72% 0.06902 266.90)",
+          "oklch(84% 0.06902 266.90)",
+          "oklch(95% 0.06902 266.90)"
         ]
       },
       "overlay-shadow": {
         "role": "neutral",
         "displayName": "Overlay shadow",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88 / .12)",
-          "oklch(26% 0.00000 89.88 / .12)",
-          "oklch(38% 0.00000 89.88 / .12)",
-          "oklch(49% 0.00000 89.88 / .12)",
-          "oklch(61% 0.00000 89.88 / .12)",
-          "oklch(72% 0.00000 89.88 / .12)",
-          "oklch(84% 0.00000 89.88 / .12)",
-          "oklch(95% 0.00000 89.88 / .12)"
+          "oklch(15% 0.06902 266.90)",
+          "oklch(26% 0.06902 266.90)",
+          "oklch(38% 0.06902 266.90)",
+          "oklch(49% 0.06902 266.90)",
+          "oklch(61% 0.06902 266.90)",
+          "oklch(72% 0.06902 266.90)",
+          "oklch(84% 0.06902 266.90)",
+          "oklch(95% 0.06902 266.90)"
         ]
       },
       "viewer-surface": {
         "role": "neutral",
         "displayName": "Viewer surface",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "viewer-overlay": {
         "role": "neutral",
         "displayName": "Viewer overlay",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88 / .96)",
-          "oklch(26% 0.00000 89.88 / .96)",
-          "oklch(38% 0.00000 89.88 / .96)",
-          "oklch(49% 0.00000 89.88 / .96)",
-          "oklch(61% 0.00000 89.88 / .96)",
-          "oklch(72% 0.00000 89.88 / .96)",
-          "oklch(84% 0.00000 89.88 / .96)",
-          "oklch(95% 0.00000 89.88 / .96)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "viewer-text": {
@@ -232,126 +302,126 @@
         "role": "neutral",
         "displayName": "Viewer border",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "viewer-hover": {
         "role": "neutral",
         "displayName": "Viewer hover",
         "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "hero-base": {
         "role": "neutral",
-        "displayName": "Hero base",
+        "displayName": "Warm fotografisch donker",
         "tonalRamp": [
-          "oklch(15% 0.01151 67.35)",
-          "oklch(26% 0.01151 67.35)",
-          "oklch(38% 0.01151 67.35)",
-          "oklch(49% 0.01151 67.35)",
-          "oklch(61% 0.01151 67.35)",
-          "oklch(72% 0.01151 67.35)",
-          "oklch(84% 0.01151 67.35)",
-          "oklch(95% 0.01151 67.35)"
+          "oklch(15% 0.01177 264.37)",
+          "oklch(26% 0.01177 264.37)",
+          "oklch(38% 0.01177 264.37)",
+          "oklch(49% 0.01177 264.37)",
+          "oklch(61% 0.01177 264.37)",
+          "oklch(72% 0.01177 264.37)",
+          "oklch(84% 0.01177 264.37)",
+          "oklch(95% 0.01177 264.37)"
         ]
       },
       "hero-shade": {
         "role": "neutral",
         "displayName": "Hero shade",
         "tonalRamp": [
-          "oklch(15% 0.00656 78.18 / .70)",
-          "oklch(26% 0.00656 78.18 / .70)",
-          "oklch(38% 0.00656 78.18 / .70)",
-          "oklch(49% 0.00656 78.18 / .70)",
-          "oklch(61% 0.00656 78.18 / .70)",
-          "oklch(72% 0.00656 78.18 / .70)",
-          "oklch(84% 0.00656 78.18 / .70)",
-          "oklch(95% 0.00656 78.18 / .70)"
+          "oklch(15% 0.01792 270.55)",
+          "oklch(26% 0.01792 270.55)",
+          "oklch(38% 0.01792 270.55)",
+          "oklch(49% 0.01792 270.55)",
+          "oklch(61% 0.01792 270.55)",
+          "oklch(72% 0.01792 270.55)",
+          "oklch(84% 0.01792 270.55)",
+          "oklch(95% 0.01792 270.55)"
         ]
       },
       "hero-shade-edge": {
         "role": "neutral",
         "displayName": "Hero shade edge",
         "tonalRamp": [
-          "oklch(15% 0.00656 78.18 / .76)",
-          "oklch(26% 0.00656 78.18 / .76)",
-          "oklch(38% 0.00656 78.18 / .76)",
-          "oklch(49% 0.00656 78.18 / .76)",
-          "oklch(61% 0.00656 78.18 / .76)",
-          "oklch(72% 0.00656 78.18 / .76)",
-          "oklch(84% 0.00656 78.18 / .76)",
-          "oklch(95% 0.00656 78.18 / .76)"
+          "oklch(15% 0.01792 270.55)",
+          "oklch(26% 0.01792 270.55)",
+          "oklch(38% 0.01792 270.55)",
+          "oklch(49% 0.01792 270.55)",
+          "oklch(61% 0.01792 270.55)",
+          "oklch(72% 0.01792 270.55)",
+          "oklch(84% 0.01792 270.55)",
+          "oklch(95% 0.01792 270.55)"
         ]
       },
       "hero-label": {
         "role": "neutral",
         "displayName": "Hero label",
         "tonalRamp": [
-          "oklch(15% 0.00662 106.52)",
-          "oklch(26% 0.00662 106.52)",
-          "oklch(38% 0.00662 106.52)",
-          "oklch(49% 0.00662 106.52)",
-          "oklch(61% 0.00662 106.52)",
-          "oklch(72% 0.00662 106.52)",
-          "oklch(84% 0.00662 106.52)",
-          "oklch(95% 0.00662 106.52)"
+          "oklch(15% 0.01079 256.69)",
+          "oklch(26% 0.01079 256.69)",
+          "oklch(38% 0.01079 256.69)",
+          "oklch(49% 0.01079 256.69)",
+          "oklch(61% 0.01079 256.69)",
+          "oklch(72% 0.01079 256.69)",
+          "oklch(84% 0.01079 256.69)",
+          "oklch(95% 0.01079 256.69)"
         ]
       },
       "hero-copy": {
         "role": "neutral",
         "displayName": "Hero copy",
         "tonalRamp": [
-          "oklch(15% 0.00796 98.87)",
-          "oklch(26% 0.00796 98.87)",
-          "oklch(38% 0.00796 98.87)",
-          "oklch(49% 0.00796 98.87)",
-          "oklch(61% 0.00796 98.87)",
-          "oklch(72% 0.00796 98.87)",
-          "oklch(84% 0.00796 98.87)",
-          "oklch(95% 0.00796 98.87)"
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
         ]
       },
       "action-line": {
         "role": "neutral",
         "displayName": "Action line",
         "tonalRamp": [
-          "oklch(15% 0.00850 106.61)",
-          "oklch(26% 0.00850 106.61)",
-          "oklch(38% 0.00850 106.61)",
-          "oklch(49% 0.00850 106.61)",
-          "oklch(61% 0.00850 106.61)",
-          "oklch(72% 0.00850 106.61)",
-          "oklch(84% 0.00850 106.61)",
-          "oklch(95% 0.00850 106.61)"
+          "oklch(15% 0.03832 260.34)",
+          "oklch(26% 0.03832 260.34)",
+          "oklch(38% 0.03832 260.34)",
+          "oklch(49% 0.03832 260.34)",
+          "oklch(61% 0.03832 260.34)",
+          "oklch(72% 0.03832 260.34)",
+          "oklch(84% 0.03832 260.34)",
+          "oklch(95% 0.03832 260.34)"
         ]
       },
       "control-line": {
         "role": "neutral",
         "displayName": "Control line",
         "tonalRamp": [
-          "oklch(15% 0.00832 106.59)",
-          "oklch(26% 0.00832 106.59)",
-          "oklch(38% 0.00832 106.59)",
-          "oklch(49% 0.00832 106.59)",
-          "oklch(61% 0.00832 106.59)",
-          "oklch(72% 0.00832 106.59)",
-          "oklch(84% 0.00832 106.59)",
-          "oklch(95% 0.00832 106.59)"
+          "oklch(15% 0.03832 260.34)",
+          "oklch(26% 0.03832 260.34)",
+          "oklch(38% 0.03832 260.34)",
+          "oklch(49% 0.03832 260.34)",
+          "oklch(61% 0.03832 260.34)",
+          "oklch(72% 0.03832 260.34)",
+          "oklch(84% 0.03832 260.34)",
+          "oklch(95% 0.03832 260.34)"
         ]
       }
     },
@@ -362,15 +432,15 @@
       },
       "display-wide": {
         "displayName": "Display wide",
-        "purpose": "Hero vanaf 601px; vaste 4.5rem vanaf 1100px."
+        "purpose": "Kleinere heroregel vanaf 1001px; 2rem vanaf 601px."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Gewone sectiekoppen."
+        "purpose": "Donkere sectiekoppen in gewone schrijfwijze, Medium 500, 1.18 regelhoogte; lokale archiefvariant is groter."
       },
       "welcome-headline": {
         "displayName": "Welcome headline",
-        "purpose": "Welkomstkop."
+        "purpose": "Donkerblauwe welkomstkop, Medium 500, 1.15 regelhoogte."
       },
       "title": {
         "displayName": "Title",
@@ -378,11 +448,11 @@
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Standaard lopende tekst."
+        "purpose": "Gewone tekst: Cooper Hewitt Book 400, 18px/1.7; welkomstinleiding behoudt die maat."
       },
       "body-compact": {
         "displayName": "Body compact",
-        "purpose": "FAQ-antwoorden en welkomstinleiding."
+        "purpose": "FAQ-antwoorden: 17px/1.7."
       },
       "label": {
         "displayName": "Label",
@@ -390,7 +460,15 @@
       },
       "button": {
         "displayName": "Button",
-        "purpose": "Normale primaire actie."
+        "purpose": "Gewone primaire actie: Medium 500. Mobiele menuactie vraagt lokaal 550 (statische Semibold 600)."
+      },
+      "invitation": {
+        "displayName": "Invitation",
+        "purpose": "Grote mobiele uitnodigingsregels; Medium 500."
+      },
+      "invitation-wide": {
+        "displayName": "Invitation wide",
+        "purpose": "Grote uitnodigingsregels vanaf 1001px; Medium 500."
       }
     },
     "shadows": [
@@ -409,22 +487,32 @@
       {
         "name": "duration-detail",
         "value": "220ms",
-        "purpose": "FAQ-indicator en antwoordreveal."
+        "purpose": "CSS-indicatorovergangen; de oudere FAQ-paragraafanimatie is uitgeschakeld."
       },
       {
         "name": "duration-menu",
         "value": "250ms",
-        "purpose": "Binnenkomst mobiel navigatievenster."
+        "purpose": "Behouden CSS-duurtoken; oude menu-keyframe is uitgeschakeld door motion.css, gedeelde Motion-aansturing verzorgt de overgang."
       },
       {
         "name": "duration-backdrop",
         "value": "200ms",
-        "purpose": "Binnenkomst menu-backdrop."
+        "purpose": "Behouden CSS-duurtoken; oude backdrop-keyframe is uitgeschakeld door motion.css."
       },
       {
         "name": "ease-reveal",
         "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Reveal-curve van het mobiele menu."
+        "purpose": "Curve voor control- en fototransforms."
+      },
+      {
+        "name": "photo-hover",
+        "value": "transform 600ms cubic-bezier(.16,1,.3,1); scale(1.025)",
+        "purpose": "Alleen hover met fijne pointer; reduced motion verwijdert transforms."
+      },
+      {
+        "name": "control-feedback",
+        "value": "transform 220ms cubic-bezier(.16,1,.3,1); active scale(.98) 90ms",
+        "purpose": "Knoppen, menutrigger en viewercontrols; reduced motion verwijdert transforms."
       }
     ],
     "breakpoints": [
@@ -448,16 +536,17 @@
         "name": "wide",
         "value": "1100px"
       }
-    ]
+    ],
+    "tonalRampNote": "Afgeleide OKLCH-presentatiehulpen; geen normatieve CSS-tokens. Frontmatter en CSS behouden de oorspronkelijke kleurwaarden; ramps tonen hue/chroma zonder alpha."
   },
   "components": [
     {
       "name": "Primaire actie",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "De normale antraciete actie.",
+      "description": "De normale donkerblauwe inschrijfactie.",
       "html": "<a class=\"ds-primary\" href=\"#inschrijven\">Hoe schrijf ik me in?</a>",
-      "css": ".ds-primary,.ds-inverse{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:50px;border:0;border-radius:6px;text-decoration:none;line-height:1.6;font-family:var(--font,\"Public Sans\",sans-serif);}.ds-primary:hover,.ds-inverse:hover{filter:brightness(1.08);text-decoration:underline;text-underline-offset:.2em}.ds-primary:active,.ds-inverse:active{filter:brightness(.9)}.ds-primary:focus-visible,.ds-inverse:focus-visible{outline:3px solid var(--focus,#245cb2);outline-offset:5px;}.ds-primary{padding:12px 18px;background:var(--action,#292929);color:var(--page,#fafaf9);font-size:1rem;font-weight:550;}"
+      "css": ".ds-primary,.ds-inverse{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:50px;border:0;border-radius:var(--radius-control,10px);text-decoration:none;line-height:1.7;font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-primary:hover,.ds-inverse:hover{text-decoration:underline;text-underline-offset:.2em}.ds-primary:active,.ds-inverse:active{filter:brightness(.9)}.ds-primary:focus-visible,.ds-inverse:focus-visible{outline:3px solid var(--focus,#2369a2);outline-offset:5px;}.ds-primary{padding:12px 18px;background:var(--action,#273a7c);color:var(--page,#fdfbf7);font-size:1rem;font-weight:500;}.ds-primary:hover{background:var(--action-hover,#1c2b60)}.ds-primary{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal,cubic-bezier(.16,1,.3,1))}.ds-primary:active{transform:scale(.98);transition-duration:90ms}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none;transform:none!important}}"
     },
     {
       "name": "Lichte heroactie",
@@ -465,36 +554,36 @@
       "refersTo": "button-inverse",
       "description": "De lichte actie op het fotografische hero-oppervlak.",
       "html": "<div class=\"ds-hero-preview\"><a class=\"ds-inverse\" href=\"#inschrijven\">Hoe schrijf ik me in?</a></div>",
-      "css": ".ds-primary,.ds-inverse{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:50px;border:0;border-radius:6px;text-decoration:none;line-height:1.6;font-family:var(--font,\"Public Sans\",sans-serif);}.ds-primary:hover,.ds-inverse:hover{filter:brightness(1.08);text-decoration:underline;text-underline-offset:.2em}.ds-primary:active,.ds-inverse:active{filter:brightness(.9)}.ds-primary:focus-visible,.ds-inverse:focus-visible{outline:3px solid var(--focus,#245cb2);outline-offset:5px;}.ds-hero-preview{background:var(--hero-base,#302b26);padding:24px}.ds-inverse{padding:12px 22px;background:var(--page,#fafaf9);color:var(--action,#292929);font-size:.875rem;font-weight:500}.ds-inverse:focus-visible{outline-color:var(--focus-on-dark,#fff)}"
+      "css": ".ds-primary,.ds-inverse{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:50px;border:0;border-radius:var(--radius-control,10px);text-decoration:none;line-height:1.7;font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-primary:hover,.ds-inverse:hover{text-decoration:underline;text-underline-offset:.2em}.ds-primary:active,.ds-inverse:active{filter:brightness(.9)}.ds-primary:focus-visible,.ds-inverse:focus-visible{outline:3px solid var(--focus,#2369a2);outline-offset:5px;}.ds-hero-preview{background:var(--hero-base,#2b241e);padding:24px}.ds-inverse{padding:12px 22px;background:var(--page,#fdfbf7);color:var(--action,#273a7c);font-size:.875rem;font-weight:500}.ds-inverse:focus-visible{outline-color:var(--focus-on-dark,#fff)}.ds-inverse:hover{background:var(--surface-soft,#f3efe7)}.ds-inverse{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal,cubic-bezier(.16,1,.3,1))}.ds-inverse:active{transform:scale(.98);transition-duration:90ms}@media(prefers-reduced-motion:reduce){.ds-inverse{transition:none;transform:none!important}}"
     },
     {
       "name": "Tekstlink",
       "kind": "button",
       "description": "Onderstreepte route- en informatieactie.",
       "html": "<a class=\"ds-link\" href=\"#ontmoetingscentra\">Openingsuren en info</a>",
-      "css": ".ds-link{display:inline-flex;align-items:center;min-height:44px;min-width:44px;font-size:1rem;font-weight:500;line-height:1.6;color:var(--text,#242424);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em;font-family:var(--font,\"Public Sans\",sans-serif);}.ds-link:hover{color:var(--action,#292929);text-decoration-thickness:2px}.ds-link:focus-visible{outline:3px solid var(--focus,#245cb2);outline-offset:5px;}"
+      "css": ".ds-link{display:inline-flex;align-items:center;min-height:44px;min-width:44px;font-size:1rem;font-weight:500;line-height:1.7;color:var(--link,#2369a2);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em;font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-link:hover{color:var(--action,#273a7c);text-decoration-thickness:2px}.ds-link:focus-visible{outline:3px solid var(--focus,#2369a2);outline-offset:5px;}"
     },
     {
       "name": "Deelnamekaart",
       "kind": "card",
       "refersTo": "participation-note",
-      "description": "Een zacht neutraal vlak voor praktische deelname-informatie.",
+      "description": "Een warm getint vlak zonder rand voor praktische deelname-informatie.",
       "html": "<aside class=\"ds-note\"><h3>Hoe schrijf ik me in?</h3><p>Inschrijven verloopt via een ontmoetingscentrum.</p></aside>",
-      "css": ".ds-note{padding:24px;border:1px solid var(--border,#d5d5d0);border-radius:8px;background:var(--surface-soft,#f0f0ed);color:var(--text,#242424);font-family:var(--font,\"Public Sans\",sans-serif);}.ds-note h3{margin:0;font-size:1.375rem;font-weight:600;line-height:1.3;letter-spacing:-.02em}.ds-note p{margin:12px 0 0;font-size:1.0625rem;line-height:1.6}"
+      "css": ".ds-note{padding:28px;border:0;border-radius:var(--radius-panel,16px);background:var(--surface-tint,#ede3d2);color:var(--text,#343936);font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-note h3{margin:0;color:var(--text,#343936);font-size:1.375rem;font-weight:500;line-height:1.3;letter-spacing:-.015em}.ds-note p{margin:12px 0 0;font-size:1.0625rem;line-height:1.6}"
     },
     {
       "name": "Desktopnavigatie",
       "kind": "nav",
-      "description": "Rustige tekstlinks en een omlijnde praktische actie.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Hoofdnavigatie\"><a href=\"#welkom\">Voor wie?</a><a class=\"ds-nav-action\" href=\"#praktisch\">Praktisch &amp; deelname</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:32px;color:var(--text,#242424);font-family:var(--font,\"Public Sans\",sans-serif);}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.6;color:inherit;text-decoration:none}.ds-nav a:not(.ds-nav-action)::after{content:\"\";position:absolute;bottom:8px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform var(--duration-fast,180ms)}.ds-nav a:hover::after{transform:scaleX(1)}.ds-nav .ds-nav-action{padding:10px 18px;border:1px solid var(--action-line,#a8a8a2);transition:background var(--duration-fast,180ms),color var(--duration-fast,180ms)}.ds-nav-action:hover{background:var(--action,#292929);color:var(--page,#fafaf9)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#245cb2);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-nav a,.ds-nav a::after{transition:none}}"
+      "description": "Donkerblauwe tekstlinks en een gevulde inschrijfactie.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Hoofdnavigatie\"><a href=\"#welkom\">Voor wie?</a><a href=\"#praktisch\">Praktische info</a><a href=\"#edities\">Vorige edities</a><a class=\"ds-nav-action\" href=\"#inschrijven\">Hoe inschrijven?</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:32px;color:var(--action,#273a7c);font-family:var(--font,\"Cooper Hewitt\",sans-serif);line-height:1.7}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;font-size:1rem;color:inherit;text-decoration:none}.ds-nav a:not(.ds-nav-action)::after{content:\"\";position:absolute;bottom:8px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform var(--duration-fast,180ms)}.ds-nav a:hover::after{transform:scaleX(1)}.ds-nav .ds-nav-action{min-height:50px;padding:12px 22px;margin-left:8px;border-radius:var(--radius-control,10px);background:var(--action,#273a7c);color:var(--page,#fdfbf7);font-weight:500}.ds-nav-action:hover{background:var(--action-hover,#1c2b60);text-decoration:underline;text-underline-offset:.2em}.ds-nav-action:active{filter:brightness(.9)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#2369a2);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
     },
     {
       "name": "FAQ-disclosure",
       "kind": "custom",
       "description": "Native details/summary met een ronde open/dicht-indicator.",
       "html": "<details class=\"ds-faq\"><summary>Kan ik ook alleen komen?<span class=\"ds-faq-indicator\" aria-hidden=\"true\"></span></summary><div class=\"ds-answer\"><p>Ja, zeker. Je kan voor jezelf inschrijven, zonder iemand mee te brengen.</p></div></details>",
-      "css": ".ds-faq{border-block:1px solid var(--border,#d5d5d0);color:var(--action,#292929);font-family:var(--font,\"Public Sans\",sans-serif);}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding-block:20px;list-style:none;cursor:pointer;font-size:1.0625rem;line-height:1.4;font-weight:500}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--action,#292929)}.ds-faq summary:focus-visible{outline:3px solid var(--focus,#245cb2);outline-offset:5px;}.ds-faq-indicator{position:relative;display:block;flex-shrink:0;width:30px;height:30px;border:1px solid var(--control-line,#bdbdb7);border-radius:50%;transition:background var(--duration-fast,180ms),border-color var(--duration-fast,180ms)}.ds-faq-indicator::before,.ds-faq-indicator::after{content:\"\";position:absolute;inset:14px 9px auto;height:1px;background:currentColor;transition:transform var(--duration-detail,220ms)}.ds-faq-indicator::after{transform:rotate(90deg)}.ds-faq[open] .ds-faq-indicator{background:var(--action,#292929);border-color:var(--action,#292929);color:var(--page,#fafaf9)}.ds-faq[open] .ds-faq-indicator::after{transform:rotate(0)}.ds-answer{padding:0 48px 24px 0}.ds-answer p{margin:0;font-size:1rem;line-height:1.7;color:var(--text-muted,#5e5e5a);max-width:570px}@media(prefers-reduced-motion:reduce){.ds-faq-indicator,.ds-faq-indicator::after,.ds-faq-indicator::before{transition:none}}"
+      "css": ".ds-faq{border-block:1px solid var(--border,#dddcd4);color:var(--text,#343936);font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding-block:20px;list-style:none;cursor:pointer;font-size:1.0625rem;line-height:1.4;font-weight:500}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--action,#273a7c)}.ds-faq summary:focus-visible{outline:3px solid var(--focus,#2369a2);outline-offset:5px;}.ds-faq-indicator{position:relative;display:block;flex-shrink:0;width:30px;height:30px;border:1px solid var(--control-line,#7d8ba2);border-radius:50%;transition:background var(--duration-fast,180ms),border-color var(--duration-fast,180ms)}.ds-faq-indicator::before,.ds-faq-indicator::after{content:\"\";position:absolute;inset:14px 9px auto;height:1px;background:currentColor;transition:transform var(--duration-detail,220ms)}.ds-faq-indicator::after{transform:rotate(90deg)}.ds-faq[open] .ds-faq-indicator{background:var(--action,#273a7c);border-color:var(--action,#273a7c);color:var(--page,#fdfbf7)}.ds-faq[open] .ds-faq-indicator::after{transform:rotate(0)}.ds-answer{padding:0 48px 24px 0}.ds-answer p{margin:0;font-size:1.0625rem;line-height:1.7;color:var(--text,#343936);max-width:570px}@media(prefers-reduced-motion:reduce){.ds-faq-indicator,.ds-faq-indicator::after,.ds-faq-indicator::before{transition:none}}@media(min-width:768px){.ds-faq summary{font-size:1.125rem}}"
     },
     {
       "name": "Foto-viewerbediening",
@@ -502,27 +591,27 @@
       "refersTo": "viewer-control",
       "description": "De neutraal donkere bediening; de uitsnede toont de controls zonder foto of dialog-script.",
       "html": "<div class=\"ds-viewer-controls\"><button type=\"button\">Vorige</button><button type=\"button\">Volgende</button></div>",
-      "css": ".ds-viewer-controls{display:flex;justify-content:space-between;gap:16px;padding:16px;border-radius:8px;background:var(--viewer-surface,#181818);color:var(--viewer-text,#f5f5f3);font-family:var(--font,\"Public Sans\",sans-serif);}.ds-viewer-controls button{min-height:44px;padding:8px 16px;border:1px solid var(--viewer-border,#505050);border-radius:6px;background:transparent;color:inherit;font:inherit;font-size:1.125rem;line-height:1.6;cursor:pointer}.ds-viewer-controls button:focus-visible{outline:3px solid var(--focus-on-dark,#fff);outline-offset:5px}.ds-viewer-controls button:active{background:var(--viewer-hover,#303030)}@media(hover:hover){.ds-viewer-controls button:hover{background:var(--viewer-hover,#303030)}}"
+      "css": ".ds-viewer-controls{display:flex;justify-content:space-between;gap:16px;padding:16px;border-radius:var(--radius-panel,16px);background:var(--viewer-surface,#181818);color:var(--viewer-text,#f5f5f3);font-family:var(--font,\"Cooper Hewitt\",sans-serif);}.ds-viewer-controls button{min-height:44px;padding:8px 16px;border:1px solid var(--viewer-border,#858585);border-radius:var(--radius-control,10px);background:var(--viewer-control,#242424);color:inherit;font:inherit;font-size:1.125rem;line-height:1.7;cursor:pointer}.ds-viewer-controls button:focus-visible{outline:3px solid var(--focus-on-dark,#fff);outline-offset:5px}.ds-viewer-controls button:active{background:var(--viewer-hover,#363636)}@media(hover:hover){.ds-viewer-controls button:hover{background:var(--viewer-hover,#363636)}}.ds-viewer-controls button{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal,cubic-bezier(.16,1,.3,1))}.ds-viewer-controls button:active{transform:scale(.98);transition-duration:90ms}@media(prefers-reduced-motion:reduce){.ds-viewer-controls button{transition:none;transform:none!important}}"
     }
   ],
   "narrative": {
     "northStar": "Licht, rustig en leesbaar",
-    "overview": "De bevestigde richting is licht en rustig: neutraal wit, antraciet en één helder sans-seriflettertype. Leesbaarheid en duidelijke bediening dragen het vertrouwen, met ruimte voor fotografie en gewone Nederlandse taal. “Licht, rustig en leesbaar” is hier een beschrijvende samenvatting van die bevestigde richting, geen apart gekozen metafoor.\n\nDe pagina gebruikt rustige lichte vlakken, dunne scheidingslijnen en compacte functionele onderdelen. Het fotografische hero-oppervlak en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels zijn expliciet afgewezen.",
+    "overview": "De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, rustiger koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en de welkomstkop; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.\n\nZachte hoeken, dunne scheidingslijnen en afwisselende fotocomposities geven de inhoud een natuurlijker ritme. De fotografische hero en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels blijven expliciet afgewezen.",
     "keyCharacteristics": [
-      "Eén lokaal gehoste Public Sans-familie voor koppen, tekst en bediening.",
-      "Lichte neutrale vlakken, antraciete acties en dunne grijze scheidingen.",
-      "Leesbare tekst, zichtbare focus en ruime aanraakvlakken.",
+      "Eén lokaal gehoste Cooper Hewitt-familie voor koppen, tekst en bediening.",
+      "Warme lichte vlakken, donkere koppen, gerichte blauwe accenten en dunne scheidingen.",
+      "Leesbare tekst, zachte hoeken, zichtbare focus en ruime aanraakvlakken.",
       "Een compacte doorlopende footer en een neutraal donkere foto-viewer."
     ],
     "rules": [
       {
-        "name": "The Neutral Surface Rule",
-        "body": "Gebruik de lichte neutrale oppervlakrollen voor de pagina en antraciet voor acties; de blauwe focuskleur dient de bediening.",
+        "name": "The Oostende Blue Rule",
+        "body": "Gebruik donkerblauw voor identiteit, acties en de welkomstkop; gebruik linkblauw voor kleine links en donkere tekst voor gewone koppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.",
         "section": "colors"
       },
       {
         "name": "The One Family Rule",
-        "body": "Gebruik Public Sans voor koppen, lopende tekst en bediening; maak hiërarchie met grootte, gewicht en ruimte.",
+        "body": "Gebruik Cooper Hewitt voor koppen, lopende tekst en bediening; maak hiërarchie met grootte, gewicht en ruimte.",
         "section": "typography"
       },
       {
@@ -532,7 +621,7 @@
       }
     ],
     "dos": [
-      "Do gebruik de bestaande lichte oppervlakrollen en antraciete acties.",
+      "Do gebruik de warme oppervlakrollen, donkere gewone koppen, donkerblauwe acties en blauwe welkomstkop.",
       "Do houd tekstlinks herkenbaar door onderstreping en geef alle bediening zichtbare toetsenbordfocus.",
       "Do behoud de leesbare tekstgroottes, regelafstand en responsieve ruimte; controleer ook tekstvergroting.",
       "Do houd de footer compact, met dezelfde ondergrond als de pagina en leesbare navigatie- en verenigingsgegevens.",
@@ -542,8 +631,7 @@
     "donts": [
       "Don't herstel groene oppervlakvlakken of decoratieve serif- en cursieve titels.",
       "Don't verander de foto-viewer in een gekleurd decoratief kader; gebruik de neutraal donkere rollen.",
-      "Don't gebruik focusblauw als decoratief merkaccent.",
-      "Don't maak van de kleine bestaande tekstlabels boven titels een nieuw herbruikbaar kickerpatroon.",
+      "Don't plaats decoratieve kickers boven koppen; de hero-context volgt de h1 en de menucontext volgt de h2.",
       "Don't leid een perfecte esthetische score of volledige toegankelijkheidscertificering af uit deze documentatie of automatische checks."
     ]
   }

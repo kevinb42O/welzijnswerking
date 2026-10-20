@@ -14,8 +14,8 @@ const titleLines = event.title.split('\n');
       <img src="/images/editorial/hero-kaarslicht-1200.webp" srcset="/images/editorial/hero-kaarslicht-640.webp 640w, /images/editorial/hero-kaarslicht-1200.webp 1200w, /images/editorial/hero-kaarslicht-1800.webp 1800w, /images/editorial/hero-kaarslicht-2200.webp 2200w" sizes="100vw" width="2200" height="1460" alt="Sfeerbeeld van een feestelijk gedekte kersttafel, met kaarslicht, dennengroen en glazen." loading="eager" fetchpriority="high" />
     </picture>
     <div class="container hero-inner">
+      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-invitation': true, 'hero-title-last': index === titleLines.length - 1}}><span class="hero-line-text">{line.split(/\s+/).map((word, wordIndex) => <Fragment>{wordIndex > 0 && ' '}<span class="hero-word"><span class="hero-word-text">{word}</span></span></Fragment>)}</span></span>)}</h1>
       <p class="hero-label">Kerstfeest {event.year} <span aria-hidden="true">·</span> Kursaal Oostende</p>
-      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-last': index === titleLines.length - 1}}>{line}</span>)}</h1>
       <p class="hero-intro">{event.intro}</p>
       {event.eligibility && <p class="hero-eligibility">{event.eligibility}</p>}
       <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Hoe schrijf ik me in?' : 'Praktische info & deelname')}{!ticket.url && <span aria-hidden="true">↓</span>}</a>

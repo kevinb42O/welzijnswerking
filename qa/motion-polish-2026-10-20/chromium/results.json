@@ -1,0 +1,209 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "frames": 10,
+    "starts": [
+      {
+        "frameIndex": 8,
+        "source": "/images/editorial/kursaal-twilight-2025-1000.webp",
+        "top": 339.21875,
+        "bottom": 642.234375,
+        "height": 303.015625,
+        "viewport": 900,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 274.5,
+        "scrollY": 5458,
+        "modal": false
+      },
+      {
+        "frameIndex": 9,
+        "source": "/images/event/2025-organisatie-1600.webp",
+        "top": 539.765625,
+        "bottom": 910.171875,
+        "height": 370.40625,
+        "viewport": 900,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 544.3999999761581,
+        "scrollY": 5816,
+        "modal": false
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "frames": 10,
+    "starts": [
+      {
+        "frameIndex": 8,
+        "source": "/images/editorial/kursaal-twilight-2025-1000.webp",
+        "top": 374.234375,
+        "bottom": 586.34375,
+        "height": 212.109375,
+        "viewport": 844,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 70.39999997615814,
+        "scrollY": 5589,
+        "modal": false
+      },
+      {
+        "frameIndex": 9,
+        "source": "/images/event/2025-organisatie-1600.webp",
+        "top": 506.875,
+        "bottom": 689.53125,
+        "height": 182.65625,
+        "viewport": 844,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 276.30000001192093,
+        "scrollY": 5924,
+        "modal": false
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "frames": 10,
+    "starts": [
+      {
+        "frameIndex": 8,
+        "source": "/images/editorial/kursaal-twilight-2025-1000.webp",
+        "top": 90.65625,
+        "bottom": 260.34375,
+        "height": 169.6875,
+        "viewport": 568,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 69.5,
+        "scrollY": 5780,
+        "modal": false
+      },
+      {
+        "frameIndex": 9,
+        "source": "/images/event/2025-organisatie-1600.webp",
+        "top": 340.5625,
+        "bottom": 486.6875,
+        "height": 146.125,
+        "viewport": 568,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 276.0999999642372,
+        "scrollY": 6005,
+        "modal": false
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "frames": 10,
+    "starts": [
+      {
+        "frameIndex": 7,
+        "source": "/images/event/2025-facebook-25-1200.webp",
+        "top": 46.0625,
+        "bottom": 218.6875,
+        "height": 172.625,
+        "viewport": 1024,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 111.30000001192093,
+        "scrollY": 4546,
+        "modal": false
+      },
+      {
+        "frameIndex": 8,
+        "source": "/images/editorial/kursaal-twilight-2025-1000.webp",
+        "top": 511.25,
+        "bottom": 695.953125,
+        "height": 184.703125,
+        "viewport": 1024,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 111.39999997615814,
+        "scrollY": 4546,
+        "modal": false
+      },
+      {
+        "frameIndex": 9,
+        "source": "/images/event/2025-organisatie-1600.webp",
+        "top": 614.203125,
+        "bottom": 825.125,
+        "height": 210.921875,
+        "viewport": 1024,
+        "decoded": true,
+        "property": "transform",
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "at": 295.80000001192093,
+        "scrollY": 4954,
+        "modal": false
+      }
+    ],
+    "passed": true
+  },
+  {
+    "slowImageScrollAway": true,
+    "passed": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "textZoom": 200,
+    "overflow": false
+  }
+]

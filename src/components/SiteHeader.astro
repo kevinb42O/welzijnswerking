@@ -3,26 +3,28 @@ import { event } from '../data/event';
 ---
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a href="#home" class="wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><span>welzijns<span class="brand-second-line">werking<span class="brand-dot">.</span></span></span><span class="wordmark-city">Oostende</span></a>
-    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a><a class="nav-participate" href="#praktisch">Praktisch & deelname</a></nav>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Open de navigatie"><span>Navigatie</span><span class="menu-bars" aria-hidden="true"></span></button>
+    <a href="#home" class="wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><span>welzijns<span class="brand-second-line">werking<span class="brand-dot">.</span></span></span></a>
+    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#praktisch">Praktische info</a><a href="#edities">Vorige edities</a><a class="button nav-participate" href="#inschrijven">Hoe inschrijven?</a></nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Open de navigatie"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
   </div>
   <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title">
     <div class="mobile-menu-top"><span class="mobile-menu-brand">welzijnswerking.</span><button class="mobile-menu-close" type="button" aria-label="Sluit de navigatie" autofocus>Sluiten</button></div>
-    <div class="mobile-menu-intro"><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p><h2 id="mobile-menu-title">Navigatie</h2></div>
+    <div class="mobile-menu-intro"><h2 id="mobile-menu-title">Navigatie</h2><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p></div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie">
       <a href="#welkom">Voor wie?</a>
+      <a href="#praktisch">Praktische info</a>
       <a href="#edities">Vorige edities</a>
-      <a href="#partners">Partners</a>
-      <a class="mobile-nav-participate" href="#praktisch">Praktisch & deelname</a>
+      <a class="button mobile-nav-participate" href="#inschrijven">Hoe inschrijven?</a>
     </nav>
   </dialog>
-  <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#praktisch">Praktisch</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a href="#partners">Partners</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
+  <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#welkom">Voor wie?</a><a href="#praktisch">Praktische info</a><a href="#edities">Vorige edities</a><a class="button" href="#inschrijven">Hoe inschrijven?</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
 </header>
 <script>
+  import { dialogMotion } from '../scripts/motion';
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const menu = document.querySelector<HTMLDialogElement>('#mobile-menu');
   if (toggle && menu) {
+    const motion = dialogMotion(menu);
     let scrollPosition = 0;
     const restorePage = () => {
       toggle.setAttribute('aria-expanded', 'false');
@@ -31,11 +33,12 @@ import { event } from '../data/event';
       document.body.style.removeProperty('--menu-scroll-offset');
       window.scrollTo({ top: scrollPosition, behavior: 'instant' });
     };
-    const close = () => {
+    const finishClose = () => {
       menu.close();
       restorePage();
       if (toggle.getClientRects().length) toggle.focus({ preventScroll: true });
     };
+    const close = (immediate = false) => motion.close(finishClose, immediate);
     toggle.addEventListener('click', () => {
       if (menu.open) { close(); return; }
       scrollPosition = window.scrollY;
@@ -43,10 +46,11 @@ import { event } from '../data/event';
       document.body.classList.add('menu-open');
       toggle.setAttribute('aria-expanded', 'true');
       menu.showModal();
+      motion.enter();
     });
-    menu.querySelector('.mobile-menu-close')?.addEventListener('click', close);
+    menu.querySelector('.mobile-menu-close')?.addEventListener('click', () => close());
     menu.querySelectorAll<HTMLAnchorElement>('a').forEach(link => link.addEventListener('click', () => {
-      close();
+      close(true);
       // Move keyboard focus to the destination after following the in-page link.
       const target = document.querySelector<HTMLElement>(link.hash);
       if (target) {
@@ -78,6 +82,6 @@ import { event } from '../data/event';
     };
     menu.addEventListener('pointerdown', event => { pointerStartedOutside = outside(event); });
     menu.addEventListener('pointerup', event => { if (pointerStartedOutside && outside(event)) close(); pointerStartedOutside = false; });
-    matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches && menu.open) close(); });
+    matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches && menu.open) close(true); });
   }
 </script>

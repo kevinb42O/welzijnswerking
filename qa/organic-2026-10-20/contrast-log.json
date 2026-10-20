@@ -1,0 +1,282 @@
+[
+  {
+    "width": 320,
+    "selector": ".hero-label",
+    "minContrast": 10.146458424673096
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.15655370906725
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 11.482996041112301
+  },
+  {
+    "width": 320,
+    "selector": ".hero-title-last",
+    "minContrast": 10.018290113205259
+  },
+  {
+    "width": 320,
+    "selector": ".hero-intro",
+    "minContrast": 10.862032966325472
+  },
+  {
+    "width": 320,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.37387208085671
+  },
+  {
+    "width": 320,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 390,
+    "selector": ".hero-label",
+    "minContrast": 10.39245306930238
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.328644712758928
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.425609288210486
+  },
+  {
+    "width": 390,
+    "selector": ".hero-title-last",
+    "minContrast": 10.088274039406945
+  },
+  {
+    "width": 390,
+    "selector": ".hero-intro",
+    "minContrast": 11.02407860801134
+  },
+  {
+    "width": 390,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.388297575090768
+  },
+  {
+    "width": 390,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 455,
+    "selector": ".hero-label",
+    "minContrast": 10.576141144435805
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 11.328644712758928
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.124828362858446
+  },
+  {
+    "width": 455,
+    "selector": ".hero-title-last",
+    "minContrast": 10.124828362858446
+  },
+  {
+    "width": 455,
+    "selector": ".hero-intro",
+    "minContrast": 11.05854263793275
+  },
+  {
+    "width": 455,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.498246209047066
+  },
+  {
+    "width": 455,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 768,
+    "selector": ".hero-label",
+    "minContrast": 10.483297506231338
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 17.0994518106319
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.17600185552205
+  },
+  {
+    "width": 768,
+    "selector": ".hero-title-last",
+    "minContrast": 10.335862135667583
+  },
+  {
+    "width": 768,
+    "selector": ".hero-intro",
+    "minContrast": 11.03065198322027
+  },
+  {
+    "width": 768,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.72354069099287
+  },
+  {
+    "width": 768,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-label",
+    "minContrast": 10.531997523660927
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 12.62750732365145
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.355100380942824
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-title-last",
+    "minContrast": 10.524433024595428
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-intro",
+    "minContrast": 11.04470017970982
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-eligibility",
+    "minContrast": 12.957507180982724
+  },
+  {
+    "width": 1000,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-label",
+    "minContrast": 10.960293446608231
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 16.358199745423956
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.989217130413618
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-title-last",
+    "minContrast": 7.1597299776769185
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-intro",
+    "minContrast": 6.397172198437448
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-eligibility",
+    "minContrast": 10.050151836723483
+  },
+  {
+    "width": 1001,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-label",
+    "minContrast": 11.279447689146695
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 15.171798226883888
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.847362500820543
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-title-last",
+    "minContrast": 7.4000855142314235
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-intro",
+    "minContrast": 10.298300860502364
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-eligibility",
+    "minContrast": 11.317554020763584
+  },
+  {
+    "width": 1440,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-label",
+    "minContrast": 9.878932389824008
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 16.993006260779598
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 10.002975590024423
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-title-last",
+    "minContrast": 6.901366372752895
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-intro",
+    "minContrast": 8.620814270770815
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-eligibility",
+    "minContrast": 10.701614376474765
+  },
+  {
+    "width": 1920,
+    "selector": ".hero .button",
+    "minContrast": 10.248729493178782
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "file": "centres-open-390.png",
+    "width": 390,
+    "height": 3189,
+    "entropy": 0.8275166767416522
+  },
+  {
+    "file": "faq-open-390.png",
+    "width": 390,
+    "height": 601,
+    "entropy": 0.8386120565555757
+  },
+  {
+    "file": "full-1001.png",
+    "width": 1001,
+    "height": 6420,
+    "entropy": 3.809356405865401
+  },
+  {
+    "file": "full-1440.png",
+    "width": 1440,
+    "height": 7000,
+    "entropy": 3.729529593605548
+  },
+  {
+    "file": "full-320.png",
+    "width": 320,
+    "height": 8896,
+    "entropy": 3.0654972624615766
+  },
+  {
+    "file": "full-390.png",
+    "width": 390,
+    "height": 8388,
+    "entropy": 3.3043431232799776
+  },
+  {
+    "file": "full-768.png",
+    "width": 768,
+    "height": 6433,
+    "entropy": 3.5440862950053997
+  },
+  {
+    "file": "menu-390.png",
+    "width": 390,
+    "height": 844,
+    "entropy": 4.538767329446273
+  },
+  {
+    "file": "ontmoetingscentra-1440.png",
+    "width": 1440,
+    "height": 317,
+    "entropy": 0.4425454721713322
+  },
+  {
+    "file": "ontmoetingscentra-390.png",
+    "width": 390,
+    "height": 251,
+    "entropy": 1.0945720671443269
+  },
+  {
+    "file": "partners-1440.png",
+    "width": 1440,
+    "height": 377,
+    "entropy": 0.7597219740273431
+  },
+  {
+    "file": "partners-390.png",
+    "width": 390,
+    "height": 784,
+    "entropy": 1.1344366343691945
+  },
+  {
+    "file": "praktisch-1440.png",
+    "width": 1440,
+    "height": 1163,
+    "entropy": 0.8340444955683779
+  },
+  {
+    "file": "praktisch-390.png",
+    "width": 390,
+    "height": 1793,
+    "entropy": 1.5658926583710127
+  },
+  {
+    "file": "site-footer-1440.png",
+    "width": 1440,
+    "height": 318,
+    "entropy": 0.4213447423207981
+  },
+  {
+    "file": "site-footer-390.png",
+    "width": 390,
+    "height": 514,
+    "entropy": 0.7961859247807297
+  },
+  {
+    "file": "viewer-390.png",
+    "width": 390,
+    "height": 844,
+    "entropy": 3.08634489736869
+  },
+  {
+    "file": "viewport-1001.png",
+    "width": 1001,
+    "height": 900,
+    "entropy": 5.799353039394191
+  },
+  {
+    "file": "viewport-1440.png",
+    "width": 1440,
+    "height": 900,
+    "entropy": 5.944440919032786
+  },
+  {
+    "file": "viewport-320.png",
+    "width": 320,
+    "height": 900,
+    "entropy": 5.180604546912946
+  },
+  {
+    "file": "viewport-390.png",
+    "width": 390,
+    "height": 844,
+    "entropy": 5.484177159894898
+  },
+  {
+    "file": "viewport-768.png",
+    "width": 768,
+    "height": 900,
+    "entropy": 5.431406597257592
+  }
+]

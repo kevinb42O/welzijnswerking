@@ -12,10 +12,10 @@ const browser = await chromium.launch();
 const results = [];
 const lum = rgb => rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((n,v,i)=>n+v*[.2126,.7152,.0722][i],0);
 for (const width of [320,390,455,768,1000,1001,1440,1920]) {
-  const page = await browser.newPage({viewport:{width,height:900}});
+  const page = await browser.newPage({viewport:{width,height:900},reducedMotion:"reduce"});
   await page.goto('http://127.0.0.1:4325/');
-  await page.evaluate(()=>document.fonts.ready);
-  const samples = await page.evaluate(()=>['.hero-label','#hero-title > span:nth-child(1)','.hero-title-last','.hero-intro','.hero-eligibility','.hero .button'].map(selector=>{
+  await page.evaluate(async()=>{await document.fonts.ready;await document.querySelector('.hero-photo img').decode();});
+  const samples = await page.evaluate(()=>['.hero-label','#hero-title > span:nth-child(1)','#hero-title > span:nth-child(2)','.hero-title-last','.hero-intro','.hero-eligibility','.hero .button'].map(selector=>{
     const el=document.querySelector(selector),s=getComputedStyle(el),rects=[];
     const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
     while(walk.nextNode()) {

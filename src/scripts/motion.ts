@@ -1,0 +1,298 @@
+import { animate } from 'motion/mini';
+
+export const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const ease = [0.16, 1, 0.3, 1] as const;
+const running = new Set<ReturnType<typeof animate>>();
+
+export function move(element: Element, frames: Parameters<typeof animate>[1], options: Parameters<typeof animate>[2] = {}) {
+  const control = animate(element, frames, { ease, ...options, ...(reducedMotion.matches ? { duration: 0, delay: 0 } : {}) });
+  running.add(control);
+  const stop = control.stop.bind(control);
+  control.stop = () => { running.delete(control); stop(); };
+  void control.then(() => running.delete(control));
+  return control;
+}
+
+reducedMotion.addEventListener('change', event => {
+  if (event.matches) for (const control of running) control.complete();
+});
+
+// Dialogs remain native: focus containment, Escape and inert backgrounds stay intact.
+export function dialogMotion(dialog: HTMLDialogElement) {
+  let current: ReturnType<typeof move> | undefined;
+  let version = 0;
+  const reset = () => {
+    dialog.style.removeProperty('opacity');
+    dialog.style.removeProperty('transform');
+  };
+  return {
+    enter() {
+      ++version;
+      current?.stop();
+      reset();
+      current = move(dialog, { opacity: [0, 1], transform: ['translateY(12px) scale(.985)', 'translateY(0) scale(1)'] }, { duration: .36 });
+    },
+    close(finish: () => void, immediate = false) {
+      const token = ++version;
+      current?.stop();
+      if (immediate || reducedMotion.matches) { finish(); reset(); return; }
+      current = move(dialog, { opacity: 0, transform: 'translateY(8px) scale(.99)' }, { duration: .16 });
+      void current.then(() => { if (token === version) { finish(); reset(); } });
+    },
+  };
+}
+
+// Reveal targets are deliberately small and independent of surrounding copy.
+// Observe the stationary frame, animate its inner surface, never its caption.
+export function startPageMotion() {
+  if (document.documentElement.dataset.motionInitialized) return;
+  document.documentElement.dataset.motionInitialized = 'true';
+  enhanceDisclosures();
+  startHero();
+  startReveals();
+}
+
+function clearMotion(element: HTMLElement) {
+  element.style.removeProperty('transform');
+  element.style.removeProperty('opacity');
+  element.style.removeProperty('will-change');
+}
+
+function finishWhenHidden(control: ReturnType<typeof move>) {
+  const finish = () => {
+    if (!document.hidden) return;
+    if (control.state === 'running' || control.state === 'paused') control.complete();
+    document.removeEventListener('visibilitychange', finish);
+  };
+  document.addEventListener('visibilitychange', finish);
+  void control.then(() => document.removeEventListener('visibilitychange', finish));
+}
+
+function startHero() {
+  const play = () => {
+    if (reducedMotion.matches || (location.hash && location.hash !== '#home') || scrollY > 32) return;
+    const words = [...document.querySelectorAll<HTMLElement>('.hero-word-text')];
+    // A clear, authored entrance: each word rises through its own typographic mask.
+    // Individual word masks follow natural wrapping on every screen size.
+    words.forEach((word, index) => {
+      word.style.willChange = 'transform, opacity';
+      const control = move(word, {
+        opacity: [.15, 1],
+        transform: ['translateY(110%)', 'translateY(0)'],
+      }, { duration: 1.08, delay: .14 + index * .085 });
+      finishWhenHidden(control);
+      void control.then(() => clearMotion(word));
+    });
+    const intro = document.querySelector<HTMLElement>('.hero-intro');
+    if (intro) {
+      const control = move(intro, {
+        opacity: [.45, 1], transform: ['translateY(14px)', 'translateY(0)'],
+      }, { duration: .8, delay: .32 });
+      finishWhenHidden(control);
+      void control.then(() => clearMotion(intro));
+    }
+    const photo = document.querySelector<HTMLImageElement>('.hero-photo img');
+    if (photo) {
+      // A lazy/cold image must not use up its motion while the pixels are missing.
+      void photo.decode().then(() => {
+        if (reducedMotion.matches || document.hidden || scrollY > 32 || (location.hash && location.hash !== '#home')) return;
+        const control = move(photo, { transform: ['scale(1.045)', 'scale(1)'] }, { duration: 1.25 });
+        finishWhenHidden(control);
+        void control.then(() => clearMotion(photo));
+      }).catch(() => {});
+    }
+  };
+  // Do not spend the intro in a background tab.
+  const visible = () => {
+    if (document.hidden) return;
+    document.removeEventListener('visibilitychange', visible);
+    requestAnimationFrame(play);
+  };
+  visible();
+  if (document.hidden) document.addEventListener('visibilitychange', visible);
+}
+
+type Reveal = {
+  frame: HTMLElement;
+  surface: HTMLElement;
+  image?: HTMLImageElement;
+  state: 'pending' | 'loading' | 'playing' | 'done';
+  control?: ReturnType<typeof move>;
+};
+
+function startReveals() {
+  const reveals: Reveal[] = [];
+  // Photo frames already present in markup remain stable even while their images move.
+  document.querySelectorAll<HTMLElement>('[data-motion-frame]').forEach(frame => {
+    const surface = frame.querySelector<HTMLElement>('[data-motion-surface]');
+    const image = frame.querySelector<HTMLImageElement>('img');
+    if (surface && image) reveals.push({ frame, surface, image, state: 'pending' });
+  });
+  const title = document.querySelector<HTMLElement>('.welcome-intro>h2');
+  if (title) reveals.push({ frame: title, surface: title, state: 'pending' });
+
+  const finish = (reveal: Reveal) => {
+    reveal.state = 'done';
+    reveal.control?.stop();
+    reveal.control?.cancel();
+    clearMotion(reveal.surface);
+    observer?.unobserve(reveal.frame);
+  };
+  const bounds = (reveal: Reveal) => {
+    const rect = reveal.frame.getBoundingClientRect();
+    const height = Math.min(rect.height, innerHeight);
+    const visible = Math.max(0, Math.min(rect.bottom, innerHeight) - Math.max(rect.top, 0));
+    // Start only after 30% of the photo (or viewport for a tall photo) is visible,
+    // and its top is above the lower 82% line. No offscreen pre-roll.
+    return { rect, ready: rect.top <= innerHeight * .82 && visible >= height * .30 && rect.bottom > 0 };
+  };
+  const blocked = () => document.hidden || document.body.matches('.menu-open, .modal-open');
+  const check = async (reveal: Reveal) => {
+    if (reveal.state !== 'pending' || blocked()) return;
+    if (reducedMotion.matches) { finish(reveal); return; }
+    const { rect, ready } = bounds(reveal);
+    // Fast scroll or an anchor may skip a scene; never play it late above the screen.
+    if (rect.bottom <= 0) { finish(reveal); return; }
+    if (!ready) return;
+    if (reveal.surface.contains(document.activeElement)) { finish(reveal); return; }
+    reveal.state = 'loading';
+    if (reveal.image) {
+      try { await reveal.image.decode(); }
+      catch { finish(reveal); return; }
+    }
+    if (reveal.state !== 'loading') return;
+    const current = bounds(reveal);
+    if (blocked() || !current.ready) {
+      reveal.state = 'pending';
+      if (current.rect.bottom <= 0) finish(reveal);
+      return;
+    }
+    // If decoding finished after the visitor has already scrolled past the top,
+    // show the photo in its final state rather than suddenly dimming it.
+    if (reducedMotion.matches || current.rect.top < 0) { finish(reveal); return; }
+    reveal.state = 'playing';
+    reveal.surface.style.willChange = 'transform, opacity';
+    reveal.control = move(reveal.surface, reveal.image
+      ? { opacity: [.82, 1], transform: ['scale(1.055)', 'scale(1)'] }
+      : { opacity: [.6, 1], transform: ['translateY(18px)', 'translateY(0)'] },
+      { duration: reveal.image ? .8 : .64 });
+    observer?.unobserve(reveal.frame);
+    finishWhenHidden(reveal.control);
+    void reveal.control.then(() => finish(reveal));
+  };
+
+  // Dense thresholds are intentional: isIntersecting alone is true even when
+  // the initial entry is below the requested ratio. Geometry is checked again.
+  let observer: IntersectionObserver | undefined;
+  const observe = () => {
+    observer?.disconnect();
+    observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        const reveal = reveals.find(item => item.frame === entry.target);
+        if (reveal && entry.isIntersecting) void check(reveal);
+      }
+    }, {
+      rootMargin: `0px 0px -${Math.round(innerHeight * .18)}px 0px`,
+      threshold: Array.from({ length: 21 }, (_, index) => index / 20),
+    });
+    reveals.filter(item => item.state === 'pending').forEach(item => observer!.observe(item.frame));
+  };
+  // Never take already-visible content away on a slow startup or restored scroll.
+  const initialTarget = document.getElementById(location.hash.slice(1));
+  for (const reveal of reveals) {
+    const rect = reveal.frame.getBoundingClientRect();
+    const anchored = initialTarget && (initialTarget.contains(reveal.frame) || reveal.frame.contains(initialTarget));
+    if (reducedMotion.matches || anchored || rect.top < innerHeight) {
+      reveal.state = 'done';
+    } else {
+      // Prepare only offscreen surfaces. The first visible pixels already have
+      // their starting appearance; nothing flashes visible and then fades out.
+      reveal.surface.style.opacity = reveal.image ? '.82' : '.6';
+      if (reveal.image) reveal.surface.style.transform = 'scale(1.055)';
+    }
+  }
+  observe();
+  const revisit = () => requestAnimationFrame(() => {
+    if (blocked()) return;
+    for (const reveal of reveals) void check(reveal);
+  });
+  document.addEventListener('visibilitychange', revisit);
+  document.addEventListener('close', revisit, true);
+  window.addEventListener('resize', () => {
+    // Rotation and responsive reflow finish a live reveal rather than restarting it.
+    for (const reveal of reveals) if (reveal.state === 'playing' || reveal.state === 'loading') finish(reveal);
+    observe();
+    revisit();
+  });
+  window.addEventListener('hashchange', () => {
+    for (const reveal of reveals) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target && (target.contains(reveal.frame) || reveal.frame.contains(target))) finish(reveal);
+    }
+    revisit();
+  });
+  document.addEventListener('focusin', event => {
+    if (!(event.target instanceof Element)) return;
+    for (const reveal of reveals) if (reveal.frame.contains(event.target)) finish(reveal);
+  });
+  reducedMotion.addEventListener('change', event => {
+    if (event.matches) for (const reveal of reveals) finish(reveal);
+  });
+}
+
+function enhanceDisclosures() {
+  const items = [...document.querySelectorAll<HTMLDetailsElement>('.welcome-questions details, .centres-disclosure')];
+  const controllers = new Map<HTMLDetailsElement, (open: boolean) => void>();
+  for (const details of items) {
+    const summary = details.querySelector('summary');
+    if (!summary) continue;
+    let current: ReturnType<typeof move> | undefined;
+    let version = 0;
+    let desired = details.open;
+    const reset = () => {
+      details.style.removeProperty('height');
+      details.style.removeProperty('overflow');
+    };
+    const change = (open: boolean) => {
+      const token = ++version;
+      desired = open;
+      current?.stop();
+      const from = details.getBoundingClientRect().height;
+      reset();
+      details.open = true;
+      const expanded = details.getBoundingClientRect().height;
+      const style = getComputedStyle(details);
+      const collapsed = summary.getBoundingClientRect().height + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+      if (reducedMotion.matches) { details.open = open; return; }
+      // Only this small, user-triggered disclosure animates measured layout.
+      details.style.overflow = 'clip';
+      current = move(details, { height: [`${from}px`, `${open ? expanded : collapsed}px`] }, { duration: open ? .32 : .22 });
+      void current.then(() => {
+        if (version !== token) return;
+        details.open = open;
+        reset();
+      });
+    };
+    controllers.set(details, change);
+    // Progressive enhancement: without this script native details[name] still works.
+    if (details.name === 'welcome-faq') details.removeAttribute('name');
+    summary.addEventListener('click', event => {
+      event.preventDefault();
+      const open = !desired;
+      if (open && details.closest('.welcome-questions')) {
+        for (const [other, update] of controllers) {
+          if (other !== details && other.closest('.welcome-questions') && other.open) update(false);
+        }
+      }
+      change(open);
+    });
+    // Hash navigation can open the centre list directly; do not delay its layout.
+    details.addEventListener('toggle', () => { if (!current || current.state === 'finished') desired = details.open; });
+    window.addEventListener('resize', () => {
+      ++version;
+      current?.stop();
+      details.open = desired;
+      reset();
+    });
+  }
+}

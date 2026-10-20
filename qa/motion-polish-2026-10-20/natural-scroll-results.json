@@ -1,0 +1,322 @@
+[
+  {
+    "width": 1440,
+    "slowModuleDelay": 2100,
+    "midway": {
+      "transform": "matrix(1, 0, 0, 1, 0, 4.73325)",
+      "opacity": "0.911252"
+    },
+    "photoStarts": [
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 660.9375,
+        "bottom": 990.9375,
+        "height": 330,
+        "viewport": 900,
+        "at": 5420.199999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 666.1875,
+        "bottom": 1192.59375,
+        "height": 526.40625,
+        "viewport": 900,
+        "at": 7119.699999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 712.1875,
+        "bottom": 1222.1875,
+        "height": 510,
+        "viewport": 900,
+        "at": 7808.5
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 664.1875,
+        "bottom": 1254.1875,
+        "height": 590,
+        "viewport": 900,
+        "at": 7947.599999964237
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 737.375,
+        "bottom": 1190.703125,
+        "height": 453.328125,
+        "viewport": 900,
+        "at": 8514.699999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 667.03125,
+        "bottom": 1021.03125,
+        "height": 354,
+        "viewport": 900,
+        "at": 8633.299999952316
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 673.890625,
+        "bottom": 1105.890625,
+        "height": 432,
+        "viewport": 900,
+        "at": 9101.899999976158
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 721.890625,
+        "bottom": 1025.046875,
+        "height": 303.15625,
+        "viewport": 900,
+        "at": 9102.099999964237
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 661.078125,
+        "bottom": 964.09375,
+        "height": 303.015625,
+        "viewport": 900,
+        "at": 9819.5
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 619.625,
+        "bottom": 990.03125,
+        "height": 370.40625,
+        "viewport": 900,
+        "at": 10402.699999988079
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "slowModuleDelay": 0,
+    "midway": {
+      "transform": "matrix(1, 0, 0, 1, 0, 6.44897)",
+      "opacity": "0.879082"
+    },
+    "photoStarts": [
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 600.125,
+        "bottom": 862.625,
+        "height": 262.5,
+        "viewport": 844,
+        "at": 2334.699999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 617.953125,
+        "bottom": 880.453125,
+        "height": 262.5,
+        "viewport": 844,
+        "at": 4966.5
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 616.046875,
+        "bottom": 878.546875,
+        "height": 262.5,
+        "viewport": 844,
+        "at": 5315.899999976158
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 585.734375,
+        "bottom": 710.984375,
+        "height": 125.25,
+        "viewport": 844,
+        "at": 5666.399999976158
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 585.734375,
+        "bottom": 710.984375,
+        "height": 125.25,
+        "viewport": 844,
+        "at": 5666.599999964237
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 658.171875,
+        "bottom": 920.671875,
+        "height": 262.5,
+        "viewport": 844,
+        "at": 5782.599999964237
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 627.859375,
+        "bottom": 753.109375,
+        "height": 125.25,
+        "viewport": 844,
+        "at": 6133.199999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 627.859375,
+        "bottom": 715.75,
+        "height": 87.890625,
+        "viewport": 844,
+        "at": 6133.300000011921
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 612.890625,
+        "bottom": 825,
+        "height": 212.109375,
+        "viewport": 844,
+        "at": 6833.699999988079
+      },
+      {
+        "target": "",
+        "surface": true,
+        "frames": {
+          "transform": [
+            "scale(1.055)",
+            "scale(1)"
+          ]
+        },
+        "top": 600.53125,
+        "bottom": 783.1875,
+        "height": 182.65625,
+        "viewport": 844,
+        "at": 7300.199999988079
+      }
+    ]
+  }
+]

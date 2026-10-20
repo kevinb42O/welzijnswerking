@@ -1,0 +1,26 @@
+[
+  {
+    "reducedMotion": "no-preference",
+    "passed": true,
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  {
+    "reducedMotion": "reduce",
+    "passed": true,
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  {
+    "javaScript": false,
+    "passed": true
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "viewer": {
+      "slowLoadKeepsImage": true,
+      "stableStage": true,
+      "errorKeepsImage": true,
+      "recovery": true,
+      "focusRestore": true
+    }
+  },
+  {
+    "liveReducedMotion": {
+      "allPendingAndActiveStylesCleared": true
+    }
+  },
+  {
+    "rotation": {
+      "activeMotionSettles": true,
+      "noHorizontalOverflow": true
+    },
+    "pageErrors": []
+  }
+]

@@ -1,0 +1,269 @@
+{
+  "slowModuleDelay": 2100,
+  "midway": {
+    "transform": "matrix(0.999992, 0.00396367, -0.00396367, 0.999992, 0, 10.4921)",
+    "opacity": "0.903482"
+  },
+  "events": [
+    {
+      "time": 2261.800000011921,
+      "target": "",
+      "frames": {
+        "transform": [
+          "scale(1.12)",
+          "scale(1)"
+        ]
+      }
+    },
+    {
+      "time": 2267.600000023842,
+      "target": "hero-line-text",
+      "frames": {
+        "opacity": [
+          0.15,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2267.600000023842,
+      "target": "hero-line-text",
+      "frames": {
+        "transform": [
+          "translateY(105%) rotate(2deg)",
+          "translateY(0) rotate(0deg)"
+        ]
+      }
+    },
+    {
+      "time": 2267.699999988079,
+      "target": "hero-line-text",
+      "frames": {
+        "opacity": [
+          0.15,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2267.699999988079,
+      "target": "hero-line-text",
+      "frames": {
+        "transform": [
+          "translateY(105%) rotate(2deg)",
+          "translateY(0) rotate(0deg)"
+        ]
+      }
+    },
+    {
+      "time": 2267.800000011921,
+      "target": "hero-line-text",
+      "frames": {
+        "opacity": [
+          0.15,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2268,
+      "target": "hero-line-text",
+      "frames": {
+        "transform": [
+          "translateY(105%) rotate(2deg)",
+          "translateY(0) rotate(0deg)"
+        ]
+      }
+    },
+    {
+      "time": 2268.199999988079,
+      "target": "hero-label",
+      "frames": {
+        "opacity": [
+          0.35,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2268.199999988079,
+      "target": "hero-label",
+      "frames": {
+        "transform": [
+          "translateY(20px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 2268.199999988079,
+      "target": "hero-intro",
+      "frames": {
+        "opacity": [
+          0.35,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2268.300000011921,
+      "target": "hero-intro",
+      "frames": {
+        "transform": [
+          "translateY(20px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 2268.300000011921,
+      "target": "hero-eligibility",
+      "frames": {
+        "opacity": [
+          0.35,
+          1
+        ]
+      }
+    },
+    {
+      "time": 2268.300000011921,
+      "target": "hero-eligibility",
+      "frames": {
+        "transform": [
+          "translateY(20px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 5226,
+      "target": "welcome-intro",
+      "frames": {
+        "opacity": [
+          0.25,
+          1
+        ]
+      }
+    },
+    {
+      "time": 5226.199999988079,
+      "target": "welcome-intro",
+      "frames": {
+        "transform": [
+          "translateY(36px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 6441.699999988079,
+      "target": "participation-note",
+      "frames": {
+        "opacity": [
+          0.25,
+          1
+        ]
+      }
+    },
+    {
+      "time": 6441.800000011921,
+      "target": "participation-note",
+      "frames": {
+        "transform": [
+          "translateY(28px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 7675.400000035763,
+      "target": "",
+      "frames": {
+        "opacity": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "time": 7675.5,
+      "target": "",
+      "frames": {
+        "transform": [
+          "translateY(32px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 7675.5,
+      "target": "",
+      "frames": {
+        "clipPath": [
+          "inset(0 0 12% 0)",
+          "inset(0 0 0% 0)"
+        ]
+      }
+    },
+    {
+      "time": 8890.900000035763,
+      "target": "venue-scene",
+      "frames": {
+        "opacity": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "time": 8890.900000035763,
+      "target": "venue-scene",
+      "frames": {
+        "transform": [
+          "translateY(28px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 8891,
+      "target": "venue-scene",
+      "frames": {
+        "clipPath": [
+          "inset(0 0 12% 0)",
+          "inset(0 0 0% 0)"
+        ]
+      }
+    },
+    {
+      "time": 8891.100000023842,
+      "target": "",
+      "frames": {
+        "opacity": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "time": 8891.100000023842,
+      "target": "",
+      "frames": {
+        "transform": [
+          "translateY(28px)",
+          "translateY(0)"
+        ]
+      }
+    },
+    {
+      "time": 8891.199999988079,
+      "target": "",
+      "frames": {
+        "clipPath": [
+          "inset(0 0 12% 0)",
+          "inset(0 0 0% 0)"
+        ]
+      }
+    }
+  ]
+}
