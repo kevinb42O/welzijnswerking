@@ -25,6 +25,7 @@ export const event = {
   ticketsUrl: source.event.ticketUrl as string | null,
   ticketStatus: source.event.ticketSalesStatus as TicketStatus,
   registrationMethod: source.event.registrationMethod as string | null,
+  registrationChannel: source.event.registrationChannel as 'meeting_centres' | null,
   menuNote: source.event.menuNote as string | null,
   ticketsInfoText: source.event.ticketsInfoText,
   organizerContactEmail: source.brand.organizationContactEmail as string | null,

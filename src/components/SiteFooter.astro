@@ -11,6 +11,6 @@ const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eve
       <nav class="footer-nav" aria-label="Footernavigatie"><span class="footer-label">Het kerstfeest</span><a href="#praktisch">Praktisch & deelname</a><a href="#verhaal">Ons verhaal</a><a href="#edities">Vorige edities</a><a href="#partners">Met dank aan</a></nav>
       <div class="footer-organization"><span class="footer-label">De vereniging</span><p>{event.organizerName}</p><address>{organization.registeredAddress.street}<br/>{organization.registeredAddress.city}</address><p class="footer-number">Ondernemingsnummer<br/>{organization.enterpriseNumber}</p>{(event.organizerContactEmail || event.phone) && <div class="footer-contact">{event.organizerContactEmail && <a href={`mailto:${event.organizerContactEmail}`}>{event.organizerContactEmail}</a>}{event.phone && <a href={`tel:${event.phone.replace(/\s/g, '')}`}>{event.phone}</a>}</div>}</div>
     </div>
-    <div class="footer-bottom"><p>© {event.year} Welzijnswerking Oostende</p><p class="maker-credit">Met zorg gemaakt door <a href="https://www.webaanzee.be/" target="_blank" rel="noopener noreferrer">Webaanzee <span aria-hidden="true">↗</span></a><span class="maker-note">Een belangeloze bijdrage.</span></p></div>
+    <div class="footer-bottom"><p>© {event.year} Welzijnswerking Oostende</p><p class="maker-credit">Met zorg gemaakt door <a href="https://www.webaanzee.be/" target="_blank" rel="noopener noreferrer">Webaanzee</a><span class="maker-note">Een belangeloze bijdrage.</span></p></div>
   </div>
 </footer>

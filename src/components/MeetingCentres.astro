@@ -1,0 +1,64 @@
+---
+import { event as sourceEvent } from '../data/event';
+import { meetingCentres, meetingCentresOverviewUrl } from '../data/meeting-centres';
+import Icon from './Icon.astro';
+interface Props { eventOverride?: typeof sourceEvent }
+const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eventOverride : sourceEvent;
+const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
+---
+
+{event.registrationChannel === 'meeting_centres' && (
+  <section id="ontmoetingscentra" class="meeting-centres section" aria-labelledby="meeting-centres-title" tabindex="-1">
+    <div class="container">
+      <div class="centres-heading">
+        <div>
+          <span class="small-label">In jouw buurt</span>
+          <h2 id="meeting-centres-title">Welk ontmoetingscentrum ligt bij jou in de buurt?</h2>
+        </div>
+      </div>
+      <details class="centres-disclosure">
+        <summary>Bekijk de negen ontmoetingscentra <span class="centres-indicator" aria-hidden="true"></span></summary>
+        <div class="centres-content">
+          <p class="centres-intro">Kies hieronder een centrum. Je vindt er het adres, het telefoonnummer en een link naar de officiële openingsuren. {!registrationClosed && <>Vragen over inschrijven voor het kerstfeest? Bel het centrum voor meer uitleg.</>}</p>
+      <ul class="centres-list" role="list">
+        {meetingCentres.map(centre => (
+          <li class="centre-card" aria-labelledby={`centre-${centre.id}`}>
+            <p class="centre-district">{centre.district}</p>
+            <h3 id={`centre-${centre.id}`}>{centre.name}</h3>
+            <p class="centre-address">{centre.streetAddress}<br />{centre.postalCode} {centre.city}</p>
+            <a class="centre-phone text-link" href={centre.phoneHref} aria-label={`Bel ${centre.name}: ${centre.phone}`}>
+              <Icon name="phone" />
+              <span>Bel {centre.name}<span class="centre-phone-number">{centre.phone}</span></span>
+            </a>
+            <div class="centre-links">
+              <a class="text-link" href={centre.routeUrl} target="_blank" rel="noopener noreferrer" aria-label={`Route naar ${centre.name} (Google Maps, opent in een nieuw tabblad)`}>Route</a>
+              <a class="text-link" href={centre.officialUrl} target="_blank" rel="noopener noreferrer" aria-label={`Openingsuren en info over ${centre.name} bij Stad Oostende (opent in een nieuw tabblad)`}>Openingsuren en info</a>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <div class="centres-footnote">
+        <p>Bekijk de actuele openingsuren en lokettijden bij Stad Oostende voor je langsgaat.</p>
+        <a class="text-link" href={meetingCentresOverviewUrl} target="_blank" rel="noopener noreferrer">Alle ontmoetingscentra bij Stad Oostende<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
+      </div>
+        </div>
+      </details>
+    </div>
+  </section>
+)}
+
+<script>
+  const centres = document.querySelector<HTMLElement>('#ontmoetingscentra');
+  const disclosure = centres?.querySelector<HTMLDetailsElement>('.centres-disclosure');
+  if (centres && disclosure) {
+    const revealFromHash = () => {
+      if (window.location.hash === '#ontmoetingscentra') disclosure.open = true;
+    };
+    // Open before the native anchor navigation calculates its scroll position.
+    document.querySelectorAll<HTMLAnchorElement>('a[href="#ontmoetingscentra"]').forEach(link => {
+      link.addEventListener('click', () => { disclosure.open = true; });
+    });
+    window.addEventListener('hashchange', revealFromHash);
+    revealFromHash();
+  }
+</script>

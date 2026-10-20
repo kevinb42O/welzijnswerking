@@ -21,7 +21,7 @@ Alle actuele evenementgegevens staan in `data/inhoud_2026.json`. De website verw
 | Verkoopstatus | `event.ticketSalesStatus` |
 | Contact | `brand.organizationContactEmail`, `brand.organizationContactPhone` |
 
-Zodra de verkoop open is: vul de echte ticketlink in en zet `ticketSalesStatus` op `available`. De hero en praktische informatie tonen dan **Reserveer je plaats**. `not_confirmed`, `sold_out` en `closed` blijven ondersteund. Zet niet automatisch de doelgroep of het menu van 2025 over naar 2026.
+Voor de bevestigde inschrijving via OC’s: vul de startdatum, deadline en betaalwijze in de toelichting `event.ticketsInfoText` in zodra ze bekend zijn. De negen centra staan al op de site met adres, belknop, route en officiële informatie; hiervoor is geen online ticketlink nodig. Zet `ticketSalesStatus` pas op `available` na bevestiging dat inschrijven open is. Als er later ook online verkoop komt, vul dan de echte ticketlink in; alleen daarmee tonen de hero en praktische informatie **Reserveer je plaats**. `not_confirmed`, `sold_out` en `closed` blijven ondersteund. Zet niet automatisch de doelgroep of het menu van 2025 over naar 2026.
 
 Bevestigde sponsorlogo's en records kunnen worden toegevoegd via de bestaande instructies in `README.md`. De zichtbare bedanking voor 2025 blijft historisch.
 

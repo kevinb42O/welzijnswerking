@@ -5,6 +5,8 @@ const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eve
 import { eventInstant } from '../data/format.mjs';
 import { ticketState } from '../data/publication.mjs';
 const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
+const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
+const menuInfoMissing = !event.menu.length && !event.menuNote;
 const detailGroups = [
   {title:'Uren en deelname', rows:[['Aanvang',event.startTime],['Deuren open',event.doorsTime],['Einde',event.endTime],['Voor wie',event.eligibility]]},
   {title:'Aan tafel', rows:[['Op het menu',event.menu.join(' · ')],['Goed om te weten',event.menuNote],['Aantal gangen',event.courseCount],['Dranken',event.includedDrinks]]},
@@ -30,13 +32,14 @@ const calendar = calendarLines.map(line => {
   <div class="container">
     <span class="small-label">Je bezoek</span><h2 id="practical-title">Praktisch voor je kerstavond</h2>
     <div class="practical-composition">
-              <div class="participation-note"><h3>{ticket.url ? 'Inschrijven voor het kerstfeest' : (event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed' ? ticket.label : (event.registrationMethod || 'Inschrijven voor het kerstfeest'))}</h3>{ticket.url && <a class="button" href={ticket.url} target="_blank" rel="noopener noreferrer">{ticket.label} <span aria-hidden="true">↗</span></a>}
-          {event.ticketStatus !== 'sold_out' && event.ticketStatus !== 'closed' && <p>{event.ticketsInfoText}</p>}
-          {(!event.startTime || !event.eligibility || !event.menu.length) && <p>Ook {[!event.startTime && 'het aanvangsuur', !event.menu.length && 'het menu', !event.eligibility && 'de deelnamevoorwaarden'].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' en $1')} {!event.eligibility || (!event.startTime && !event.menu.length) ? 'worden' : 'wordt'} voor {event.year} hier bekendgemaakt.</p>}
+              <div id="inschrijven" class="participation-note" role="region" aria-labelledby="registration-title" tabindex="-1"><h3 id="registration-title">{ticket.url ? 'Inschrijven voor het kerstfeest' : (registrationClosed ? ticket.label : (event.registrationMethod || 'Inschrijven voor het kerstfeest'))}</h3>{ticket.url && <a class="button" href={ticket.url} target="_blank" rel="noopener noreferrer">{ticket.label}</a>}
+          {!registrationClosed && <p>{event.ticketsInfoText}</p>}
+          {!registrationClosed && !ticket.url && event.registrationChannel === 'meeting_centres' && <a class="button" href="#ontmoetingscentra">Vind een ontmoetingscentrum <span aria-hidden="true">↓</span></a>}
+          {(!event.startTime || !event.eligibility || menuInfoMissing) && <p>Ook {[!event.startTime && 'het aanvangsuur', menuInfoMissing && 'het menu', !event.eligibility && 'de deelnamevoorwaarden'].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' en $1')} {!event.eligibility || (!event.startTime && menuInfoMissing) ? 'worden' : 'wordt'} voor {event.year} hier bekendgemaakt.</p>}
         </div>
       <div class="practical-content">
         <div class="info-row"><h3>Wanneer</h3><p><time datetime={event.dateISO}>{eventDate}</time></p></div>
-        <div class="info-row venue-detail"><h3>Waar</h3><div><p><strong>{event.placeName}</strong><br />{event.address}</p>{event.room && <p>Zaal: {event.room}</p>}<div class="arrival-links"><a class="text-link" href={routeUrl} target="_blank" rel="noopener noreferrer">Plan je route <span aria-hidden="true">↗</span></a><a class="text-link" href={accessibilityUrl} target="_blank" rel="noopener noreferrer">Bereikbaarheid Kursaal <span aria-hidden="true">↗</span></a></div></div></div>
+        <div class="info-row venue-detail"><h3>Waar</h3><div><p><strong>{event.placeName}</strong><br />{event.address}</p>{event.room && <p>Zaal: {event.room}</p>}<div class="arrival-links"><a class="text-link" href={routeUrl} target="_blank" rel="noopener noreferrer">Plan je route</a><a class="text-link" href={accessibilityUrl} target="_blank" rel="noopener noreferrer">Bereikbaarheid Kursaal</a></div></div></div>
         <div class="info-row"><h3>Maaltijd</h3><p>{event.mealDescription}<br /><strong>{price} per persoon</strong></p></div>
         {detailGroups.map(group => group.rows.length > 0 && <section class="detail-group" aria-label={group.title}><h3>{group.title}</h3><dl class="additional-details">{group.rows.map(([label,value])=><div><dt>{label}</dt><dd>{value}</dd></div>)}</dl></section>)}
 

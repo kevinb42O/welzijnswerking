@@ -32,21 +32,19 @@
     "room": null,
     "eligibilityRules": "Voor alleenstaanden vanaf 50 jaar.",
     "courseCount": null,
-    "menuItems": [
-      "Erwtensoep",
-      "Garnaalkroketten"
-    ],
+    "menuItems": [],
     "drinksIncluded": null,
     "ticketUrl": null,
     "ticketSalesStatus": "not_confirmed",
-    "ticketsInfoText": "Je inschrijving verloopt via een van de negen ontmoetingscentra (OC’s). Vanaf wanneer je kunt inschrijven, tot wanneer en hoe je betaalt, wordt hier nog bekendgemaakt.",
+    "ticketsInfoText": "Je schrijft je in via een van de negen ontmoetingscentra in Oostende. Hieronder vind je hun adressen en telefoonnummers. De startdatum, uiterste inschrijfdatum en betaalwijze worden hier nog bekendgemaakt.",
     "accessibilitySpecifics": null,
     "transportSpecifics": null,
     "entertainmentDetails": "Muziek van Patrick “Pulle” en een special guest die een verrassing blijft.",
     "volunteerSignupUrl": null,
     "intro": "Een feestelijke maaltijd, een warme ontmoeting. Vier kerstavond samen in het Kursaal.",
-    "menuNote": "Dit staat al vast. Het volledige menu en de inbegrepen dranken worden later bekendgemaakt.",
-    "registrationMethod": "Inschrijven via de negen ontmoetingscentra (OC’s)"
+    "menuNote": "Het menu wordt later bekendgemaakt. Informatie over de inbegrepen dranken volgt.",
+    "registrationMethod": "Inschrijven via een ontmoetingscentrum",
+    "registrationChannel": "meeting_centres"
   },
   "history": {
     "story": "De traditie van Welzijnswerking brengt sinds de jaren negentig alleenstaande senioren in Oostende samen. Na een onderbreking vond op kerstavond 2025 opnieuw een feest plaats in het Kursaal.",

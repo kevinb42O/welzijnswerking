@@ -4,6 +4,7 @@ import PhotoGallery from '../../components/PhotoGallery.astro';
 import SponsorGrid from '../../components/SponsorGrid.astro';
 import EventHero from '../../components/EventHero.astro';
 import PracticalInfo from '../../components/PracticalInfo.astro';
+import MeetingCentres from '../../components/MeetingCentres.astro';
 import WelcomeSection from '../../components/WelcomeSection.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import { event } from '../../data/event';
@@ -16,7 +17,7 @@ interface Props { photos: number; sponsors: number; state: string | null; resear
 export function getStaticPaths() {
   if (!import.meta.env.DEV) return [];
   const modules = [[0,0],[1,1],[2,3],[3,4],[4,12],[10,24],[20,40],[20,24],[4,4],[10,12],[20,24]];
-  const states = ['start','full','available','invalid','missing-link','sold-out','closed','contact','menu-only','eligibility-only','only-menu-missing'];
+  const states = ['start','full','available','invalid','missing-link','sold-out','closed','contact','menu-only','eligibility-only','only-menu-missing','centres','centres-available','centres-online','centres-sold-out','centres-closed'];
   return [...['beeldenonderzoek','fotoselectie'].map(mode => ({params:{mode},props:{photos:0,sponsors:0,state:null,research:mode}})), ...new Map(modules.map(([photos,sponsors]) => [`modules-${photos}-${sponsors}`,{params:{mode:`modules-${photos}-${sponsors}`},props:{photos,sponsors,state:null}}])).values(), ...states.map(state => ({params:{mode:`state-${state}`},props:{photos:0,sponsors:0,state}}))];
 }
 const {photos,sponsors,state,research}=Astro.props;
@@ -30,7 +31,12 @@ const patches: Record<string, Partial<typeof event>> = {
   contact:{organizerContactEmail:'demo@example.com',phone:'+32 59 00 00 00'},
   'menu-only':{menu:['DEMO-menu']},'eligibility-only':{eligibility:'DEMO-voorwaarden'},
   'only-menu-missing':{startTime:'18.00 uur',eligibility:'DEMO-voorwaarden'},
+  centres:{registrationChannel:'meeting_centres',registrationMethod:event.registrationMethod,ticketsInfoText:event.ticketsInfoText},
+  'centres-available':{registrationChannel:'meeting_centres',registrationMethod:event.registrationMethod,ticketsInfoText:'DEMO · Inschrijven via een ontmoetingscentrum.',ticketStatus:'available',ticketsUrl:null},
+  'centres-online':{registrationChannel:'meeting_centres',registrationMethod:event.registrationMethod,ticketStatus:'available',ticketsUrl:'https://example.com/tickets',ticketsInfoText:'DEMO · Online inschrijven is beschikbaar.'},
+  'centres-sold-out':{registrationChannel:'meeting_centres',registrationMethod:event.registrationMethod,ticketStatus:'sold_out'},
+  'centres-closed':{registrationChannel:'meeting_centres',registrationMethod:event.registrationMethod,ticketStatus:'closed'},
 };
-const fixture={...event,...(state ? {startTime:null,endTime:null,eligibility:null,menu:[],menuNote:null,registrationMethod:null,entertainmentDetails:null,ticketsInfoText:'Inschrijfinformatie volgt.',...patches[state]} : {})};
+const fixture={...event,...(state ? {startTime:null,endTime:null,eligibility:null,menu:[],menuNote:null,registrationMethod:null,registrationChannel:null,entertainmentDetails:null,ticketsInfoText:'Inschrijfinformatie volgt.',...patches[state]} : {})};
 ---
-<BaseLayout>{research && <SiteHeader />}<main id="inhoud"><div class="container preview-intro">{research ? (research === 'beeldenonderzoek' ? <h1>Beeldonderzoek · vorige edities</h1> : <p>Fotoselectie in de website</p>) : state ? <p>Development-preview</p> : <h1>Development-preview</h1>}<p class="demo-banner">{research ? 'Beeldselectie met echte eventfoto’s, editiejaar en bron. De geselecteerde eventfoto’s staan ook op de hoofdpagina.' : 'DEMO · Geen echte evenementgegevens, editiefoto’s of sponsors. Deze route wordt niet gebouwd voor productie.'}</p><a href="/">Terug naar de website</a></div>{research ? <>{research === 'fotoselectie' && <><EventHero /><WelcomeSection /><PracticalInfo /></>}{research === 'beeldenonderzoek' ? <ResearchArchive audit /> : <EventArchive />}{research === 'fotoselectie' && <><StorySection /><HistorySection /><SponsorGrid /></>}</> : state ? <><EventHero eventOverride={fixture} /><PracticalInfo eventOverride={fixture} /></> : <><PhotoGallery previewCount={photos} /><SponsorGrid previewCount={sponsors} /></>}</main>{(state || research) && <SiteFooter eventOverride={fixture} />}</BaseLayout>
+<BaseLayout>{research && <SiteHeader />}<main id="inhoud"><div class="container preview-intro">{research ? (research === 'beeldenonderzoek' ? <h1>Beeldonderzoek · vorige edities</h1> : <p>Fotoselectie in de website</p>) : state ? <p>Development-preview</p> : <h1>Development-preview</h1>}<p class="demo-banner">{research ? 'Beeldselectie met echte eventfoto’s, editiejaar en bron. De geselecteerde eventfoto’s staan ook op de hoofdpagina.' : 'DEMO · Geen echte evenementgegevens, editiefoto’s of sponsors. Deze route wordt niet gebouwd voor productie.'}</p><a href="/">Terug naar de website</a></div>{research ? <>{research === 'fotoselectie' && <><EventHero /><WelcomeSection /><PracticalInfo /><MeetingCentres /></>}{research === 'beeldenonderzoek' ? <ResearchArchive audit /> : <EventArchive />}{research === 'fotoselectie' && <><StorySection /><HistorySection /><SponsorGrid /></>}</> : state ? <><EventHero eventOverride={fixture} /><PracticalInfo eventOverride={fixture} /><MeetingCentres eventOverride={fixture} /></> : <><PhotoGallery previewCount={photos} /><SponsorGrid previewCount={sponsors} /></>}</main>{(state || research) && <SiteFooter eventOverride={fixture} />}</BaseLayout>

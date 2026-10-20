@@ -4,6 +4,8 @@ import { ticketState } from '../data/publication.mjs';
 interface Props { eventOverride?: typeof sourceEvent }
 const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eventOverride : sourceEvent;
 const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
+const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
+const hasRegistrationInfo = Boolean(event.registrationMethod) && !registrationClosed;
 const titleLines = event.title.split('\n');
 ---
 <section id="home" class="hero" aria-labelledby="hero-title">
@@ -15,7 +17,7 @@ const titleLines = event.title.split('\n');
       <p class="hero-label">Kerstfeest {event.year} <span aria-hidden="true">·</span> Kursaal Oostende</p>
       <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-last': index === titleLines.length - 1}}>{line}</span>)}</h1>
       <p class="hero-intro">{event.intro}</p>
-      <a class="button" href={ticket.url || '#praktisch'} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (event.registrationMethod ? 'Hoe schrijf ik me in?' : 'Praktische info & deelname')}<span aria-hidden="true">↗</span></a>
+      <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Hoe schrijf ik me in?' : 'Praktische info & deelname')}{!ticket.url && <span aria-hidden="true">↓</span>}</a>
     </div>
   </div>
   <div class="hero-bottom">

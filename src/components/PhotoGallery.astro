@@ -11,7 +11,7 @@ const photos = demo ? Array.from({ length: Astro.props.previewCount! }, (_, i) =
     <div class="gallery-grid" data-count={photos.length} data-small={photos.length <= 4 || undefined}>{photos.map((photo,index) => <figure class:list={['gallery-item',{'desktop-tail':index===photos.length-1 && photos.length%3===1,'desktop-pair':photos.length%3===2 && index>=photos.length-2,'mobile-tail':index===photos.length-1 && photos.length%2===1}]}>
       <button class="gallery-open" data-index={index} data-src={photo.src} data-alt={photo.alt} data-caption={`${photo.year ? `${photo.year} · ` : ''}${photo.credit}`} aria-label={`Vergroot: ${photo.alt}`}>
         <img src={photo.src} srcset={photo.variants?.filter(v=>v.src.startsWith('/images/event/') && hasLocalImage(v.src) && Number.isInteger(v.width) && v.width>0).map(v=>`${v.src} ${v.width}w`).join(', ') || undefined} sizes={photos.length===1 ? '(max-width: 767px) calc(100vw - 40px), 720px' : '(max-width: 600px) calc(50vw - 28px), (max-width: 1440px) 45vw, 600px'} alt={photo.alt} width="1000" height="750" loading="lazy" style={{objectPosition:photo.objectPosition || 'center'}} />
-        <span class="photo-year">{demo ? 'DEMO / GEEN ECHTE EDITIEFOTO' : photo.year} <span aria-hidden="true">↗</span></span>
+        <span class="photo-year">{demo ? 'DEMO / GEEN ECHTE EDITIEFOTO' : photo.year} · Vergroot foto</span>
       </button><figcaption><span class="photo-description">{photo.alt}</span>{photo.credit}</figcaption>
     </figure>)}</div>
   </div>

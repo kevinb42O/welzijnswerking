@@ -23,6 +23,8 @@ De hero gebruikt een doorlopende illustratieve kersttafelfoto van Nicole Michalo
 
 De stijlarchitectuur heeft drie lagen: `tokens.css` definieert fonts, kleuren en schalen; `global.css` bevat documentbasis en herbruikbare bediening; `campaign.css` groepeert actuele componenten en hun responsive regels. De menu-CSS en JS gebruiken dezelfde grens van 1001 px. Zonder JavaScript blijft zichtbare navigatie beschikbaar. Vergrote tekst kan ombreken. Het mobiele menu opent als modaal dialoogvenster met een vervaagde achtergrond, scrollvergrendeling en toetsenbordbediening. De veelgestelde vragen zijn standaard ingeklapt; bij het openen van een vraag sluit het vorige antwoord.
 
+Links gebruiken geen diagonale pijlen. Tekstlinks zijn onderstreept en krijgen bij hover een nadrukkelijkere onderstreping; actielinks behouden een duidelijke knopvorm. Toetsenbordfocus blijft zichtbaar. Vergrootbare foto's krijgen een tekstuele aanwijzing en een zoomcursor. Dit geldt ook voor bronverwijzingen, de footer en development-previews.
+
 Actuele bewijzen en beperkingen: `qa/CURRENT_DESIGN.md` en `qa/redesign-fix/VISUAL_REVIEW.md`. Voor-opnames staan apart in `qa/redesign-fix/before/`. Oudere QA-mappen zijn procesarchief en beschrijven eerdere versies.
 
 ## Evenementinformatie aanpassen
@@ -44,7 +46,17 @@ Deze optionele velden worden automatisch zichtbaar zodra ze zijn ingevuld. De re
 
 ### Tickets activeren
 
-Zet uitsluitend na bevestiging `ticketSalesStatus` op `available` en vul `ticketUrl` met de echte HTTPS-URL. Dan verandert de primaire heroactie automatisch in **Reserveer je plaats** en verschijnt dezelfde actie bij de praktische informatie. Zonder geldige URL blijft de hero naar `#praktisch` verwijzen. `sold_out` en `closed` tonen de juiste status. Voor een toekomstige verkoopstart blijft de status `not_confirmed` tot de verkoop daadwerkelijk open is; er is geen automatische planning.
+Voor online verkoop: zet uitsluitend na bevestiging `ticketSalesStatus` op `available` en vul `ticketUrl` met de echte HTTPS-URL. Dan verandert de primaire heroactie automatisch in **Reserveer je plaats** en verschijnt dezelfde actie bij de praktische informatie. Zonder geldige ticketlink verwijst de hero bij een ingevulde inschrijfmethode naar `#inschrijven`, anders naar `#praktisch`. `sold_out` en `closed` tonen de juiste status en krijgen voorrang op de inschrijfuitnodiging. Voor een toekomstige verkoopstart blijft de status `not_confirmed` tot de verkoop daadwerkelijk open is; er is geen automatische planning.
+
+### Inschrijven via de ontmoetingscentra
+
+De bevestigde inschrijfmethode gebruikt `event.registrationChannel: "meeting_centres"`, de titel `registrationMethod` en de toelichting `ticketsInfoText`. De knop **Hoe schrijf ik me in?** gaat rechtstreeks naar de inschrijfkaart. Het centrumoverzicht staat standaard ingeklapt om plaats te besparen. **Vind een ontmoetingscentrum** opent het overzicht en brengt de bezoeker ernaartoe, direct na de praktische informatie. Per centrum staan wijk, adres, telefoonnummer, een belknop met telefoonicoon, route en officiële openingsuren. De lijst staat volledig in de HTML; zonder JavaScript opent de bezoeker het overzicht zelf met **Bekijk de negen ontmoetingscentra**. Rechtstreeks openen van `#ontmoetingscentra` klapt de lijst met JavaScript ook open.
+
+De contactgegevens staan in `src/data/meeting-centres.ts`, met bronlink en controledatum per centrum (20 oktober 2026). Gebruik bij wijzigingen de individuele officiële centrumpagina’s: sommige algemene stadspagina’s bevatten afwijkende gegevens. Openingstijden worden niet gekopieerd; de site verwijst naar de actuele informatie van Stad Oostende. De belknoppen bieden contact voor uitleg en beloven geen telefonische inschrijving.
+
+Startdatum, uiterste inschrijfdatum en betaalwijze moeten nog door de organisatie worden bevestigd. Werk dan de toelichting bij en pas de status aan. Voor inschrijving via een OC is geen online ticketlink nodig. Vul een centrumwebsite nooit als `ticketUrl` in. Bij `sold_out` of `closed` verdwijnen de inschrijfuitnodiging en de zoekknop uit de kaart; de centrumlijst blijft beschikbaar voor algemene contactinformatie.
+
+Controle: `node scripts/meeting-centres-qa.mjs` tegen de productiepreview (4325) en devserver (4323). Dit controleert vijf schermbreedtes, de toetsenbordroute, bel-/routelinks, aanraakvlakken, axe, 200% tekst, vijf OC-inschrijfstatussen en de werking zonder JavaScript. Bewijs: `qa/meeting-centres-report.json` en `qa/ONTMOETINGSCENTRA_REVIEW.md`.
 
 De agenda-knop downloadt een datumherinnering voor de hele dag, zonder reservering. Ook na bevestiging van tijden blijft dit bewust een datumherinnering; de zichtbare uren staan bij de praktische informatie.
 
@@ -131,7 +143,7 @@ Volg `DEPLOY_MORGEN.md` om de informatie van 21 oktober in te vullen. `npm run r
 
 ### Bevestigde aanvulling van 20 oktober 2026
 
-Fabrice bevestigde via WhatsApp: 17.00–21.30 uur, alleenstaanden vanaf 50 jaar, € 5, inschrijving via de negen ontmoetingscentra, erwtensoep en garnaalkroketten, muziek van Patrick “Pulle” met een verrassingsgast. `event.registrationMethod` is de titel van de inschrijfuitleg; `ticketsInfoText` bevat de praktische toelichting. Dit maakt geen online ticketverkoop actief. `event.menuNote` verduidelijkt dat het menu nog onvolledig is.
+Fabrice bevestigde via WhatsApp: 17.00–21.30 uur, alleenstaanden vanaf 50 jaar, € 5, inschrijving via de negen ontmoetingscentra, muziek van Patrick “Pulle” met een verrassingsgast. De opdrachtgever verduidelijkte daarna dat de gerechten nog niet bekend zijn. `menuItems` blijft leeg; `event.menuNote` meldt dat het menu later wordt bekendgemaakt. `event.registrationMethod` is de titel van de inschrijfuitleg; `ticketsInfoText` bevat de praktische toelichting. Dit maakt geen online ticketverkoop actief.
 
 De agenda-download gebruikt bevestigde begin- en eindtijd in Europe/Brussels; bij ontbrekende tijden blijft het een datumherinnering. Beide zijn geen inschrijving. Deze actuele werking vervangt de eerdere beschrijving van de agenda als uitsluitend een herinnering voor de hele dag.
 
