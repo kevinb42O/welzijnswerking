@@ -55,7 +55,7 @@ for (const [name,engine] of [['chromium',chromium],['webkit',webkit]]) {
     await page.locator('.hero .button').click();
     await expect(page).toHaveURL(/#inschrijven$/);
     await page.getByRole('link',{name:'Vind een ontmoetingscentrum'}).click();
-    await expect(page.locator('.centres-disclosure')).toHaveAttribute('open','');
+    await expect(page.locator('[data-centre-finder]')).toHaveClass(/centre-finder-enhanced/);
     await page.goto(base);await page.locator('.menu-toggle').focus();await page.keyboard.press('Enter');
     await expect(page.locator('.mobile-menu-close')).toBeFocused();
     await page.keyboard.press('Shift+Tab');await expect(page.locator('.mobile-nav-participate')).toBeFocused();

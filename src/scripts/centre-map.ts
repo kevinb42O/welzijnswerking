@@ -20,6 +20,7 @@ export function setupCentreMap() {
     const centre = meetingCentres[index];
     if (!centre) return;
     choice.value = centre.id;
+    if (pan) root.dispatchEvent(new CustomEvent('centre-selected', { bubbles: true, detail: { id: centre.id } }));
     const setText = (name: string, value: string) => { root.querySelector<HTMLElement>(`[data-map-${name}]`)!.textContent = value; };
     setText('number', String(index + 1));
     setText('name', centre.name);
@@ -138,7 +139,8 @@ export function setupCentreMap() {
         }
       }).observe(canvas);
       narrow.addEventListener('change', () => { if (narrow.matches) map?.dragging.disable(); else map?.dragging.enable(); });
-    } catch {
+    } catch (error) {
+      if (import.meta.env.DEV) console.error('Ontmoetingscentra: kaart initialiseren mislukt.', error);
       map?.remove();
       map = undefined;
       markers.length = 0;

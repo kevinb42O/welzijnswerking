@@ -1,0 +1,46 @@
+{
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "photos": 9,
+      "initialFallback": true,
+      "keyboardSelection": true,
+      "attribution": true,
+      "axeViolations": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "photos": 9,
+      "initialFallback": true,
+      "keyboardSelection": true,
+      "attribution": true,
+      "axeViolations": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "photos": 9,
+      "initialFallback": true,
+      "keyboardSelection": true,
+      "attribution": true,
+      "axeViolations": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "photos": 9,
+      "initialFallback": true,
+      "keyboardSelection": true,
+      "attribution": true,
+      "axeViolations": 0
+    }
+  ],
+  "errors": [],
+  "noJavaScriptFallback": true,
+  "responsiveMove": true,
+  "mapSelection": true,
+  "failedImageFallback": true,
+  "rapidSelection": true
+}

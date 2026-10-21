@@ -5,69 +5,100 @@ import Icon from './Icon.astro';
 import CentreMap from './CentreMap.astro';
 import CentreHours from './CentreHours.astro';
 import { centreHoursCheckedOn, centreHoursCheckedOnLabel, centreClosureDates } from '../data/centre-hours';
+import '../styles/meeting-centres.css';
 interface Props { eventOverride?: typeof sourceEvent }
 const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eventOverride : sourceEvent;
 const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
+const districts = [...new Set(meetingCentres.map(centre => centre.district))].map(name => ({
+  name,
+  count: meetingCentres.filter(centre => centre.district === name).length,
+}));
 ---
 
 {event.registrationChannel === 'meeting_centres' && (
-  <section id="ontmoetingscentra" class="meeting-centres section" aria-labelledby="meeting-centres-title" tabindex="-1">
+  <section id="ontmoetingscentra" class="meeting-centres section" aria-labelledby="meeting-centres-title" tabindex="-1" data-centre-finder>
     <div class="container">
-      <div class="centres-heading">
-        <div>
-
-          <h2 id="meeting-centres-title">Welk ontmoetingscentrum ligt bij jou in de buurt?</h2>
+      <header class="centres-heading">
+        <div class="centres-heading-copy">
+        <h2 id="meeting-centres-title">Een ontmoetingscentrum<br class="centres-title-break" /> dicht bij jou.</h2>
+        <p class="centre-finder-intro">Kies je wijk en vind een centrum in jouw buurt. Een vraag over inschrijven? Bel gerust even.</p>
+        <noscript><style is:inline>.centre-finder-intro{display:none}</style><p>Kies een centrum voor het adres, telefoonnummer en de openingsuren.</p></noscript>
         </div>
-      </div>
-      <details class="centres-disclosure">
-        <summary>Bekijk de negen ontmoetingscentra <span class="centres-indicator" aria-hidden="true"></span></summary>
-        <div class="centres-content">
-          <p class="centres-intro">Kies hieronder een centrum. Je vindt er het adres, het telefoonnummer en de openingsuren. {!registrationClosed && <>Vragen over inschrijven voor het kerstfeest? Bel het centrum voor meer uitleg.</>}</p>
-          <CentreMap />
-          <div class="centres-hours-notice">
-            <p><strong>Voor je langsgaat</strong><br />De openingsuren van het centrum en de loketuren kunnen verschillen. Bel het centrum om te vragen wanneer je kunt inschrijven voor het kerstfeest.</p>
-            <p>De centra zijn in 2026 ook gesloten op {centreClosureDates.map((day, index) => <>{index > 0 && (index === centreClosureDates.length - 1 ? ' en ' : ', ')}<time datetime={day.date}>{day.label}</time></>)}.</p>
+        <figure class="centres-welcome-photo" data-centre-photo>
+          <img src="/images/ontmoetingscentra/centrum-in-het-groen.webp" width="680" height="453" loading="lazy" alt="Een laag gebouw met grote ramen, omgeven door gras en bomen." data-centre-photo-image />
+          <figcaption><a data-centre-photo-source hidden target="_blank" rel="noopener noreferrer"></a></figcaption>
+        </figure>
+      </header>
+      <div class="centre-finder-layout">
+        <div class="district-picker" data-district-picker hidden>
+          <label class="district-label" for="centre-district-choice">Kies je wijk</label>
+          <div class="district-select-wrap">
+            <select id="centre-district-choice" data-district-select aria-controls="centre-results">
+              {districts.map(district => <option value={district.name}>{district.name} · {district.count} {district.count === 1 ? 'centrum' : 'centra'}</option>)}
+              <option value="all">Alle 9 centra</option>
+            </select>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m5 8 5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </div>
-      <ul class="centres-list" role="list">
-        {meetingCentres.map((centre, index) => (
-          <li class="centre-card" aria-labelledby={`centre-${centre.id}`}>
-            <p class="centre-district">{centre.district}</p>
-            <h3 id={`centre-${centre.id}`}><span class="centre-list-number" aria-hidden="true">{index + 1}</span>{centre.name}</h3>
-            <p class="centre-address">{centre.streetAddress}<br />{centre.postalCode} {centre.city}</p>
-            <a class="centre-phone text-link" href={centre.phoneHref} aria-label={`Bel ${centre.name}: ${centre.phone}`}>
-              <Icon name="phone" />
-              <span>Bel {centre.name}<span class="centre-phone-number">{centre.phone}</span></span>
-            </a>
-            <CentreHours centre={centre} />
-            <div class="centre-links">
-              <a class="text-link" href={centre.routeUrl} target="_blank" rel="noopener noreferrer" aria-label={`Route naar ${centre.name} (Google Maps, opent in een nieuw tabblad)`}>Route</a>
-              <a class="text-link" href={centre.officialUrl} target="_blank" rel="noopener noreferrer" aria-label={`Openingsuren en info over ${centre.name} bij Stad Oostende (opent in een nieuw tabblad)`}>Info bij Stad Oostende</a>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div class="centres-footnote">
-        <p>Bron: Stad Oostende. Openingsuren gecontroleerd op <time datetime={centreHoursCheckedOn}>{centreHoursCheckedOnLabel}</time>. Bij feestdagen of uitzonderlijke sluitingen kunnen de uren afwijken; bel het centrum bij twijfel.</p>
-        <a class="text-link" href={meetingCentresOverviewUrl} target="_blank" rel="noopener noreferrer">Alle ontmoetingscentra bij Stad Oostende<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
-      </div>
+          <div class="district-options" role="group" aria-label="Kies je wijk">
+            {districts.map(district => <button type="button" class="district-option" data-district={district.name} aria-pressed="false" aria-controls="centre-results">
+              <span>{district.name}</span><span class="district-count">{district.count} {district.count === 1 ? 'centrum' : 'centra'}</span>
+              <svg class="district-check" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>)}
+          </div>
         </div>
-      </details>
+        <div id="centre-results" class="centre-results" aria-labelledby="centre-results-title">
+          <header class="centre-results-heading">
+            <h3 id="centre-results-title" data-results-title>Alle ontmoetingscentra</h3>
+            <p data-results-count>9 ontmoetingscentra in Oostende</p>
+          </header>
+          <div class="centre-photo-mobile-slot" data-centre-photo-slot></div>
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-results-status></p>
+          <ul class="centres-list" role="list">
+            {meetingCentres.map((centre, index) => (
+              <li class="centre-card" data-centre-district={centre.district} data-centre-id={centre.id}>
+                <details class="centre-detail" open={index === 0}>
+                  <summary class="centre-detail-toggle">
+                    <span><span class="centre-card-name" id={`centre-${centre.id}`}>{centre.name}</span><span class="centre-summary-address">{centre.streetAddress}<span class="centre-summary-district"> · {centre.district}</span></span></span>
+                    <span class="centre-toggle-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m5 8 5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+                  </summary>
+                  <div class="centre-detail-body">
+                    <p class="centre-address">{centre.streetAddress}, {centre.postalCode} {centre.city}</p>
+                    <p class="centre-phone-number">{centre.phone}</p>
+                    <div class="centre-actions">
+                      <a class="centre-phone button" href={centre.phoneHref} aria-label={`Bel ${centre.name}: ${centre.phone}`}><Icon name="phone" /><span>Bel {centre.name}</span></a>
+                      <a class="text-link" href={centre.routeUrl} target="_blank" rel="noopener noreferrer" aria-label={`Route naar ${centre.name} (Google Maps, opent in een nieuw tabblad)`}>Plan je route<Icon name="external" /></a>
+                    </div>
+                    <details class="centre-practical">
+                      <summary>Openingsuren en praktische info<span class="centres-indicator" aria-hidden="true"></span></summary>
+                      <div class="centre-practical-body">
+                        <CentreHours centre={centre} />
+                        <p class="centre-hours-caution">De openingsuren van het centrum en de loketuren kunnen verschillen.{!registrationClosed && <> Bel om te vragen wanneer je kunt inschrijven voor het kerstfeest.</>}</p>
+                        <p class="centre-closures">Gesloten op {centreClosureDates.map((day, dayIndex) => <>{dayIndex > 0 && (dayIndex === centreClosureDates.length - 1 ? ' en ' : ', ')}<time datetime={day.date}>{day.label}</time></>)} 2026.</p>
+                        <a class="text-link centre-official" href={centre.officialUrl} target="_blank" rel="noopener noreferrer">Info bij Stad Oostende<Icon name="external" /><span class="sr-only"> over {centre.name} (nieuw tabblad)</span></a>
+                      </div>
+                    </details>
+                  </div>
+                </details>
+              </li>
+            ))}
+          </ul>
+          <div class="centre-visit-note"><Icon name="phone" /><div><p class="centre-visit-title">Even bellen voor je langskomt?</p><p>{registrationClosed ? 'Vraag gerust naar de openingsuren. De loketuren kunnen verschillen.' : 'Vraag wanneer je kunt inschrijven. De loketuren kunnen verschillen van de openingsuren.'}</p></div></div>
+          <div class="centre-alternatives">
+            <button class="text-link" type="button" data-show-all hidden>Bekijk alle 9 centra</button>
+            <button class="text-link" type="button" data-show-map aria-controls="centre-finder-map" aria-expanded="false" hidden>Toon op kaart<Icon name="pin" /></button>
+          </div>
+        </div>
+      </div>
+      <div id="centre-finder-map" class="centre-finder-map"><CentreMap /></div>
+      <footer class="centres-footnote">
+        <p>Bron: Stad Oostende. Openingsuren gecontroleerd op <time datetime={centreHoursCheckedOn}>{centreHoursCheckedOnLabel}</time>. Bij feestdagen of uitzonderlijke sluitingen kunnen de uren afwijken; bel bij twijfel.</p>
+        <a class="text-link" href={meetingCentresOverviewUrl} target="_blank" rel="noopener noreferrer">Alle ontmoetingscentra bij Stad Oostende<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
+      </footer>
     </div>
   </section>
 )}
 
 <script>
-  const centres = document.querySelector<HTMLElement>('#ontmoetingscentra');
-  const disclosure = centres?.querySelector<HTMLDetailsElement>('.centres-disclosure');
-  if (centres && disclosure) {
-    const revealFromHash = () => {
-      if (window.location.hash === '#ontmoetingscentra') disclosure.open = true;
-    };
-    // Open before the native anchor navigation calculates its scroll position.
-    document.querySelectorAll<HTMLAnchorElement>('a[href="#ontmoetingscentra"]').forEach(link => {
-      link.addEventListener('click', () => { disclosure.open = true; });
-    });
-    window.addEventListener('hashchange', revealFromHash);
-    revealFromHash();
-  }
+  import { setupCentreFinder } from '../scripts/centre-finder';
+  setupCentreFinder();
 </script>

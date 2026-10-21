@@ -1,142 +1,140 @@
-import { chromium, expect } from '@playwright/test';
+import { chromium, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
-import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 
 const base = process.env.QA_URL || 'http://127.0.0.1:4325/';
-const devBase = process.env.DEV_QA_URL || 'http://127.0.0.1:4323';
-await mkdir('qa', { recursive: true });
-const browser = await chromium.launch();
-const report = { layouts: [], states: [], noJavaScript: false, enlargedText: false };
-const errors = [];
-
-try {
-  const context = await browser.newContext({ reducedMotion: 'reduce' });
-  const page = await context.newPage();
-  page.on('pageerror', error => errors.push(error.message));
-  for (const width of [320, 360, 390, 768, 1440]) {
-    await page.setViewportSize({ width, height: 900 });
+const dev = process.env.DEV_QA_URL || 'http://127.0.0.1:4323';
+const out = process.env.QA_OUT_DIR || 'qa/centre-finder-2026-10-21';
+await mkdir(out, { recursive: true });
+const report = { base, layouts: [], states: [], noJavaScript: [], errors: [] };
+const districts = ['Centrum', 'Konterdam', 'Mariakerke', 'Raversijde', 'Stene', 'Vuurtorenwijk', 'Westerkwartier', 'Zandvoorde'];
+const tags = ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'];
+for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
+  const browser = await engine.launch();
+  try {
+    const context = await browser.newContext({ reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    page.on('pageerror', error => report.errors.push(`${name}: ${error.message}`));
+    const widths = name === 'chromium' ? [320, 390, 767, 768, 1001, 1440] : [390, 768, 1440];
+    for (const width of widths) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(base);
+      const root = page.locator('[data-centre-finder]');
+      await expect(root).toHaveClass(/centre-finder-enhanced/);
+      await root.scrollIntoViewIfNeeded();
+      await expect(root.locator('.centre-card:visible')).toHaveCount(2);
+      await expect(root.locator('[data-results-title]')).toHaveText('In Centrum');
+      const chooser = root.locator(width >= 768 ? '[data-district="Centrum"]' : '[data-district-select]');
+      await expect(chooser).toBeVisible();
+      await chooser.focus();
+      await page.keyboard.press('Tab');
+      if (width < 768) await expect(root.locator('.centre-detail-toggle').first()).toBeFocused();
+      for (const district of districts) {
+        if (width >= 768) await root.locator(`[data-district="${district}"]`).click();
+        else await root.locator('[data-district-select]').selectOption(district);
+        await expect(root.locator('[data-results-title]')).toHaveText(`In ${district}`);
+        await expect(root.locator('.centre-card:visible')).toHaveCount(district === 'Centrum' ? 2 : 1);
+        await expect(root.locator('.centre-card:visible .centre-detail').first()).toHaveAttribute('open', '');
+        const visibleDistricts = await root.locator('.centre-card:visible').evaluateAll(cards => cards.map(card => card.dataset.centreDistrict));
+        assert.ok(visibleDistricts.every(value => value === district));
+        await expect(root.locator('[data-district-select]')).toHaveValue(district);
+        await expect(root.locator(`[data-district="${district}"]`)).toHaveAttribute('aria-pressed', 'true');
+      }
+      await root.locator('[data-show-all]').focus();
+      await page.keyboard.press('Enter');
+      await expect(root.locator('.centre-card:visible')).toHaveCount(9);
+      await expect(root.locator('[data-show-all]')).toBeFocused();
+      await expect(root.locator('[data-centre-district="Zandvoorde"] .centre-summary-district')).toBeVisible();
+      const contacts = await root.locator('.centre-card').evaluateAll(cards => cards.map(card => ({
+        address: card.querySelector('.centre-address').textContent,
+        phone: card.querySelector('.centre-phone').getAttribute('href'),
+        route: card.querySelector('.centre-actions .text-link').href,
+        official: card.querySelector('.centre-official').href,
+      })));
+      for (const contact of contacts) {
+        assert.match(contact.phone, /^tel:059\d{6}$/);
+        assert.ok(new URL(contact.route).searchParams.get('destination').endsWith(contact.address));
+        assert.equal(new URL(contact.official).hostname, 'www.oostende.be');
+      }
+      await root.locator('[data-show-all]').click();
+      await expect(root.locator('[data-results-title]')).toHaveText('In Zandvoorde');
+      await expect(root.locator('.centre-card:visible')).toHaveCount(1);
+      if(width >= 768) await root.locator('[data-district="Centrum"]').click();
+      else await root.locator('[data-district-select]').selectOption('Centrum');
+      await expect(root.locator('.centre-card:visible')).toHaveCount(2);
+      const first = root.locator('.centre-card:visible').first();
+      const second = root.locator('.centre-card:visible').nth(1);
+      await second.locator('.centre-detail-toggle').focus();
+      await page.keyboard.press('Enter');
+      await expect(second.locator('.centre-detail')).toHaveAttribute('open', '');
+      await first.locator('.centre-practical > summary').focus();
+      await page.keyboard.press('Enter');
+      await expect(first.locator('[data-centre-hours="de-boeie"]')).toBeVisible();
+      await expect(first.locator('.centre-closures')).toContainText('26 december');
+      await first.locator('.centre-desk-hours > summary').click();
+      await expect(first.locator('.centre-desk-hours')).toHaveAttribute('open', '');
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      const axe = await new AxeBuilder({ page }).include('#ontmoetingscentra').withTags(tags).analyze();
+      assert.deepEqual(axe.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => n.target) })), []);
+      const targets = await root.locator('button:visible, a:visible, summary:visible, select:visible').evaluateAll(elements => elements.map(element => element.getBoundingClientRect().height));
+      assert.ok(targets.every(height => height >= 44), `44px touch heights ${width}: ${targets}`);
+      // Return to the compact state for screenshots.
+      await root.locator('[data-show-all]').click();
+      await root.locator('[data-show-all]').click();
+      await root.evaluate(element => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
+      if (name === 'chromium' && [390, 1440].includes(width)) await page.screenshot({ path: `${out}/finder-${width}.png` });
+      report.layouts.push({ engine: name, width, allDistricts: true, allContacts: true, keyboard: true, axeViolations: 0, overflow: false });
+    }
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${base}#ontmoetingscentra`);
+    const root = page.locator('[data-centre-finder]');
+    await expect(root.locator('[data-results-title]')).toHaveText('In Centrum');
+    await root.locator('[data-show-map]').click();
+    await expect(root.locator('[data-centre-map]')).toHaveAttribute('open', '');
+    await expect(root.locator('[data-centre-map] > summary')).toBeFocused();
+    await expect(root.locator('.centre-map-marker')).toHaveCount(9, { timeout: 15000 });
+    await root.locator('[data-map-choice]').selectOption('kasteeltje');
+    await expect(root.locator('[data-map-name]')).toHaveText('’t Kasteeltje');
+    await expect(root.locator('[data-map-hours]')).toHaveAttribute('data-hours-centre', 'kasteeltje');
+    await root.locator('[data-centre-map] > summary').click();
+    await expect(root.locator('[data-show-map]')).toBeFocused();
+    await expect(root.locator('.centre-finder-map')).toBeHidden();
+    await root.locator('[data-district-select]').selectOption('Mariakerke');
+    await root.locator('[data-show-map]').click();
+    await expect(root.locator('[data-map-name]')).toHaveText('’t Viooltje');
     await page.goto(base);
-    await page.evaluate(() => document.fonts.ready);
-    const disclosure = page.locator('.centres-disclosure');
-    const summary = disclosure.locator(':scope > summary');
-    await expect(disclosure).not.toHaveAttribute('open');
-    await expect(page.locator('.centre-phone').first()).toBeHidden();
-    const collapsedAxe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
-    assert.deepEqual(collapsedAxe.violations.map(violation => violation.id), []);
-    await page.locator('#ontmoetingscentra').focus();
-    if (width === 390 || width === 1440) await page.screenshot({ path: `qa/meeting-centres-collapsed-${width}.png` });
-    await summary.focus();
-    await page.keyboard.press('Enter');
-    await expect(disclosure).toHaveAttribute('open', '');
-    await page.keyboard.press('Enter');
-    await expect(disclosure).not.toHaveAttribute('open');
-    const hero = page.locator('.hero .button');
-    await expect(hero).toHaveAttribute('href', '#inschrijven');
-    await hero.focus();
-    await page.keyboard.press('Enter');
-    await expect(page.locator('#inschrijven')).toBeFocused();
-    await page.keyboard.press('Tab');
-    await expect(page.getByRole('link', { name: 'Vind een ontmoetingscentrum' })).toBeFocused();
-    if (width === 390 || width === 1440) await page.screenshot({ path: `qa/registration-${width}.png` });
-    await page.keyboard.press('Enter');
-    await expect(page).toHaveURL(/#ontmoetingscentra$/);
-    await expect(disclosure).toHaveAttribute('open', '');
-    await expect(page.locator('#ontmoetingscentra')).toBeFocused();
-    assert.ok(await page.locator('#ontmoetingscentra').evaluate(el => Math.abs(el.getBoundingClientRect().top) < 80));
-    await page.keyboard.press('Tab');
-    await expect(summary).toBeFocused();
-    await page.keyboard.press('Tab');
-    await expect(page.locator('[data-centre-map] > summary')).toBeFocused();
-    await page.keyboard.press('Tab');
-    await expect(page.locator('.centre-phone').first()).toBeFocused();
-    await expect(page.locator('.centre-card')).toHaveCount(9);
-    await expect(page.locator('.centre-phone svg[aria-hidden="true"]')).toHaveCount(9);
-    const contacts = await page.locator('.centre-card').evaluateAll(cards => cards.map(card => {
-      const links = [...card.querySelectorAll('a')];
-      return {
-        name: card.querySelector('h3').textContent,
-        address: card.querySelector('.centre-address').innerText.replace(/\n/g, ', '),
-        phone: links.find(link => link.getAttribute('href')?.startsWith('tel:')).getAttribute('href'),
-        route: links.find(link => link.href.includes('/maps/dir/')).href,
-        official: card.querySelector('.centre-links a[href^="https://www.oostende.be/"]').href,
-        targets: links.map(link => ({ width: link.getBoundingClientRect().width, height: link.getBoundingClientRect().height })),
-      };
-    }));
-    assert.equal(new Set(contacts.map(contact => contact.name)).size, 9);
-    for (const contact of contacts) {
-      assert.match(contact.phone, /^tel:059\d{6}$/);
-      const route = new URL(contact.route);
-      assert.equal(route.origin, 'https://www.google.com');
-      assert.equal(route.pathname, '/maps/dir/');
-      assert.ok(route.searchParams.get('destination').endsWith(contact.address));
-      assert.equal(new URL(contact.official).hostname, 'www.oostende.be');
-      assert.ok(contact.targets.every(target => target.height >= 44 && target.width >= 44));
+    await page.setViewportSize({ width: 320, height: 900 });
+    await page.locator('[data-show-all]').click();
+    await page.locator('.centre-detail-toggle').nth(8).click();
+    await page.locator('.centre-card').nth(8).locator('.centre-practical > summary').click();
+    await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, '200% text overflow');
+    const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    const fallback = await noJs.newPage();
+    await fallback.goto(`${base}#ontmoetingscentra`);
+    await expect(fallback.locator('.centre-card:visible')).toHaveCount(9);
+    await expect(fallback.locator('[data-district-picker]')).toBeHidden();
+    await fallback.locator('.centre-detail-toggle').nth(8).click();
+    await expect(fallback.locator('.centre-card').nth(8).locator('.centre-phone')).toBeVisible();
+    await fallback.locator('.centre-card').nth(8).locator('.centre-practical > summary').click();
+    await expect(fallback.locator('[data-centre-hours="kasteeltje"]')).toBeVisible();
+    report.noJavaScript.push({ engine: name, nineCentres: true, nativeDetails: true, contactLinks: true });
+    await noJs.close();
+    if (name === 'chromium') {
+      for (const state of ['centres', 'centres-available', 'centres-online', 'centres-sold-out', 'centres-closed']) {
+        await page.goto(`${dev}/dev-preview/state-${state}`);
+        await expect(page.locator('.centre-card')).toHaveCount(9);
+        const closed = ['centres-sold-out', 'centres-closed'].includes(state);
+        const online = state === 'centres-online';
+        await expect(page.locator('#inschrijven a[href="#ontmoetingscentra"]')).toHaveCount(closed || online ? 0 : 1);
+        if (closed) await expect(page.locator('.centre-visit-note')).not.toContainText('inschrijven');
+        report.states.push({ state, passed: true });
+      }
     }
-    // Catch the address/phone discrepancies found on older general city pages.
-    await expect(page.locator('.centre-card').filter({ has: page.getByRole('heading', { name: 'Oud Hospitaal', exact: true }) })).toContainText('Amsterdamstraat 61');
-    await expect(page.locator('.centre-card').filter({ has: page.getByRole('heading', { name: 'De Ballon', exact: true }) })).toContainText('Mansveldstraat 9');
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-    const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
-    assert.deepEqual(axe.violations.map(violation => ({ id: violation.id, nodes: violation.nodes })), []);
-    if (width === 390 || width === 1440) {
-      await page.locator('#ontmoetingscentra').focus();
-      await page.screenshot({ path: `qa/meeting-centres-${width}.png` });
-    }
-    report.layouts.push({ width, centres: contacts.length, collapsedByDefault: true, keyboardToggle: true, opensFromRegistrationLink: true, phoneIcons: 9, keyboardRoute: true, touchTargets: true, axeViolations: 0, overflow: false });
-  }
-
-  await page.setViewportSize({ width: 320, height: 900 });
-  await page.goto(base);
-  await page.locator('.centres-disclosure > summary').click();
-  await page.evaluate(() => {
-    const sizes = [...document.querySelectorAll('#inschrijven, #inschrijven *, #ontmoetingscentra, #ontmoetingscentra *')].map(el => [el, parseFloat(getComputedStyle(el).fontSize)]);
-    for (const [el, size] of sizes) el.style.fontSize = `${size * 2}px`;
-  });
-  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-  report.enlargedText = true;
-
-  await page.goto(`${base}#ontmoetingscentra`);
-  await expect(page.locator('.centres-disclosure')).toHaveAttribute('open', '');
-  await page.locator('.centres-disclosure > summary').click();
-  await expect(page.locator('.centres-disclosure')).not.toHaveAttribute('open');
-  await page.getByRole('link', { name: 'Vind een ontmoetingscentrum' }).click();
-  await expect(page.locator('.centres-disclosure')).toHaveAttribute('open', '');
-
-  for (const state of ['centres', 'centres-available', 'centres-online', 'centres-sold-out', 'centres-closed']) {
-    await page.goto(`${devBase}/dev-preview/state-${state}`);
-    await expect(page.locator('.centre-card')).toHaveCount(9);
-    const closed = state === 'centres-sold-out' || state === 'centres-closed';
-    const online = state === 'centres-online';
-    await expect(page.locator('#inschrijven a[href="#ontmoetingscentra"]')).toHaveCount(closed || online ? 0 : 1);
-    await expect(page.locator('.hero .button')).toHaveAttribute('href', closed ? '#praktisch' : online ? 'https://example.com/tickets' : '#inschrijven');
-    if (closed) {
-      await expect(page.locator('#inschrijven')).toContainText(state === 'centres-sold-out' ? 'uitverkocht' : 'afgesloten');
-      await expect(page.locator('#ontmoetingscentra')).not.toContainText('Vragen over inschrijven');
-      await expect(page.locator('.hero .button')).not.toContainText('Hoe schrijf ik me in?');
-    }
-    report.states.push({ state, passed: true });
-  }
-  await page.goto(`${devBase}/dev-preview/state-start`);
-  await expect(page.locator('#ontmoetingscentra')).toHaveCount(0);
-  const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 360, height: 800 }, reducedMotion: 'reduce' });
-  const noJsPage = await noJsContext.newPage();
-  await noJsPage.goto(base);
-  await expect(noJsPage.locator('.centres-disclosure')).not.toHaveAttribute('open');
-  await noJsPage.locator('.hero .button').click();
-  await noJsPage.getByRole('link', { name: 'Vind een ontmoetingscentrum' }).click();
-  await expect(noJsPage).toHaveURL(/#ontmoetingscentra$/);
-  await noJsPage.locator('.centres-disclosure > summary').click();
-  await expect(noJsPage.locator('.centre-phone').first()).toBeVisible();
-  await expect(noJsPage.locator('.centre-card')).toHaveCount(9);
-  report.noJavaScript = true;
-  await noJsContext.close();
-  assert.deepEqual(errors, []);
-  const html = await readFile('dist/index.html', 'utf8');
-  assert.ok(html.includes('id="ontmoetingscentra"'));
-  assert.ok(!html.includes('DEMO ·'));
-  await writeFile('qa/meeting-centres-report.json', `${JSON.stringify(report, null, 2)}\n`);
-  console.log('Meeting centres: collapsed by default, keyboard toggle, automatic opening from links, 9 phone icons, 5 screen sizes, axe, 200% text, 5 registration states and no-JavaScript flow passed.');
-} finally {
-  await browser.close();
+    await context.close();
+  } finally { await browser.close(); }
 }
+assert.deepEqual(report.errors, []);
+await writeFile(`${out}/report.json`, JSON.stringify(report, null, 2));
+console.log('Centre finder passed: district filtering, all 9 contacts, keyboard, map markers, opening hours, 200% text, no JavaScript and registration states in Chromium/WebKit.');

@@ -1,0 +1,105 @@
+{
+  "base": "http://127.0.0.1:4323/",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "chromium",
+      "width": 844,
+      "height": 390,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "height": 720,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "webkit",
+      "width": 844,
+      "height": 390,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "height": 720,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "photos": 7,
+      "fullPhoto": true,
+      "visibleControls": true,
+      "extremeAspectRatios": true,
+      "focusRestore": true
+    }
+  ]
+}

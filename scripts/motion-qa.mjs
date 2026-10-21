@@ -36,9 +36,9 @@ try {
     await expect(page).toHaveURL(/#inschrijven$/);
     await expect(page.locator('#inschrijven')).toBeFocused();
     await page.goto(`${base}#ontmoetingscentra`);
-    await expect(page.locator('.centres-disclosure')).toHaveAttribute('open', '');
-    await page.locator('.centres-disclosure summary').click();
-    await expect(page.locator('.centres-disclosure')).not.toHaveAttribute('open', '');
+    await expect(page.locator('[data-centre-finder]')).toHaveClass(/centre-finder-enhanced/);
+    await page.locator('.centre-card').first().locator('.centre-practical > summary').click();
+    await expect(page.locator('.centre-practical').first()).toHaveAttribute('open', '');
     const photo = page.locator('[data-photo-open]').first();
     await photo.click();
     await expect(page.locator('#event-lightbox .photo-viewer-stage img')).toBeVisible();
@@ -74,7 +74,7 @@ try {
   await expect(page.locator('h1')).toBeVisible();
   await page.locator('.welcome-questions summary').first().click();
   await expect(page.locator('.faq-answer').first()).toBeVisible();
-  await page.locator('.centres-disclosure summary').click();
+  await page.locator('.centre-card').first().locator('.centre-practical > summary').click();
   await expect(page.locator('.centres-list')).toBeVisible();
   results.push({ javaScript: false, passed: true });
   await writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));

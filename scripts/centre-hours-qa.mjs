@@ -12,9 +12,13 @@ try {
  const page=await context.newPage();
  page.on('pageerror',error=>report.pageErrors.push(error.message));
  await page.goto(base+'#ontmoetingscentra');
+ await page.locator('[data-show-all]').click();
  for(const record of evidence){
   assert.equal(record.weekDate,'21-10-2026 00:00:00');
   const hours=page.locator(`[data-centre-hours="${record.id}"]`);
+  const card=page.locator('.centre-card').filter({has:hours});
+  if(!await card.locator('.centre-detail').evaluate(el=>el.open))await card.locator('.centre-detail-toggle').click();
+  await card.locator('.centre-practical > summary').click();
   await expect(hours).toBeVisible();
   await expect(hours.locator('.centre-hours-source')).toHaveCount(0);
   // Validate all seven days against the independently saved official weekly schedule.
@@ -36,7 +40,7 @@ try {
   }else await expect(hours).toContainText('Voor loketuren: bel het centrum.');
   report.centres.push({id:record.id,source:record.url,allSevenDaysMatchSource:true,generalDesk:hasGeneralDesk});
  }
- await page.locator('[data-centre-map] > summary').click();
+ await page.locator('[data-show-map]').click();
  await expect(page.locator('.centre-map-marker')).toHaveCount(9);
  for(const record of evidence){
   await page.locator('[data-map-choice]').selectOption(record.id);
@@ -66,7 +70,7 @@ try {
  report.enlargedText=true;
  const noJs=await browser.newPage({javaScriptEnabled:false,viewport:{width:390,height:900}});
  await noJs.goto(base);
- await noJs.locator('.centres-disclosure > summary').click();
+ await noJs.locator('.centre-card').first().locator('.centre-practical > summary').click();
  await expect(noJs.locator('[data-centre-hours]')).toHaveCount(9);
  await noJs.locator('[data-centre-hours="de-boeie"] summary').click();
  await expect(noJs.locator('[data-centre-hours="de-boeie"] details')).toHaveAttribute('open');

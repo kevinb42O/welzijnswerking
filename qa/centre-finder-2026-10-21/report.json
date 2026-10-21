@@ -1,0 +1,123 @@
+{
+  "base": "http://127.0.0.1:4325/",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "chromium",
+      "width": 767,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1001,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "allDistricts": true,
+      "allContacts": true,
+      "keyboard": true,
+      "axeViolations": 0,
+      "overflow": false
+    }
+  ],
+  "states": [
+    {
+      "state": "centres",
+      "passed": true
+    },
+    {
+      "state": "centres-available",
+      "passed": true
+    },
+    {
+      "state": "centres-online",
+      "passed": true
+    },
+    {
+      "state": "centres-sold-out",
+      "passed": true
+    },
+    {
+      "state": "centres-closed",
+      "passed": true
+    }
+  ],
+  "noJavaScript": [
+    {
+      "engine": "chromium",
+      "nineCentres": true,
+      "nativeDetails": true,
+      "contactLinks": true
+    },
+    {
+      "engine": "webkit",
+      "nineCentres": true,
+      "nativeDetails": true,
+      "contactLinks": true
+    }
+  ],
+  "errors": []
+}

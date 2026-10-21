@@ -1,0 +1,83 @@
+{
+  "de-boeie": {
+    "src": "/images/ontmoetingscentra/de-boeie.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum De Boeie, met de naam van het centrum in beeld.",
+    "name": "De Boeie",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-de-boeie-ldc",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "oud-hospitaal": {
+    "src": "/images/ontmoetingscentra/oud-hospitaal.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum Oud Hospitaal, met de naam van het centrum in beeld.",
+    "name": "Oud Hospitaal",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-oud-hospitaal",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "schaperye": {
+    "src": "/images/ontmoetingscentra/schaperye.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum Schaperye, met de naam van het centrum in beeld.",
+    "name": "Schaperye",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-schaperye-ldc",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "viooltje": {
+    "src": "/images/ontmoetingscentra/viooltje.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum ’t Viooltje, met de naam van het centrum in beeld.",
+    "name": "’t Viooltje",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-viooltje",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "ter-yde": {
+    "src": "/images/ontmoetingscentra/ter-yde.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum Ter Yde, met de naam van het centrum in beeld.",
+    "name": "Ter Yde",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-ter-yde",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "de-blomme": {
+    "src": "/images/ontmoetingscentra/de-blomme.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum De Blomme, met de naam van het centrum in beeld.",
+    "name": "De Blomme",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-de-blomme",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "de-ballon": {
+    "src": "/images/ontmoetingscentra/de-ballon.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum De Ballon, met de naam van het centrum in beeld.",
+    "name": "De Ballon",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-de-ballon",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "de-schelpe": {
+    "src": "/images/ontmoetingscentra/de-schelpe.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum De Schelpe, met de naam van het centrum in beeld.",
+    "name": "De Schelpe",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-de-schelpe-ldc",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  },
+  "kasteeltje": {
+    "src": "/images/ontmoetingscentra/kasteeltje.webp",
+    "alt": "Herkenningsfoto van ontmoetingscentrum ’t Kasteeltje, met de naam van het centrum in beeld.",
+    "name": "’t Kasteeltje",
+    "sourceUrl": "https://www.oostende.be/ontmoetingscentrum-t-kasteeltje",
+    "credit": "Stad Oostende",
+    "width": 544,
+    "height": 355
+  }
+}

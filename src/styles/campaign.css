@@ -97,7 +97,7 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 @media(min-width:768px){.credits-composition{grid-template-columns:1.3fr 1fr;gap:64px}.culinary-grid{grid-template-columns:1fr 1fr;gap:16px 32px}.sponsor-grid{grid-template-columns:repeat(var(--sponsor-columns,3),minmax(0,1fr))}}
 
 /* Optional photo archive: count-aware rows, readable captions, and balanced final pairs. */
-.memories{background:var(--page)}.gallery-heading{display:grid;gap:20px}.gallery-heading>p{max-width:420px}.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;margin-top:28px}.gallery-grid[data-count="1"]{grid-template-columns:1fr;max-width:720px}.gallery-item{min-width:0}.gallery-item.mobile-tail{grid-column:1/-1}.gallery-open{display:block;position:relative;width:100%;padding:0;border:0;background:var(--action)}.gallery-open img{width:100%;aspect-ratio:4/3;object-fit:cover}.photo-year{position:absolute;bottom:8px;left:8px;background:var(--action);color:var(--page);padding:5px 8px;font-size:0.75rem;max-width:calc(100% - 16px);text-align:left}.photo-year>span{margin-left:8px}.gallery-item figcaption{font-size:0.8125rem;color:var(--text-muted);padding-top:10px;line-height:1.5}.photo-description{display:block;color:var(--text);font-size:0.875rem;margin-bottom:4px}.lightbox{width:min(1200px,calc(100% - 24px));max-height:calc(100dvh - 24px);border:0;border-radius:var(--radius-panel);background:var(--viewer-surface);color:var(--viewer-text);padding:16px}.lightbox::backdrop{background:var(--viewer-overlay)}.lightbox-inner{display:flex;flex-direction:column}.lightbox form{display:flex;justify-content:end}.lightbox button{min-height:44px;padding:8px 16px;border:1px solid var(--viewer-border);border-radius:var(--radius-control);background:var(--viewer-control);color:inherit}.lightbox :focus-visible{outline-color:var(--focus-on-dark)}.lightbox-close{margin-bottom:14px}.photo-viewer-stage img{width:100%;max-height:calc(100dvh - 260px);object-fit:contain}.photo-viewer-caption{text-align:center;padding:14px 0;font-size:1rem}.lightbox-controls{display:flex;justify-content:space-between;gap:16px}
+.memories{background:var(--page)}.gallery-heading{display:grid;gap:20px}.gallery-heading>p{max-width:420px}.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;margin-top:28px}.gallery-grid[data-count="1"]{grid-template-columns:1fr;max-width:720px}.gallery-item{min-width:0}.gallery-item.mobile-tail{grid-column:1/-1}.gallery-open{display:block;position:relative;width:100%;padding:0;border:0;background:var(--action)}.gallery-open img{width:100%;aspect-ratio:4/3;object-fit:cover}.photo-year{position:absolute;bottom:8px;left:8px;background:var(--action);color:var(--page);padding:5px 8px;font-size:0.75rem;max-width:calc(100% - 16px);text-align:left}.photo-year>span{margin-left:8px}.gallery-item figcaption{font-size:0.8125rem;color:var(--text-muted);padding-top:10px;line-height:1.5}.photo-description{display:block;color:var(--text);font-size:0.875rem;margin-bottom:4px}.lightbox{width:min(1200px,calc(100% - 24px));height:min(1000px,calc(100dvh - 24px));max-height:calc(100dvh - 24px);border:0;border-radius:var(--radius-panel);background:var(--viewer-surface);color:var(--viewer-text);padding:16px}.lightbox::backdrop{background:var(--viewer-overlay)}.lightbox-inner{display:grid;grid-template-rows:auto minmax(0,1fr) auto;height:100%;min-height:0}.lightbox-inner>figure{display:grid;grid-template-rows:minmax(0,1fr) auto auto;min-height:0}.lightbox form{display:flex;justify-content:end}.lightbox button{min-height:44px;padding:8px 16px;border:1px solid var(--viewer-border);border-radius:var(--radius-control);background:var(--viewer-control);color:inherit}.lightbox :focus-visible{outline-color:var(--focus-on-dark)}.lightbox-close{margin-bottom:14px}.photo-viewer-stage img{position:absolute;inset:0;width:100%;height:100%;max-height:100%;object-fit:contain}.photo-viewer-caption{text-align:center;padding:14px 0;font-size:1rem}.lightbox-controls{display:flex;justify-content:space-between;gap:16px}
 @media(min-width:601px){.gallery-heading{grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}.gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}.gallery-item{grid-column:span 2}.gallery-grid[data-count="2"],.gallery-grid[data-count="4"]{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid[data-small] .gallery-item{grid-column:auto}.gallery-grid[data-count="1"] .gallery-item{grid-column:1/-1}.gallery-grid:not([data-small]) .gallery-item.desktop-pair{grid-column:span 3}.gallery-grid:not([data-small]) .gallery-item.desktop-tail{grid-column:1/-1}.gallery-grid:not([data-small]) .gallery-item.desktop-tail img{aspect-ratio:2.5}}
 
 /* A compact footer with a warm sand background. */
@@ -117,7 +117,7 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 .hero-eligibility{font-size:1rem;font-weight:600;line-height:1.5;margin:12px 0 0;color:var(--hero-copy);max-width:530px;text-wrap:pretty}
 .gallery-open{text-decoration:none;color:inherit}
 .lightbox{overscroll-behavior:contain;color-scheme:dark}
-.photo-viewer-stage{display:grid;place-items:center;min-height:min(40dvh,360px)}
+.photo-viewer-stage{position:relative;min-width:0;min-height:0}
 .photo-viewer-stage img[hidden]{display:none}
 .photo-viewer-status{font-size:1rem;text-align:center}
 .photo-viewer-status:not(:empty){padding-block:12px}
@@ -128,34 +128,9 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 /* Local registration help, with all contact details readable without scripts. */
 #inschrijven,#ontmoetingscentra{scroll-margin-top:24px}
 .participation-note .button{max-width:100%;text-align:left}
-.meeting-centres{background:var(--surface-soft)}
-.centres-heading{margin-bottom:24px}
-.centres-heading h2{max-width:640px;font-weight:500;text-transform:none;letter-spacing:-.015em}
-.centres-disclosure{border-block:1px solid var(--border)}
-.centres-disclosure>summary{color:var(--brand);display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding-block:16px;list-style:none;cursor:pointer;font-size:1.125rem;font-weight:600;line-height:1.5}
-.centres-disclosure>summary::-webkit-details-marker{display:none}
-.centres-disclosure>summary:hover{color:var(--action)}
 .centres-indicator{transition:background var(--duration-fast),border-color var(--duration-fast);position:relative;flex-shrink:0;width:32px;height:32px;border:1px solid var(--control-border);border-radius:50%}
 .centres-indicator::before,.centres-indicator::after{content:"";position:absolute;top:15px;left:9px;width:12px;height:1px;background:currentColor}
 .centres-indicator::after{transform:rotate(90deg);transition:transform var(--duration-fast)}
-.centres-disclosure[open]>summary .centres-indicator{background:var(--action);border-color:var(--action);color:var(--page)}
-.centres-disclosure[open]>summary .centres-indicator::after{transform:rotate(0)}
-.centres-intro{max-width:720px;font-size:1.0625rem;line-height:1.7;margin:8px 0 24px}
-.centres-content{padding-bottom:24px}
-.centres-list{display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px;list-style:none;padding:0;margin:0}
-.centre-card{min-width:0;border-top:1px solid var(--border);padding:24px 0}
-.centre-district{font-size:1rem;font-weight:500;color:var(--brand);margin-bottom:10px}
-.centre-card h3{font-size:1.625rem;font-weight:500;line-height:1.25}
-.centre-address{font-size:1.0625rem;line-height:1.6;margin-top:10px}
-.centre-phone{margin-top:12px;font-size:1rem;font-weight:600}
-.centre-phone svg{flex-shrink:0;width:22px;height:22px}
-.centre-phone-number{display:block;font-weight:400;letter-spacing:.02em}
-.centre-links{display:flex;flex-wrap:wrap;gap:0 24px;margin-top:8px}
-.centre-links .text-link{font-size:0.9375rem}
-.centres-footnote{display:grid;gap:8px;border-top:1px solid var(--border);padding-top:24px;margin-top:8px}
-.centres-footnote p{font-size:0.9375rem;color:var(--text-muted);max-width:620px}
-.centres-footnote .text-link{justify-self:start}
-@media(min-width:768px){.centres-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}.centre-card{padding-block:28px}}
 
 /* Return to the current participation information after the historical content. */
 .footer-registration{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--border)}

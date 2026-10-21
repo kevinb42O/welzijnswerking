@@ -19,7 +19,8 @@ try {
     const map = page.locator('[data-centre-map]');
     assert.equal(requests.length, 0, 'Map tiles must not load before user opens map');
     await expect(map).not.toHaveAttribute('open');
-    await map.locator('summary').click();
+    if (await map.isVisible()) await map.locator('summary').click();
+    else await page.locator('[data-show-map]').click();
     await expect(page.locator('.centre-map-marker')).toHaveCount(9);
     await expect(page.locator('.leaflet-tile-loaded').first()).toBeVisible({ timeout: 20000 });
     await expect(page.locator('[data-map-status]')).toBeHidden();
@@ -41,9 +42,11 @@ try {
     await page.locator('[data-map-reset]').click();
     await page.getByRole('button', { name: 'Inzoomen', exact: true }).click();
     await page.getByRole('button', { name: 'Uitzoomen', exact: true }).click();
-    await map.locator('summary').click();
+    if (await map.isVisible()) await map.locator('summary').click();
+    else await page.locator('[data-show-map]').click();
     await expect(map).not.toHaveAttribute('open');
-    await map.locator('summary').click();
+    if (await map.isVisible()) await map.locator('summary').click();
+    else await page.locator('[data-show-map]').click();
     await expect(page.locator('.centre-map-marker')).toHaveCount(9);
     await page.locator('[data-map-reset]').click();
     await page.locator('[data-map-choice]').selectOption('de-boeie');
@@ -61,7 +64,7 @@ try {
   const page = await context.newPage();
   await page.route('https://geo.api.vlaanderen.be/GRB/wmts?**', route=>route.abort());
   await page.goto(base+'#ontmoetingscentra');
-  await page.locator('[data-centre-map] summary').click();
+  await page.locator('[data-show-map]').click();
   await expect(page.locator('[data-map-status]')).toContainText('achtergrondkaart kan niet laden');
   await page.locator('[data-map-choice]').selectOption('ter-yde');
   await expect(page.locator('[data-map-name]')).toHaveText('Ter Yde');
@@ -71,7 +74,7 @@ try {
   const touchContext = await browser.newContext({ viewport: { width:390,height:900 }, isMobile:true, hasTouch:true, reducedMotion:'reduce' });
   const touchPage = await touchContext.newPage();
   await touchPage.goto(base+'#ontmoetingscentra');
-  await touchPage.locator('[data-centre-map] summary').click();
+  await touchPage.locator('[data-show-map]').click();
   await expect(touchPage.locator('.centre-map-marker')).toHaveCount(9);
   await touchPage.locator('[data-map-canvas]').scrollIntoViewIfNeeded();
   const rect = await touchPage.locator('[data-map-canvas]').boundingBox();
@@ -92,7 +95,6 @@ try {
   const noJs = await browser.newContext({ javaScriptEnabled: false, viewport:{width:390,height:900} });
   const noJsPage = await noJs.newPage();
   await noJsPage.goto(base);
-  await noJsPage.locator('.centres-disclosure > summary').click();
   await expect(noJsPage.locator('.centre-phone')).toHaveCount(9);
   await noJsPage.locator('[data-centre-map] summary').click();
   await expect(noJsPage.locator('[data-centre-map] noscript p')).toBeVisible();

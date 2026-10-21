@@ -25,9 +25,7 @@
   .hero-photo img,.hero h1>span,.hero-line-text,.hero-word-text,.hero-intro,.gallery-open img,[data-photo-open] img,.button,.button>span,.text-link>span[aria-hidden],.menu-toggle,.lightbox button{transform:none!important}
 }
 
-/* A fixed stage and reserved status line prevent the viewer from jumping at swaps. */
-.photo-viewer-stage{height:clamp(160px,calc(100dvh - 310px),720px);min-height:0}
-.photo-viewer-stage img{width:100%;height:100%;max-height:100%;object-fit:contain}
+/* The viewport-bounded viewer and reserved status line stay stable at photo swaps. */
 .photo-viewer-status{min-height:2rem;font-size:.875rem;line-height:1.5;padding-block:6px}
 .photo-viewer-status:not(:empty){padding-block:6px}
 
