@@ -8,7 +8,7 @@ const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
 const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
 const menuInfoMissing = !event.menu.length && !event.menuNote;
 const detailGroups = [
-  {title:'Uren en deelname', note:null, rows:[['Aanvang',event.startTime],['Deuren open',event.doorsTime],['Einde',event.endTime],['Voor wie',event.eligibility]]},
+  {title:'Deelname', note:null, rows:[['Deuren open',event.doorsTime],['Voor wie',event.eligibility]]},
   {title:'Menu en dranken', note:event.menuNote, rows:[['Op het menu',event.menu.join(' · ')],['Aantal gangen',event.courseCount],['Dranken',event.includedDrinks]]},
   {title:'Tijdens je bezoek', note:null, rows:[['Programma',event.entertainmentDetails],['Toegankelijkheid',event.accessibilityDetails],['Vervoer',event.transportDetails]]},
 ].map(group=>({...group,rows:group.rows.filter(([,value])=>Boolean(value))}));
@@ -34,7 +34,7 @@ const calendarUrl = import.meta.env.DEV && Astro.props.eventOverride
 
       </div>
     </div>
-    <div class="agenda-note"><a class="calendar-download text-link" href={calendarUrl} download={filename}>Zet in mijn agenda <span aria-hidden="true">↓</span></a><p>{timedCalendar ? `Van ${event.startTime} tot ${event.endTime}. Deze herinnering is geen inschrijving.` : 'Datumherinnering voor de hele dag, geen reservatie.'}</p></div>
+    <div class="agenda-note"><a class="calendar-download text-link" href={calendarUrl} download={filename}>Zet in mijn agenda <span aria-hidden="true">↓</span></a><p>{timedCalendar ? 'Deze herinnering is geen inschrijving.' : 'Datumherinnering voor de hele dag, geen reservatie.'}</p></div>
     <div class="practical-details">
       {detailGroups.map(group => (group.rows.length > 0 || group.note) && <section class="detail-group" aria-label={group.title}>
         <h3>{group.title}</h3>
