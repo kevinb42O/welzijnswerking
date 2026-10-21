@@ -386,3 +386,8 @@ Het hero-goud is #f3ca76, de actietekst #17375e en de hoverkleur #ffda90. De doe
 ## Aangeleverd kleurenlogo — 21 oktober 2026
 
 Op verzoek van de gebruiker vervangt de aangeleverde transparante PNG met drie gekleurde personen en “Welzijnswerking Oostende” het vorige beeldwoordmerk in navigatie, mobiele navigatiedialoog en footer. Het originele bestand wordt ongewijzigd geleverd als `public/images/branding/welzijnswerking-oostende-kleuren.png` (2172×724). De header gebruikt maximaal 190px op mobiel en 220px op desktop; op smalle schermen kan het logo verkleinen naast de menuknop. De footer gebruikt maximaal 220px en de menudialoog 190px. Beeldverhouding en transparantie blijven behouden.
+
+
+## Correctie heroschaal — 21 oktober 2026
+
+De gebruiker heeft de uitvergrote hero expliciet afgewezen. De hero gebruikt opnieuw de oorspronkelijke container, responsive fotopositie en verduistering, boven-/onderruimte (174/36px mobiel, 200/48px tablet, 76/72px desktop), titelschaal (32–56px mobiel, 56–72px tablet, 64–80px desktop), toelichting (17px), doelgroep (16px) en actie (16px, minimaal 50px hoog, 10px hoeken). De drie serifregels en gouden cursieve nadruk blijven behouden. Dit vervangt de hierboven beschreven schaal tot 140px en de vergrote knop en begeleidende tekst.
