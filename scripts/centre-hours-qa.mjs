@@ -55,7 +55,7 @@ try {
   await page.evaluate(()=>document.fonts.ready);
   await expect(page.locator('.leaflet-tile-loaded').first()).toBeVisible();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-  const axe=await new AxeBuilder({page}).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+  const axe=await new AxeBuilder({page}).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   assert.deepEqual(axe.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.failureSummary)})),[]);
   await page.locator('[data-centre-map]').screenshot({path:`${output}/map-${width}.png`});
   await page.locator('.centre-card').first().screenshot({path:`${output}/centre-${width}.png`});

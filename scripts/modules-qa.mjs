@@ -18,7 +18,7 @@ for(const [photos,count] of [[0,0],[1,1],[2,3],[3,4],[4,12],[10,24],[20,40]]) {
     for (const image of await page.locator('.gallery-grid img,.sponsor img').all()) {await image.scrollIntoViewIfNeeded();await image.evaluate(img=>img.decode());}
     const layout=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,brokenImages:[...document.querySelectorAll('.gallery-grid img,.sponsor img')].filter(img=>!img.naturalWidth).length,demoYears:[...document.querySelectorAll('.photo-year')].some(el=>/2019|2025/.test(el.textContent))}));
     assert.equal(layout.scrollWidth,width);assert.equal(layout.brokenImages,0);assert.equal(layout.demoYears,false);
-    const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+    const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
     results.push({photos,count,width,...layout,accessibilityViolations:axe.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))});
     if(photos) await page.locator('#sfeerbeelden').screenshot({path:`qa/redesign-fix/modules/demo-gallery-${photos}-${width}.png`});
     await page.locator('#partners').screenshot({path:`qa/redesign-fix/modules/demo-sponsors-${count}-${width}.png`});
@@ -28,7 +28,7 @@ await page.setViewportSize({width:390,height:844});await page.goto(`${base}/dev-
 await page.locator('.gallery-open').first().click();await expect(page.locator('.lightbox')).toBeVisible();await expect(page.locator('.lightbox-close')).toBeFocused();
 await page.keyboard.press('ArrowRight');await expect(page.locator('#lightbox-caption')).toContainText('2 / 20');await page.keyboard.press('ArrowLeft');await expect(page.locator('#lightbox-caption')).toContainText('1 / 20');await page.keyboard.press('ArrowLeft');await expect(page.locator('#lightbox-caption')).toContainText('20 / 20');
 await page.keyboard.press('Shift+Tab');await expect(page.locator('#next-photo')).toBeFocused();await page.keyboard.press('Tab');await expect(page.locator('.lightbox-close')).toBeFocused();
-const dialogAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();assert.equal(dialogAxe.violations.length,0,JSON.stringify(dialogAxe.violations));
+const dialogAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();assert.equal(dialogAxe.violations.length,0,JSON.stringify(dialogAxe.violations));
 await page.screenshot({path:'qa/redesign-fix/modules/demo-lightbox-390.png'});
 await page.keyboard.press('Escape');await expect(page.locator('.lightbox')).not.toBeVisible();await expect(page.locator('.gallery-open').first()).toBeFocused();
 await page.locator('.gallery-open').nth(2).click();await page.locator('.lightbox-close').click();await expect(page.locator('.gallery-open').nth(2)).toBeFocused();

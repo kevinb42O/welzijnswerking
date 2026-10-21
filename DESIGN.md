@@ -170,6 +170,10 @@ components:
 
 # Design System: Welzijnswerking Oostende
 
+## Toegankelijkheidsherstel — 21 oktober 2026
+
+De automatische slee blijft behouden zonder stopknop, zoals expliciet gevraagd door de gebruiker. De volledige automatische passage duurt 4,7 seconden: 3,2 seconden binnenkomst, 0,3 seconde losmaken en 1,2 seconden vertrek. Reduced motion blijft de passage overslaan en kan haar ook tijdens het afspelen beëindigen. Dit vervangt eerdere langere timingbeschrijvingen. De fotoviewer behoudt onder 481px schermhoogte minimaal 8rem beeldruimte en laat de inhoud indien nodig verticaal scrollen; dit vervangt daar de eerdere eis dat de viewer nooit scrollt. Namen voor hulptechnologie bevatten de zichtbare labels. Praktische informatie gebruikt een krimpbare gridkolom en veilige woordafbreking bij tekstvergroting. Forced-colors-indicatoren gebruiken zichtbare lijnen via currentColor. De overige vastgelegde vormgeving blijft gelden.
+
 ## Overview
 
 **Creative North Star: "Licht, rustig en leesbaar"**

@@ -45,7 +45,7 @@ export function setupCentreFinder() {
       if (entry) {
         photoSource.href = entry.sourceUrl;
         photoSource.textContent = `${entry.name} · Foto: ${entry.credit}`;
-        photoSource.setAttribute('aria-label', `Foto van ${entry.name}, bron ${entry.credit} (nieuw tabblad)`);
+        photoSource.setAttribute('aria-label', `${entry.name} · Foto: ${entry.credit} (nieuw tabblad)`);
       } else {
         photoSource.removeAttribute('href');
         photoSource.textContent = '';

@@ -7,7 +7,7 @@ const base = process.env.QA_URL || 'http://127.0.0.1:4325/';
 const out = process.env.QA_OUT_DIR || 'qa/skill-fixes-2026-10-20';
 await mkdir(out, {recursive:true});
 const report = {base,viewports:[],engines:[],errors:[],badResponses:[],platformUnavailable:[]};
-const tags = ['wcag2a','wcag2aa','wcag21aa','wcag22aa'];
+const tags = ['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa'];
 for (const [name,engine] of [['chromium',chromium],['webkit',webkit]]) {
   console.log(`Checking ${name}…`);
   const browser=await engine.launch();

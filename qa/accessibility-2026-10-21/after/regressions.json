@@ -1,0 +1,24 @@
+[
+  {
+    "engine": "chromium",
+    "noStopButton": true,
+    "automaticMotionUnderFiveSeconds": true,
+    "remainingMotionMs": 4881,
+    "liveReducedMotion": true,
+    "reflow320Text200": true,
+    "sevenPhotosAt320x256": true,
+    "viewerAxeViolations": 0,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "noStopButton": true,
+    "automaticMotionUnderFiveSeconds": true,
+    "remainingMotionMs": 4835,
+    "liveReducedMotion": true,
+    "reflow320Text200": true,
+    "sevenPhotosAt320x256": true,
+    "viewerAxeViolations": 0,
+    "errors": []
+  }
+]

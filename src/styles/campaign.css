@@ -132,6 +132,18 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 .gallery-open{text-decoration:none;color:inherit}
 .lightbox{overscroll-behavior:contain;color-scheme:dark}
 .photo-viewer-stage{position:relative;min-width:0;min-height:0}
+
+/* Keep the artwork available when zoom leaves little vertical room. */
+@media(max-height:480px){
+  .lightbox{overflow-y:auto}
+  .lightbox-inner{height:auto;min-height:100%;grid-template-rows:auto auto auto}
+  .lightbox-inner>figure{grid-template-rows:minmax(8rem,35dvh) auto auto}
+}
+.practical-composition{grid-template-columns:minmax(0,1fr)}
+.participation-note,.practical-content{min-width:0}
+@media(forced-colors:active){
+  .faq-indicator::before,.faq-indicator::after,.centres-indicator::before,.centres-indicator::after{border-top:1px solid currentColor;background:none}
+}
 .photo-viewer-stage img[hidden]{display:none}
 .photo-viewer-status{font-size:1rem;text-align:center}
 .photo-viewer-status:not(:empty){padding-block:12px}

@@ -39,12 +39,12 @@ export function setupCentreMap() {
     for (const [name, url] of [['route', centre.routeUrl], ['phone', centre.phoneHref], ['info', centre.officialUrl]]) {
       const link = root.querySelector<HTMLAnchorElement>(`[data-map-${name}]`)!;
       link.href = url;
-      link.setAttribute('aria-label', name === 'phone' ? `Bel ${centre.name}: ${centre.phone}` : name === 'route' ? `Route naar ${centre.name} in Google Maps (nieuw tabblad)` : `Openingsuren en info over ${centre.name} (nieuw tabblad)`);
+      link.setAttribute('aria-label', name === 'phone' ? `Bel ${centre.name}: ${centre.phone}` : name === 'route' ? `Route plannen naar ${centre.name} in Google Maps (nieuw tabblad)` : `Info bij Stad Oostende over ${centre.name} (nieuw tabblad)`);
     }
     markers.forEach((marker, i) => {
       const element = marker.getElement();
       element?.classList.toggle('is-selected', i === index);
-      element?.setAttribute('aria-label', `Toon ${meetingCentres[i].name}, ${meetingCentres[i].district}`);
+      element?.setAttribute('aria-label', `${i + 1}. Toon ${meetingCentres[i].name}, ${meetingCentres[i].district}`);
       element?.setAttribute('aria-pressed', String(i === index));
       marker.setZIndexOffset(i === index ? 1000 : 0);
       marker.closeTooltip();
@@ -93,7 +93,7 @@ export function setupCentreMap() {
         }).addTo(map!);
         marker.bindTooltip(centre.name, { direction: 'top', className: 'centre-map-tooltip' });
         marker.on('click', () => select(centre.id));
-        marker.getElement()?.setAttribute('aria-label', `Toon ${centre.name}, ${centre.district}`);
+        marker.getElement()?.setAttribute('aria-label', `${index + 1}. Toon ${centre.name}, ${centre.district}`);
         markers.push(marker);
       });
       // Separate nearby pins at small scales; fine leader lines retain their exact addresses.

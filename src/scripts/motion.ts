@@ -202,7 +202,8 @@ function startFactsMotion() {
     const right = hitch.getBoundingClientRect().right - strip.left;
     const width = Math.min(360, Math.max(220, innerWidth * .25));
     const from = -right - width - 80;
-    const duration = 10;
+    // The complete automatic sequence stays below five seconds.
+    const duration = 3.2;
     const travelEase = [.25, .15, .55, 1] as const;
     const transform = [`translateX(${from}px)`, 'translateX(0px)'];
     team.style.left = `${right + 60}px`;
@@ -282,13 +283,13 @@ function startFactsMotion() {
       if (state !== 'playing') return;
       clearMotion(frame);
       // Hold both endpoints still until the connection has gently disappeared.
-      const release = move(rope, { opacity: [1, 0] }, { duration: .6 });
+      const release = move(rope, { opacity: [1, 0] }, { duration: .3 });
       controls.push(release);
       await release;
       if (state !== 'playing') return;
       const departure = move(team, {
         transform: ['translateX(0px)', `translateX(${Math.max(200, innerWidth - right + width)}px)`],
-      }, { duration: 2.8, ease: [.35, .15, .55, 1] });
+      }, { duration: 1.2, ease: [.35, .15, .55, 1] });
       controls.push(departure);
       await departure;
       finish();

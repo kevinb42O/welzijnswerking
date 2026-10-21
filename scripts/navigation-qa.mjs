@@ -13,10 +13,10 @@ const errors = [];
 page.on('pageerror', error => errors.push(error.message));
 const toggle = page.locator('.menu-toggle');
 const menu = page.getByRole('dialog', { name: 'Navigatie', exact: true });
-const close = page.getByRole('button', { name: 'Sluit de navigatie' });
+const close = page.getByRole('button', { name: 'Sluiten — navigatie' });
 const questions = page.locator('.welcome-questions details');
 const summaries = questions.locator('summary');
-const tags = ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'];
+const tags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 
 try {
   for (const [width, height] of [[320,568], [390,844], [430,932], [768,1024], [844,390], [1000,900]]) {

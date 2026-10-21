@@ -51,7 +51,7 @@ try {
     await page.locator('[data-map-reset]').click();
     await page.locator('[data-map-choice]').selectOption('de-boeie');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-    const axe = await new AxeBuilder({ page }).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+    const axe = await new AxeBuilder({ page }).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
     assert.deepEqual(axe.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})), []);
     await page.waitForFunction(() => [...document.querySelectorAll('.leaflet-tile')].every(image => image.complete && image.naturalWidth > 0));
     await map.scrollIntoViewIfNeeded();

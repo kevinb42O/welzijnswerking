@@ -30,7 +30,7 @@ for (const [width, height] of [[1000,900],[1001,900],[600,800],[601,800],[767,10
     horizontalOverflow: [...document.querySelectorAll('body *')].filter(el=>{const r=el.getBoundingClientRect();const s=getComputedStyle(el);return r.width>0 && !['absolute','fixed'].includes(s.position) && (r.right>innerWidth+1 || r.left < -1);}).map(el=>({tag:el.tagName,class:el.className})).slice(0,20),
     heroHeight: document.querySelector('.hero').getBoundingClientRect().height,
   }));
-  const axe = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+  const axe = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   results.push({ width, height, ...layout, accessibilityViolations: axe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})) });
   if (true) {
     await page.screenshot({path:`qa/redesign-fix/final/viewport-${width}-${height}.png`});
@@ -88,7 +88,7 @@ const noJsContext=await browser.newContext({javaScriptEnabled:false,viewport:{wi
 const noJsPage=await noJsContext.newPage();await noJsPage.goto(base);
 await expect(noJsPage.locator('.no-js-nav a[href="#praktisch"]')).toBeVisible();await noJsPage.locator('.no-js-nav a[href="#praktisch"]').click();await expect(noJsPage).toHaveURL(/#praktisch$/);await noJsContext.close();
 await page.goto(base);await page.setViewportSize({width:390,height:844});await toggle.click();
-const menuAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();assert.equal(menuAxe.violations.length,0);await page.keyboard.press('Escape');
+const menuAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();assert.equal(menuAxe.violations.length,0);await page.keyboard.press('Escape');
 await page.goto(base);
 const structuredData=await page.locator('script[type="application/ld+json"]').textContent();assert.equal(JSON.parse(structuredData)['@graph'].find(item=>item['@type']==='Event').startDate,'2026-12-24T16:00:00.000Z');assert.ok(!structuredData.includes('Offer'));assert.equal(await page.locator('.gallery-open').count(),0);assert.equal(await page.locator('.sponsor').count(),0);assert.equal(await page.locator('.historic-partner').count(),7);assert.equal(await page.locator('.demo-banner').count(),0);
 const report={results,enlargedOverflow,noJsNavigation:true,menuAxeViolations:menuAxe.violations.length,errors,badResponses,interactions:{desktopAnchors:anchors,mobileAnchors,skipLink:true,menuKeyboardEscapeFocus:true,menuOutsideClick:true,menuResize:true,calendarDownload:true,routePopups:true},externalLinks:externalResults};

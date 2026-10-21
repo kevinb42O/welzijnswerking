@@ -48,7 +48,7 @@ for (const [engineName, engine] of [['chromium', chromium], ['webkit', webkit]])
    else await page.locator('[data-district-select]').selectOption('Stene');
    await expect(photo).toHaveAttribute('data-selected-centre', 'de-blomme');
    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-   const axe = await new AxeBuilder({ page }).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+   const axe = await new AxeBuilder({ page }).include('#ontmoetingscentra').withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
    assert.deepEqual(axe.violations.map(v => ({ id: v.id, targets: v.nodes.map(n => n.target) })), []);
    await page.mouse.move(0,0);
    if (engineName === 'chromium') await page.locator('[data-centre-finder]').screenshot({ path: `${out}/selected-${width}.png` });

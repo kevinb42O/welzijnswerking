@@ -19,7 +19,7 @@ try {
     await expect(page.locator('main')).not.toContainText(/erwtensoep|garnaalkroketten/i);
     await expect(page.locator('#praktisch')).toContainText('Patrick');
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overflow at ${width}px`);
-    const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
     assert.deepEqual(axe.violations.map(violation => violation.id), []);
     if (width === 390 || width === 1440) await page.screenshot({ path: `qa/event-update-${width}.png`, fullPage: true });
     console.log(`Content, layout and accessibility OK: ${width}px`);

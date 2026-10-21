@@ -41,7 +41,7 @@ try {
   for (const question of ['Hoe schrijf ik me in?', 'Wat kost het kerstfeest?']) {
     assert.equal(await page.locator('#welkom summary').filter({ hasText: question }).count(), 1);
   }
-  assert.equal(await page.locator('#ontmoetingscentra a[href^="tel:"]').count(), 9);
+  assert.equal(await page.locator('#ontmoetingscentra .centre-card a[href^="tel:"]').count(), 9);
 
   const data = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
   const graph = data['@graph'];

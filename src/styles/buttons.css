@@ -68,7 +68,7 @@
 @media (max-width: 359px) {
   .button { padding-inline: 16px; gap: 12px; }
   .hero .button { padding-inline: 18px; gap: 16px; }
-  .participation-note .button { overflow-wrap: normal; }
+  .participation-note .button { overflow-wrap: anywhere; }
   .participation-note .button-icon { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

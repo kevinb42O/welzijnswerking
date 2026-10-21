@@ -15,7 +15,7 @@ for(const state of ['start','full','available','invalid','missing-link','sold-ou
   if(state==='eligibility-only')assert.ok(!note.includes('deelnamevoorwaarden'));
   if(state==='contact'){await expect(page.locator('a[href="mailto:demo@example.com"]')).toBeVisible();await expect(page.locator('a[href="tel:+3259000000"]')).toBeVisible();}
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();assert.equal(axe.violations.length,0,JSON.stringify(axe.violations));
+  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();assert.equal(axe.violations.length,0,JSON.stringify(axe.violations));
   await page.locator('#praktisch').screenshot({path:`qa/redesign-fix/modules/state-${state}-${width}.png`});results.push({state,width,note,axeViolations:0,overflow:false});
  }
 }

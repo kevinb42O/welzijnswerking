@@ -9,7 +9,7 @@ const out = process.env.QA_OUT_DIR || 'qa/centre-finder-2026-10-21';
 await mkdir(out, { recursive: true });
 const report = { base, layouts: [], states: [], noJavaScript: [], errors: [] };
 const districts = ['Centrum', 'Konterdam', 'Mariakerke', 'Raversijde', 'Stene', 'Vuurtorenwijk', 'Westerkwartier', 'Zandvoorde'];
-const tags = ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'];
+const tags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
   const browser = await engine.launch();
   try {

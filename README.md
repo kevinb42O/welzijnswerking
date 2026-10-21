@@ -10,10 +10,15 @@ npm run dev -- --port 4323
 npm run build
 npm run preview -- --port 4325
 npm test
+npm run test:a11y
 npm run release
 ```
 
 `build` voert Astro/TypeScript-controle uit en schrijft de homepage en het downloadbare agendabestand naar `dist/`. Gebruik de door Astro afgedrukte lokale URL. De ontwikkeling gebruikt geen nieuwe UI- of animatiebibliotheek. De pagina gebruikt lokaal gehoste Public Sans, inclusief OFL-licentie in `public/fonts/`.
+
+## Toegankelijkheidsherstel — 21 oktober 2026
+
+De audit staat in `qa/accessibility-2026-10-21/AUDIT.md`; de herstelcontrole in dezelfde map onder `HERSTEL.md`. Menu, sluitknoppen, kaartmarkers en dynamische links behouden hun zichtbare tekst in de toegankelijke naam. De automatische slee heeft geen stopknop en duurt volledig 4,7 seconden; reduced motion slaat haar over. De fotoviewer behoudt bij weinig schermhoogte een beeldruimte en kan dan verticaal scrollen. De praktische informatie past ook bij 320px met 200% tekst. Open/dichtindicatoren blijven herkenbaar in forced colors. Bestaande axe-scans nemen nu ook `wcag21a` mee. `npm run test:a11y` controleert de duur, reduced motion, tekstvergroting en alle zeven foto's bij 320×256 in Chromium en WebKit; start hiervoor eerst de productiepreview op poort 4325.
 
 ## Vormgeving en structuur
 
