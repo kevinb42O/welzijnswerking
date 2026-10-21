@@ -1,0 +1,27 @@
+[
+  {
+    "href": "/favicon.ico?v=beeldmerk-20261021",
+    "type": null,
+    "sizes": "16x16 32x32 48x48"
+  },
+  {
+    "href": "/favicon-32.png?v=beeldmerk-20261021",
+    "type": "image/png",
+    "sizes": "32x32"
+  },
+  {
+    "href": "/favicon-16.png?v=beeldmerk-20261021",
+    "type": "image/png",
+    "sizes": "16x16"
+  },
+  {
+    "href": "/favicon.svg?v=beeldmerk-20261021",
+    "type": "image/svg+xml",
+    "sizes": "any"
+  },
+  {
+    "href": "/apple-touch-icon.png?v=beeldmerk-20261021",
+    "type": null,
+    "sizes": "180x180"
+  }
+]

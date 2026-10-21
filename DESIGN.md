@@ -391,3 +391,8 @@ Op verzoek van de gebruiker vervangt de aangeleverde transparante PNG met drie g
 ## Correctie heroschaal — 21 oktober 2026
 
 De gebruiker heeft de uitvergrote hero expliciet afgewezen. De hero gebruikt opnieuw de oorspronkelijke container, responsive fotopositie en verduistering, boven-/onderruimte (174/36px mobiel, 200/48px tablet, 76/72px desktop), titelschaal (32–56px mobiel, 56–72px tablet, 64–80px desktop), toelichting (17px), doelgroep (16px) en actie (16px, minimaal 50px hoog, 10px hoeken). De drie serifregels en gouden cursieve nadruk blijven behouden. Dit vervangt de hierboven beschreven schaal tot 140px en de vergrote knop en begeleidende tekst.
+
+
+## Favicon met origineel beeldmerk — 21 oktober 2026
+
+De favicon gebruikt op verzoek van de gebruiker alleen de drie gekleurde personen uit het huidige logo, zonder tekst. `scripts/generate-favicons.mjs` snijdt het beeldmerk deterministisch uit de originele PNG (x=55, y=136, 491×428), centreert het met circa 5% marge in een vierkant en genereert transparante PNG's op 16, 32 en 48px, een ICO met deze drie resoluties, en een SVG-container met de oorspronkelijke rasteruitsnede. Het Apple-touch-icoon is 180px met de warme papierachtergrond. Alle headverwijzingen gebruiken `v=beeldmerk-20261021` voor cacheverversing. Bestandsafmetingen, ICO-frames en HTTP-verwijzingen zijn gecontroleerd; visuele vergelijking op lichte en donkere achtergronden staat in `qa/favicon-2026-10-21/preview.png`.
