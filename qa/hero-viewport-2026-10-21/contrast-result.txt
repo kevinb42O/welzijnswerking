@@ -1,0 +1,322 @@
+[
+  {
+    "width": 320,
+    "selector": ".hero-label",
+    "minContrast": 7.0750991612723
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 10.953841003905852
+  },
+  {
+    "width": 320,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 5.847945704079605
+  },
+  {
+    "width": 320,
+    "selector": ".hero-title-last",
+    "minContrast": 9.114388177584376
+  },
+  {
+    "width": 320,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 5.847945704079605
+  },
+  {
+    "width": 320,
+    "selector": ".hero-intro",
+    "minContrast": 9.246482195082564
+  },
+  {
+    "width": 320,
+    "selector": ".hero-eligibility",
+    "minContrast": 9.082843519633084
+  },
+  {
+    "width": 320,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 390,
+    "selector": ".hero-label",
+    "minContrast": 6.922624673418281
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 9.706894626903223
+  },
+  {
+    "width": 390,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 5.961922334313224
+  },
+  {
+    "width": 390,
+    "selector": ".hero-title-last",
+    "minContrast": 9.223482907470183
+  },
+  {
+    "width": 390,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 5.961922334313224
+  },
+  {
+    "width": 390,
+    "selector": ".hero-intro",
+    "minContrast": 9.111472726925836
+  },
+  {
+    "width": 390,
+    "selector": ".hero-eligibility",
+    "minContrast": 9.102073539424131
+  },
+  {
+    "width": 390,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 455,
+    "selector": ".hero-label",
+    "minContrast": 6.972975366298687
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 9.259868401479173
+  },
+  {
+    "width": 455,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 6.011178594558091
+  },
+  {
+    "width": 455,
+    "selector": ".hero-title-last",
+    "minContrast": 9.72610450350221
+  },
+  {
+    "width": 455,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 6.011178594558091
+  },
+  {
+    "width": 455,
+    "selector": ".hero-intro",
+    "minContrast": 9.232800376622114
+  },
+  {
+    "width": 455,
+    "selector": ".hero-eligibility",
+    "minContrast": 9.102073539424131
+  },
+  {
+    "width": 455,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 768,
+    "selector": ".hero-label",
+    "minContrast": 6.634313734403385
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 9.259868401479173
+  },
+  {
+    "width": 768,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 5.913552541896638
+  },
+  {
+    "width": 768,
+    "selector": ".hero-title-last",
+    "minContrast": 9.147627677792297
+  },
+  {
+    "width": 768,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 5.913552541896638
+  },
+  {
+    "width": 768,
+    "selector": ".hero-intro",
+    "minContrast": 9.114388177584376
+  },
+  {
+    "width": 768,
+    "selector": ".hero-eligibility",
+    "minContrast": 9.102073539424131
+  },
+  {
+    "width": 768,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-label",
+    "minContrast": 9.81418811549736
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 10.296790109313848
+  },
+  {
+    "width": 1000,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 6.017216005099405
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-title-last",
+    "minContrast": 9.204406358303622
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 6.017216005099405
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-intro",
+    "minContrast": 9.082843519633084
+  },
+  {
+    "width": 1000,
+    "selector": ".hero-eligibility",
+    "minContrast": 9.721373804288426
+  },
+  {
+    "width": 1000,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-label",
+    "minContrast": 4.946700379688248
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 8.802765896460174
+  },
+  {
+    "width": 1001,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 6.029448849040005
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-title-last",
+    "minContrast": 6.6264161874160195
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 6.029448849040005
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-intro",
+    "minContrast": 7.07431568512272
+  },
+  {
+    "width": 1001,
+    "selector": ".hero-eligibility",
+    "minContrast": 6.873635169470551
+  },
+  {
+    "width": 1001,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-label",
+    "minContrast": 11.579925954865097
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 7.004376305145544
+  },
+  {
+    "width": 1440,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 6.597548214121741
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-title-last",
+    "minContrast": 6.364210408225372
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 6.597548214121741
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-intro",
+    "minContrast": 6.780147964478229
+  },
+  {
+    "width": 1440,
+    "selector": ".hero-eligibility",
+    "minContrast": 6.745282395776899
+  },
+  {
+    "width": 1440,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-label",
+    "minContrast": 7.9638327679065135
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(1)",
+    "minContrast": 6.26904970228529
+  },
+  {
+    "width": 1920,
+    "selector": "#hero-title > span:nth-child(2)",
+    "minContrast": 4.452970220450487
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-title-last",
+    "minContrast": 6.370920089744505
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-word-emphasis",
+    "minContrast": 4.452970220450487
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-intro",
+    "minContrast": 7.31121154862742
+  },
+  {
+    "width": 1920,
+    "selector": ".hero-eligibility",
+    "minContrast": 6.902191179673311
+  },
+  {
+    "width": 1920,
+    "selector": ".hero .button",
+    "minContrast": 7.750335503702278
+  }
+]

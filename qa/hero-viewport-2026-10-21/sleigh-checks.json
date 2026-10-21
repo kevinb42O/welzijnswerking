@@ -1,0 +1,40 @@
+[
+  {
+    "width": 1440,
+    "moving": {
+      "state": "playing",
+      "hidden": false,
+      "x": 548.8982543945312,
+      "y": 817.125,
+      "right": 908.8982543945312,
+      "bottom": 897.125,
+      "screenWidth": 1440,
+      "screenHeight": 900,
+      "cord": "M495.89825439453125 130.125Q530.8193070261102 134.125 565.7403596576892 130.1208881578948"
+    },
+    "settled": {
+      "hidden": true,
+      "transform": ""
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "moving": {
+      "state": "playing",
+      "hidden": false,
+      "x": 122.50067138671875,
+      "y": 783.078125,
+      "right": 342.50067138671875,
+      "bottom": 863.078125,
+      "screenWidth": 390,
+      "screenHeight": 900,
+      "cord": "M69.50067138671875 95.296875Q103.33400472005209 99.296875 137.16733805338544 95.28645833333326"
+    },
+    "settled": {
+      "hidden": true,
+      "transform": ""
+    },
+    "errors": []
+  }
+]
