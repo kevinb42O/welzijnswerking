@@ -374,3 +374,15 @@ Op verzoek van de gebruiker staat “Welzijnswerking” met hoofdletter in de na
 ## Goedgekeurd beeldwoordmerk met sierstreep — 21 oktober 2026
 
 De gebruiker heeft het gegenereerde donkerblauwe beeldwoordmerk met licht hellende letters en de asymmetrische sierstreep expliciet goedgekeurd en gevraagd het toe te passen. Dit vervangt de eerdere tekstwoordmerken in header, mobiele menudialoog en footer. De goedgekeurde bron staat in `assets/branding/welzijnswerking-signature-concept-v4.png`; de transparante PNG voor de website staat, met transparante buitenruimte bijgesneden, in `public/images/branding/welzijnswerking-oostende.png` (1847×339). Het beeld behoudt zijn volledige verhouding, met beschrijvende alt-tekst en expliciete afmetingen. Na gebruikersfeedback op de te dominante toepassing is de headerbreedte teruggebracht tot 150px op mobiel/tablet en 180px op desktop; footer 180px en menudialoog maximaal 170px. Het woordmerk blijft een bescheiden afzender in de volledige paginacompositie. De menuknop blijft op smalle schermen op één regel. Dit is een gerichte merkuitzondering; Cooper Hewitt en bestaande tekst- en kleurrollen blijven gelden voor de overige interface. Build en Astro-controle slagen; visuele controles op 320, 390, 768, 1001 en 1440px, footer en geopende menudialoog staan in `qa/branding-2026-10-21/`.
+
+
+## Hero volgens aangeleverd voorbeeld — 21 oktober 2026
+
+De gebruiker vraagt de hero-tekst exact volgens de aangeleverde afbeelding. Deze gerichte uitzondering vervangt voor de hero de eerdere uitsluitend rechte Cooper Hewitt-titel en context onder de titel. De drie regels luiden “Vier kerstavond”, “samen” en “in het Kursaal.”, met Georgia Regular, een cursieve gouden tweede regel en een schaal van 40 tot 140px. Bovenaan staat de gouden contextregel met een korte horizontale lijn. Public Sans uit de bestaande lokale fontbestanden verzorgt uitsluitend de hero-context, toelichting, doelgroep en actie. De overige pagina behoudt Cooper Hewitt en de bestaande Oostendse vormgeving.
+
+Het hero-goud is #f3ca76, de actietekst #17375e en de hoverkleur #ffda90. De doelgroep krijgt een eenvoudig personenicoon; de gouden inschrijfknop een pijl naar rechts en 16–30px hoeken volgens het voorbeeld. De foto en de functionele feitenstrook blijven behouden. De drie titelregels passen op 320, 390, 768, 1164 en 1440px zonder horizontale overflow; reduced motion blijft werken via de bestaande woordmaskers. Screenshots en contrastmetingen staan in `qa/hero-reference-2026-10-21/`.
+
+
+## Aangeleverd kleurenlogo — 21 oktober 2026
+
+Op verzoek van de gebruiker vervangt de aangeleverde transparante PNG met drie gekleurde personen en “Welzijnswerking Oostende” het vorige beeldwoordmerk in navigatie, mobiele navigatiedialoog en footer. Het originele bestand wordt ongewijzigd geleverd als `public/images/branding/welzijnswerking-oostende-kleuren.png` (2172×724). De header gebruikt maximaal 190px op mobiel en 220px op desktop; op smalle schermen kan het logo verkleinen naast de menuknop. De footer gebruikt maximaal 220px en de menudialoog 190px. Beeldverhouding en transparantie blijven behouden.
