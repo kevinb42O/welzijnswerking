@@ -139,7 +139,7 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 .event-hours{display:block;margin-top:4px;font-variant-numeric:tabular-nums}
 
 /* Horizontal wordmark: a clear name with a quiet local signature. */
-.header-wordmark{flex-direction:column;align-items:flex-start;flex-shrink:0;gap:5px;color:var(--brand);font-size:clamp(1.125rem,4.8vw,1.5rem);line-height:1.1}
+.header-wordmark{flex-direction:column;align-items:flex-start;flex-shrink:0;gap:3px;color:var(--brand);font-size:clamp(1.25rem,5.2vw,1.625rem);line-height:1.1}
 .header-wordmark-name{white-space:nowrap}
-.header-wordmark-city{font:400 .8125rem/1.2 var(--sans);letter-spacing:.035em}
-@media(min-width:1001px){.header-wordmark{font-size:1.75rem;gap:6px}.header-wordmark-city{font-size:.875rem}}
+.header-wordmark-city{font:500 .8125rem/1.2 var(--sans);letter-spacing:.06em}
+@media(min-width:1001px){.header-wordmark{font-size:2rem;gap:3px}.header-wordmark-city{font-size:.875rem}}
