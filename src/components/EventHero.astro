@@ -22,6 +22,12 @@ const titleLines = event.title.split('\n');
     </div>
   </div>
   <div class="hero-bottom">
+    <div class="facts-sleigh-scene" hidden aria-hidden="true">
+      <svg class="facts-towline" viewBox="0 0 64 24" fill="none">
+        <path class="facts-cord" /><path class="facts-cord-light" /><path class="facts-hitch" />
+      </svg>
+      <div class="facts-sleigh"></div>
+    </div>
     <dl class="container hero-facts">
       <div class="hero-date"><dt>Datum en uur</dt><dd><time datetime={event.dateISO}>{eventDate}</time>{event.startTime && <span class="hero-hours">{event.startTime}{event.endTime && ` – ${event.endTime}`}</span>}</dd></div>
       <div class="hero-location"><dt>Locatie</dt><dd>{event.placeName}</dd></div>

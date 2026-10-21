@@ -1,0 +1,614 @@
+[
+  {
+    "id": "de-boeie",
+    "url": "https://www.oostende.be/oc-de-boeie",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC De Boeie",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden zijn van 10.00 uur tot 12.00 uur (op dinsdag van 11.00 tot 12.00 uur) en van 14.00 uur tot 16.00 uur.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "oud-hospitaal",
+    "url": "https://www.oostende.be/oc-oud-hospitaal",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC Oud Hospitaal",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "de lokettijden zijn van 10.00 uur tot 12.00 uur (van 11.00 tot 12.00 uur op dinsdag) en van 14.00 uur tot 16.00 uur.de lokettijden voor de maaltijden zijn op maandag en woensdag van 10.00 tot 11.30 uur.Voor inschrijvingen, intake, reservatie activiteiten, vragen, wensen of suggesties kom je gerust bij ons langs.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "schaperye",
+    "url": "https://www.oostende.be/ontmoetingscentrum-schaperye",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC Schaperye",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden zijn van 10.00 tot 12.00 uur (op dinsdag van 11.00 tot 12.00 uur) en van 14.00 tot 16.00 uur.De lokettijden voor de maaltijden zijn op dinsdag van 11.00 tot 12.00 uur en donderdag van 10.30 tot 12.00 uurVoor inschrijvingen, intake, reservatie activiteiten, vragen, wensen of suggesties, kom gerust langs.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "viooltje",
+    "url": "https://www.oostende.be/oc-t-viooltje",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC 't Viooltje",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden voor de maaltijden zijn op maandag en donderdag van 10.00 tot 11.30 uur.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "ter-yde",
+    "url": "https://www.oostende.be/oc-ter-yde",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC Ter Yde",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden voor de maaltijden zijn op maandag en donderdag: 10.00 uur tot 12.00 uur.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "de-blomme",
+    "url": "https://www.oostende.be/oc-de-blomme",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC De Blomme",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden zijn van 10.00 tot 12.00 uur (op dinsdag van 11.00 tot 12.00 uur) en van 14.00 tot 16.00 uur. De lokettijden voor de maaltijden zijn op maandag, woensdag en vrijdag van 10.00 tot 11.30 uurVoor inschrijvingen, intake, reservatie activiteiten, vragen, wensen of suggesties, kom gerust langs.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "de-ballon",
+    "url": "https://www.oostende.be/oc-de-ballon",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC De Ballon",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "Lokettijden maaltijdenMaandag en donderdag van 10.00 tot 11.30 uurLokettijden UiTpasDonderdag van 14.00 tot 16.00 uur",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "de-schelpe",
+    "url": "https://www.oostende.be/oc-de-schelpe",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC De Schelpe",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "Voor inschrijvingen, intake, reservatie activiteiten, vragen, wensen of suggesties kom je gerust bij ons langs.De lokettijden zijn van 10.00 tot 12.00 uur (op dinsdag van 11.00 tot 12.00 uur) en van 14.00 tot 16.00 uur.De lokettijden voor de maaltijden zijn op maandag en vrijdag van 10.00 tot 11.45 uur.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  },
+  {
+    "id": "kasteeltje",
+    "url": "https://www.oostende.be/oc-t-kasteeltje",
+    "checkedOn": "2026-10-21",
+    "title": "Contact & openingsuren OC 't Kasteeltje",
+    "weekDate": "21-10-2026 00:00:00",
+    "weeklyHours": [
+      {
+        "day": "maandag",
+        "date": "19",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "dinsdag",
+        "date": "20",
+        "from": "11",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "woensdag",
+        "date": "21",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "donderdag",
+        "date": "22",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "vrijdag",
+        "date": "23",
+        "from": "9.30",
+        "to": "17",
+        "closed": ""
+      },
+      {
+        "day": "zaterdag",
+        "date": "24",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      },
+      {
+        "day": "zondag",
+        "date": "25",
+        "from": "",
+        "to": "",
+        "closed": "Gesloten"
+      }
+    ],
+    "serviceNotes": "De lokettijden zijn van 10.00 tot 12.00 uur (op dinsdag van 11.00 tot 12.00 uur) en van 14.00 tot 16.00 uur.De lokettijden voor de maaltijden zijn op dinsdag van 11.00 tot 12.00 uur en vrijdag van 10.00 tot 12.00 uur.Voor inschrijvingen, intake, reservatie activiteiten, vragen, wensen of suggesties, kom gerust langs.",
+    "closures": [
+      "zondag 1 november 2026 Allerheiligen",
+      "maandag 2 november 2026 Allerzielen",
+      "woensdag 11 november 2026 Wapenstilstand",
+      "vrijdag 25 december 2026 Kerstdag",
+      "zaterdag 26 december 2026 Tweede Kerstdag",
+      "vrijdag 1 januari 2027 Nieuwjaarsdag",
+      "zaterdag 2 januari 2027 Tweede nieuwjaarsdag"
+    ]
+  }
+]

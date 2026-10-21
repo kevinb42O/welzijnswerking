@@ -1,0 +1,116 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 320,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 390,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 390,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 768,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 768,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1001,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1001,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1440,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1440,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1920,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 1920,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 2880,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    },
+    {
+      "width": 2880,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "textOverflow": false
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "violations": [],
+  "checks": {
+    "articulatedReindeer": true,
+    "settledCenter": true,
+    "noReplay": true,
+    "liveReducedMotion": true,
+    "mobileScrollEntry": true,
+    "resizeFinishes": true,
+    "noJs": true,
+    "assetFailureFallback": true,
+    "noAssetFetchOnReducedMotion": true
+  }
+}

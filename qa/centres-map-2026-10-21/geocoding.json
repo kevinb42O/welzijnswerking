@@ -1,0 +1,335 @@
+[
+  {
+    "id": "de-boeie",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Kerkstraat%2035%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Kerkstraat",
+    "Housenumber": "35",
+    "ID": 2617948,
+    "FormattedAddress": "Kerkstraat 35, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.230526221703514,
+      "Lon_WGS84": 2.9197172154873416,
+      "X_Lambert72": 48789.82,
+      "Y_Lambert72": 214385.92,
+      "X_Lambert2008": 548785.02,
+      "Y_Lambert2008": 714373.92
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.230526221703514,
+        "Lon_WGS84": 2.9197172154873416,
+        "X_Lambert72": 48789.82,
+        "Y_Lambert72": 214385.92,
+        "X_Lambert2008": 548785.02,
+        "Y_Lambert2008": 714373.92
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.230526221703514,
+        "Lon_WGS84": 2.9197172154873416,
+        "X_Lambert72": 48789.82,
+        "Y_Lambert72": 214385.92,
+        "X_Lambert2008": 548785.02,
+        "Y_Lambert2008": 714373.92
+      }
+    }
+  },
+  {
+    "id": "oud-hospitaal",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Amsterdamstraat%2061%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Amsterdamstraat",
+    "Housenumber": "61",
+    "ID": 2456457,
+    "FormattedAddress": "Amsterdamstraat 61, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.22452626672727,
+      "Lon_WGS84": 2.912595585026947,
+      "X_Lambert72": 48279.38,
+      "Y_Lambert72": 213728.25,
+      "X_Lambert2008": 548274.67,
+      "Y_Lambert2008": 713716.19
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.22452626672727,
+        "Lon_WGS84": 2.912595585026947,
+        "X_Lambert72": 48279.38,
+        "Y_Lambert72": 213728.25,
+        "X_Lambert2008": 548274.67,
+        "Y_Lambert2008": 713716.19
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.22452626672727,
+        "Lon_WGS84": 2.912595585026947,
+        "X_Lambert72": 48279.38,
+        "Y_Lambert72": 213728.25,
+        "X_Lambert2008": 548274.67,
+        "Y_Lambert2008": 713716.19
+      }
+    }
+  },
+  {
+    "id": "schaperye",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Steenovenstraat%2086%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Steenovenstraat",
+    "Housenumber": "86",
+    "ID": 2598605,
+    "FormattedAddress": "Steenovenstraat 86, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.21487809723383,
+      "Lon_WGS84": 2.936138468672287,
+      "X_Lambert72": 49903.07,
+      "Y_Lambert72": 212623.07,
+      "X_Lambert2008": 549898.48,
+      "Y_Lambert2008": 712611.22
+    },
+    "LocationType": "basisregisters_huisnummer_afgeleidVanObject",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.21487809723383,
+        "Lon_WGS84": 2.936138468672287,
+        "X_Lambert72": 49903.07,
+        "Y_Lambert72": 212623.07,
+        "X_Lambert2008": 549898.48,
+        "Y_Lambert2008": 712611.22
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.21487809723383,
+        "Lon_WGS84": 2.936138468672287,
+        "X_Lambert72": 49903.07,
+        "Y_Lambert72": 212623.07,
+        "X_Lambert2008": 549898.48,
+        "Y_Lambert2008": 712611.22
+      }
+    }
+  },
+  {
+    "id": "viooltje",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Violierenlaan%203b%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Violierenlaan",
+    "Housenumber": "3B",
+    "ID": 30018958,
+    "FormattedAddress": "Violierenlaan 3B, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.21271549142237,
+      "Lon_WGS84": 2.880138324187501,
+      "X_Lambert72": 45986.04,
+      "Y_Lambert72": 212459.45,
+      "X_Lambert2008": 545981.5,
+      "Y_Lambert2008": 712447.13
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.21271549142237,
+        "Lon_WGS84": 2.880138324187501,
+        "X_Lambert72": 45986.04,
+        "Y_Lambert72": 212459.45,
+        "X_Lambert2008": 545981.5,
+        "Y_Lambert2008": 712447.13
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.21271549142237,
+        "Lon_WGS84": 2.880138324187501,
+        "X_Lambert72": 45986.04,
+        "Y_Lambert72": 212459.45,
+        "X_Lambert2008": 545981.5,
+        "Y_Lambert2008": 712447.13
+      }
+    }
+  },
+  {
+    "id": "ter-yde",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Duinenstraat%20172%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Duinenstraat",
+    "Housenumber": "172",
+    "ID": 3282674,
+    "FormattedAddress": "Duinenstraat 172, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.20756124900735,
+      "Lon_WGS84": 2.8631846482065813,
+      "X_Lambert72": 44789.98,
+      "Y_Lambert72": 211910.01,
+      "X_Lambert2008": 544785.51,
+      "Y_Lambert2008": 711897.55
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.20756124900735,
+        "Lon_WGS84": 2.8631846482065813,
+        "X_Lambert72": 44789.98,
+        "Y_Lambert72": 211910.01,
+        "X_Lambert2008": 544785.51,
+        "Y_Lambert2008": 711897.55
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.20756124900735,
+        "Lon_WGS84": 2.8631846482065813,
+        "X_Lambert72": 44789.98,
+        "Y_Lambert72": 211910.01,
+        "X_Lambert2008": 544785.51,
+        "Y_Lambert2008": 711897.55
+      }
+    }
+  },
+  {
+    "id": "de-blomme",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Chrysantenstraat%2030%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Chrysantenstraat",
+    "Housenumber": "30",
+    "ID": 3236138,
+    "FormattedAddress": "Chrysantenstraat 30, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.21072633881599,
+      "Lon_WGS84": 2.9173420685604383,
+      "X_Lambert72": 48580.91,
+      "Y_Lambert72": 212186.75,
+      "X_Lambert2008": 548576.38,
+      "Y_Lambert2008": 712174.74
+    },
+    "LocationType": "basisregisters_huisnummer_afgeleidVanObject",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.21072633881599,
+        "Lon_WGS84": 2.9173420685604383,
+        "X_Lambert72": 48580.91,
+        "Y_Lambert72": 212186.75,
+        "X_Lambert2008": 548576.38,
+        "Y_Lambert2008": 712174.74
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.21072633881599,
+        "Lon_WGS84": 2.9173420685604383,
+        "X_Lambert72": 48580.91,
+        "Y_Lambert72": 212186.75,
+        "X_Lambert2008": 548576.38,
+        "Y_Lambert2008": 712174.74
+      }
+    }
+  },
+  {
+    "id": "de-ballon",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Mansveldstraat%209%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Mansveldstraat",
+    "Housenumber": "9",
+    "ID": 20208540,
+    "FormattedAddress": "Mansveldstraat 9, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.23451229216419,
+      "Lon_WGS84": 2.9466180234227903,
+      "X_Lambert72": 50677,
+      "Y_Lambert72": 214793,
+      "X_Lambert2008": 550672.14,
+      "Y_Lambert2008": 714781.22
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.23451229216419,
+        "Lon_WGS84": 2.9466180234227903,
+        "X_Lambert72": 50677,
+        "Y_Lambert72": 214793,
+        "X_Lambert2008": 550672.14,
+        "Y_Lambert2008": 714781.22
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.23451229216419,
+        "Lon_WGS84": 2.9466180234227903,
+        "X_Lambert72": 50677,
+        "Y_Lambert72": 214793,
+        "X_Lambert2008": 550672.14,
+        "Y_Lambert2008": 714781.22
+      }
+    }
+  },
+  {
+    "id": "de-schelpe",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Elisabethlaan%2032%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Elisabethlaan",
+    "Housenumber": "32",
+    "ID": 30215183,
+    "FormattedAddress": "Elisabethlaan 32, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.21554720850705,
+      "Lon_WGS84": 2.893531779287314,
+      "X_Lambert72": 46928.01,
+      "Y_Lambert72": 212755.76,
+      "X_Lambert2008": 546923.42,
+      "Y_Lambert2008": 712743.55
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.21554720850705,
+        "Lon_WGS84": 2.893531779287314,
+        "X_Lambert72": 46928.01,
+        "Y_Lambert72": 212755.76,
+        "X_Lambert2008": 546923.42,
+        "Y_Lambert2008": 712743.55
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.21554720850705,
+        "Lon_WGS84": 2.893531779287314,
+        "X_Lambert72": 46928.01,
+        "Y_Lambert72": 212755.76,
+        "X_Lambert2008": 546923.42,
+        "Y_Lambert2008": 712743.55
+      }
+    }
+  },
+  {
+    "id": "kasteeltje",
+    "url": "https://geo.api.vlaanderen.be/geolocation/v4/Location?q=Kasteelstraat%2022b%2C%208400%20Oostende",
+    "Municipality": "Oostende",
+    "Zipcode": "8400",
+    "Thoroughfarename": "Kasteelstraat",
+    "Housenumber": "22B",
+    "ID": 3236155,
+    "FormattedAddress": "Kasteelstraat 22B, 8400 Oostende",
+    "Location": {
+      "Lat_WGS84": 51.20233302837124,
+      "Lon_WGS84": 2.9765052268247203,
+      "X_Lambert72": 52697,
+      "Y_Lambert72": 211174,
+      "X_Lambert2008": 552692.56,
+      "Y_Lambert2008": 711162.49
+    },
+    "LocationType": "basisregisters_huisnummer_aangeduidDoorBeheerder",
+    "BoundingBox": {
+      "LowerLeft": {
+        "Lat_WGS84": 51.20233302837124,
+        "Lon_WGS84": 2.9765052268247203,
+        "X_Lambert72": 52697,
+        "Y_Lambert72": 211174,
+        "X_Lambert2008": 552692.56,
+        "Y_Lambert2008": 711162.49
+      },
+      "UpperRight": {
+        "Lat_WGS84": 51.20233302837124,
+        "Lon_WGS84": 2.9765052268247203,
+        "X_Lambert72": 52697,
+        "Y_Lambert72": 211174,
+        "X_Lambert2008": 552692.56,
+        "Y_Lambert2008": 711162.49
+      }
+    }
+  }
+]

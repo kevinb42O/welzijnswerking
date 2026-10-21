@@ -1,0 +1,93 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "overflow": false,
+      "cta": 16,
+      "hours": 16,
+      "price": 16,
+      "when": "Wanneerdonderdag 24 december 202617.00 uur – 21.30 uur",
+      "archive": 30,
+      "organization": 22,
+      "axeViolations": 0,
+      "footerLinkOpensCentres": true,
+      "indicators": [
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        },
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "cta": 16,
+      "hours": 16,
+      "price": 16,
+      "when": "Wanneerdonderdag 24 december 202617.00 uur – 21.30 uur",
+      "archive": 30,
+      "organization": 22,
+      "axeViolations": 0,
+      "footerLinkOpensCentres": true,
+      "indicators": [
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        },
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "cta": 16,
+      "hours": 16,
+      "price": 16,
+      "when": "Wanneerdonderdag 24 december 202617.00 uur – 21.30 uur",
+      "archive": 30,
+      "organization": 22,
+      "axeViolations": 0,
+      "footerLinkOpensCentres": true,
+      "indicators": [
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        },
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "cta": 16,
+      "hours": 16,
+      "price": 16,
+      "when": "Wanneerdonderdag 24 december 202617.00 uur – 21.30 uur",
+      "archive": 40,
+      "organization": 22,
+      "axeViolations": 0,
+      "footerLinkOpensCentres": true,
+      "indicators": [
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        },
+        {
+          "background": "rgb(39, 58, 124)",
+          "color": "rgb(253, 251, 247)"
+        }
+      ]
+    }
+  ],
+  "text200At320": true
+}

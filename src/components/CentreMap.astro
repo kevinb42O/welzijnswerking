@@ -1,0 +1,48 @@
+---
+import { meetingCentres } from '../data/meeting-centres';
+import Icon from './Icon.astro';
+import CentreHours from './CentreHours.astro';
+import '../styles/centre-map.css';
+const first = meetingCentres[0];
+---
+<details class="centre-map-disclosure" data-centre-map>
+  <summary class="centre-map-toggle">
+    <span class="centre-map-toggle-icon"><Icon name="pin" /></span>
+    <span><span class="centre-map-toggle-title">Bekijk de centra op de kaart</span><span class="centre-map-toggle-copy">Ontdek welk ontmoetingscentrum bij jou in de buurt ligt.</span></span>
+    <span class="centres-indicator" aria-hidden="true"></span>
+  </summary>
+  <div class="centre-map-body">
+    <div class="centre-map-toolbar">
+      <div><h3>Negen plekken om binnen te stappen</h3><p>Kies een stip op de kaart of een centrum uit de lijst.</p></div>
+      <button class="centre-map-reset" type="button" data-map-reset hidden><Icon name="pin" /> Alle centra in beeld</button>
+    </div>
+    <div class="centre-map-layout">
+      <div class="centre-map-stage">
+        <div class="centre-map-canvas" data-map-canvas role="region" aria-label="Kaart met de negen ontmoetingscentra in Oostende" aria-describedby="centre-map-help"></div>
+        <p class="centre-map-status" data-map-status role="status">De kaart wordt geladen zodra je dit overzicht opent.</p>
+      </div>
+      <div class="centre-map-panel">
+        <label for="centre-map-choice">Welk centrum zoek je?</label>
+        <select id="centre-map-choice" data-map-choice>
+          {meetingCentres.map((centre, index) => <option value={centre.id}>{index + 1}. {centre.name} · {centre.district}</option>)}
+        </select>
+        <div class="centre-map-detail" aria-live="polite" aria-atomic="true">
+          <div class="centre-map-detail-heading"><span class="centre-map-number" data-map-number>1</span><h4 data-map-name>{first.name}</h4></div>
+          <p class="centre-map-district" data-map-district>{first.district}</p>
+          <p class="centre-map-address"><span data-map-street>{first.streetAddress}</span><br />8400 Oostende</p>
+          <CentreHours centre={first} map />
+          <a class="centre-map-route button" data-map-route href={first.routeUrl} target="_blank" rel="noopener noreferrer">Route plannen <Icon name="external" /><span class="sr-only">in Google Maps (nieuw tabblad)</span></a>
+          <a class="text-link centre-map-phone" data-map-phone href={first.phoneHref}><Icon name="phone" /><span data-map-phone-text>{first.phone}</span></a>
+          <a class="text-link" data-map-info href={first.officialUrl} target="_blank" rel="noopener noreferrer">Info bij Stad Oostende<span class="sr-only"> bij Stad Oostende (nieuw tabblad)</span></a>
+        </div>
+        <p class="centre-map-panel-note">Feestdagen en sluitingsdagen kunnen afwijken. Bel het centrum om te vragen wanneer je kunt inschrijven voor het kerstfeest.</p>
+      </div>
+    </div>
+    <p id="centre-map-help" class="centre-map-help">Een lijntje bij een verschoven stip wijst de exacte locatie aan. Zoom met de knoppen op de kaart. Op je telefoon verplaats je de kaart met twee vingers. Route plannen opent Google Maps.</p>
+    <noscript><style is:inline>.centre-map-layout,.centre-map-toolbar,.centre-map-help{display:none!important}</style><p>Voor de interactieve kaart is JavaScript nodig. Alle adressen, telefoonnummers en routes staan hieronder.</p></noscript>
+  </div>
+</details>
+<script>
+  import { setupCentreMap } from '../scripts/centre-map';
+  setupCentreMap();
+</script>

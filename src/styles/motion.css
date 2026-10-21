@@ -30,3 +30,15 @@
 .photo-viewer-stage img{width:100%;height:100%;max-height:100%;object-fit:contain}
 .photo-viewer-status{min-height:2rem;font-size:.875rem;line-height:1.5;padding-block:6px}
 .photo-viewer-status:not(:empty){padding-block:6px}
+
+/* The sourced Lottie team and towline share the text's measured travel path. */
+.facts-sleigh-scene{position:absolute;inset:0;pointer-events:none;z-index:1}
+.facts-sleigh-scene[hidden]{display:none}
+.facts-sleigh{position:absolute;top:calc(50% - 48px);height:96px}
+.facts-sleigh svg{display:block;width:100%;height:100%;overflow:visible}
+.facts-towline{position:absolute;top:calc(50% + 4px);width:56px;height:24px;overflow:visible}
+.facts-towline path{stroke-linecap:round;stroke-linejoin:round}
+.facts-cord,.facts-hitch{stroke:color-mix(in srgb,var(--text) 65%,var(--surface-tint));stroke-width:1.6}
+.facts-cord-light{stroke:var(--page);stroke-width:.5;opacity:.65}
+.facts-hitch{stroke-width:1.2}
+@media(prefers-reduced-motion:reduce){.facts-sleigh-scene{display:none}.hero-facts{transform:none!important;opacity:1!important}}

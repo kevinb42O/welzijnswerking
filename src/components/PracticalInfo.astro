@@ -28,7 +28,7 @@ const calendarUrl = import.meta.env.DEV && Astro.props.eventOverride
           {(!event.startTime || !event.eligibility || menuInfoMissing) && <p>Ook {[!event.startTime && 'het aanvangsuur', menuInfoMissing && 'het menu', !event.eligibility && 'de deelnamevoorwaarden'].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' en $1')} {!event.eligibility || (!event.startTime && menuInfoMissing) ? 'worden' : 'wordt'} voor {event.year} hier bekendgemaakt.</p>}
         </div>
       <div class="practical-content">
-        <div class="info-row"><h3>Wanneer</h3><p><time datetime={event.dateISO}>{eventDate}</time></p></div>
+        <div class="info-row"><h3>Wanneer</h3><p><time datetime={event.dateISO}>{eventDate}</time>{event.startTime && <span class="event-hours">{event.startTime}{event.endTime && ` – ${event.endTime}`}</span>}</p></div>
         <div class="info-row venue-detail"><h3>Waar</h3><div><p><strong>{event.placeName}</strong><br />{event.address}</p>{event.room && <p>Zaal: {event.room}</p>}<div class="arrival-links"><a class="text-link" href={routeUrl} target="_blank" rel="noopener noreferrer">Plan je route</a><a class="text-link" href={accessibilityUrl} target="_blank" rel="noopener noreferrer">Bereikbaarheid Kursaal</a></div></div></div>
         <div class="info-row"><h3>Maaltijd</h3><p>{event.mealDescription}<br /><strong>{price} per persoon</strong></p></div>
 

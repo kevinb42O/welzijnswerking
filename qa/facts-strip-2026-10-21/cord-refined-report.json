@@ -1,0 +1,30 @@
+[
+  {
+    "width": 320,
+    "heightDifference": 0.01043701171875,
+    "wrapTouchesText": true,
+    "attachedToSleigh": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "heightDifference": 0.01043701171875,
+    "wrapTouchesText": true,
+    "attachedToSleigh": true,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "heightDifference": 0.01043701171875,
+    "wrapTouchesText": true,
+    "attachedToSleigh": true,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "heightDifference": 0.01153564453125,
+    "wrapTouchesText": true,
+    "attachedToSleigh": true,
+    "overflow": false
+  }
+]

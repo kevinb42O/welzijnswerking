@@ -1,0 +1,57 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "markers": 9,
+      "delayedLoading": true,
+      "keyboardSelection": true,
+      "selection": true,
+      "reset": true,
+      "reopen": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "tiles": 14
+    },
+    {
+      "width": 390,
+      "markers": 9,
+      "delayedLoading": true,
+      "keyboardSelection": true,
+      "selection": true,
+      "reset": true,
+      "reopen": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "tiles": 18
+    },
+    {
+      "width": 768,
+      "markers": 9,
+      "delayedLoading": true,
+      "keyboardSelection": true,
+      "selection": true,
+      "reset": true,
+      "reopen": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "tiles": 18
+    },
+    {
+      "width": 1440,
+      "markers": 9,
+      "delayedLoading": true,
+      "keyboardSelection": true,
+      "selection": true,
+      "reset": true,
+      "reopen": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "tiles": 60
+    }
+  ],
+  "errors": [],
+  "tileFailureRecovery": true,
+  "touchPan": true,
+  "enlargedText": true,
+  "noJavaScript": true
+}

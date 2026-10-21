@@ -1,0 +1,20 @@
+---
+import type { meetingCentres } from '../data/meeting-centres';
+import '../styles/centre-hours.css';
+interface Props { centre: (typeof meetingCentres)[number]; map?: boolean }
+const { centre, map = false } = Astro.props;
+---
+<div class="centre-hours" data-centre-hours={map ? undefined : centre.id} data-map-hours={map ? '' : undefined} data-hours-centre={centre.id}>
+  <p class="centre-hours-title">Openingsuren</p>
+  <dl class="centre-hours-grid">
+    {centre.openingHours.map(row => <div class="centre-hours-row"><dt>{row.days}</dt><dd>{row.hours.map(hours => <span>{hours}</span>)}</dd></div>)}
+  </dl>
+  {centre.deskHours ? (
+    <details class="centre-desk-hours">
+      <summary>Bekijk de loketuren</summary>
+      <dl class="centre-hours-grid">
+        {centre.deskHours.map(row => <div class="centre-hours-row"><dt>{row.days}</dt><dd>{row.hours.map(hours => <span>{hours}</span>)}</dd></div>)}
+      </dl>
+    </details>
+  ) : <p class="centre-hours-note">Voor loketuren: bel het centrum.</p>}
+</div>

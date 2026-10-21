@@ -19,7 +19,7 @@ try {
     await page.goto(base);
     await page.evaluate(() => document.fonts.ready);
     const disclosure = page.locator('.centres-disclosure');
-    const summary = disclosure.locator('summary');
+    const summary = disclosure.locator(':scope > summary');
     await expect(disclosure).not.toHaveAttribute('open');
     await expect(page.locator('.centre-phone').first()).toBeHidden();
     const collapsedAxe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
@@ -47,6 +47,8 @@ try {
     await page.keyboard.press('Tab');
     await expect(summary).toBeFocused();
     await page.keyboard.press('Tab');
+    await expect(page.locator('[data-centre-map] > summary')).toBeFocused();
+    await page.keyboard.press('Tab');
     await expect(page.locator('.centre-phone').first()).toBeFocused();
     await expect(page.locator('.centre-card')).toHaveCount(9);
     await expect(page.locator('.centre-phone svg[aria-hidden="true"]')).toHaveCount(9);
@@ -55,9 +57,9 @@ try {
       return {
         name: card.querySelector('h3').textContent,
         address: card.querySelector('.centre-address').innerText.replace(/\n/g, ', '),
-        phone: links[0].getAttribute('href'),
-        route: links[1].href,
-        official: links[2].href,
+        phone: links.find(link => link.getAttribute('href')?.startsWith('tel:')).getAttribute('href'),
+        route: links.find(link => link.href.includes('/maps/dir/')).href,
+        official: card.querySelector('.centre-links a[href^="https://www.oostende.be/"]').href,
         targets: links.map(link => ({ width: link.getBoundingClientRect().width, height: link.getBoundingClientRect().height })),
       };
     }));
@@ -86,7 +88,7 @@ try {
 
   await page.setViewportSize({ width: 320, height: 900 });
   await page.goto(base);
-  await page.locator('.centres-disclosure summary').click();
+  await page.locator('.centres-disclosure > summary').click();
   await page.evaluate(() => {
     const sizes = [...document.querySelectorAll('#inschrijven, #inschrijven *, #ontmoetingscentra, #ontmoetingscentra *')].map(el => [el, parseFloat(getComputedStyle(el).fontSize)]);
     for (const [el, size] of sizes) el.style.fontSize = `${size * 2}px`;
@@ -96,7 +98,7 @@ try {
 
   await page.goto(`${base}#ontmoetingscentra`);
   await expect(page.locator('.centres-disclosure')).toHaveAttribute('open', '');
-  await page.locator('.centres-disclosure summary').click();
+  await page.locator('.centres-disclosure > summary').click();
   await expect(page.locator('.centres-disclosure')).not.toHaveAttribute('open');
   await page.getByRole('link', { name: 'Vind een ontmoetingscentrum' }).click();
   await expect(page.locator('.centres-disclosure')).toHaveAttribute('open', '');
@@ -124,7 +126,7 @@ try {
   await noJsPage.locator('.hero .button').click();
   await noJsPage.getByRole('link', { name: 'Vind een ontmoetingscentrum' }).click();
   await expect(noJsPage).toHaveURL(/#ontmoetingscentra$/);
-  await noJsPage.locator('.centres-disclosure summary').click();
+  await noJsPage.locator('.centres-disclosure > summary').click();
   await expect(noJsPage.locator('.centre-phone').first()).toBeVisible();
   await expect(noJsPage.locator('.centre-card')).toHaveCount(9);
   report.noJavaScript = true;

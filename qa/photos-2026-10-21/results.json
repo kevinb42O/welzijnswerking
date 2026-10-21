@@ -1,0 +1,19 @@
+[
+  {
+    "width": 390,
+    "oneInitialPhoto": true,
+    "toggle": true,
+    "keyboard": true,
+    "viewerAllSeven": true
+  },
+  {
+    "width": 1440,
+    "oneInitialPhoto": true,
+    "toggle": true,
+    "keyboard": true,
+    "viewerAllSeven": true
+  },
+  {
+    "noJavaScript": true
+  }
+]

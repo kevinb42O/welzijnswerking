@@ -1,4 +1,5 @@
 import { animate } from 'motion/mini';
+import type { AnimationItem } from 'lottie-web';
 
 export const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -49,6 +50,7 @@ export function startPageMotion() {
   document.documentElement.dataset.motionInitialized = 'true';
   enhanceDisclosures();
   startHero();
+  startFactsMotion();
   startReveals();
 }
 
@@ -110,6 +112,206 @@ function startHero() {
   };
   visible();
   if (document.hidden) document.addEventListener('visibilitychange', visible);
+}
+
+// A real, locally hosted Lottie team pulls the whole summary into its final slot.
+// Motion owns the measured journey; Lottie owns the reindeer's articulated gait.
+function startFactsMotion() {
+  const frame = document.querySelector<HTMLElement>('.hero-facts');
+  const scene = document.querySelector<HTMLElement>('.facts-sleigh-scene');
+  const team = scene?.querySelector<HTMLElement>('.facts-sleigh');
+  const rope = scene?.querySelector<SVGElement>('.facts-towline');
+  if (!frame || !scene || !team || !rope || reducedMotion.matches) return;
+  let state: 'pending' | 'loading' | 'ready' | 'playing' | 'done' = 'pending';
+  let player: AnimationItem | undefined;
+  let gaitFrame = 0;
+  const controls: ReturnType<typeof move>[] = [];
+  const observer = new IntersectionObserver(() => { void check(); }, {
+    rootMargin: '200px 0px', threshold: [0, .45, 1],
+  });
+  const finish = () => {
+    if (state === 'done') return;
+    state = 'done';
+    frame.dataset.sleighState = 'done';
+    observer.disconnect();
+    controls.forEach(control => { control.stop(); control.cancel(); });
+    cancelAnimationFrame(gaitFrame);
+    player?.destroy();
+    scene.hidden = true;
+    const reset = () => {
+      clearMotion(frame);
+      team.removeAttribute('style');
+      rope.removeAttribute('style');
+    };
+    reset();
+    requestAnimationFrame(reset);
+    document.removeEventListener('visibilitychange', visibility);
+    document.removeEventListener('close', check, true);
+    window.removeEventListener('resize', resize);
+    window.removeEventListener('scroll', scroll);
+    window.removeEventListener('hashchange', finish);
+    window.removeEventListener('pagehide', finish);
+    reducedMotion.removeEventListener('change', preference);
+  };
+  const check = async () => {
+    if (state === 'done' || state === 'playing') return;
+    const rect = frame.getBoundingClientRect();
+    if (reducedMotion.matches || rect.bottom <= 0) { finish(); return; }
+    if (document.hidden || document.body.matches('.menu-open, .modal-open')) return;
+    if (rect.top < 0 || (location.hash && location.hash !== '#home')) { finish(); return; }
+    if (rect.top > innerHeight + 200) return;
+    if (state === 'loading') return;
+    if (state === 'pending') {
+      state = 'loading';
+      try {
+        // Load the SVG-only player and artwork only near this strip, never on reduce.
+        const [module, response] = await Promise.all([
+          import('lottie-web/build/player/lottie_light'),
+          fetch('/animations/santa-sleigh.json'),
+        ]);
+        if (!response.ok) throw new Error('Sleigh artwork unavailable');
+        const data = await response.json();
+        if ((state as string) === 'done' || reducedMotion.matches) { finish(); return; }
+        player = module.default.loadAnimation({
+          container: team, renderer: 'svg', loop: true, autoplay: false,
+          animationData: data, rendererSettings: { preserveAspectRatio: 'xMinYMid meet' },
+        });
+        await new Promise<void>((resolve, reject) => {
+          const timeout = setTimeout(() => reject(new Error('Sleigh render timeout')), 3000);
+          player!.addEventListener('DOMLoaded', () => { clearTimeout(timeout); resolve(); });
+          player!.addEventListener('data_failed', () => { clearTimeout(timeout); reject(new Error('Sleigh render failed')); });
+        });
+        if ((state as string) === 'done') return;
+        team.querySelector('svg')?.setAttribute('viewBox', '100 180 600 190');
+        state = 'ready';
+      } catch { finish(); return; }
+    }
+    // Re-measure after the lazy load: never replay above a visitor's scroll position.
+    const current = frame.getBoundingClientRect();
+    if (current.top < 0 || reducedMotion.matches) { finish(); return; }
+    if (document.hidden || document.body.matches('.menu-open, .modal-open')) return;
+    const visible = Math.min(current.bottom, innerHeight) - Math.max(current.top, 0);
+    if (visible < Math.min(current.height, innerHeight) * .45) return;
+    state = 'playing';
+    frame.dataset.sleighState = 'playing';
+    observer.disconnect();
+    const strip = frame.parentElement!.getBoundingClientRect();
+    const label = frame.querySelector('.hero-price dd span')!;
+    const hitch = document.createRange();
+    hitch.selectNodeContents(label);
+    const right = hitch.getBoundingClientRect().right - strip.left;
+    const width = Math.min(360, Math.max(220, innerWidth * .25));
+    const from = -right - width - 80;
+    const duration = 10;
+    const travelEase = [.25, .15, .55, 1] as const;
+    const transform = [`translateX(${from}px)`, 'translateX(0px)'];
+    team.style.left = `${right + 60}px`;
+    team.style.width = `${width}px`;
+    rope.style.inset = '0';
+    rope.style.width = `${strip.width}px`;
+    rope.style.height = `${strip.height}px`;
+    rope.setAttribute('viewBox', `0 0 ${strip.width} ${strip.height}`);
+    frame.style.willChange = 'transform';
+    const path = rope.querySelector('.facts-cord')!;
+    const highlight = rope.querySelector('.facts-cord-light')!;
+    const binding = rope.querySelector('.facts-hitch')!;
+    const artwork = team.querySelector('svg')!;
+    path.setAttribute('d', '');
+    team.style.height = '80px';
+    team.style.top = '0px';
+    scene.hidden = false;
+    // Put the sleigh's attachment at the text's height, rather than drawing a
+    // diagonal through the scene. The smaller team fits above and below this line.
+    const textBox = hitch.getBoundingClientRect();
+    const attachment = new DOMPoint(140, 280).matrixTransform(artwork.getScreenCTM()!);
+    team.style.top = `${textBox.top + textBox.height * .5 - attachment.y}px`;
+    // A real text range supplies the hitch point. The other endpoint is a point
+    // inside the sleigh's body, transformed through the actual SVG screen matrix.
+    // Recompute both while travelling: no guessed baseline or disconnected line.
+    const drawTowline = () => {
+      const text = hitch.getBoundingClientRect();
+      const bounds = scene.getBoundingClientRect();
+      const matrix = artwork.getScreenCTM();
+      if (!matrix) return;
+      const sleighHitch = new DOMPoint(140, 280).matrixTransform(matrix);
+      const rightEdge = text.right - bounds.left;
+      const y = text.top - bounds.top + text.height * .5;
+      const x = rightEdge + 7;
+      const endX = sleighHitch.x - bounds.left;
+      const endY = sleighHitch.y - bounds.top;
+      const mid = (x + endX) * .5;
+      const cord = `M${x} ${y}Q${mid} ${y + 4} ${endX} ${endY}`;
+      path.setAttribute('d', cord);
+      highlight.setAttribute('d', cord);
+      // A small wrap and binding catch the last letter instead of extending it
+      // into a ruler-straight stroke. They disappear with the cord at the handoff.
+      binding.setAttribute('d', `M${rightEdge - 5} ${y + 4}C${rightEdge + 2} ${y + 6} ${rightEdge + 5} ${y + 4} ${rightEdge + 5} ${y}C${rightEdge + 5} ${y - 4} ${rightEdge + 2} ${y - 6} ${rightEdge - 5} ${y - 4}M${rightEdge + 3} ${y - 2}L${rightEdge + 8} ${y + 2}M${rightEdge + 3} ${y + 2}L${rightEdge + 8} ${y - 2}`);
+    };
+    // The one-second source cycle now takes at least 3.6 seconds. Its cadence
+    // follows travel gently, with no fast gallop or four-pixel arrival bounce.
+    let lastX = right + 60 + from;
+    let lastAt = performance.now();
+    let lastSpeed = 0;
+    let galloping = false;
+    const gait = (now: number) => {
+      if (state !== 'playing') return;
+      drawTowline();
+      const elapsed = now - lastAt;
+      if (elapsed >= 80) {
+        const x = team.getBoundingClientRect().left;
+        const velocity = Math.abs(x - lastX) / elapsed * 1000;
+        const speed = Math.min(.28, Math.max(.1, velocity / 900));
+        if (velocity < 5) {
+          if (galloping) { player!.pause(); galloping = false; }
+        } else {
+          if (Math.abs(speed - lastSpeed) > .015) {
+            player!.setSpeed(speed);
+            lastSpeed = speed;
+          }
+          if (!galloping) { player!.play(); galloping = true; }
+        }
+        lastX = x;
+        lastAt = now;
+      }
+      gaitFrame = requestAnimationFrame(gait);
+    };
+    const journey = move(frame, { transform }, { duration, ease: travelEase });
+    controls.push(journey, move(team, { transform }, { duration, ease: travelEase }));
+    gaitFrame = requestAnimationFrame(gait);
+    void journey.then(async () => {
+      if (state !== 'playing') return;
+      clearMotion(frame);
+      // Hold both endpoints still until the connection has gently disappeared.
+      const release = move(rope, { opacity: [1, 0] }, { duration: .6 });
+      controls.push(release);
+      await release;
+      if (state !== 'playing') return;
+      const departure = move(team, {
+        transform: ['translateX(0px)', `translateX(${Math.max(200, innerWidth - right + width)}px)`],
+      }, { duration: 2.8, ease: [.35, .15, .55, 1] });
+      controls.push(departure);
+      await departure;
+      finish();
+    });
+  };
+  const visibility = () => { if (document.hidden && state === 'playing') finish(); else void check(); };
+  const resize = () => { if (state === 'playing') finish(); else void check(); };
+  const preference = () => { if (reducedMotion.matches) finish(); };
+  let scrollQueued = false;
+  const scroll = () => {
+    if (scrollQueued || (state !== 'pending' && state !== 'ready')) return;
+    scrollQueued = true;
+    requestAnimationFrame(() => { scrollQueued = false; void check(); });
+  };
+  document.addEventListener('visibilitychange', visibility);
+  document.addEventListener('close', check, true);
+  window.addEventListener('resize', resize);
+  window.addEventListener('scroll', scroll, { passive: true });
+  window.addEventListener('hashchange', finish);
+  window.addEventListener('pagehide', finish);
+  reducedMotion.addEventListener('change', preference);
+  observer.observe(frame);
+  void check();
 }
 
 type Reveal = {

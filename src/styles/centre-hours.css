@@ -1,0 +1,16 @@
+.centre-hours{container-type:inline-size;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:1rem;line-height:1.6}
+.centre-hours-title{font-weight:500;margin-bottom:8px}
+.centre-hours-grid{display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.centre-hours-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:baseline}
+.centre-hours-row dt{min-width:0}
+.centre-hours-row dd{text-align:right}
+.centre-hours-row dd span{display:block;white-space:nowrap}
+.centre-desk-hours{margin-top:8px}
+.centre-desk-hours>summary{display:list-item;min-height:44px;padding-block:9px;color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:.25em;font-weight:500}
+.centre-desk-hours>summary:hover{text-decoration-thickness:2px;color:var(--action)}
+.centre-desk-hours[open]>.centre-hours-grid{padding:4px 0 8px}
+.centre-hours-note{margin-top:10px;color:var(--text-muted)}
+@container(max-width:15rem){.centre-hours-row{grid-template-columns:minmax(0,1fr);gap:0}.centre-hours-row+.centre-hours-row{margin-top:6px}.centre-hours-row dd{text-align:left}}
+.centres-hours-notice{max-width:760px;margin:0 0 28px;font-size:1rem;line-height:1.7}
+.centres-hours-notice p+p{margin-top:8px}
+.centre-map-detail>.centre-hours{margin-top:20px}

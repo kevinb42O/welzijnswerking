@@ -1,0 +1,321 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 601,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 601,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1000,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1000,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1001,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1001,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 2880,
+      "zoom": "100%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 2880,
+      "zoom": "200%",
+      "overflow": false,
+      "centerOffset": 0,
+      "values": [
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        },
+        {
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "activeAnimations": 12,
+  "checks": {
+    "noReplay": true,
+    "liveReducedMotion": true,
+    "offscreenTrigger": true,
+    "resizeFinishes": true,
+    "noJs": true
+  },
+  "violations": []
+}

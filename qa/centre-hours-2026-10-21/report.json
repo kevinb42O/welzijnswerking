@@ -1,0 +1,83 @@
+{
+  "centres": [
+    {
+      "id": "de-boeie",
+      "source": "https://www.oostende.be/oc-de-boeie",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    },
+    {
+      "id": "oud-hospitaal",
+      "source": "https://www.oostende.be/oc-oud-hospitaal",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    },
+    {
+      "id": "schaperye",
+      "source": "https://www.oostende.be/ontmoetingscentrum-schaperye",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    },
+    {
+      "id": "viooltje",
+      "source": "https://www.oostende.be/oc-t-viooltje",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": false
+    },
+    {
+      "id": "ter-yde",
+      "source": "https://www.oostende.be/oc-ter-yde",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": false
+    },
+    {
+      "id": "de-blomme",
+      "source": "https://www.oostende.be/oc-de-blomme",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    },
+    {
+      "id": "de-ballon",
+      "source": "https://www.oostende.be/oc-de-ballon",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": false
+    },
+    {
+      "id": "de-schelpe",
+      "source": "https://www.oostende.be/oc-de-schelpe",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    },
+    {
+      "id": "kasteeltje",
+      "source": "https://www.oostende.be/oc-t-kasteeltje",
+      "allSevenDaysMatchSource": true,
+      "generalDesk": true
+    }
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "axeViolations": 0
+    }
+  ],
+  "pageErrors": [],
+  "enlargedText": true,
+  "noJavaScript": true
+}

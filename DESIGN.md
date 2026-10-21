@@ -214,7 +214,7 @@ Warme papier- en zandtinten verzachten de bevestigde Oostendse blauwrollen.
 ## Typography
 
 **Display Font:** Cooper Hewitt, met de systeem-sans-stack uit de frontmatter als fallback.
-**Body Font:** dezelfde Cooper Hewitt-familie, lokaal gehost als drie statische WOFF2-bestanden: Book (400), Medium (500) en Semibold (600). Book en Semibold worden vooraf geladen; Medium laadt wanneer nodig. Gewone primaire acties gebruiken Medium (500). Enkele lokale regels, zoals de mobiele menuactie en footer, vragen 550; bij deze statische set kiest de browser daarvoor Semibold (600). Er is geen variabele 550-fontface.
+**Body Font:** dezelfde Cooper Hewitt-familie, lokaal gehost als drie statische WOFF2-bestanden: Book (400), Medium (500) en Semibold (600). Book en Semibold worden vooraf geladen; Medium laadt wanneer nodig. Gewone primaire acties gebruiken Medium (500). De mobiele menuactie en footer gebruiken eveneens het beschikbare Medium (500).
 
 **Character:** helder en direct, zonder decoratieve lettertypewisseling. Koppen zijn rechtop, doorgaans Medium (500), donker en in gewone schrijfwijze met lichte negatieve tracking. De welkomstkop blijft bewust donkerblauw. Lopende tekst gebruikt Book.
 
@@ -222,11 +222,11 @@ Warme papier- en zandtinten verzachten de bevestigde Oostendse blauwrollen.
 
 - **Display en invitation**: “Kerstavond.” gebruikt de kleinere displayrol; “Kom erbij.” en “Schuif mee aan.” krijgen de grotere invitationrol op twee regels. Vanaf 601px zijn de tussenstappen respectievelijk 2rem en `clamp(3.5rem, 7.5vw, 4.5rem)`; vanaf 1001px gelden display-wide en invitation-wide. Beide blijven Cooper Hewitt, rechtop en Medium (500).
 - **Hero-fotografie**: de verfijning van 20 oktober 2026 laat op mobiel boven de tekst circa 140–200px foto vrij. Een verticaal warm donker verloop beschermt de witte tekst eronder. De event-/locatiecontext staat onder de h1. Vanaf 1001px loopt de verduistering van links naar rechts af, zodat kaarslicht en glazen rechts helder blijven. De lichte feitenstrook en bestaande inhoud blijven behouden.
-- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant. Globale h2-koppen zijn donker, sentence-case, Medium (500), met regelhoogte (1.18) en tracking (-.02em). Welkom gebruikt donkerblauw en regelhoogte (1.15); het eventarchief gebruikt een grotere lokale kop (`clamp(2rem,4vw,3.25rem)`, regelhoogte 1.12).
+- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant. Globale h2-koppen zijn donker, sentence-case, Medium (500), met regelhoogte (1.18) en tracking (-.02em). Welkom gebruikt donkerblauw en regelhoogte (1.15); het eventarchief deelt de redactionele koprol met welkom (`clamp(1.875rem,3.2vw,2.5rem)`, regelhoogte 1.15).
 - **Title**: gewone tussenkoppen gebruiken `title`. Praktische rijen en fotobijschriften hebben kleinere, contextgebonden varianten; centrumnamen hebben een grotere lokale variant.
 - **Body**: standaardtekst gebruikt `body` (18px/1.7); de welkomstinleiding houdt die maat en FAQ-antwoorden gebruiken `body-compact` (17px/1.7). Verhaaltekst en tijdlijnparagrafen zijn waar ingesteld begrensd tot (65ch).
 - **Label**: de `label`-rol beschrijft kleine gewone tekst zoals bronregels en bijschriften, niet een decoratieve bovenkop. Footer- en juridische metadata hebben compactere contextvarianten.
-- **Button**: het normale actiegewicht is vastgelegd in `button`; de lichte heroactie gebruikt een rustiger lokaal gewicht.
+- **Button**: het normale actiegewicht is vastgelegd in `button`; de lichte heroactie deelt dezelfde 16px en Medium (500) met de andere primaire acties.
 
 Koppen gebruiken gebalanceerde regels; paragrafen krijgen `text-wrap: pretty` waar ondersteund. Behoud de volledige tekst bij zoom en smalle vensters.
 
@@ -240,7 +240,7 @@ Inhoud stapelt op smalle schermen. Vanaf (768px) ontstaan twee kolommen voor ond
 
 De aanvullende praktische gegevens staan onder de hoofdgegevens in een gecentreerd blok van maximaal (960px), met één bovenlijn. De agendalink en bijbehorende toelichting staan gecentreerd tussen de hoofdgegevens en dit detailblok, met (32px) ruimte erboven en (32px) eronder, (40px) eronder vanaf (768px). Vanaf (768px) staan uren en doelgroep links, menu en bezoekinformatie rechts met (64px) kolomruimte. De menutoelichting is een gewone paragraaf. Detailgroepen hebben geen afzonderlijke rijlijnen; onder (20rem) groepsbreedte, ook bij tekstvergroting, staan labels boven hun waarden.
 
-De footer gebruikt eerst twee inhoudskolommen, met de identiteit erboven, en vanaf (768px) drie kolommen. Onder (360px) stapelt de inhoud opnieuw. De footer gebruikt het lichte zandvlak (`surface-soft`), met een bovenlijn en een kleine juridische afsluiting.
+De footer gebruikt eerst twee inhoudskolommen, met de identiteit erboven, en vanaf (768px) drie kolommen. Onder (360px) stapelt de inhoud opnieuw. De footer begint met een compacte teruglink naar de actuele inschrijfinformatie en gebruikt het lichte zandvlak (`surface-soft`), met een bovenlijn en een kleine juridische afsluiting.
 
 ## Elevation & Depth
 
@@ -282,7 +282,7 @@ De header volgt de warme paginaondergrond, zonder bovenlijn, met het compacte tw
 
 ### Fotografie
 
-De vrijwilligersfoto (`2025-facebook-07`) staat vroeg onder de doelgroeptekst, met zichtbaar editiejaar 2025 en bronlink. Het eventarchief begint met dansende gasten (`31`) en behoudt alle zeven oorspronkelijke beelden in de viewer: 31, 07, 01, 34, 17, 37 en 25. De zes vervolgbeelden volgen de compositie uit Layout; zichtbare historische context en bron blijven bij de beelden horen. De viewer toont het volledige beeld met `object-fit: contain`.
+De foto van drie lachende mensen aan de bar (`2025-facebook-05`) staat vroeg onder de doelgroeptekst, met zichtbaar editiejaar 2025 en bronlink. De eerdere keukenfoto is na feedback vervangen door dit uitnodigende beeld. Het eventarchief begint met dansende gasten (`31`) en behoudt alle zeven oorspronkelijke beelden in de viewer: 31, 07, 01, 34, 17, 37 en 25. De zes vervolgbeelden staan standaard ingeklapt achter “Toon meer foto’s (6)”, als native disclosure dat ook zonder JavaScript werkt. Open verandert de knop in “Toon minder foto’s”. Uitgeklapt volgen ze de compositie uit Layout; zichtbare historische context en bron blijven bij de beelden horen. De viewer toont het volledige beeld met `object-fit: contain`.
 
 ### Photo viewer
 
@@ -327,3 +327,12 @@ Essentiële doelgroeptekst en FAQ-antwoorden gebruiken `text`; bijschriften en m
 De hero gebruikt een warmer bruin-neutraal verloop met 70–80% dekking in het tekstgebied en een lichtere bovenkant op mobiel. Het mobiele menu gebruikt een neutrale scrim van 22% en 6px blur. Reduced transparency behoudt een dekkender neutrale backdrop zonder blur. De viewer behoudt neutraal donker, met permanente controlvulling `#242424`, rand `#858585` en hover `#363636`.
 
 Nieuwe contrastmetingen en detectorresultaat staan in `qa/color-refinement-2026-10-20/`. De vroegere organic-captures documenteren de vorige kleurwaarden.
+
+
+## Consistentieverfijning — 21 oktober 2026
+
+De hoofdactie in de hero gebruikt dezelfde 16px als andere primaire acties, op alle schermbreedtes. Mobiele datum, uren, locatie, prijs en prijsaanvulling zijn minimaal 16px. Onder 360px stapelt de feitenstrook op één kolom, zodat de tekst niet hoeft te krimpen. Datum en uren staan ook samen onder Wanneer in de praktische informatie. De aanvullende detailgegevens blijven beschikbaar.
+
+`--h2` blijft de gewone sectiekop (28–36px), `--heading-editorial` is de bewuste redactionele variant voor welkom en het fotoarchief (30–40px), en `--h3` is de tussenkop van 22px, ook bij de organisatie. De partnerkop volgt voortaan de gewone sectiekop. `--type-action` (16px), `--type-caption` (14px) en `--type-photo-title` (16px) maken de rollen van bediening, bronvermelding en fotobeschrijving expliciet. Deze waarden vervangen de oudere lokale maten hierboven: de archiefkop groeit niet meer tot 52px, de organisatiekop niet meer tot 38px en de heroactie krimpt niet meer tot 13–15px. Bronbijschriften bij welkom, archief, locatie en organisatie delen de captionrol.
+
+FAQ, centrumlijst en de toegevoegde kaart gebruiken dezelfde donkerblauwe openindicator met een licht minteken. De centrumlijst heeft duidelijkere blauwe wijknamen van 16px; de nummering en koppeling met de kaart blijven behouden. De footer begint met een compacte terugweg naar de actuele inschrijfinformatie, met passende tekst bij afgesloten of uitverkochte inschrijving. De browserkleur volgt het warme papier. Lokale gewichten van 550 zijn vervangen door beschikbaar Medium (500).
