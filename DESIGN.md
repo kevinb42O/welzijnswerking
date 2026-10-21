@@ -430,3 +430,8 @@ Labels blijven stilstaan; alleen richtinggevende SVG-pijlen bewegen 3px bij hove
 ### Tastbare 3D-afwerking na gebruikersfeedback
 
 De gebruiker vraagt expliciet om meer 3D en schaduw. De gevulde acties zijn daarom een gerichte uitzondering op de vlakke gewone inhoud: een subtiel verticaal kleurverloop, binnenste bovenlicht en onderrand, met een compacte contactschaduw en zachtere slagschaduw. Blauw loopt van #3a5197 naar #273a7c met #192957 als contour; goud van #ffe0a0 naar #f0c36b met #c69744 als contour. Hover tilt de knop 2px en verruimt de schaduw; indrukken laat hem zakken en verkleint de schaduw. Reduced motion houdt de positie vast. De gedeelde CSS bevat de exacte schaduwlagen. De inschrijfknop vult maximaal 390px; uitsluitend onder 360px vervalt de aanvullende pijl. Er is geen container-querybehandeling meer. Deze behandeling vervangt de hierboven beschreven vlakke knopafwerking. Bronnen voor de licht- en interactieprincipes: Josh W. Comeau, Designing Beautiful Shadows in CSS en Building a Magical 3D Button.
+
+
+### Subtielere knopschaduw — 21 oktober 2026
+
+Op verzoek van de gebruiker vervangt één zachte slagschaduw de gelaagde contactschaduw en binnenranden van blauwe en gouden acties: `0 4px 12px rgba(20, 35, 75, 0.16)`. Het bestaande kleurverloop blijft behouden. Hover gebruikt `0 5px 14px rgba(20, 35, 75, 0.18)` en 1px lift; indrukken gebruikt `0 2px 5px rgba(20, 35, 75, 0.12)`. Dit vervangt de eerdere zwaardere 3D-schaduwspecificatie.
