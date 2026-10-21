@@ -140,8 +140,8 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 
 /* Approved signature wordmark, kept intact on every surface. */
 .brand-image{display:block;width:100%;height:auto}
-.header-wordmark{display:block;flex-shrink:0;width:clamp(160px,50vw,270px);padding-block:8px}
-.mobile-menu-brand{display:block;width:min(230px,100%)}
-.footer-brand{display:block;width:250px;max-width:100%}
-@media(min-width:1001px){.header-wordmark{width:290px}}
+.header-wordmark{display:block;flex-shrink:0;width:150px;padding-block:8px}
+.mobile-menu-brand{display:block;width:min(170px,100%)}
+.footer-brand{display:block;width:180px;max-width:100%}
+@media(min-width:1001px){.header-wordmark{width:180px}}
 @media(max-width:600px){.header-inner{gap:12px}.menu-toggle{flex-shrink:0;white-space:nowrap}}
