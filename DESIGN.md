@@ -413,3 +413,8 @@ De hero is een flexkolom met minimaal `100svh` min de navigatiehoogte (90px mobi
 
 
 De bestaande rendier-/sleeanimatie blijft volledig behouden, inclusief de trekkoordverbinding en de binnenkomst van de informatiebalk. Een verouderde Vite-verwijzing naar de lui geladen Lottie-speler veroorzaakte in de lokale preview HTTP 504 en sloeg de animatie over. `astro.config.mjs` laat deze dependency voortaan vooraf optimaliseren. De volledige passage wordt gecontroleerd op desktop en mobiel, inclusief zichtbaar beeld, trekkoord, eindpositie en opruimen; reduced motion blijft de animatie overslaan. Opnamen en resultaten staan in `qa/hero-viewport-2026-10-21/`.
+
+
+## Compacte informatiebalk — 21 oktober 2026
+
+De gebruiker vindt de informatiebalk te dominant. De balk is teruggebracht tot circa 98px op desktop: 10px verticale padding, 22px iconen, 6px ruimte onder de iconen, hoofdtekst maximaal 20px en secundaire tekst 16px met 4px bovenruimte. Mobiel zijn iconen 20px en blijft alle tekst minimaal 16px; tekst mag over meerdere regels lopen. De vrijgekomen hoogte gaat volledig naar de hero-foto via de bestaande flexverdeling, met behoud van de titelgrootte, drie titelregels, kleuren en rendieranimatie. Deze waarden vervangen de eerdere ruimere balkspecificatie.
