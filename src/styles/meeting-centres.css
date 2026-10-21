@@ -1,7 +1,7 @@
 /* A welcoming local contact, with the complete directory available without scripts. */
 .meeting-centres{background:var(--page)}
 .centres-heading{margin-bottom:32px}
-.centres-heading h2{max-width:740px;font-size:var(--heading-editorial);font-weight:500;text-transform:none;letter-spacing:-.02em;line-height:1.18;color:var(--brand)}
+.centres-heading h2{max-width:740px;font-size:var(--heading-editorial);font-weight:var(--section-heading-weight);text-transform:none;letter-spacing:-.02em;line-height:1.18;color:var(--brand)}
 .centres-heading-copy>p{margin-top:20px;max-width:560px;font-size:1.125rem;line-height:1.7}
 .centres-welcome-photo{display:block;min-width:0}
 .centres-welcome-photo img{width:100%;height:auto;aspect-ratio:680/453;object-fit:contain;background:var(--surface-soft);border-radius:12px 32px 12px 12px}

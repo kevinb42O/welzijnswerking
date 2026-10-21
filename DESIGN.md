@@ -61,13 +61,13 @@ typography:
   headline:
     fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "clamp(1.75rem,2.8vw,2.25rem)"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 1.18
     letterSpacing: "-.02em"
   welcome-headline:
     fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "clamp(1.875rem, 3.2vw, 2.5rem)"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 1.15
     letterSpacing: "-.02em"
   title:
@@ -174,13 +174,13 @@ components:
 
 **Creative North Star: "Licht, rustig en leesbaar"**
 
-De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, rustiger koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en de welkomstkop; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.
+De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en alle hoofdsectiekoppen; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.
 
 Zachte hoeken, dunne scheidingslijnen en afwisselende fotocomposities geven de inhoud een natuurlijker ritme. De fotografische hero en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels blijven expliciet afgewezen.
 
 **Key Characteristics:**
 - Eén lokaal gehoste Cooper Hewitt-familie voor koppen, tekst en bediening.
-- Warme lichte vlakken, donkere koppen, gerichte blauwe accenten en dunne scheidingen.
+- Warme lichte vlakken, donkerblauwe sectiekoppen, gerichte blauwe accenten en dunne scheidingen.
 - Leesbare tekst, zachte hoeken, zichtbare focus en ruime aanraakvlakken.
 - Een compacte doorlopende footer en een neutraal donkere foto-viewer.
 
@@ -194,8 +194,8 @@ Warme papier- en zandtinten verzachten de bevestigde Oostendse blauwrollen.
 
 ### Primary
 
-- **Oostends donkerblauw** (`brand`, `action`): identiteit, primaire knoppen, navigatie, de welkomstkop en geopende FAQ-indicator. `action-hover` verdiept de primaire actie bij hover.
-- **Helder Oostends blauw** (`accent`): behouden accenttoken; geen algemene kleur voor de huidige sectiekoppen.
+- **Oostends donkerblauw** (`brand`, `action`): identiteit, primaire knoppen, navigatie, alle hoofdsectiekoppen en geopende FAQ-indicator. `action-hover` verdiept de primaire actie bij hover.
+- **Helder Oostends blauw** (`accent`): behouden accenttoken; geen algemene kleur voor sectiekoppen; die gebruiken donkerblauw.
 - **Leesbaar linkblauw** (`link`, `focus`): kleine tekstlinks en toetsenbordfocus op licht. Dit donkerdere blauw bewaart de leesbaarheid van kleine tekst.
 
 ### Neutral
@@ -209,20 +209,20 @@ Warme papier- en zandtinten verzachten de bevestigde Oostendse blauwrollen.
 - **Warm fotografisch donker** (`hero-base`, `hero-shade`, `hero-shade-edge`): verduistering over de warme hero-foto. `hero-label` en `hero-copy` verzorgen de lichte tekst daarop.
 - **Witte focus op donker** (`focus-on-dark`): hero en viewer; het warme lichte mobiele menu gebruikt focusblauw.
 
-**The Oostende Blue Rule.** Gebruik donkerblauw voor identiteit, acties en de welkomstkop; gebruik linkblauw voor kleine links en donkere tekst voor gewone koppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.
+**The Oostende Blue Rule.** Gebruik donkerblauw voor identiteit, acties en hoofdsectiekoppen; gebruik linkblauw voor kleine links en donkere tekst voor tussenkoppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.
 
 ## Typography
 
 **Display Font:** Cooper Hewitt, met de systeem-sans-stack uit de frontmatter als fallback.
 **Body Font:** dezelfde Cooper Hewitt-familie, lokaal gehost als drie statische WOFF2-bestanden: Book (400), Medium (500) en Semibold (600). Book en Semibold worden vooraf geladen; Medium laadt wanneer nodig. Gewone primaire acties gebruiken Medium (500). De mobiele menuactie en footer gebruiken eveneens het beschikbare Medium (500).
 
-**Character:** helder en direct, zonder decoratieve lettertypewisseling. Koppen zijn rechtop, doorgaans Medium (500), donker en in gewone schrijfwijze met lichte negatieve tracking. De welkomstkop blijft bewust donkerblauw. Lopende tekst gebruikt Book.
+**Character:** helder en direct, zonder decoratieve lettertypewisseling. Hoofdsectiekoppen zijn rechtop, Semibold (600), donkerblauw en in gewone schrijfwijze met lichte negatieve tracking. Tussenkoppen blijven donker en doorgaans Medium (500). Lopende tekst gebruikt Book.
 
 ### Hierarchy
 
 - **Display en invitation**: “Kerstavond.” gebruikt de kleinere displayrol; “Kom erbij.” en “Schuif mee aan.” krijgen de grotere invitationrol op twee regels. Vanaf 601px zijn de tussenstappen respectievelijk 2rem en `clamp(3.5rem, 7.5vw, 4.5rem)`; vanaf 1001px gelden display-wide en invitation-wide. Beide blijven Cooper Hewitt, rechtop en Medium (500).
 - **Hero-fotografie**: de verfijning van 20 oktober 2026 laat op mobiel boven de tekst circa 140–200px foto vrij. Een verticaal warm donker verloop beschermt de witte tekst eronder. De event-/locatiecontext staat onder de h1. Vanaf 1001px loopt de verduistering van links naar rechts af, zodat kaarslicht en glazen rechts helder blijven. De lichte feitenstrook en bestaande inhoud blijven behouden.
-- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant. Globale h2-koppen zijn donker, sentence-case, Medium (500), met regelhoogte (1.18) en tracking (-.02em). Welkom gebruikt donkerblauw en regelhoogte (1.15); het eventarchief deelt de redactionele koprol met welkom (`clamp(1.875rem,3.2vw,2.5rem)`, regelhoogte 1.15).
+- **Headline**: sectiekoppen gebruiken `headline`; de welkomstkop heeft de afzonderlijk vastgelegde `welcome-headline`-variant. H2-koppen binnen secties zijn donkerblauw, sentence-case, Semibold (600), met regelhoogte (1.18) en tracking (-.02em). Welkom gebruikt donkerblauw en regelhoogte (1.15); het eventarchief deelt de redactionele koprol met welkom (`clamp(1.875rem,3.2vw,2.5rem)`, regelhoogte 1.15).
 - **Title**: gewone tussenkoppen gebruiken `title`. Praktische rijen en fotobijschriften hebben kleinere, contextgebonden varianten; centrumnamen hebben een grotere lokale variant.
 - **Body**: standaardtekst gebruikt `body` (18px/1.7); de welkomstinleiding houdt die maat en FAQ-antwoorden gebruiken `body-compact` (17px/1.7). Verhaaltekst en tijdlijnparagrafen zijn waar ingesteld begrensd tot (65ch).
 - **Label**: de `label`-rol beschrijft kleine gewone tekst zoals bronregels en bijschriften, niet een decoratieve bovenkop. Footer- en juridische metadata hebben compactere contextvarianten.
@@ -297,7 +297,7 @@ Er zijn geen eigen invoervelden of chips op de publieke pagina; dit document sch
 ## Do's and Don'ts
 
 ### Do:
-- **Do** gebruik de warme oppervlakrollen, donkere gewone koppen, donkerblauwe acties en blauwe welkomstkop.
+- **Do** gebruik de warme oppervlakrollen, donkerblauwe sectiekoppen in Semibold, donkere tussenkoppen en donkerblauwe acties.
 - **Do** houd tekstlinks herkenbaar door onderstreping en geef alle bediening zichtbare toetsenbordfocus.
 - **Do** behoud de leesbare tekstgroottes, regelafstand en responsieve ruimte; controleer ook tekstvergroting.
 - **Do** houd de footer compact, met dezelfde ondergrond als de pagina en leesbare navigatie- en verenigingsgegevens.
@@ -361,3 +361,8 @@ De gebruiker heeft gevraagd de sectiefoto te laten volgen op de centrumkeuze. De
 Bij de eerste weergave blijft de aangeleverde gebouwfoto zichtbaar, ook al is het eerste centrum voor het gemak open. Een expliciete wijkkeuze toont de foto van het eerste centrum; het openen van een ander centrum of selecteren op de kaart werkt de foto en bronvermelding bij. Sluiten van het actieve centrum of overschakelen naar het volledige overzicht herstelt het standaardbeeld. Nieuwe foto's worden eerst gedecodeerd. Een volgnummer voorkomt dat een oudere laadactie een recentere keuze overschrijft; laadfouten vallen terug op het standaardbeeld. Afbeeldingen behouden hun volledige verhouding via object-fit:contain en een vaste beeldruimte.
 
 Vanaf 1001px staat dezelfde foto in de introductie; op kleinere schermen verplaatst het ene figure-element naar de centrumresultaten, zodat de wijkkeuze eerst bereikbaar blijft en de foto nabij de gegevens staat. Breakpointwissels behouden de gekozen foto. Bij een specifieke foto staat de centrumnaam met bronlink naar Stad Oostende. Zonder JavaScript blijft het aangeleverde standaardbeeld beschikbaar op desktop en blijven alle centrumgegevens leesbaar. Controle: `scripts/centre-photos-qa.mjs`, bewijs in `qa/centre-photos-2026-10-21/`.
+
+
+## Donkerblauwe sectietitels — 21 oktober 2026
+
+Op verzoek van de gebruiker volgen alle hoofdsectietitels de sectiekoppen van Stad Oostende: Cooper Hewitt Semibold (600) in donkerblauw `#273a7c`. De gedeelde tokens `--section-heading-color` en `--section-heading-weight` sturen de h2-rol binnen secties en de lokale gewichtsvarianten van welkom en de centrumkeuze aan. De bestaande schalen (28–36px en de redactionele 30–40px), gewone schrijfwijze, regelafstanden en tussenruimte blijven behouden. Tussenkoppen, lopende tekst en de witte hero behouden hun bestaande behandeling. Dit vervangt de eerdere keuze voor donkere sectiekoppen in Medium.

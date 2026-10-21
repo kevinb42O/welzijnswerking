@@ -436,11 +436,11 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Donkere sectiekoppen in gewone schrijfwijze, Medium 500, 1.18 regelhoogte; lokale archiefvariant is groter."
+        "purpose": "Donkerblauwe sectiekoppen in gewone schrijfwijze, Semibold 600, 1.18 regelhoogte; lokale archiefvariant is groter."
       },
       "welcome-headline": {
         "displayName": "Welcome headline",
-        "purpose": "Donkerblauwe welkomstkop, Medium 500, 1.15 regelhoogte."
+        "purpose": "Donkerblauwe welkomstkop, Semibold 600, 1.15 regelhoogte."
       },
       "title": {
         "displayName": "Title",
@@ -596,17 +596,17 @@
   ],
   "narrative": {
     "northStar": "Licht, rustig en leesbaar",
-    "overview": "De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, rustiger koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en de welkomstkop; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.\n\nZachte hoeken, dunne scheidingslijnen en afwisselende fotocomposities geven de inhoud een natuurlijker ritme. De fotografische hero en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels blijven expliciet afgewezen.",
+    "overview": "De gebruiker heeft de Oostendse huisstijl op 20 oktober 2026 verfijnd naar een warmere, organischere uitnodiging: warme lichte oppervlakken, koppen in gewone schrijfwijze en echte mensen vroeg in de pagina. Donkerblauw blijft herkenbaar in identiteit, acties en alle hoofdsectiekoppen; tekstlinks behouden hun eigen leesbare blauw. Cooper Hewitt verbindt alle tekstrollen. “Licht, rustig en leesbaar” blijft de beschrijvende samenvatting van deze bevestigde richting.\n\nZachte hoeken, dunne scheidingslijnen en afwisselende fotocomposities geven de inhoud een natuurlijker ritme. De fotografische hero en de neutraal donkere foto-viewer zijn gerichte uitzonderingen op de lichte basis. De footer sluit compact aan op dezelfde paginaondergrond. Groen als oppervlak en decoratieve serif- of cursieve titels blijven expliciet afgewezen.",
     "keyCharacteristics": [
       "Eén lokaal gehoste Cooper Hewitt-familie voor koppen, tekst en bediening.",
-      "Warme lichte vlakken, donkere koppen, gerichte blauwe accenten en dunne scheidingen.",
+      "Warme lichte vlakken, donkerblauwe sectiekoppen, gerichte blauwe accenten en dunne scheidingen.",
       "Leesbare tekst, zachte hoeken, zichtbare focus en ruime aanraakvlakken.",
       "Een compacte doorlopende footer en een neutraal donkere foto-viewer."
     ],
     "rules": [
       {
         "name": "The Oostende Blue Rule",
-        "body": "Gebruik donkerblauw voor identiteit, acties en de welkomstkop; gebruik linkblauw voor kleine links en donkere tekst voor gewone koppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.",
+        "body": "Gebruik donkerblauw voor identiteit, acties en hoofdsectiekoppen; gebruik linkblauw voor kleine links en donkere tekst voor tussenkoppen. Houd de pagina warm en licht en de foto-viewer neutraal donker.",
         "section": "colors"
       },
       {
@@ -621,7 +621,7 @@
       }
     ],
     "dos": [
-      "Do gebruik de warme oppervlakrollen, donkere gewone koppen, donkerblauwe acties en blauwe welkomstkop.",
+      "Do gebruik de warme oppervlakrollen, donkerblauwe sectiekoppen in Semibold, donkere tussenkoppen en donkerblauwe acties.",
       "Do houd tekstlinks herkenbaar door onderstreping en geef alle bediening zichtbare toetsenbordfocus.",
       "Do behoud de leesbare tekstgroottes, regelafstand en responsieve ruimte; controleer ook tekstvergroting.",
       "Do houd de footer compact, met dezelfde ondergrond als de pagina en leesbare navigatie- en verenigingsgegevens.",

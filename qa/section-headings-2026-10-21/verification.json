@@ -1,0 +1,154 @@
+[
+  {
+    "width": 390,
+    "headings": [
+      {
+        "text": "Voor wie is het kerstfeest?",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Praktische informatie",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Een ontmoetingscentrum dicht bij jou.",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Kerstavond 2025 in beeld",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Over Welzijnswerking",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Vorige edities",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Met dank aan onze partners van 2025",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      }
+    ],
+    "axeViolations": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "headings": [
+      {
+        "text": "Voor wie is het kerstfeest?",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Praktische informatie",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Een ontmoetingscentrum dicht bij jou.",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Kerstavond 2025 in beeld",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "30px"
+      },
+      {
+        "text": "Over Welzijnswerking",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Vorige edities",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      },
+      {
+        "text": "Met dank aan onze partners van 2025",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "28px"
+      }
+    ],
+    "axeViolations": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1440,
+    "headings": [
+      {
+        "text": "Voor wie is het kerstfeest?",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "40px"
+      },
+      {
+        "text": "Praktische informatie",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "36px"
+      },
+      {
+        "text": "Een ontmoetingscentrum dicht bij jou.",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "40px"
+      },
+      {
+        "text": "Kerstavond 2025 in beeld",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "40px"
+      },
+      {
+        "text": "Over Welzijnswerking",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "36px"
+      },
+      {
+        "text": "Vorige edities",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "36px"
+      },
+      {
+        "text": "Met dank aan onze partners van 2025",
+        "color": "rgb(39, 58, 124)",
+        "weight": "600",
+        "size": "36px"
+      }
+    ],
+    "axeViolations": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 390,
+    "textZoom": "200%",
+    "horizontalOverflow": false
+  }
+]
