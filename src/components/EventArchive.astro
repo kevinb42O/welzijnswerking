@@ -26,7 +26,7 @@ const photos = [
       </figure>
     </div>
     <details class="event-photos-disclosure">
-      <summary class="button event-photo-toggle"><span class="label-more">Toon meer foto’s ({photos.length})</span><span class="label-less">Toon minder foto’s</span></summary>
+      <summary class="button event-photo-toggle"><span class="label-more">Toon meer foto’s ({photos.length})</span><span class="label-less">Toon minder foto’s</span><svg class="button-icon event-photo-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary>
     <div class="event-photo-grid">{photos.map(photo => {
       const isHall = photo.index === '25';
       const prefix = `/images/event/2025-facebook-${photo.index}-`;
@@ -57,7 +57,6 @@ const photos = [
 .event-photo-toggle{list-style:none;cursor:pointer;width:fit-content;max-width:100%}
 .event-photo-toggle::-webkit-details-marker{display:none}
 .event-photo-toggle::marker{content:""}
-.event-photo-toggle>span{font-size:var(--type-action);line-height:1.7}
 .event-photo-toggle .label-less,.event-photos-disclosure[open] .label-more{display:none}
 .event-photos-disclosure[open] .label-less{display:inline}
 .event-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;margin-top:40px;align-items:start}

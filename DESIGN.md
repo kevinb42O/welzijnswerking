@@ -418,3 +418,15 @@ De bestaande rendier-/sleeanimatie blijft volledig behouden, inclusief de trekko
 ## Compacte informatiebalk — 21 oktober 2026
 
 De gebruiker vindt de informatiebalk te dominant. De balk is teruggebracht tot circa 98px op desktop: 10px verticale padding, 22px iconen, 6px ruimte onder de iconen, hoofdtekst maximaal 20px en secundaire tekst 16px met 4px bovenruimte. Mobiel zijn iconen 20px en blijft alle tekst minimaal 16px; tekst mag over meerdere regels lopen. De vrijgekomen hoogte gaat volledig naar de hero-foto via de bestaande flexverdeling, met behoud van de titelgrootte, drie titelregels, kleuren en rendieranimatie. Deze waarden vervangen de eerdere ruimere balkspecificatie.
+
+
+## Verfijnde blauwe en gouden acties — 21 oktober 2026
+
+Gevulde acties delen `src/styles/buttons.css`: 16px Semibold, regelhoogte 1.4, minimaal 52px hoogte, 14px/22px binnenruimte, bestaande 10px hoeken en een subtiele donkerdere contour. De gouden heroactie gebruikt minimaal 54px en 14px/24px, met behoud van Public Sans, #f3ca76 en #17375e; hover gebruikt #ffda90 en indrukken #e8bc65. Navigatie blijft 50px hoog. Dit vervangt de eerdere Medium-labels, onderstreping bij hover, helderheidsfilter en schaalfeedback op gevulde acties.
+
+Labels blijven stilstaan; alleen richtinggevende SVG-pijlen bewegen 3px bij hover op fijne pointers. Indrukken verplaatst de knop 1px; reduced motion slaat beweging over. Telefooniconen blijven stil; foto-uitklappen gebruikt een draaiende chevron. Alle iconen delen een 20px kader. De inschrijfkaart blijft tot 1001px gestapeld om te smalle tekst en gebroken woorden te voorkomen. Bij minder dan 260px binnenruimte vervalt uitsluitend de aanvullende pijl in deze knop. Toetsenbordfocus blijft zichtbaar.
+
+
+### Tastbare 3D-afwerking na gebruikersfeedback
+
+De gebruiker vraagt expliciet om meer 3D en schaduw. De gevulde acties zijn daarom een gerichte uitzondering op de vlakke gewone inhoud: een subtiel verticaal kleurverloop, binnenste bovenlicht en onderrand, met een compacte contactschaduw en zachtere slagschaduw. Blauw loopt van #3a5197 naar #273a7c met #192957 als contour; goud van #ffe0a0 naar #f0c36b met #c69744 als contour. Hover tilt de knop 2px en verruimt de schaduw; indrukken laat hem zakken en verkleint de schaduw. Reduced motion houdt de positie vast. De gedeelde CSS bevat de exacte schaduwlagen. De inschrijfknop vult maximaal 390px; uitsluitend onder 360px vervalt de aanvullende pijl. Er is geen container-querybehandeling meer. Deze behandeling vervangt de hierboven beschreven vlakke knopafwerking. Bronnen voor de licht- en interactieprincipes: Josh W. Comeau, Designing Beautiful Shadows in CSS en Building a Magical 3D Button.

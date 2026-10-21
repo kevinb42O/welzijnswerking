@@ -41,11 +41,8 @@
 .centre-detail-body{padding:0 20px}
 .centre-address{font-size:1.0625rem;line-height:1.6;margin-top:10px}
 .centre-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-block:24px}
-.centre-phone{justify-content:flex-start;gap:14px;font-weight:500;white-space:normal;padding:12px 20px;min-height:50px}
-.centre-phone>span{font-size:inherit}
-.centre-phone:hover>span{transform:none}
+.centre-phone{justify-content:flex-start;white-space:normal}
 .centre-phone-number{margin-top:4px;font-size:1rem;line-height:1.6;font-weight:400;font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.centre-phone svg{width:22px;height:22px;flex-shrink:0}
 .centre-actions>.text-link svg,.centre-official svg,.centre-alternatives svg{width:18px;height:18px;flex-shrink:0}
 .centre-actions>.text-link{gap:8px}
 .centre-practical{border-top:1px solid var(--border)}

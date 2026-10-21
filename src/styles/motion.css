@@ -6,8 +6,8 @@
 .hero-photo img{transform-origin:62% 45%}
 .mobile-menu{transform-origin:top center}
 .event-photo-lead>a,.gallery-open{overflow:hidden}
-.button,.menu-toggle,.lightbox button{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal)}
-.button>span,.text-link>span[aria-hidden]{transition:transform 260ms var(--ease-reveal)}
+.menu-toggle,.lightbox button{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal)}
+.text-link>span[aria-hidden]{transition:transform 260ms var(--ease-reveal)}
 .motion-photo-frame{overflow:clip;border-radius:var(--radius-panel)}
 .welcome-photo .motion-photo-frame{border-radius:12px 32px 12px 12px}
 .motion-photo-frame>img{border-radius:0}
@@ -15,11 +15,10 @@
 /* Hover changes light, so it never competes with an entrance's transform. */
 .gallery-open img,[data-photo-open] img{transition:filter 220ms ease}
 @media(hover:hover) and (pointer:fine){
-  .button:hover>span{transform:translateY(3px)}
   .text-link:hover>span[aria-hidden]{transform:translateX(3px)}
   .gallery-open:hover img,[data-photo-open]:hover img{filter:brightness(1.04)}
 }
-.button:active,.menu-toggle:active,.lightbox button:active{transform:scale(.98);transition-duration:90ms}
+.menu-toggle:active,.lightbox button:active{transform:scale(.98);transition-duration:90ms}
 @media(prefers-reduced-transparency:reduce){.mobile-menu::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgb(30 29 27 / .8)}}
 @media(prefers-reduced-motion:reduce){
   .hero-photo img,.hero h1>span,.hero-line-text,.hero-word-text,.hero-intro,.gallery-open img,[data-photo-open] img,.button,.button>span,.text-link>span[aria-hidden],.menu-toggle,.lightbox button{transform:none!important}

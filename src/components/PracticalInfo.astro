@@ -24,7 +24,7 @@ const calendarUrl = import.meta.env.DEV && Astro.props.eventOverride
     <div class="practical-composition">
               <div id="inschrijven" class="participation-note" role="region" aria-labelledby="registration-title" tabindex="-1"><h3 id="registration-title">{ticket.url ? 'Inschrijven voor het kerstfeest' : (registrationClosed ? ticket.label : (event.registrationMethod || 'Inschrijven voor het kerstfeest'))}</h3>{ticket.url && <a class="button" href={ticket.url} target="_blank" rel="noopener noreferrer">{ticket.label}</a>}
           {!registrationClosed && <p>{event.ticketsInfoText}</p>}
-          {!registrationClosed && !ticket.url && event.registrationChannel === 'meeting_centres' && <a class="button" href="#ontmoetingscentra">Vind een ontmoetingscentrum <span aria-hidden="true">↓</span></a>}
+          {!registrationClosed && !ticket.url && event.registrationChannel === 'meeting_centres' && <a class="button" href="#ontmoetingscentra">Vind een ontmoetingscentrum <svg class="button-icon button-icon--down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7" /></svg></a>}
           {(!event.startTime || !event.eligibility || menuInfoMissing) && <p>Ook {[!event.startTime && 'het aanvangsuur', menuInfoMissing && 'het menu', !event.eligibility && 'de deelnamevoorwaarden'].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' en $1')} {!event.eligibility || (!event.startTime && menuInfoMissing) ? 'worden' : 'wordt'} voor {event.year} hier bekendgemaakt.</p>}
         </div>
       <div class="practical-content">
