@@ -18,23 +18,23 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 .no-js-nav{display:flex;flex-wrap:wrap;gap:4px 20px;padding-block:12px}.no-js-nav a{min-height:44px;align-content:center}.site-header :focus-visible{outline-color:var(--focus)}
 @media(min-width:1001px){.header-inner{min-height:96px}.wordmark{font-size:1.75rem}.wordmark-city{font-size:0.75rem}.desktop-nav{display:flex;align-items:center;gap:32px}.desktop-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:1rem}.desktop-nav a:not(.nav-participate)::after{content:"";position:absolute;bottom:8px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform var(--duration-fast)}.desktop-nav a:hover::after{transform:scaleX(1)}.desktop-nav .nav-participate{min-height:50px;padding:12px 22px;margin-left:8px}.desktop-nav .nav-participate:hover{text-decoration:underline;text-underline-offset:.2em}.menu-toggle{display:none}}
 
-/* Reference invitation: three serif lines, gold emphasis, and a clear registration action. */
+/* Compact invitation: two serif lines, gold emphasis, and a clear registration action. */
 @font-face{font-family:'Hero Public Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/public-sans-latin-variable.woff2') format('woff2')}
 .hero{--hero-gold:#f3ca76;background:var(--page);color:var(--page)}
 .hero-invitation{position:relative;isolation:isolate;overflow:hidden;background:var(--hero-base);font-family:'Hero Public Sans',var(--sans)}
 .hero-photo{position:absolute;inset:0;z-index:-2}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 38%}
-.hero-invitation::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(30 26 22 / .02),rgb(30 26 22 / .12) 90px,var(--hero-shade-edge) 140px,var(--hero-shade-edge) 100%)}
+.hero-invitation::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(30 26 22 / .02) 0px,rgb(30 26 22 / .35) 60px,var(--hero-shade-edge) 140px,var(--hero-shade-edge) 100%)}
 .hero-inner{text-align:left;padding-block:174px 36px}
 .hero-label{display:flex;align-items:center;gap:12px;font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-gold);margin:0 0 20px;max-width:660px;flex-wrap:wrap}
 .hero-label::before{content:"";width:36px;height:2px;background:currentColor;flex-shrink:0}
 .hero-label span{letter-spacing:0}
-.hero h1{color:var(--hero-copy);font:400 clamp(2rem,9.7vw,3.5rem)/1.1 Georgia,'Times New Roman',serif;letter-spacing:-.015em;max-width:660px;text-wrap:balance}
+.hero h1{color:var(--hero-copy);font:400 clamp(1.625rem,7.7vw,3rem)/1.1 Georgia,'Times New Roman',serif;letter-spacing:-.015em;max-width:660px;text-wrap:balance}
 .hero h1>span{display:block}
 .hero h1 .hero-title-invitation{margin:0}
-.hero h1 .hero-title-emphasis{color:var(--hero-gold);font-style:italic;line-height:1.1}
+.hero h1 .hero-word-emphasis{color:var(--hero-gold);font-style:italic;line-height:1.1}
 .hero-intro{font-size:1.0625rem;line-height:1.6;max-width:460px;margin:24px 0 0;color:var(--hero-copy);text-wrap:pretty}
-.hero .button{background:var(--hero-gold);color:#17375e;margin-top:24px;min-height:50px;padding:12px 22px;gap:20px;border-radius:var(--radius-control);font-weight:500;font-size:var(--type-action);line-height:1.7}
+.hero .button{background:var(--hero-gold);color:#17375e;margin-top:24px;min-height:50px;padding:12px 28px;gap:24px;max-width:100%;border-radius:var(--radius-control);font-weight:500;font-size:var(--type-action);line-height:1.7}
 .hero .button:hover{background:#ffda90}
 .hero .button svg{width:1.1em;height:1.1em;flex-shrink:0}
 .hero-bottom{position:relative;isolation:isolate;overflow:clip;background:var(--surface-soft);color:var(--text)}
@@ -55,15 +55,15 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 }
 @media(min-width:601px){
   .hero-inner{padding-block:200px 48px}
-  .hero h1{font-size:clamp(3.5rem,7.5vw,4.5rem);max-width:620px}
+  .hero h1{font-size:clamp(3rem,6.5vw,3.5rem);max-width:620px}
   .hero-intro{max-width:490px}
   .hero .button{margin-top:28px}
 }
 @media(min-width:1001px){
   .hero-inner{padding-block:76px 72px}
   .hero-photo img{object-position:50% 48%}
-  .hero-invitation::after{background:linear-gradient(90deg,var(--hero-shade-edge),var(--hero-shade) 38%,rgb(30 26 22 / .22) 64%,rgb(30 26 22 / 0) 82%)}
-  .hero h1{font-size:clamp(4rem,5.8vw,5rem);max-width:660px}
+  .hero-invitation::after{background:linear-gradient(90deg,rgb(30 26 22 / .75) 0%,rgb(30 26 22 / .7) calc(max(32px,(100vw - 1200px)/2) + 470px),rgb(30 26 22 / .45) calc(max(32px,(100vw - 1200px)/2) + 620px),rgb(30 26 22 / .02) 100%)}
+  .hero h1{font-size:clamp(3.5rem,4.6vw,4rem);max-width:660px}
   .hero-label{font-size:.875rem}
   .hero-intro{max-width:470px}
 }

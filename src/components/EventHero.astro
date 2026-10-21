@@ -6,7 +6,8 @@ const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eve
 const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
 const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
 const hasRegistrationInfo = Boolean(event.registrationMethod) && !registrationClosed;
-const titleLines = event.title.replace('kerstavond samen', 'kerstavond\nsamen').split('\n');
+const titleLines = event.title.split('\n');
+const heroDate = new Intl.DateTimeFormat('nl-BE', { weekday: 'long', day: 'numeric', month: 'long', timeZone: event.timezone }).format(new Date(`${event.dateISO}T12:00:00Z`));
 ---
 <section id="home" class="hero" aria-labelledby="hero-title">
   <div class="hero-invitation">
@@ -14,11 +15,11 @@ const titleLines = event.title.replace('kerstavond samen', 'kerstavond\nsamen').
       <img src="/images/editorial/hero-kaarslicht-1200.webp" srcset="/images/editorial/hero-kaarslicht-640.webp 640w, /images/editorial/hero-kaarslicht-1200.webp 1200w, /images/editorial/hero-kaarslicht-1800.webp 1800w, /images/editorial/hero-kaarslicht-2200.webp 2200w" sizes="100vw" width="2200" height="1460" alt="Sfeerbeeld van een feestelijk gedekte kersttafel, met kaarslicht, dennengroen en glazen." loading="eager" fetchpriority="high" />
     </picture>
     <div class="container hero-inner">
-      <p class="hero-label">Kerstfeest {event.year} <span aria-hidden="true">•</span> Kursaal Oostende</p>
-      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-invitation': true, 'hero-title-last': index === titleLines.length - 1, 'hero-title-emphasis': line === 'samen'}}><span class="hero-line-text">{line.split(/\s+/).map((word, wordIndex) => <Fragment>{wordIndex > 0 && ' '}<span class="hero-word"><span class="hero-word-text">{word}</span></span></Fragment>)}</span></span>)}</h1>
+      <p class="hero-label"><time datetime={event.dateISO}>{heroDate}</time> <span aria-hidden="true">·</span> {event.placeName}</p>
+      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-invitation': true, 'hero-title-last': index === titleLines.length - 1}}><span class="hero-line-text">{line.split(/\s+/).map((word, wordIndex) => <Fragment>{wordIndex > 0 && ' '}<span class:list={{'hero-word': true, 'hero-word-emphasis': word === 'samen'}}><span class="hero-word-text">{word}</span></span></Fragment>)}</span></span>)}</h1>
       <p class="hero-intro">{event.intro}</p>
       {event.eligibility && <p class="hero-eligibility"><svg viewBox="0 0 32 28" fill="currentColor" aria-hidden="true"><circle cx="10" cy="7" r="5"/><circle cx="23" cy="9" r="4"/><path d="M0 26v-3a10 10 0 0 1 20 0v3Zm23 0v-3a13 13 0 0 0-3-8 8 8 0 0 1 12 7v4Z"/></svg><span>{event.eligibility}</span></p>}
-      <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Hoe schrijf ik me in?' : 'Praktische info & deelname')}{!ticket.url && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h17M12 4l8 8-8 8"/></svg>}</a>
+      <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Ontdek hoe je inschrijft' : 'Praktische info & deelname')}{!ticket.url && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h17M12 4l8 8-8 8"/></svg>}</a>
     </div>
   </div>
   <div class="hero-bottom">

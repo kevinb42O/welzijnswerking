@@ -1,0 +1,15 @@
+{
+  "viewports": [
+    320,
+    390,
+    768,
+    1001,
+    1440
+  ],
+  "titleLines": 2,
+  "horizontalOverflow": false,
+  "date": "donderdag 24 december",
+  "cta": "#inschrijven",
+  "text200Percent": "no horizontal overflow",
+  "serverRenderedContent": true
+}
