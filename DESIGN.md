@@ -491,3 +491,7 @@ Op gestapelde schermen, bij reduced motion en zonder JavaScript blijven hero en 
 ### Verfijnde regie van de hero-overgang — 27 oktober 2026
 
 De herotekst vervaagt in het eerste kwart van de scrollbeweging. Het ivoren paneel opent vanaf 2% van de afstand, de foto vanaf 10%; beide zijn vóór het einde volledig uit beeld. Het beeld beweegt binnen het fotovlak maximaal 1,5% met 4% schaalreserve. De praktische titel verschijnt tussen 58 en 82%, de inhoud volgt kort daarna en staat vóór de vrijgave stil. Alle bewegingen volgen dezelfde omkeerbare scrollpositie. Zodra de overgang begint, worden lopende hero-entrees afgerond zodat titelentree en vertrek niet door elkaar lopen. Ankerposities worden uit layoutafstanden berekend, onafhankelijk van de onthullingstransforms. Reduced motion en mobiele documentflow herstellen ook alle nieuwe opacity-, translate- en scale-eigenschappen.
+
+### Correctie: inhoud blijft zichtbaar tijdens het openen — 27 oktober 2026
+
+De gebruiker wijst de vervagingen en lege tussenbeelden expliciet af. De linker herotekst blijft daarom volledig zichtbaar en beweegt met het ivoren paneel mee uit beeld. De praktische titel en alle informatie staan vanaf het begin volledig zichtbaar achter de panelen, zonder opacity- of binnenkomstanimatie. Alleen het openschuiven bepaalt wat zichtbaar wordt. Dit vervangt de vervagings- en onthullingstiming uit de vorige paragraaf. De verschillende paneeltiming, subtiele fotobeweging en afhandeling van lopende hero-entrees blijven behouden.

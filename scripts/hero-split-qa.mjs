@@ -24,14 +24,15 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
         for (const [name, progress] of [['start', 0], ['middle', .5], ['open', 1]]) {
           await page.evaluate(y => scrollTo({ top: y, behavior: 'instant' }), top + travel * progress);
           await page.waitForTimeout(100);
+          assert.equal(await page.locator('.hero-copy, #practical-title, .practical-composition, .agenda-note, .practical-details').evaluateAll(elements => elements.every(el => getComputedStyle(el).opacity === '1')), true, `${engine}/${width}/${name}: content remains visible`);
           if (progress === 1) await expect(page.locator('.hero')).toHaveCSS('visibility', 'hidden');
           const state = await page.locator('.hero-transition-stage').evaluate(el => ({ top: el.getBoundingClientRect().top, left: getComputedStyle(el.querySelector('.hero-inner')).transform, right: getComputedStyle(el.querySelector('.hero-photo')).transform, hidden: getComputedStyle(el.querySelector('.hero')).visibility }));
           assert.ok(Math.abs(state.top) < 2, `${engine}/${width}/${name}: sticky stage`);
           if (progress === .5) {
             assert.ok(translationX(state.left) < 0);
             assert.ok(translationX(state.right) > 0);
-            assert.equal(await page.locator('.hero-copy').evaluate(el => getComputedStyle(el).opacity), '0');
-            assert.equal(await page.locator('#practical-title').evaluate(el => getComputedStyle(el).opacity), '0');
+            assert.equal(await page.locator('.hero-copy').evaluate(el => getComputedStyle(el).opacity), '1');
+            assert.equal(await page.locator('#practical-title').evaluate(el => getComputedStyle(el).opacity), '1');
             assert.equal(await page.locator('.hero-word-text').evaluateAll(elements => elements.every(el => !el.style.transform && !el.style.opacity)), true);
           }
           if (progress === 1) assert.equal(state.hidden, 'hidden', `${engine}/${width}: panels hidden at end`);

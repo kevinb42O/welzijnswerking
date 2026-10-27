@@ -174,10 +174,7 @@ function startHeroTransition() {
   const right = hero?.querySelector<HTMLElement>('.hero-photo');
   const practical = stage?.querySelector<HTMLElement>('.practical');
   if (!scene || !stage || !hero || !invitation || !left || !right || !practical) return;
-  const copy = hero.querySelector<HTMLElement>('.hero-copy');
   const image = right.querySelector<HTMLImageElement>('img');
-  const title = practical.querySelector<HTMLElement>('h2');
-  const groups = [...practical.querySelectorAll<HTMLElement>('.practical-composition, .agenda-note, .practical-details')];
   const smooth = (value: number) => {
     const t = Math.min(1, Math.max(0, value));
     return t * t * (3 - 2 * t);
@@ -196,20 +193,11 @@ function startHeroTransition() {
     if (progress > 0) finishHeroEntrance();
     left.style.transform = `translate3d(${-leftProgress * 101}%, 0, 0)`;
     right.style.transform = `translate3d(${rightProgress * 101}%, 0, 0)`;
-    if (copy) copy.style.opacity = `${1 - smooth(progress / .25)}`;
     // Independent transform properties preserve the image's load-time zoom.
     if (image) {
       image.style.translate = `${-rightProgress * 1.5}% 0`;
       image.style.scale = `${1 + rightProgress * .04}`;
     }
-    // Keep the opening quiet until there is room to read the arriving content.
-    const reveal = (element: HTMLElement, start: number, end: number, distance: number) => {
-      const amount = smooth((progress - start) / (end - start));
-      element.style.opacity = `${amount}`;
-      element.style.transform = `translate3d(0, ${(1 - amount) * distance}px, 0)`;
-    };
-    if (title) reveal(title, .58, .82, 12);
-    groups.forEach((group, index) => reveal(group, .66 + index * .025, .92 + index * .01, 18));
     hero.style.visibility = progress === 1 ? 'hidden' : 'visible';
     hero.style.pointerEvents = progress > 0 ? 'none' : '';
     hero.inert = progress > 0;
@@ -226,7 +214,7 @@ function startHeroTransition() {
     hero.style.removeProperty('visibility');
     hero.style.removeProperty('pointer-events');
     hero.inert = practical.inert = false;
-    for (const panel of [left, right, practical, copy, title, ...groups]) {
+    for (const panel of [left, right, practical]) {
       if (!panel) continue;
       panel.style.removeProperty('transform');
       panel.style.removeProperty('opacity');
@@ -245,8 +233,7 @@ function startHeroTransition() {
     scene.style.setProperty('--split-stage-height', `${stage.getBoundingClientRect().height}px`);
     update();
   };
-  // Layout offsets exclude the reveal transforms, so anchors land precisely
-  // even when their destination is still partway through its entrance.
+  // Layout offsets keep anchors independent of the moving hero panels.
   const offsetInStage = (target: HTMLElement) => {
     let offset = 0;
     let node: HTMLElement | null = target;
