@@ -16,6 +16,9 @@ const centreRegistration = !registrationClosed && event.registrationChannel === 
       <nav class="footer-nav" aria-label="Footernavigatie"><a href="#praktisch">Praktisch & deelname</a><a href="#verhaal">Ons verhaal</a><a href="#edities">Vorige edities</a><a href="#partners">Met dank aan</a></nav>
       <div class="footer-organization"><p>{event.organizerName}</p><address>{organization.registeredAddress.street}<br/>{organization.registeredAddress.city}</address><p class="footer-number">Ondernemingsnummer<br/>{organization.enterpriseNumber}</p>{(event.organizerContactEmail || event.phone) && <div class="footer-contact">{event.organizerContactEmail && <a href={`mailto:${event.organizerContactEmail}`}>{event.organizerContactEmail}</a>}{event.phone && <a href={`tel:${event.phone.replace(/\s/g, '')}`}>{event.phone}</a>}</div>}</div>
     </div>
-    <div class="footer-bottom"><p>© {event.year} Welzijnswerking Oostende</p><p class="maker-credit">Website door <a href="https://www.webaanzee.be/" target="_blank" rel="noopener noreferrer">Webaanzee</a></p></div>
+    <div class="footer-bottom">
+      <p>© {event.year} Welzijnswerking Oostende</p>
+      <p class="maker-credit"><span>Design &amp; development</span><a href="https://www.webaanzee.be/" target="_blank" rel="noopener noreferrer"><img src="/images/branding/webaanzee.webp" alt="Webaanzee" width="640" height="77" loading="lazy" decoding="async" /></a></p>
+    </div>
   </div>
 </footer>
