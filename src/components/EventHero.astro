@@ -13,6 +13,7 @@ const heroDate = new Intl.DateTimeFormat('nl-BE', { weekday: 'long', day: 'numer
 <section id="home" class="hero hero--invitation" aria-labelledby="hero-title">
   <div class="hero-invitation">
     <div class="hero-inner">
+      <div class="hero-copy">
       <h1 id="hero-title">{titleWords.map((word, index) => <Fragment>{index > 0 && ' '}<span class="hero-word"><span class="hero-word-text">{word}</span></span></Fragment>)}</h1>
       <p class="hero-intro">{event.intro}</p>
       {event.eligibility && <p class="hero-eligibility">{event.eligibility}</p>}
@@ -22,6 +23,7 @@ const heroDate = new Intl.DateTimeFormat('nl-BE', { weekday: 'long', day: 'numer
         <div><dt>Deelname</dt><dd>{price}<span class="hero-detail-note">Per persoon</span></dd></div>
       </dl>
       <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Ontdek hoe je inschrijft' : 'Praktische info & deelname')}{!ticket.url && <svg class="button-icon button-icon--forward" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M12 4l8 8-8 8"/></svg>}</a>
+      </div>
     </div>
     <picture class="hero-photo">
       <img src="/images/event/kursaal-zaal-v3-1717.webp" srcset="/images/event/kursaal-zaal-v3-640.webp 640w, /images/event/kursaal-zaal-v3-1200.webp 1200w, /images/event/kursaal-zaal-v3-1717.webp 1717w" sizes="(min-width: 1001px) max(55vw, 1200px), 100vw" width="1717" height="916" alt="Gasten aan lange, feestelijk gedekte tafels in de grote zaal van het Kursaal." loading="eager" fetchpriority="high" />

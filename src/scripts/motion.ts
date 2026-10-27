@@ -72,7 +72,19 @@ function finishWhenHidden(control: ReturnType<typeof move>) {
   void control.then(() => document.removeEventListener('visibilitychange', finish));
 }
 
+const heroEntrances = new Set<ReturnType<typeof move>>();
+function finishHeroEntrance() {
+  for (const control of heroEntrances) control.complete();
+  heroEntrances.clear();
+}
+
 function startHero() {
+  const entrance = (element: HTMLElement, frames: Parameters<typeof move>[1], options: Parameters<typeof move>[2]) => {
+    const control = move(element, frames, options);
+    heroEntrances.add(control);
+    void control.then(() => heroEntrances.delete(control));
+    return control;
+  };
   const play = () => {
     if (reducedMotion.matches || (location.hash && location.hash !== '#home') || scrollY > 32) return;
     const words = [...document.querySelectorAll<HTMLElement>('.hero-word-text')];
@@ -80,7 +92,7 @@ function startHero() {
     // Individual word masks follow natural wrapping on every screen size.
     words.forEach((word, index) => {
       word.style.willChange = 'transform, opacity';
-      const control = move(word, {
+      const control = entrance(word, {
         opacity: [.15, 1],
         transform: ['translateY(110%)', 'translateY(0)'],
       }, { duration: 1.08, delay: .14 + index * .085 });
@@ -89,7 +101,7 @@ function startHero() {
     });
     const intro = document.querySelector<HTMLElement>('.hero-intro');
     if (intro) {
-      const control = move(intro, {
+      const control = entrance(intro, {
         opacity: [.45, 1], transform: ['translateY(14px)', 'translateY(0)'],
       }, { duration: .8, delay: .32 });
       finishWhenHidden(control);
@@ -100,7 +112,7 @@ function startHero() {
       // A lazy/cold image must not use up its motion while the pixels are missing.
       void photo.decode().then(() => {
         if (reducedMotion.matches || document.hidden || scrollY > 32 || (location.hash && location.hash !== '#home')) return;
-        const control = move(photo, { transform: ['scale(1.045)', 'scale(1)'] }, { duration: 1.25 });
+        const control = entrance(photo, { transform: ['scale(1.045)', 'scale(1)'] }, { duration: 1.25 });
         finishWhenHidden(control);
         void control.then(() => clearMotion(photo));
       }).catch(() => {});
@@ -162,19 +174,42 @@ function startHeroTransition() {
   const right = hero?.querySelector<HTMLElement>('.hero-photo');
   const practical = stage?.querySelector<HTMLElement>('.practical');
   if (!scene || !stage || !hero || !invitation || !left || !right || !practical) return;
+  const copy = hero.querySelector<HTMLElement>('.hero-copy');
+  const image = right.querySelector<HTMLImageElement>('img');
+  const title = practical.querySelector<HTMLElement>('h2');
+  const groups = [...practical.querySelectorAll<HTMLElement>('.practical-composition, .agenda-note, .practical-details')];
+  const smooth = (value: number) => {
+    const t = Math.min(1, Math.max(0, value));
+    return t * t * (3 - 2 * t);
+  };
   let frame = 0;
   let travel = 0;
   let enabled = false;
   const update = () => {
     frame = 0;
     if (!enabled || document.body.classList.contains('menu-open')) return;
-    const progress = Math.min(1, Math.max(0, -scene.getBoundingClientRect().top / travel));
-    // Smooth starts and finishes, with the scroll position always authoritative.
-    const eased = progress * progress * (3 - 2 * progress);
-    left.style.transform = `translate3d(${-eased * 101}%, 0, 0)`;
-    right.style.transform = `translate3d(${eased * 101}%, 0, 0)`;
-    practical.style.transform = `translate3d(0, ${(1 - eased) * 28}px, 0)`;
-    practical.style.opacity = `${.7 + eased * .3}`;
+    const distance = -scene.getBoundingClientRect().top;
+    const progress = distance >= travel - .5 ? 1 : Math.min(1, Math.max(0, distance / travel));
+    // Left opens first; the room follows a fraction later and settles before release.
+    const leftProgress = smooth((progress - .02) / .86);
+    const rightProgress = smooth((progress - .10) / .86);
+    if (progress > 0) finishHeroEntrance();
+    left.style.transform = `translate3d(${-leftProgress * 101}%, 0, 0)`;
+    right.style.transform = `translate3d(${rightProgress * 101}%, 0, 0)`;
+    if (copy) copy.style.opacity = `${1 - smooth(progress / .25)}`;
+    // Independent transform properties preserve the image's load-time zoom.
+    if (image) {
+      image.style.translate = `${-rightProgress * 1.5}% 0`;
+      image.style.scale = `${1 + rightProgress * .04}`;
+    }
+    // Keep the opening quiet until there is room to read the arriving content.
+    const reveal = (element: HTMLElement, start: number, end: number, distance: number) => {
+      const amount = smooth((progress - start) / (end - start));
+      element.style.opacity = `${amount}`;
+      element.style.transform = `translate3d(0, ${(1 - amount) * distance}px, 0)`;
+    };
+    if (title) reveal(title, .58, .82, 12);
+    groups.forEach((group, index) => reveal(group, .66 + index * .025, .92 + index * .01, 18));
     hero.style.visibility = progress === 1 ? 'hidden' : 'visible';
     hero.style.pointerEvents = progress > 0 ? 'none' : '';
     hero.inert = progress > 0;
@@ -187,14 +222,18 @@ function startHeroTransition() {
     scene.removeAttribute('data-split-active');
     scene.style.removeProperty('--split-hero-height');
     scene.style.removeProperty('--split-travel');
+    scene.style.removeProperty('--split-stage-height');
     hero.style.removeProperty('visibility');
     hero.style.removeProperty('pointer-events');
     hero.inert = practical.inert = false;
-    for (const panel of [left, right, practical]) {
+    for (const panel of [left, right, practical, copy, title, ...groups]) {
+      if (!panel) continue;
       panel.style.removeProperty('transform');
       panel.style.removeProperty('opacity');
       panel.style.removeProperty('will-change');
     }
+    image?.style.removeProperty('translate');
+    image?.style.removeProperty('scale');
     // The stacked mobile composition remains readable in ordinary document flow.
     enabled = !reducedMotion.matches && matchMedia('(min-width: 1001px)').matches;
     if (!enabled) return;
@@ -206,13 +245,24 @@ function startHeroTransition() {
     scene.style.setProperty('--split-stage-height', `${stage.getBoundingClientRect().height}px`);
     update();
   };
+  // Layout offsets exclude the reveal transforms, so anchors land precisely
+  // even when their destination is still partway through its entrance.
+  const offsetInStage = (target: HTMLElement) => {
+    let offset = 0;
+    let node: HTMLElement | null = target;
+    while (node && node !== stage) {
+      offset += node.offsetTop;
+      node = node.offsetParent as HTMLElement | null;
+    }
+    return offset;
+  };
   const revealAnchor = () => {
     const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if (enabled && target === hero) {
       window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top, behavior: 'instant' });
       update();
     } else if (enabled && target && practical.contains(target)) {
-      window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, target.getBoundingClientRect().top - practical.getBoundingClientRect().top + practical.offsetTop - 24), behavior: 'instant' });
+      window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, offsetInStage(target) - 24), behavior: 'instant' });
       update();
     }
   };
@@ -231,7 +281,7 @@ function startHeroTransition() {
   practical.addEventListener('focusin', event => {
     if (!enabled || hero.style.visibility === 'hidden' || !(event.target instanceof HTMLElement)) return;
     const target = event.target;
-    window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, target.getBoundingClientRect().top - practical.getBoundingClientRect().top + practical.offsetTop - 120), behavior: 'instant' });
+    window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, offsetInStage(target) - 120), behavior: 'instant' });
     update();
   });
   window.addEventListener('scroll', schedule, { passive: true });
