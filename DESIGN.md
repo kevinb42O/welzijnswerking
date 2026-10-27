@@ -439,3 +439,51 @@ De gebruiker vraagt expliciet om meer 3D en schaduw. De gevulde acties zijn daar
 ### Subtielere knopschaduw — 21 oktober 2026
 
 Op verzoek van de gebruiker vervangt één zachte slagschaduw de gelaagde contactschaduw en binnenranden van blauwe en gouden acties: `0 4px 12px rgba(20, 35, 75, 0.16)`. Het bestaande kleurverloop blijft behouden. Hover gebruikt `0 5px 14px rgba(20, 35, 75, 0.18)` en 1px lift; indrukken gebruikt `0 2px 5px rgba(20, 35, 75, 0.12)`. Dit vervangt de eerdere zwaardere 3D-schaduwspecificatie.
+
+
+## Lichte uitnodiging met echte editie-foto — 27 oktober 2026
+
+De gebruiker heeft de gouden serifhero met kaarslicht als te AI-achtig afgewezen en gekozen voor een echte foto van de vorige editie, binnen de lichte Oostendse huisstijl. De hero toont nu blauwe Cooper Hewitt Semibold-koppen (40–56px), de datum onder de titel, leesbare begeleidende tekst (18px) en de bestaande blauwe primaire actie op warm papier. Tekst en foto staan apart; de foto vermeldt zichtbaar Kerstavond 2025 en een gelinkte bron. Vanaf 768px staan tekst en foto naast elkaar. De zandkleurige feitenstrook heeft drie kolommen en stapelt tot en met 600px. De hero heeft inhoudsgedreven hoogte; fotografie gebruikt hier geen parallax. De bestaande woordentree, sleeanimatie en reduced-motion-afhandeling blijven behouden.
+
+Dit vervangt uitsluitend de eerdere hero-aanwijzingen over goud, serif, donkere tekstoverlays, gouden acties en schermvullende hoogte, inclusief de eerdere driekolomsbalk op mobiel. De overige visuele wereld en gedeelde knopafwerking blijven gelden. Bronnen: `src/components/EventHero.astro`, `src/styles/campaign.css`, `src/styles/buttons.css` en `src/scripts/motion.ts`; foto: `public/images/event/2025-facebook-17-*.webp`. Frontmatter en `.impeccable/design.json` zijn voor deze lokale wijziging niet herschreven.
+
+Oplevercontrole: build en 11 tests geslaagd; geen hero-overtredingen in axe op 390 en 1440px; geen horizontale overflow op 320, 390, 768, 1001, 1440 en 2048px. De inschrijflink is gecontroleerd met en zonder JavaScript en met reduced motion. Review: opleveren, geen materiële bevindingen. Visueel bewijs staat in `.impeccable/review/`.
+
+
+## Schermvullende echte fotohero — 27 oktober 2026
+
+De gebruiker heeft de gesplitste uitnodiging hierboven afgewezen en vraagt een schermvullende, randloze echte foto met een egaal warm donker overlay, een grote moderne titel links en royale regelafstand. De hero gebruikt nu de zaalopname `2025-facebook-25` als volledige achtergrond, een uniforme verduistering van 66% en Cooper Hewitt Medium (48–96px, regelhoogte 1.14). Eenvoudige feitentekst en een lichte actie begeleiden de titel. De minimumhoogte volgt de viewport minus de header. Er zijn geen fotokader, zichtbaar bijschrift, iconenstrook of aanvullende decoraties; de voormalige feitenbalk en slee zijn hier verwijderd. Het fotojaar blijft in de alt-tekst herkenbaar; bron- en historische context blijven elders op de pagina beschikbaar. De woordentree blijft behouden en parallax blijft uitgeschakeld.
+
+Deze expliciete lokale keuze vervangt de gesplitste hero-aanwijzingen uit de vorige sectie, inclusief het losse fotovlak, zichtbare bijschrift, blauwe heroactie en zandkleurige feitenstrook. Frontmatter, sidecar en de overige visuele wereld blijven ongewijzigd. Implementatie: `src/components/EventHero.astro`, `src/styles/campaign.css` en `src/styles/buttons.css`.
+
+Build, Astro-controle en 11 tests slagen. Axe meldt geen hero-overtredingen op 390 en 1440px; geen horizontale overflow op 320, 390, 768, 1440 en 2048px. De actie is op alle gecontroleerde maten en zonder JavaScript getest. De visuele review is nog in uitvoering.
+
+
+### Aangeleverde hero-foto — 27 oktober 2026
+
+Op expliciet verzoek vervangt de door de gebruiker aangeleverde brede zaalafbeelding het vorige hero-beeld. Origineel: `assets/aangeleverd/kursaal-zaal-hero-2026-10-27.png` (1919×820); responsive WebP-bestanden: `public/images/event/kursaal-zaal-aangeleverd-{640,1200,1920}.webp`. De full-bleed compositie en egale overlay blijven behouden. De beschrijvende alt-tekst koppelt geen onbevestigd jaartal aan deze aangeleverde versie.
+
+
+### Alternatief sfeerbeeld in de hero — 27 oktober 2026
+
+Op verzoek probeert de hero de tweede aangeleverde afbeelding, `kursaal-kerstsfeer-aangeleverd-*`, met warme verlichting, kerstbomen en lange tafels. Compositie, egale overlay, typografie en bediening blijven gelijk om de beelden te kunnen vergelijken. Het beeld krijgt geen onbevestigd editiejaar of documentaire claim.
+
+
+## Ivoren uitnodiging met kerstbeeld rechts — 27 oktober 2026
+
+De nieuwste expliciete gebruikerskeuze vervangt de schermvullende fotohero hierboven: links warm ivoor (#f7f1e5) met de emotionele titel “Samen is kerst zoveel mooier.”, rechts het laatst aangeleverde warme kerstbeeld. Marineblauwe koppen en knoppen, een dunne gouden lijn (#c5a25b) en rustige leesbaarheid voor 50-plussers bepalen deze lokale uitvoering. De titel gebruikt Cooper Hewitt Semibold (40–64px, regelhoogte 1.16), de begeleidende tekst 18px. Datum, locatie en prijs staan als één groep bijeen: drie kolommen op desktop, twee op mobiel met de locatie eronder.
+
+Vanaf 1001px staan tekst en beeld in gelijke kolommen met minimaal 680px hoogte; vanaf 1500px is de verhouding 0.95/1.05. Daaronder stapelen ze. Het rechterbeeld vult zijn vlak tot aan de randen, zonder afgeronde kaart, bijschrift of overlay. Het aangeleverde kerstbeeld blijft behouden via de bestaande WebP; er is geen nieuwe beeldbewerking uitgevoerd. Dit vervangt de voorgaande fullbleed-richting, inclusief het donkere overlay, de lichte actie en viewportgebonden minimumhoogte. De overige visuele wereld, frontmatter en sidecar blijven ongewijzigd. Bronnen: `src/components/EventHero.astro`, `src/styles/campaign.css`, `src/styles/buttons.css` en de centrale evenementtitel in `data/inhoud_2026.json`.
+
+Build, Astro-controle en 11 tests slagen. Geen horizontale overflow op 320, 390, 768, 1001, 1440 en 2048px; axe meldt geen hero-overtredingen op 390 en 1440px. Screenshots staan in `qa/hero-ivory-2026-10-27/`. De onafhankelijke visuele review geeft disposition ship voor deze hero, zonder materiële bevindingen. De inschrijflink werkt op alle zes geteste breedtes en zonder JavaScript.
+
+
+### Fotowissel binnen de ivoren hero — 27 oktober 2026
+
+Het nieuwste door de gebruiker gekozen zaalbeeld (`kursaal-zaal-v3-*`) vervangt het vorige kerst-sfeerbeeld. De ivoren linkerhelft, titel, feiten, blauwe actie en beeldverdeling blijven ongewijzigd.
+
+## Openschuivende hero naar praktische informatie — 27 oktober 2026
+
+Op verzoek staat praktische informatie direct na de hero en vóór “Voor wie?”. Vanaf 1001px vormen de bestaande ivoren teksthelft en zaalopname twee panelen boven de bestaande praktische inhoud. Een sticky scène koppelt hun tegengestelde horizontale verplaatsing aan 1,1 viewport scrollafstand; omhoog scrollen sluit de panelen weer. De praktische inhoud komt daarbij licht vanuit de diepte naar voren en scrolt na het openen normaal verder, inclusief alle aanvullende gegevens. De navigatie volgt de nieuwe inhoudsvolgorde.
+
+Op gestapelde schermen, bij reduced motion en zonder JavaScript blijven hero en praktische informatie in gewone documentvolgorde staan. Er worden geen wiel- of aanraakbewegingen onderschept. Ankerlinks naar praktische informatie en inschrijven slaan de overgang over; toetsenbordfocus maakt de praktische bediening bereikbaar. De scène gebruikt compositortransforms en alleen op aanvraag een animation frame. Implementatie: `HeroTransition.astro`, `motion.ts` en `motion.css`. Browsercontroles en visuele fasen staan in `qa/hero-split-2026-10-27/`.

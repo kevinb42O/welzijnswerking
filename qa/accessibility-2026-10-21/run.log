@@ -1,0 +1,1201 @@
+{
+  "states": [
+    {
+      "engine": "chromium",
+      "state": "desktop",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "engine": "chromium",
+      "state": "width-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "width-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "width-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "mobile-menu",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".mobile-menu-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "faq-open",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "all-centres-all-hours",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "map-open",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              "div[title=\"9. ’t Kasteeltje, Zandvoorde\"]"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "map-selection-kasteeltje",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              "div[title=\"1. De Boeie, Centrum\"]"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "photo-viewer",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".lightbox-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "text-200-width-320",
+      "width": 320,
+      "scrollWidth": 417,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "menu-text-200",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".mobile-menu-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "map-text-200",
+      "width": 320,
+      "scrollWidth": 417,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              "div[title=\"9. ’t Kasteeltje, Zandvoorde\"]"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "text-spacing",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "state": "forced-colors",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".button[href$=\"#ontmoetingscentra\"]"
+            ],
+            [
+              "a[aria-label=\"Bel De Boeie: 059 25 91 07\"] > span"
+            ],
+            [
+              ".label-more"
+            ]
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "desktop",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "engine": "webkit",
+      "state": "width-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "width-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "width-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "mobile-menu",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".mobile-menu-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "faq-open",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "all-centres-all-hours",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "map-open",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              "div[title=\"9. ’t Kasteeltje, Zandvoorde\"]"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "map-selection-kasteeltje",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              "div[title=\"1. De Boeie, Centrum\"]"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "photo-viewer",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".lightbox-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "text-200-width-320",
+      "width": 320,
+      "scrollWidth": 417,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "menu-text-200",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".mobile-menu-close"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "map-text-200",
+      "width": 320,
+      "scrollWidth": 417,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ],
+            [
+              "a[data-centre-photo-source=\"\"]"
+            ],
+            [
+              ".is-selected"
+            ],
+            [
+              "div[title=\"2. Oud Hospitaal, Centrum\"]"
+            ],
+            [
+              "div[title=\"3. Schaperye, Konterdam\"]"
+            ],
+            [
+              "div[title=\"4. ’t Viooltje, Mariakerke\"]"
+            ],
+            [
+              "div[title=\"5. Ter Yde, Raversijde\"]"
+            ],
+            [
+              "div[title=\"6. De Blomme, Stene\"]"
+            ],
+            [
+              "div[title=\"7. De Ballon, Vuurtorenwijk\"]"
+            ],
+            [
+              "div[title=\"8. De Schelpe, Westerkwartier\"]"
+            ],
+            [
+              "div[title=\"9. ’t Kasteeltje, Zandvoorde\"]"
+            ],
+            [
+              ".centre-map-route"
+            ],
+            [
+              "a[data-map-info=\"\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "text-spacing",
+      "width": 320,
+      "scrollWidth": 320,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "state": "forced-colors",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "nodes": [
+            [
+              ".menu-toggle"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "structure": {
+        "title": "Kerstfeest 2026 voor alleenstaanden in Oostende | Welzijnswerking",
+        "lang": "nl-BE",
+        "headings": [
+          {
+            "level": "H2",
+            "text": "Navigatie"
+          },
+          {
+            "level": "H1",
+            "text": "Vier kerstavondsamenin het Kursaal."
+          },
+          {
+            "level": "H2",
+            "text": "Voor wie is het kerstfeest?"
+          },
+          {
+            "level": "H2",
+            "text": "Praktische informatie"
+          },
+          {
+            "level": "H3",
+            "text": "Inschrijven via een ontmoetingscentrum"
+          },
+          {
+            "level": "H3",
+            "text": "Wanneer"
+          },
+          {
+            "level": "H3",
+            "text": "Waar"
+          },
+          {
+            "level": "H3",
+            "text": "Maaltijd"
+          },
+          {
+            "level": "H3",
+            "text": "Deelname"
+          },
+          {
+            "level": "H3",
+            "text": "Menu en dranken"
+          },
+          {
+            "level": "H3",
+            "text": "Tijdens je bezoek"
+          },
+          {
+            "level": "H2",
+            "text": "Een ontmoetingscentrum dicht bij jou."
+          },
+          {
+            "level": "H3",
+            "text": "In Centrum"
+          },
+          {
+            "level": "H3",
+            "text": "Negen plekken om binnen te stappen"
+          },
+          {
+            "level": "H4",
+            "text": "De Boeie"
+          },
+          {
+            "level": "H2",
+            "text": "Kerstavond 2025 in beeld"
+          },
+          {
+            "level": "H3",
+            "text": "Vrijwilligers in de keuken"
+          },
+          {
+            "level": "H3",
+            "text": "Gasten aan tafel"
+          },
+          {
+            "level": "H3",
+            "text": "Desserts afwerken"
+          },
+          {
+            "level": "H3",
+            "text": "Samen aan tafel"
+          },
+          {
+            "level": "H3",
+            "text": "Een feestelijk dessert"
+          },
+          {
+            "level": "H3",
+            "text": "Samen vieren in het Kursaal"
+          },
+          {
+            "level": "H2",
+            "text": "Over Welzijnswerking"
+          },
+          {
+            "level": "H3",
+            "text": "Kursaal Oostende"
+          },
+          {
+            "level": "H3",
+            "text": "De organisatie in 2025"
+          },
+          {
+            "level": "H2",
+            "text": "Vorige edities"
+          },
+          {
+            "level": "H3",
+            "text": "Kerst in de namiddag."
+          },
+          {
+            "level": "H3",
+            "text": "Terug op kerstavond."
+          },
+          {
+            "level": "H2",
+            "text": "Met dank aan onze partners van 2025"
+          },
+          {
+            "level": "H3",
+            "text": "Keukenpartners"
+          },
+          {
+            "level": "H4",
+            "text": "Revi Food"
+          },
+          {
+            "level": "H4",
+            "text": "Gastrobar Sam"
+          },
+          {
+            "level": "H4",
+            "text": "Restaurant North"
+          },
+          {
+            "level": "H4",
+            "text": "Rederij Desmit"
+          },
+          {
+            "level": "H3",
+            "text": "Achter de schermen"
+          },
+          {
+            "level": "H4",
+            "text": "Stad Oostende"
+          },
+          {
+            "level": "H4",
+            "text": "GO! Vesaliusinstituut"
+          },
+          {
+            "level": "H4",
+            "text": "Kursaal Oostende"
+          }
+        ],
+        "images": [],
+        "anchors": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "skip": true,
+      "afterSkip": "<a class=\"button\" href=\"#inschrijven\">Ontdek hoe je inschrijft<svg class=\"button-icon button-icon--forward\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><pa"
+    },
+    {
+      "engine": "chromium",
+      "menuFocus": "mobile-menu-close",
+      "menuTrapBack": "button mobile-nav-participate",
+      "menuRestored": true
+    },
+    {
+      "engine": "chromium",
+      "mapSpace": "De Boeie",
+      "mapButtons": [
+        {
+          "role": "button",
+          "label": "Toon De Boeie, Centrum",
+          "pressed": "true",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Oud Hospitaal, Centrum",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Schaperye, Konterdam",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon ’t Viooltje, Mariakerke",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Ter Yde, Raversijde",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Blomme, Stene",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Ballon, Vuurtorenwijk",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Schelpe, Westerkwartier",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon ’t Kasteeltje, Zandvoorde",
+          "pressed": "false",
+          "tabindex": "0"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "mapReturn": false
+    },
+    {
+      "engine": "chromium",
+      "viewerTrap": "Volgende foto",
+      "viewerReturn": true
+    },
+    {
+      "engine": "chromium",
+      "nojs": {
+        "centres": 9,
+        "nav": true,
+        "photos": 7
+      }
+    },
+    {
+      "engine": "webkit",
+      "structure": {
+        "title": "Kerstfeest 2026 voor alleenstaanden in Oostende | Welzijnswerking",
+        "lang": "nl-BE",
+        "headings": [
+          {
+            "level": "H2",
+            "text": "Navigatie"
+          },
+          {
+            "level": "H1",
+            "text": "Vier kerstavondsamenin het Kursaal."
+          },
+          {
+            "level": "H2",
+            "text": "Voor wie is het kerstfeest?"
+          },
+          {
+            "level": "H2",
+            "text": "Praktische informatie"
+          },
+          {
+            "level": "H3",
+            "text": "Inschrijven via een ontmoetingscentrum"
+          },
+          {
+            "level": "H3",
+            "text": "Wanneer"
+          },
+          {
+            "level": "H3",
+            "text": "Waar"
+          },
+          {
+            "level": "H3",
+            "text": "Maaltijd"
+          },
+          {
+            "level": "H3",
+            "text": "Deelname"
+          },
+          {
+            "level": "H3",
+            "text": "Menu en dranken"
+          },
+          {
+            "level": "H3",
+            "text": "Tijdens je bezoek"
+          },
+          {
+            "level": "H2",
+            "text": "Een ontmoetingscentrum dicht bij jou."
+          },
+          {
+            "level": "H3",
+            "text": "In Centrum"
+          },
+          {
+            "level": "H3",
+            "text": "Negen plekken om binnen te stappen"
+          },
+          {
+            "level": "H4",
+            "text": "De Boeie"
+          },
+          {
+            "level": "H2",
+            "text": "Kerstavond 2025 in beeld"
+          },
+          {
+            "level": "H3",
+            "text": "Vrijwilligers in de keuken"
+          },
+          {
+            "level": "H3",
+            "text": "Gasten aan tafel"
+          },
+          {
+            "level": "H3",
+            "text": "Desserts afwerken"
+          },
+          {
+            "level": "H3",
+            "text": "Samen aan tafel"
+          },
+          {
+            "level": "H3",
+            "text": "Een feestelijk dessert"
+          },
+          {
+            "level": "H3",
+            "text": "Samen vieren in het Kursaal"
+          },
+          {
+            "level": "H2",
+            "text": "Over Welzijnswerking"
+          },
+          {
+            "level": "H3",
+            "text": "Kursaal Oostende"
+          },
+          {
+            "level": "H3",
+            "text": "De organisatie in 2025"
+          },
+          {
+            "level": "H2",
+            "text": "Vorige edities"
+          },
+          {
+            "level": "H3",
+            "text": "Kerst in de namiddag."
+          },
+          {
+            "level": "H3",
+            "text": "Terug op kerstavond."
+          },
+          {
+            "level": "H2",
+            "text": "Met dank aan onze partners van 2025"
+          },
+          {
+            "level": "H3",
+            "text": "Keukenpartners"
+          },
+          {
+            "level": "H4",
+            "text": "Revi Food"
+          },
+          {
+            "level": "H4",
+            "text": "Gastrobar Sam"
+          },
+          {
+            "level": "H4",
+            "text": "Restaurant North"
+          },
+          {
+            "level": "H4",
+            "text": "Rederij Desmit"
+          },
+          {
+            "level": "H3",
+            "text": "Achter de schermen"
+          },
+          {
+            "level": "H4",
+            "text": "Stad Oostende"
+          },
+          {
+            "level": "H4",
+            "text": "GO! Vesaliusinstituut"
+          },
+          {
+            "level": "H4",
+            "text": "Kursaal Oostende"
+          }
+        ],
+        "images": [],
+        "anchors": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "skip": false,
+      "afterSkip": "<summary data-astro-cid-tuaqzpeu=\"\">Hoe schrijf ik me in?<span class=\"faq-indicator\" aria-hidden=\"true\" data-astro-cid-tuaqzpeu=\"\"></span></summary>"
+    },
+    {
+      "engine": "webkit",
+      "menuFocus": "mobile-menu-close",
+      "menuTrapBack": "button mobile-nav-participate",
+      "menuRestored": true
+    },
+    {
+      "engine": "webkit",
+      "mapSpace": "De Boeie",
+      "mapButtons": [
+        {
+          "role": "button",
+          "label": "Toon De Boeie, Centrum",
+          "pressed": "true",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Oud Hospitaal, Centrum",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Schaperye, Konterdam",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon ’t Viooltje, Mariakerke",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon Ter Yde, Raversijde",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Blomme, Stene",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Ballon, Vuurtorenwijk",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon De Schelpe, Westerkwartier",
+          "pressed": "false",
+          "tabindex": "0"
+        },
+        {
+          "role": "button",
+          "label": "Toon ’t Kasteeltje, Zandvoorde",
+          "pressed": "false",
+          "tabindex": "0"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "mapReturn": true
+    },
+    {
+      "engine": "webkit",
+      "viewerTrap": "Volgende foto",
+      "viewerReturn": true
+    },
+    {
+      "engine": "webkit",
+      "nojs": {
+        "centres": 9,
+        "nav": true,
+        "photos": 7
+      }
+    }
+  ],
+  "errors": []
+}

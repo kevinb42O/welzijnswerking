@@ -6,44 +6,25 @@ const event = import.meta.env.DEV && Astro.props.eventOverride ? Astro.props.eve
 const ticket = ticketState(event.ticketStatus, event.ticketsUrl);
 const registrationClosed = event.ticketStatus === 'sold_out' || event.ticketStatus === 'closed';
 const hasRegistrationInfo = Boolean(event.registrationMethod) && !registrationClosed;
-const titleLines = event.title.split('\n');
-const factsDate = new Intl.DateTimeFormat('nl-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: event.timezone }).format(new Date(`${event.dateISO}T12:00:00Z`));
+const titleWords = event.title.split(/\s+/);
 const heroHours = event.startTime?.replace(/ uur$/, '') + (event.endTime ? ` – ${event.endTime.replace(/ uur$/, '')} uur` : ' uur');
 const heroDate = new Intl.DateTimeFormat('nl-BE', { weekday: 'long', day: 'numeric', month: 'long', timeZone: event.timezone }).format(new Date(`${event.dateISO}T12:00:00Z`));
 ---
-<section id="home" class="hero" aria-labelledby="hero-title">
+<section id="home" class="hero hero--invitation" aria-labelledby="hero-title">
   <div class="hero-invitation">
-    <picture class="hero-photo">
-      <img src="/images/editorial/hero-kaarslicht-1200.webp" srcset="/images/editorial/hero-kaarslicht-640.webp 640w, /images/editorial/hero-kaarslicht-1200.webp 1200w, /images/editorial/hero-kaarslicht-1800.webp 1800w, /images/editorial/hero-kaarslicht-2200.webp 2200w" sizes="100vw" width="2200" height="1460" alt="Sfeerbeeld van een feestelijk gedekte kersttafel, met kaarslicht, dennengroen en glazen." loading="eager" fetchpriority="high" />
-    </picture>
-    <div class="container hero-inner">
-      <p class="hero-label"><time datetime={event.dateISO}>{heroDate}</time> <span aria-hidden="true">·</span> {event.placeName}</p>
-      <h1 id="hero-title">{titleLines.map((line, index) => <span class:list={{'hero-title-invitation': true, 'hero-title-last': index === titleLines.length - 1, 'hero-title-emphasis': line === 'samen'}}><span class="hero-line-text">{line.split(/\s+/).map((word, wordIndex) => <Fragment>{wordIndex > 0 && ' '}<span class:list={{'hero-word': true, 'hero-word-emphasis': word === 'samen'}}><span class="hero-word-text">{word}</span></span></Fragment>)}</span></span>)}</h1>
+    <div class="hero-inner">
+      <h1 id="hero-title">{titleWords.map((word, index) => <Fragment>{index > 0 && ' '}<span class="hero-word"><span class="hero-word-text">{word}</span></span></Fragment>)}</h1>
       <p class="hero-intro">{event.intro}</p>
-      {event.eligibility && <p class="hero-eligibility"><svg viewBox="0 0 32 28" fill="currentColor" aria-hidden="true"><circle cx="10" cy="7" r="5"/><circle cx="23" cy="9" r="4"/><path d="M0 26v-3a10 10 0 0 1 20 0v3Zm23 0v-3a13 13 0 0 0-3-8 8 8 0 0 1 12 7v4Z"/></svg><span>{event.eligibility}</span></p>}
+      {event.eligibility && <p class="hero-eligibility">{event.eligibility}</p>}
+      <dl class="hero-details">
+        <div><dt>Wanneer</dt><dd><time datetime={event.dateISO}>{heroDate} {event.year}</time>{event.startTime && <span class="hero-detail-note">{heroHours}</span>}</dd></div>
+        <div><dt>Waar</dt><dd>{event.placeName}<span class="hero-detail-note">Oostende</span></dd></div>
+        <div><dt>Deelname</dt><dd>{price}<span class="hero-detail-note">Per persoon</span></dd></div>
+      </dl>
       <a class="button" href={ticket.url || (hasRegistrationInfo ? '#inschrijven' : '#praktisch')} {...(ticket.url ? {target:'_blank',rel:'noopener noreferrer'} : {})}>{ticket.url ? ticket.label : (hasRegistrationInfo ? 'Ontdek hoe je inschrijft' : 'Praktische info & deelname')}{!ticket.url && <svg class="button-icon button-icon--forward" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M12 4l8 8-8 8"/></svg>}</a>
     </div>
-  </div>
-  <div class="hero-bottom">
-    <div class="facts-sleigh-scene" hidden aria-hidden="true">
-      <svg class="facts-towline" viewBox="0 0 64 24" fill="none">
-        <path class="facts-cord" /><path class="facts-cord-light" /><path class="facts-hitch" />
-      </svg>
-      <div class="facts-sleigh"></div>
-    </div>
-    <dl class="container hero-facts">
-      <div class="hero-date">
-        <dt><svg class="hero-fact-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="22" height="24" rx="2"/><path d="M10 2v6M22 2v6M5 12h22"/><path class="hero-fact-accent" d="M10 17h.01M16 17h.01M22 17h.01M10 22h.01M16 22h.01M22 22h.01"/></svg><span class="hero-fact-label">Datum en uur</span></dt>
-        <dd><time datetime={event.dateISO}>{factsDate}</time>{event.startTime && <span class="hero-fact-detail hero-hours">{heroHours}</span>}</dd>
-      </div>
-      <div class="hero-location">
-        <dt><svg class="hero-fact-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27 13c0 8-11 16-11 16S5 21 5 13a11 11 0 0 1 22 0Z"/><circle class="hero-fact-accent" cx="16" cy="13" r="4"/></svg><span class="hero-fact-label">Locatie</span></dt>
-        <dd>{event.placeName}<span class="hero-fact-detail">Oostende</span></dd>
-      </div>
-      <div class="hero-price">
-        <dt><svg class="hero-fact-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h24a1 1 0 0 1 1 1v5a4 4 0 0 0 0 8v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5a4 4 0 0 0 0-8V7a1 1 0 0 1 1-1Z"/><path class="hero-fact-accent" d="M18 7v3M18 14v4M18 22v3"/></svg><span class="hero-fact-label">Prijs</span></dt>
-        <dd>{price}<span class="hero-fact-detail">Per persoon</span></dd>
-      </div>
-    </dl>
+    <picture class="hero-photo">
+      <img src="/images/event/kursaal-zaal-v3-1717.webp" srcset="/images/event/kursaal-zaal-v3-640.webp 640w, /images/event/kursaal-zaal-v3-1200.webp 1200w, /images/event/kursaal-zaal-v3-1717.webp 1717w" sizes="(min-width: 1001px) max(55vw, 1200px), 100vw" width="1717" height="916" alt="Gasten aan lange, feestelijk gedekte tafels in de grote zaal van het Kursaal." loading="eager" fetchpriority="high" />
+    </picture>
   </div>
 </section>

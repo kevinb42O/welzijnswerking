@@ -110,3 +110,27 @@ Bronnen, makers, licenties, bewerkingen en bestandsmetadata staan in `assets/ext
 De fotografische/filmvariant uit hoofdstuk 7 is verworpen. Op de actieve pagina staan geen video, mediabediening of Nicole Michalou-tafelbeelden meer. Het publieke MP4-bestand is verwijderd; de onbewerkte acquisitie blijft alleen in het onderzoeksarchief. De foto's worden niet meer gerenderd.
 
 De hero gebruikt een getekende SVG-kandelaar (`src/components/CandleDrawing.astro`), met eenmalige lijn- en vlamanimatie van maximaal 4,4 seconden. Er is geen ImageGen of andere beeldgeneratiedienst gebruikt. De echte CC0-locatiefoto van het Kursaal uit 2025 blijft behouden met zichtbare bron/datering. De footercredits noemen alleen het daadwerkelijk gebruikte externe beeld.
+
+
+## Vervangende locatiefoto — 27 oktober 2026
+
+`public/images/editorial/kursaal-zeedijk-{640,1000,1600}.webp` vervangt de zachte avondfoto in “Over Welzijnswerking”. Bron: [Oostende Casino R02.jpg](https://commons.wikimedia.org/wiki/File:Oostende_Casino_R02.jpg), Marc Ryckaert, 19 november 2016, origineel 4810 × 3343 px. Licentie: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Afgeleide beelden behouden deze licentie. Bewerkingen: uitsnede tot 3:2, verkleining en WebP-compressie. Origineel: `assets/external-originals/kursaal-zeedijk-marc-ryckaert-2016.jpg`. Zichtbare naamsvermelding, bron, licentie en uitsnedevermelding staan bij de foto.
+
+
+## Met AI verbeterde originele avondfoto — 27 oktober 2026
+
+Op gebruikersverzoek vervangt `public/images/editorial/kursaal-avond-verbeterd-{640,1000,1536}.webp` de hierboven genoemde daglichtfoto in de sectie Over Welzijnswerking. Met de ingebouwde Imagegen-tool gegenereerd vanuit de oorspronkelijke foto van Karelde (2025), [Casino-Kurzaal Oostende.jpg](https://commons.wikimedia.org/wiki/File:Casino-Kurzaal_Oostende.jpg), CC0. AI-bewerking: scherpte en details gereconstrueerd, kleurzweem en lichtbloei verminderd, perspectief en uitsnede verfijnd. Het resultaat is geen ongewijzigde documentaire foto; het zichtbare bijschrift vermeldt de AI-bewerking. Gegenereerde master: `assets/generated/kursaal-avond-verbeterd.png`.
+
+### Hero: aangeleverde zaalafbeelding — 27 oktober 2026
+
+De gebruiker leverde deze afbeelding in de chat aan met de expliciete instructie ze als hero te gebruiken. Het origineel is bewaard als `assets/aangeleverd/kursaal-zaal-hero-2026-10-27.png` (1919×820). De website gebruikt uitsluitend verkleinde WebP-versies onder `public/images/event/kursaal-zaal-aangeleverd-*.webp`; er is geen nieuwe beeldinhoud gegenereerd. Fotograaf, bewerkingshistoriek en editiejaar van deze aangeleverde versie zijn niet afzonderlijk bevestigd. De alt-tekst beschrijft daarom alleen het zichtbare zaalbeeld.
+
+
+### Alternatieve hero met kerstsfeer — 27 oktober 2026
+
+Door de gebruiker aangeleverd met de expliciete vraag dit beeld te proberen. Origineel: `assets/aangeleverd/kursaal-kerstsfeer-hero-2026-10-27.png` (1672×941); WebP-varianten: `public/images/event/kursaal-kerstsfeer-aangeleverd-{640,1200,1672}.webp`. Herkomst, eventuele beeldbewerking en editiejaar zijn niet bevestigd; het beeld wordt daarom in de alt-tekst als sfeerbeeld beschreven. Alleen formaatconversie en verkleining uitgevoerd. De vorige aangeleverde versie blijft bewaard voor vergelijking.
+
+
+### Hero zaalbeeld v3 — 27 oktober 2026
+
+De gebruiker vraagt expliciet het nieuwste aangeleverde zaalbeeld toe te passen. Origineel: `assets/aangeleverd/kursaal-zaal-hero-v3-2026-10-27.png` (1717×916); website: `public/images/event/kursaal-zaal-v3-{640,1200,1717}.webp`. Alleen verkleining en formaatconversie; fotograaf, eventuele eerdere bewerking en editiejaar zijn niet afzonderlijk bevestigd. De alt-tekst beschrijft het zichtbare beeld zonder jaartal.

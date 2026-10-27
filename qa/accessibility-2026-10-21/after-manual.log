@@ -1,0 +1,390 @@
+[
+  {
+    "engine": "chromium",
+    "skipExplicit": "<a class=\"button\" href=\"#inschrijven\">Ontdek hoe je inschrijft<svg class=\"button-icon button-icon--forward\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"cu",
+    "h1": "- heading \"Vier kerstavond samen in het Kursaal.\" [level=1]"
+  },
+  {
+    "engine": "chromium",
+    "spaceSelect": "’t Viooltje"
+  },
+  {
+    "engine": "chromium",
+    "spaceAfterZoom": "De Blomme"
+  },
+  {
+    "engine": "chromium",
+    "mapFocusAfterWait": true
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "height": 256,
+    "overflow": false,
+    "smallTargets": [
+      {
+        "text": "Welzijnswerking Oostende / Facebook",
+        "cls": "",
+        "width": 228.21875,
+        "height": 22.390625
+      },
+      {
+        "text": "CC0",
+        "cls": "",
+        "width": 25.703125,
+        "height": 16
+      },
+      {
+        "text": "Foto: EFO / KW",
+        "cls": "",
+        "width": 87.375,
+        "height": 16
+      },
+      {
+        "text": "Bekijk de praktische informatie.",
+        "cls": "",
+        "width": 202.46875,
+        "height": 18
+      },
+      {
+        "text": "Webaanzee",
+        "cls": "",
+        "width": 60.46875,
+        "height": 15
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "viewer": [
+      320,
+      256
+    ],
+    "geometry": {
+      "client": 232,
+      "scroll": 403,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 76.59375
+        },
+        {
+          "text": "Vorige",
+          "top": 350.59375,
+          "bottom": 399.1875
+        },
+        {
+          "text": "Volgende",
+          "top": 350.59375,
+          "bottom": 399.1875
+        }
+      ],
+      "stageHeight": 128
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "smallTargets": [
+      {
+        "text": "Welzijnswerking Oostende / Facebook",
+        "cls": "",
+        "width": 228.21875,
+        "height": 22.390625
+      },
+      {
+        "text": "Wikimedia Commons",
+        "cls": "",
+        "width": 126.109375,
+        "height": 16
+      },
+      {
+        "text": "CC0",
+        "cls": "",
+        "width": 25.703125,
+        "height": 16
+      },
+      {
+        "text": "Foto: EFO / KW",
+        "cls": "",
+        "width": 87.375,
+        "height": 16
+      },
+      {
+        "text": "Webaanzee",
+        "cls": "",
+        "width": 60.46875,
+        "height": 15
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "viewer": [
+      390,
+      844
+    ],
+    "geometry": {
+      "client": 820,
+      "scroll": 820,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 76.59375
+        },
+        {
+          "text": "Vorige",
+          "top": 767.40625,
+          "bottom": 816
+        },
+        {
+          "text": "Volgende",
+          "top": 767.40625,
+          "bottom": 816
+        }
+      ],
+      "stageHeight": 568.8125
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "height": 900,
+    "overflow": false,
+    "smallTargets": []
+  },
+  {
+    "engine": "chromium",
+    "viewer": [
+      1280,
+      900
+    ],
+    "geometry": {
+      "client": 876,
+      "scroll": 876,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 107.1875
+        },
+        {
+          "text": "Vorige",
+          "top": 792.8125,
+          "bottom": 872
+        },
+        {
+          "text": "Volgende",
+          "top": 792.8125,
+          "bottom": 872
+        }
+      ],
+      "stageHeight": 531.625
+    }
+  },
+  {
+    "engine": "chromium",
+    "animationAt5seconds": "playing"
+  },
+  {
+    "engine": "chromium",
+    "liveReducedMotion": "done"
+  },
+  {
+    "engine": "webkit",
+    "skipExplicit": "<summary data-astro-cid-tuaqzpeu=\"\">Kan ik komen als ik niemand ken?<span class=\"faq-indicator\" aria-hidden=\"true\" data-astro-cid-tuaqzpeu=\"\"></span><",
+    "h1": "- heading \"Vier kerstavond samen in het Kursaal.\" [level=1]"
+  },
+  {
+    "engine": "webkit",
+    "spaceSelect": "’t Viooltje"
+  },
+  {
+    "engine": "webkit",
+    "spaceAfterZoom": "De Blomme"
+  },
+  {
+    "engine": "webkit",
+    "mapFocusAfterWait": true
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "height": 256,
+    "overflow": false,
+    "smallTargets": [
+      {
+        "text": "Welzijnswerking Oostende / Facebook",
+        "cls": "",
+        "width": 228.21875,
+        "height": 22.390625
+      },
+      {
+        "text": "CC0",
+        "cls": "",
+        "width": 25.689453125,
+        "height": 16.734375
+      },
+      {
+        "text": "Foto: EFO / KW",
+        "cls": "",
+        "width": 87.36328125,
+        "height": 16.734375
+      },
+      {
+        "text": "Bekijk de praktische informatie.",
+        "cls": "",
+        "width": 202.4560546875,
+        "height": 17.9296875
+      },
+      {
+        "text": "Webaanzee",
+        "cls": "",
+        "width": 60.46875,
+        "height": 14.34375
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "viewer": [
+      320,
+      256
+    ],
+    "geometry": {
+      "client": 232,
+      "scroll": 403,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 76.59375
+        },
+        {
+          "text": "Vorige",
+          "top": 350.59375,
+          "bottom": 399.1875
+        },
+        {
+          "text": "Volgende",
+          "top": 350.59375,
+          "bottom": 399.1875
+        }
+      ],
+      "stageHeight": 128
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "smallTargets": [
+      {
+        "text": "Welzijnswerking Oostende / Facebook",
+        "cls": "",
+        "width": 228.21875,
+        "height": 22.390625
+      },
+      {
+        "text": "Wikimedia Commons",
+        "cls": "",
+        "width": 126.1025390625,
+        "height": 16.734375
+      },
+      {
+        "text": "CC0",
+        "cls": "",
+        "width": 25.689453125,
+        "height": 16.734375
+      },
+      {
+        "text": "Foto: EFO / KW",
+        "cls": "",
+        "width": 87.36328125,
+        "height": 16.734375
+      },
+      {
+        "text": "Bekijk de praktische informatie.",
+        "cls": "",
+        "width": 202.4560546875,
+        "height": 17.9296875
+      },
+      {
+        "text": "Webaanzee",
+        "cls": "",
+        "width": 60.46875,
+        "height": 14.34375
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "viewer": [
+      390,
+      844
+    ],
+    "geometry": {
+      "client": 820,
+      "scroll": 820,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 76.59375
+        },
+        {
+          "text": "Vorige",
+          "top": 767.40625,
+          "bottom": 816
+        },
+        {
+          "text": "Volgende",
+          "top": 767.40625,
+          "bottom": 816
+        }
+      ],
+      "stageHeight": 568.8125
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "height": 900,
+    "overflow": false,
+    "smallTargets": []
+  },
+  {
+    "engine": "webkit",
+    "viewer": [
+      1280,
+      900
+    ],
+    "geometry": {
+      "client": 876,
+      "scroll": 876,
+      "controls": [
+        {
+          "text": "Sluiten ×",
+          "top": 28,
+          "bottom": 107.1875
+        },
+        {
+          "text": "Vorige",
+          "top": 792.8125,
+          "bottom": 872
+        },
+        {
+          "text": "Volgende",
+          "top": 792.8125,
+          "bottom": 872
+        }
+      ],
+      "stageHeight": 531.625
+    }
+  }
+]

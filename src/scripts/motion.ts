@@ -50,6 +50,8 @@ export function startPageMotion() {
   document.documentElement.dataset.motionInitialized = 'true';
   enhanceDisclosures();
   startHero();
+  startHeroParallax();
+  startHeroTransition();
   startFactsMotion();
   startReveals();
 }
@@ -112,6 +114,133 @@ function startHero() {
   };
   visible();
   if (document.hidden) document.addEventListener('visibilitychange', visible);
+}
+
+// Move the photo frame independently of its image's opening zoom.
+// Scroll events schedule one compositor transform; there is no idle animation loop.
+function startHeroParallax() {
+  const hero = document.querySelector<HTMLElement>('.hero-invitation');
+  const photo = hero?.querySelector<HTMLElement>('.hero-photo');
+  if (!hero || !photo || hero.closest('.hero--invitation')) return;
+  let frame = 0;
+  const update = () => {
+    frame = 0;
+    if (reducedMotion.matches) {
+      photo.removeAttribute('data-parallax');
+      photo.style.removeProperty('transform');
+      photo.style.removeProperty('will-change');
+      return;
+    }
+    photo.dataset.parallax = 'true';
+    const bounds = hero.getBoundingClientRect();
+    const visible = bounds.bottom > 0 && bounds.top < innerHeight && !document.hidden;
+    photo.style.willChange = visible ? 'transform' : 'auto';
+    // Overscan reserves 12% at both edges; travel never uses more than 11%.
+    // Mobile has a gentler depth, while desktop lets the candlelit room linger.
+    const rate = innerWidth <= 600 ? .12 : .22;
+    const offset = Math.min(bounds.height * .11, Math.max(0, -bounds.top * rate));
+    photo.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
+  };
+  const schedule = () => {
+    if (!frame) frame = requestAnimationFrame(update);
+  };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('pageshow', schedule);
+  document.addEventListener('visibilitychange', schedule);
+  reducedMotion.addEventListener('change', schedule);
+  update();
+}
+
+// Native scrolling drives two physical panels; no wheel interception or idle loop.
+function startHeroTransition() {
+  const scene = document.querySelector<HTMLElement>('[data-hero-transition]');
+  const stage = scene?.querySelector<HTMLElement>('.hero-transition-stage');
+  const hero = stage?.querySelector<HTMLElement>('.hero');
+  const invitation = hero?.querySelector<HTMLElement>('.hero-invitation');
+  const left = hero?.querySelector<HTMLElement>('.hero-inner');
+  const right = hero?.querySelector<HTMLElement>('.hero-photo');
+  const practical = stage?.querySelector<HTMLElement>('.practical');
+  if (!scene || !stage || !hero || !invitation || !left || !right || !practical) return;
+  let frame = 0;
+  let travel = 0;
+  let enabled = false;
+  const update = () => {
+    frame = 0;
+    if (!enabled || document.body.classList.contains('menu-open')) return;
+    const progress = Math.min(1, Math.max(0, -scene.getBoundingClientRect().top / travel));
+    // Smooth starts and finishes, with the scroll position always authoritative.
+    const eased = progress * progress * (3 - 2 * progress);
+    left.style.transform = `translate3d(${-eased * 101}%, 0, 0)`;
+    right.style.transform = `translate3d(${eased * 101}%, 0, 0)`;
+    practical.style.transform = `translate3d(0, ${(1 - eased) * 28}px, 0)`;
+    practical.style.opacity = `${.7 + eased * .3}`;
+    hero.style.visibility = progress === 1 ? 'hidden' : 'visible';
+    hero.style.pointerEvents = progress > 0 ? 'none' : '';
+    hero.inert = progress > 0;
+
+    const moving = progress > 0 && progress < 1;
+    left.style.willChange = right.style.willChange = moving ? 'transform' : 'auto';
+  };
+  const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+  const measure = () => {
+    scene.removeAttribute('data-split-active');
+    scene.style.removeProperty('--split-hero-height');
+    scene.style.removeProperty('--split-travel');
+    hero.style.removeProperty('visibility');
+    hero.style.removeProperty('pointer-events');
+    hero.inert = practical.inert = false;
+    for (const panel of [left, right, practical]) {
+      panel.style.removeProperty('transform');
+      panel.style.removeProperty('opacity');
+      panel.style.removeProperty('will-change');
+    }
+    // The stacked mobile composition remains readable in ordinary document flow.
+    enabled = !reducedMotion.matches && matchMedia('(min-width: 1001px)').matches;
+    if (!enabled) return;
+    const height = Math.max(invitation.getBoundingClientRect().height, innerHeight);
+    travel = Math.round(innerHeight * 1.1);
+    scene.style.setProperty('--split-hero-height', `${height}px`);
+    scene.style.setProperty('--split-travel', `${travel}px`);
+    scene.dataset.splitActive = 'true';
+    scene.style.setProperty('--split-stage-height', `${stage.getBoundingClientRect().height}px`);
+    update();
+  };
+  const revealAnchor = () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (enabled && target === hero) {
+      window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top, behavior: 'instant' });
+      update();
+    } else if (enabled && target && practical.contains(target)) {
+      window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, target.getBoundingClientRect().top - practical.getBoundingClientRect().top + practical.offsetTop - 24), behavior: 'instant' });
+      update();
+    }
+  };
+  // Browser anchor positioning assumes normal flow; account for the pinned runway.
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href^="#"]') : null;
+    const target = link && document.getElementById(link.hash.slice(1));
+    if (!enabled || !target || (!practical.contains(target) && target !== hero)) return;
+    event.preventDefault();
+    history.pushState(null, '', link!.hash);
+    revealAnchor();
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  });
+  practical.addEventListener('focusin', event => {
+    if (!enabled || hero.style.visibility === 'hidden' || !(event.target instanceof HTMLElement)) return;
+    const target = event.target;
+    window.scrollTo({ top: scrollY + scene.getBoundingClientRect().top + travel + Math.max(0, target.getBoundingClientRect().top - practical.getBoundingClientRect().top + practical.offsetTop - 120), behavior: 'instant' });
+    update();
+  });
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', measure);
+  window.addEventListener('pageshow', () => { measure(); revealAnchor(); });
+  window.addEventListener('hashchange', revealAnchor);
+  reducedMotion.addEventListener('change', measure);
+  measure();
+  void document.fonts.ready.then(() => { measure(); revealAnchor(); });
 }
 
 // A real, locally hosted Lottie team pulls the whole summary into its final slot.

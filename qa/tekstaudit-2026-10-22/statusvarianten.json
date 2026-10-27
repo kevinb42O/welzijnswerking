@@ -1,0 +1,30 @@
+[
+  {
+    "state": "centres-sold-out",
+    "hero": "Praktische info & deelname",
+    "registration": "Het kerstfeest is uitverkocht.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "centres": "Kies je wijk en vind een centrum in jouw buurt. Een vraag over inschrijven? Bel gerust even.",
+    "mapNote": "Feestdagen en sluitingsdagen kunnen afwijken. Bel het centrum om te vragen wanneer je kunt inschrijven voor het kerstfeest."
+  },
+  {
+    "state": "centres-closed",
+    "hero": "Praktische info & deelname",
+    "registration": "De inschrijvingen zijn afgesloten.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "centres": "Kies je wijk en vind een centrum in jouw buurt. Een vraag over inschrijven? Bel gerust even.",
+    "mapNote": "Feestdagen en sluitingsdagen kunnen afwijken. Bel het centrum om te vragen wanneer je kunt inschrijven voor het kerstfeest."
+  },
+  {
+    "state": "centres-available",
+    "hero": "Ontdek hoe je inschrijft",
+    "registration": "Inschrijven via een ontmoetingscentrum\n\nDEMO · Inschrijven via een ontmoetingscentrum.\n\nVind een ontmoetingscentrum\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "centres": "Kies je wijk en vind een centrum in jouw buurt. Een vraag over inschrijven? Bel gerust even.",
+    "mapNote": "Feestdagen en sluitingsdagen kunnen afwijken. Bel het centrum om te vragen wanneer je kunt inschrijven voor het kerstfeest."
+  },
+  {
+    "state": "missing-link",
+    "hero": "Praktische info & deelname",
+    "registration": "Inschrijven voor het kerstfeest\n\nInschrijfinformatie volgt.\n\nOok het aanvangsuur, het menu en de deelnamevoorwaarden worden voor 2026 hier bekendgemaakt.",
+    "centres": null,
+    "mapNote": null
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "viewport": 390,
+    "source": "http://127.0.0.1:4323/images/editorial/kursaal-zeedijk-1000.webp",
+    "naturalWidth": 350,
+    "displayWidth": 350,
+    "overflow": false
+  },
+  {
+    "viewport": 1440,
+    "source": "http://127.0.0.1:4323/images/editorial/kursaal-zeedijk-1000.webp",
+    "naturalWidth": 500,
+    "displayWidth": 500,
+    "overflow": false
+  }
+]

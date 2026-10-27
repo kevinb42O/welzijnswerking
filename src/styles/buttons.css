@@ -29,16 +29,9 @@
 .button > svg { width: 20px; height: 20px; flex: 0 0 20px; }
 .button:focus-visible { outline-offset: 5px; }
 .hero .button {
-  --button-top: #ffe0a0;
-  --button-bottom: #f0c36b;
-  --button-edge: #c69744;
   min-height: 54px;
   padding: 14px 24px;
   gap: 20px;
-  color: #17375e;
-  font-size: var(--type-action);
-  font-weight: 600;
-  line-height: 1.4;
   text-align: left;
 }
 .desktop-nav .nav-participate,

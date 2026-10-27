@@ -4,6 +4,8 @@
 .hero-word{display:inline-block;vertical-align:top;overflow:clip;padding-block:.12em;margin-block:-.12em}
 .hero-word-text{display:block;transform-origin:left bottom}
 .hero-photo img{transform-origin:62% 45%}
+.hero-photo[data-parallax]{inset:-12% 0;backface-visibility:hidden}
+@media(prefers-reduced-motion:reduce){.hero-photo[data-parallax]{inset:0;transform:none!important;will-change:auto!important}}
 .mobile-menu{transform-origin:top center}
 .event-photo-lead>a,.gallery-open{overflow:hidden}
 .menu-toggle,.lightbox button{transition:background-color 180ms ease,color 180ms ease,transform 220ms var(--ease-reveal)}
@@ -39,3 +41,13 @@
 .facts-cord-light{stroke:var(--page);stroke-width:.5;opacity:.65}
 .facts-hitch{stroke-width:1.2}
 @media(prefers-reduced-motion:reduce){.facts-sleigh-scene{display:none}.hero-facts{transform:none!important;opacity:1!important}}
+
+/* The existing invitation opens like two doors onto the practical section.
+   Without JS, on stacked screens, and with reduced motion this is normal flow. */
+.hero-transition[data-split-active]{position:relative;height:calc(var(--split-stage-height) + var(--split-travel));isolation:isolate}
+[data-split-active] .hero-transition-stage{position:sticky;top:0;min-height:var(--split-hero-height);overflow:clip}
+[data-split-active] .hero{position:absolute;inset:0 0 auto;z-index:2;height:var(--split-hero-height);background:transparent;pointer-events:none}
+[data-split-active] .hero-invitation{height:100%;min-height:100%;pointer-events:none}
+[data-split-active] .hero-inner{align-self:stretch;align-content:center;background:#f7f1e5;pointer-events:auto}
+[data-split-active] .hero-photo{pointer-events:auto}
+[data-split-active] .practical{min-height:var(--split-hero-height)}

@@ -4,20 +4,20 @@ import { event } from '../data/event';
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#home" class="wordmark header-wordmark" aria-label="Welzijnswerking Oostende — naar het begin"><img class="brand-image" src="/images/branding/welzijnswerking-oostende-kleuren.png" alt="Welzijnswerking Oostende" width="2172" height="724" decoding="async" /></a>
-    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#welkom">Voor wie?</a><a href="#praktisch">Praktische info</a><a href="#edities">Vorige edities</a><a class="button nav-participate" href="#inschrijven">Hoe inschrijven?</a></nav>
+    <nav aria-label="Hoofdnavigatie" class="desktop-nav"><a href="#praktisch">Praktische info</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a class="button nav-participate" href="#inschrijven">Hoe inschrijven?</a></nav>
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Menu openen"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></button>
   </div>
   <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title">
     <div class="mobile-menu-top"><span class="mobile-menu-brand"><img class="brand-image" src="/images/branding/welzijnswerking-oostende-kleuren.png" alt="Welzijnswerking Oostende" width="2172" height="724" decoding="async" /></span><button class="mobile-menu-close" type="button" aria-label="Sluiten — navigatie" autofocus>Sluiten</button></div>
     <div class="mobile-menu-intro"><h2 id="mobile-menu-title">Navigatie</h2><p class="mobile-nav-label">Kerstavond in Oostende · {event.year}</p></div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobiele navigatie">
-      <a href="#welkom">Voor wie?</a>
       <a href="#praktisch">Praktische info</a>
+      <a href="#welkom">Voor wie?</a>
       <a href="#edities">Vorige edities</a>
       <a class="button mobile-nav-participate" href="#inschrijven">Hoe inschrijven?</a>
     </nav>
   </dialog>
-  <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#welkom">Voor wie?</a><a href="#praktisch">Praktische info</a><a href="#edities">Vorige edities</a><a class="button" href="#inschrijven">Hoe inschrijven?</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
+  <noscript><nav class="container no-js-nav" aria-label="Navigatie zonder JavaScript"><a href="#praktisch">Praktische info</a><a href="#welkom">Voor wie?</a><a href="#edities">Vorige edities</a><a class="button" href="#inschrijven">Hoe inschrijven?</a></nav><style>.menu-toggle{display:none!important}</style></noscript>
 </header>
 <script>
   import { dialogMotion } from '../scripts/motion';

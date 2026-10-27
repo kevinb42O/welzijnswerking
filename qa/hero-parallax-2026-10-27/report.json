@@ -1,0 +1,82 @@
+[
+  {
+    "browser": "chromium",
+    "width": 390,
+    "top": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "top": 8.359375,
+      "bottom": 852.078125,
+      "heroTop": 90,
+      "heroBottom": 770.4375,
+      "overflow": false
+    },
+    "scrolled": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22.8)",
+      "top": -248.8406219482422,
+      "bottom": 594.8781280517578,
+      "heroTop": -190,
+      "heroBottom": 490.4375,
+      "overflow": false
+    }
+  },
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "top": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "top": 11.234375,
+      "bottom": 887.171875,
+      "heroTop": 96,
+      "heroBottom": 802.40625,
+      "overflow": false
+    },
+    "scrolled": {
+      "transform": "matrix(1, 0, 0, 1, 0, 40.48)",
+      "top": -228.28562927246094,
+      "bottom": 647.6518707275391,
+      "heroTop": -184,
+      "heroBottom": 522.40625,
+      "overflow": false
+    }
+  },
+  {
+    "browser": "webkit",
+    "width": 390,
+    "top": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "top": 8.359375,
+      "bottom": 852.078125,
+      "heroTop": 90,
+      "heroBottom": 770.4375,
+      "overflow": false
+    },
+    "scrolled": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22.799999)",
+      "top": -248.8406219482422,
+      "bottom": 594.8781280517578,
+      "heroTop": -190,
+      "heroBottom": 490.4375,
+      "overflow": false
+    }
+  },
+  {
+    "browser": "webkit",
+    "width": 1440,
+    "top": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "top": 11.234375,
+      "bottom": 887.171875,
+      "heroTop": 96,
+      "heroBottom": 802.40625,
+      "overflow": false
+    },
+    "scrolled": {
+      "transform": "matrix(1, 0, 0, 1, 0, 40.48)",
+      "top": -228.28562927246094,
+      "bottom": 647.6518707275391,
+      "heroTop": -184,
+      "heroBottom": 522.40625,
+      "overflow": false
+    }
+  }
+]
