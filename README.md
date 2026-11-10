@@ -102,12 +102,11 @@ Origineel in `assets/sponsors/`; geoptimaliseerd bestand in `public/images/spons
   "logoAlt": "Logo van Officiële naam",
   "confirmedFor2026": true,
   "verified": true,
-  "logoUsageApproved": true,
   "displayOrder": 10
 }
 ```
 
-Alle verificatievelden en een bestaand lokaal logo zijn vereist. Categorieën: `main`, `partner`, `support`, `in_kind`; volgorde via `displayOrder`. Verhoudingen en kleuren blijven intact. De actuele sectie verschijnt pas als er goedgekeurde records zijn. Historische bijdragers in `src/data/history.ts` blijven apart als 2025-erkenning staan; dit is geen sponsorbewijs voor 2026.
+Bevestiging voor de editie en verificatie zijn vereist. Een partner zonder beschikbaar logo kan met een lege `logo` worden vermeld; een ingevuld logo moet lokaal bestaan. Categorieën: `main`, `partner`, `support`, `in_kind`; volgorde via `displayOrder`. Verhoudingen en kleuren blijven intact. Controleer bij aangeleverde of gevonden logo’s steeds de gebruiksrechten. Historische gegevens blijven in `src/data/history.ts` bewaard.
 
 ## Browser- en modulecontrole
 

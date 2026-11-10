@@ -50,4 +50,8 @@
 [data-split-active] .hero-invitation{height:100%;min-height:100%;pointer-events:none}
 [data-split-active] .hero-inner{align-self:stretch;align-content:center;background:#f7f1e5;pointer-events:auto}
 [data-split-active] .hero-photo{pointer-events:auto}
-[data-split-active] .practical{min-height:var(--split-hero-height)}
+[data-split-active] .christmas-reveal{height:var(--split-hero-height)}
+
+
+.christmas-reveal-photo{transform-origin:50% 38%}
+@media(prefers-reduced-motion:reduce){.christmas-reveal-photo{transform:none!important;will-change:auto!important}}

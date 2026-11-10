@@ -51,7 +51,7 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 }
 
 /* Practical information. Participation comes first in the reading and mobile order. */
-.practical{background:var(--page)}.practical h2{max-width:680px;text-transform:none;letter-spacing:-.02em}.practical-composition{display:grid;gap:32px;margin-top:28px;align-items:start}.participation-note{background:var(--surface-soft);border:0;border-radius:var(--radius-panel);padding:28px}.participation-note h3{font:500 1.375rem/1.3 var(--heading)}.participation-note p{font-size:1.0625rem;line-height:1.6;margin-top:12px}.participation-note .button{margin-top:20px}.info-row{padding-block:20px;border-top:1px solid var(--border);display:grid;gap:10px}.info-row h3{font:600 1.0625rem/1.6 var(--sans);letter-spacing:0}.info-row p{font-size:1.125rem}.info-row time{display:block}.info-row time:first-letter{text-transform:uppercase}.arrival-links{display:flex;flex-wrap:wrap;gap:0 24px;margin-top:12px;color:var(--action)}.practical-details{display:grid;gap:32px;max-width:960px;margin:32px auto 0;padding-top:32px;border-top:1px solid var(--border)}
+.practical{background:var(--page)}.practical h2{max-width:680px;text-transform:none;letter-spacing:-.02em}.practical-composition{display:grid;gap:32px;margin-top:28px;align-items:start}.participation-note{position:relative;isolation:isolate;background:#fbf5e9;border:0;border-radius:var(--radius-panel);padding:28px;box-shadow:0 18px 44px -16px rgb(102 75 40 / .24),0 5px 14px -6px rgb(102 75 40 / .12)}.participation-note h3{color:#a32b32;font:600 1.375rem/1.3 var(--heading)}.participation-note p{font-size:1.0625rem;line-height:1.6;margin-top:12px}.participation-note .button{margin-top:20px}.info-row{padding-block:20px;border-top:1px solid var(--border);display:grid;gap:10px}.info-row h3{font:600 1.0625rem/1.6 var(--sans);letter-spacing:0}.info-row p{font-size:1.125rem}.info-row time{display:block}.info-row time:first-letter{text-transform:uppercase}.arrival-links{display:flex;flex-wrap:wrap;gap:0 24px;margin-top:12px;color:var(--action)}.practical-details{display:grid;gap:32px;max-width:960px;margin:32px auto 0;padding-top:32px;border-top:1px solid var(--border)}
 .detail-group{min-width:0;container-type:inline-size}.detail-group h3{font-size:1.375rem;margin-bottom:16px}
 .additional-details{display:grid;gap:12px}.additional-details>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px}
 .additional-details dt{font-size:1rem;font-weight:600}.additional-details dd{margin:0;font-variant-numeric:tabular-nums}
@@ -69,7 +69,7 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 @media(min-width:601px){.timeline li{grid-template-columns:170px 1fr;gap:40px}.archive-footnote{grid-template-columns:1fr 1fr;gap:48px}}
 
 /* Historical acknowledgement, with a separate, optional current sponsor grid. */
-.partners{background:var(--page);padding-block:40px}.credits-heading{margin-bottom:24px}.credits-heading h2{text-transform:none;letter-spacing:-.015em;font-size:var(--h2);max-width:800px}.credits-composition{display:grid;gap:24px}.credit-category{font:600 0.9375rem/1.5 var(--sans);letter-spacing:0;border-top:1px solid var(--border);padding-top:12px;margin-bottom:16px}.culinary-grid{display:grid;gap:16px}.historic-partner h4{font:600 1.1875rem/1.3 var(--sans);letter-spacing:0}.historic-partner p{font-size:1rem;line-height:1.5;margin-top:4px}.supporting-credits .historic-partner+.historic-partner{margin-top:16px}.current-sponsors{padding-bottom:40px;margin-bottom:36px;border-bottom:1px solid var(--border)}.current-sponsors h2{margin-bottom:24px}.sponsor-tier+.sponsor-tier{margin-top:24px}.sponsor-tier>h3{font:500 1.125rem/1.4 var(--sans);margin-bottom:16px}.sponsor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sponsor{min-width:0;padding:16px;background:var(--surface);text-align:center}.sponsor a{display:flex;flex-direction:column;align-items:center;text-decoration:none}.sponsor img{width:100%;height:90px;object-fit:contain;margin-bottom:12px}.sponsor span{font-size:1rem}.sponsor p{font-size:0.9375rem;margin-top:8px}.demo-banner{padding:16px;border:2px dashed var(--action);background:var(--page);color:var(--action);margin-block:24px}.demo-logo-label{display:block;font-size:0.8125rem!important;color:var(--action)}.preview-intro{padding-block:40px}.preview-intro h1{font-size:2.25rem}.sponsor-tiers.sparse .sponsor-grid{grid-template-columns:1fr}.sponsor-tiers.sparse{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:24px}.sponsor-tiers.sparse .sponsor-tier{margin:0}
+.partners{background:var(--page);padding-block:40px}.credits-heading{margin-bottom:24px}.credits-heading h2{text-transform:none;letter-spacing:-.015em;font-size:var(--h2);max-width:800px}.credits-composition{display:grid;gap:24px}.credit-category{font:600 0.9375rem/1.5 var(--sans);letter-spacing:0;border-top:1px solid var(--border);padding-top:12px;margin-bottom:16px}.culinary-grid{display:grid;gap:16px}.historic-partner h4{font:600 1.1875rem/1.3 var(--sans);letter-spacing:0}.historic-partner p{font-size:1rem;line-height:1.5;margin-top:4px}.supporting-credits .historic-partner+.historic-partner{margin-top:16px}.current-sponsors{padding-bottom:40px;margin-bottom:36px;border-bottom:1px solid var(--border)}.current-sponsors h2{margin-bottom:24px}.sponsor-tier+.sponsor-tier{margin-top:24px}.sponsor-tier>h3{font:500 1.125rem/1.4 var(--sans);margin-bottom:16px}.sponsor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sponsor{min-width:0;padding:16px;background:transparent;text-align:center}.sponsor a{display:flex;flex-direction:column;align-items:center;text-decoration:none}.sponsor img{width:100%;height:90px;object-fit:contain;margin-bottom:12px}.sponsor span{font-size:1rem}.sponsor p{font-size:0.9375rem;margin-top:8px}.demo-banner{padding:16px;border:2px dashed var(--action);background:var(--page);color:var(--action);margin-block:24px}.demo-logo-label{display:block;font-size:0.8125rem!important;color:var(--action)}.preview-intro{padding-block:40px}.preview-intro h1{font-size:2.25rem}.sponsor-tiers.sparse .sponsor-grid{grid-template-columns:1fr}.sponsor-tiers.sparse{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:24px}.sponsor-tiers.sparse .sponsor-tier{margin:0}
 @media(min-width:768px){.credits-composition{grid-template-columns:1.3fr 1fr;gap:64px}.culinary-grid{grid-template-columns:1fr 1fr;gap:16px 32px}.sponsor-grid{grid-template-columns:repeat(var(--sponsor-columns,3),minmax(0,1fr))}}
 
 /* Optional photo archive: count-aware rows, readable captions, and balanced final pairs. */
@@ -131,12 +131,159 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 .event-hours{display:block;margin-top:4px;font-variant-numeric:tabular-nums}
 
 /* Supplied full-color PNG, kept intact on every brand surface. */
-.brand-image{display:block;width:100%;height:auto}
+.brand-logo{display:flex;align-items:center;gap:2%;width:100%;container-type:inline-size;color:#0d1e7b}.brand-prefix{flex:none;font:600 5.5cqw/1 var(--sans);letter-spacing:0}.brand-symbol{display:block;flex:0 0 19%;width:19%;height:auto}.brand-name{display:block;min-width:0;white-space:nowrap;letter-spacing:-.035em}.brand-name-main{display:block;font:600 8.5cqw/1 var(--sans);letter-spacing:-.035em}.brand-name-place{display:block;font:400 7.2cqw/1.05 var(--sans);letter-spacing:-.035em}
 .header-wordmark{display:block;flex:0 1 190px;min-width:0;width:190px;padding-block:8px}
 .mobile-menu-brand{display:block;width:min(190px,100%)}
-.footer-brand{display:block;width:220px;max-width:100%}
-@media(min-width:1001px){.header-wordmark{flex-basis:220px;width:220px}}
+.footer-brand{display:block;width:250px;max-width:100%}
+@media(min-width:1001px){.header-wordmark{flex-basis:250px;width:250px}}
 @media(max-width:600px){.header-inner{gap:12px}.menu-toggle{flex-shrink:0;white-space:nowrap}}
 
 /* Keep the registration action readable before there is room for two columns. */
 @media(min-width:1001px){.practical-composition{grid-template-columns:1.6fr 1fr;gap:48px}.participation-note{grid-column:2;grid-row:1}.practical-content{grid-column:1;grid-row:1}}
+
+/* Fill the hero panel edge to edge with the supplied artwork. */
+.hero-photo--poster{background:#700b05}
+.hero-photo--poster img{aspect-ratio:1;object-fit:cover;object-position:center;transform:none!important;scale:1!important;translate:none!important}
+@media(max-width:1000px){.hero-photo--poster img{height:auto}}
+
+/* Supplied festive background travels with the left hero panel. */
+.hero-inner{align-self:stretch;display:flex;align-items:center;background:#f7f1e5 url("/images/event/hero-achtergrond-lichtjes.webp") center/cover no-repeat}
+[data-split-active] .hero .hero-inner{background:#f7f1e5 url("/images/event/hero-achtergrond-lichtjes.webp") center/cover no-repeat}
+
+/* Selected title colors from the supplied Christmas palette. */
+.hero h1{color:#801e29}
+.hero h1 .hero-word--accent{color:#a32b32}
+@media(forced-colors:active){.hero h1,.hero h1 .hero-word--accent{color:CanvasText}}
+
+/* Christmas palette within the invitation panel. */
+.hero{--hero-bordeaux:#801e29;--hero-red:#a32b32;--hero-gold:#c49a52;--hero-ivory:#fbf5e9;--hero-text:#4b423c;color:var(--hero-text)}
+.hero-intro,.hero-details dt,.hero-detail-note{color:var(--hero-text)}
+.hero.hero--invitation .hero-eligibility,.hero-details dd{color:var(--hero-bordeaux)}
+.hero-details{border-top-color:var(--hero-gold)}
+.hero .button{--button-top:var(--hero-red);--button-bottom:var(--hero-bordeaux);--button-edge:var(--hero-bordeaux);color:var(--hero-ivory);box-shadow:0 4px 12px rgb(128 30 41 / .16)}
+.hero .button:hover{box-shadow:0 5px 14px rgb(128 30 41 / .18)}
+.hero .button:active{box-shadow:0 2px 5px rgb(128 30 41 / .12)}
+.hero-invitation :focus-visible{outline-color:var(--hero-bordeaux)}
+
+/* Shared palette for the navigation and invitation, with gold reserved for actions. */
+.site-header{--page:#fbf5e9;--action:#801e29;--focus:#801e29;--control-line:#c49a52;--menu-ink:#4b423c;--menu-ink-soft:#4b423c;--menu-line:#c49a52;background:#fbf5e9;color:#4b423c;border-bottom:1px solid #c49a52}
+.site-header .desktop-nav>a:not(.button),.site-header .no-js-nav>a:not(.button){color:#4b423c}
+.site-header .desktop-nav>a:not(.button):hover,.site-header .mobile-nav>a:not(.button):hover{color:#a32b32}
+.site-header .desktop-nav a:not(.nav-participate)::after{background:#c49a52}
+.site-header .mobile-menu{background:#fbf5e9;color:#4b423c}
+.site-header .mobile-menu h2{color:#801e29}
+.hero.hero--invitation .hero-eligibility,.hero-details dd{color:var(--hero-text)}
+.site-header .button,.hero .button,.participation-note .button{--button-top:var(--gold);--button-bottom:var(--gold);--button-edge:var(--gold);color:var(--gold-ink);box-shadow:0 4px 12px rgb(102 91 83 / .16)}
+.site-header .button:hover,.hero .button:hover,.participation-note .button:hover{box-shadow:0 5px 14px rgb(102 91 83 / .18)}
+@media (hover:hover) and (pointer:fine){.site-header .button:hover,.hero .button:hover,.participation-note .button:hover{--button-top:var(--gold-hover);--button-bottom:var(--gold-hover);--button-edge:var(--gold-hover);filter:none}}
+.site-header .button:active,.hero .button:active,.participation-note .button:active{box-shadow:0 2px 5px rgb(102 91 83 / .12)}
+
+/* A pale, slowly drifting photographic layer keeps the content still. */
+.participation-note::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:url("/images/event/hero-achtergrond-lichtjes.webp") 15% 20%/auto 135% no-repeat;opacity:.58;pointer-events:none;animation:registration-lights-drift 10s ease-in-out infinite alternate}
+@keyframes registration-lights-drift{from{background-position:15% 20%}to{background-position:85% 80%}}
+@media(prefers-reduced-motion:reduce){.participation-note::before{animation:none;background-position:center}}
+@media(forced-colors:active){.participation-note::before{display:none}}
+
+/* Keep partner names aligned when an official logo is not yet available. */
+.sponsor-logo{display:flex;align-items:center;justify-content:center;width:100%;height:90px;margin-bottom:12px}.sponsor .sponsor-logo img{height:90px;margin:0}
+
+/* A quiet invitation panel keeps the festive artwork at its edges. */
+.hero-inner,[data-split-active] .hero .hero-inner{position:relative;isolation:isolate;background:#f7f1e5}
+.hero-inner::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("/images/event/hero-bokeh-zacht.webp") center/cover no-repeat;opacity:.55}
+.hero-details{margin-top:40px;padding-top:24px}
+.hero-details dt{display:flex;align-items:center;gap:8px}
+.hero-details dt svg{width:18px;height:18px;flex:none;color:#a77932}
+.hero .button{margin-top:24px}
+.site-header{border-bottom-color:var(--border)}
+.site-header .desktop-nav>a:not(.button):hover,.site-header .mobile-nav>a:not(.button):hover,.site-header .mobile-menu h2{color:var(--brand)}
+.hero-photo--poster{position:relative}
+
+@media(max-width:600px){.hero-details{margin-top:32px}}
+
+/* The cover is a sheet of ivory paper resting over the poster. */
+@media(min-width:1001px){
+  .hero-inner{width:calc(100% + 26px);z-index:1;border-radius:0 22px 15px 0 / 0 48% 52% 0;box-shadow:10px 3px 22px -10px rgb(66 31 18 / .32);overflow:clip}
+  /* The poster's curved inner edge is tucked beneath the ivory cover at rest. */
+  .hero-photo--poster{width:calc(100% + 26px);margin-left:-26px;border-radius:24px 0 0 18px / 44% 0 0 56%;box-shadow:-10px 4px 24px -8px rgb(66 31 18 / .32)}
+}
+/* Inside the invitation, registration is the next step. */
+.practical{background:#fbf5e9;color:#4b423c;--border:rgb(196 154 82 / .35)}
+.practical h2{color:#801e29}
+.invitation-inside-intro{max-width:48ch;margin-top:20px;font-size:1.125rem;line-height:1.7}
+.practical .participation-note{background:transparent;box-shadow:none;border-radius:0;padding:0}
+.practical .participation-note::before{display:none}
+.practical .participation-note h3{color:#801e29}
+.practical .info-row h3,.practical .detail-group h3{color:#801e29}
+.practical .info-row p+p{margin-top:12px}
+.practical .agenda-note{margin-top:32px}
+@media(min-width:1001px){
+  .practical-composition{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:80px}
+  .practical .participation-note{grid-column:1;grid-row:1}
+  .practical-content{grid-column:2;grid-row:1}
+}
+@media(forced-colors:active){.hero-inner,.hero-photo--poster{box-shadow:none}.practical{background:Canvas;color:CanvasText}.practical h2,.practical .participation-note h3,.practical .info-row h3,.practical .detail-group h3{color:CanvasText}}
+
+/* A reserved seat is the whole reveal: no headline, controls, or hold. */
+.christmas-reveal{position:relative;isolation:isolate;height:68svh;min-height:420px;margin:0;overflow:clip;background:#f7f1e5}
+.christmas-reveal-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
+.registration-invitation{max-width:1120px}
+.registration-heading{max-width:680px}
+.registration-steps{list-style:none;counter-reset:registration;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin:40px 0 32px;padding:0}
+.registration-steps>li{counter-increment:registration;position:relative;padding-top:48px}
+.registration-steps>li::before{content:counter(registration,decimal-leading-zero);position:absolute;top:0;left:0;color:#a77932;font-size:1.5rem;font-weight:500;line-height:1}
+.registration-steps h3{font-size:1.25rem;line-height:1.35;color:#801e29;font-weight:600}
+.registration-steps p{margin-top:14px;font-size:1.125rem;line-height:1.7}
+.registration-main-action,.registration-status .button{--button-top:var(--gold);--button-bottom:var(--gold);--button-edge:var(--gold);color:var(--gold-ink);gap:24px}
+.registration-status{margin-top:32px}
+.registration-invitation .visit-preparation{margin-top:32px}
+@media(max-width:1000px){.registration-steps{grid-template-columns:1fr;gap:28px;margin-top:32px}.registration-steps>li{padding:0 0 0 48px}.registration-steps>li::before{top:4px}.christmas-reveal{height:62svh;min-height:380px}.registration-main-action{width:100%;justify-content:space-between;text-align:left}}
+.practical .agenda-note{max-width:960px;margin:28px auto 0;text-align:left;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px}
+.practical .agenda-note p{margin:0;font-size:.875rem}
+.practical .practical-details{margin-top:28px;padding-top:24px}
+.practical .info-row:first-child{border-top:0;padding-top:0}
+.visit-preparation{margin-top:28px;border-top:1px solid var(--border);padding-top:12px}
+.visit-preparation>summary{cursor:pointer;min-height:48px;padding-block:12px;font-size:1.125rem;font-weight:600;color:#801e29}
+.practical .visit-preparation .practical-details{border-top:0;margin-top:8px;padding-top:8px;max-width:none}
+.uitloket-info{margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
+.uitloket-info h3{font-size:1.25rem;line-height:1.4;font-weight:600;color:#801e29}
+.uitloket-info>p{margin-top:8px;font-size:1.125rem}
+.uitloket-details>summary{cursor:pointer;min-height:48px;padding-block:12px;color:var(--link);text-decoration:underline;text-underline-offset:4px}
+.uitloket-start-note{max-width:65ch;margin-block:12px 20px}
+.uitloket-hours{max-width:720px;margin-block:16px 24px}
+.uitloket-hours>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding-block:8px}
+.uitloket-hours dt{font-weight:500}
+.uitloket-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:12px}
+.uitloket-source{font-size:.875rem;margin-top:16px;color:var(--text-muted)}
+.uitloket-source a{color:var(--link);text-underline-offset:3px}
+@media(max-width:600px){.uitloket-hours>div{grid-template-columns:1fr;gap:4px}}
+.registration-event-hours{display:block;white-space:nowrap}
+
+/* One Christmas palette carries the invitation through the whole page. */
+main{--section-heading-color:var(--brand)}
+main .practical{position:relative;z-index:3;margin-top:-76px;border-radius:28px 28px 0 0;box-shadow:0 -12px 28px -16px rgb(66 31 18 / .28);padding-top:80px}
+main .practical h2{font-size:clamp(2.25rem,3.5vw,3rem);line-height:1.18}
+.registration-invitation{max-width:1200px}
+.registration-heading{max-width:760px}
+.registration-heading .invitation-inside-intro{font-size:1.25rem;line-height:1.7}
+.registration-steps{gap:56px;margin-top:52px;margin-bottom:40px}
+.registration-steps>li{padding-top:64px}
+.registration-steps>li::before{font-size:2.5rem;color:#9a6f2d}
+.registration-steps h3{font-size:1.375rem;line-height:1.4}
+.registration-steps p{font-size:1.1875rem;line-height:1.75;margin-top:18px}
+/* Gold marks primary actions throughout the page. */
+main .registration-main-action,main .volunteer-submit{background:var(--gold);border-color:var(--gold);color:var(--gold-ink);box-shadow:0 4px 12px rgb(102 91 83 / .16)}
+@media(hover:hover){main .registration-main-action:hover,main .volunteer-submit:hover{background:var(--gold-hover);color:var(--gold-ink);filter:none}}
+main .welcome-photo{margin-top:28px}
+main .welcome-photo img,main .volunteer-photo img{aspect-ratio:4/3}
+@media(min-width:1001px){main .welcome-grid{gap:72px}main .welcome-intro{max-width:none}main .volunteer-intro{max-width:36rem}main .volunteer-photo{margin-top:36px}}
+@media(max-width:1000px){
+ main .practical{margin-top:-64px;padding-top:56px;border-radius:22px 22px 0 0}
+ .registration-steps{gap:36px;margin-top:36px}
+ .registration-steps>li{padding:0 0 0 64px}
+ .registration-steps>li::before{font-size:2rem;top:2px}
+ .registration-steps p{font-size:1.125rem;line-height:1.75;margin-top:12px}
+ .registration-heading .invitation-inside-intro{font-size:1.125rem}
+}
+@media(forced-colors:active){main .section h2[id]{color:CanvasText}main .practical{box-shadow:none}main .registration-main-action,main .volunteer-submit{background:ButtonFace;color:ButtonText;border-color:ButtonText}}
+
+@media(min-width:1001px){main .welcome-photo{max-width:520px}main .welcome-intro>p{max-width:48ch}}

@@ -31,13 +31,13 @@ try {
   const title = await page.title();
   const description = await meta('description');
   assert.match(title, /Kerstfeest 2026 voor alleenstaanden in Oostende/);
-  for (const term of ['24 december 2026', '50 jaar', '€ 5', 'ontmoetingscentrum']) assert.ok(description.includes(term), term);
+  for (const term of ['24 december 2026', '65 jaar', 'gedomicilieerd zijn in Oostende', '€ 5', 'ontmoetingscentrum']) assert.ok(description.includes(term), term);
   assert.equal(await meta('og:description'), description);
   assert.equal(await meta('twitter:description'), description);
   assert.equal(await meta('og:title'), title);
   assert.equal(await meta('twitter:title'), title);
   const text = await page.locator('main').textContent();
-  for (const term of ['Oostende', '50 jaar', '17.00 uur', '21.30 uur', '€ 5', 'negen ontmoetingscentra']) assert.ok(text.includes(term), term);
+  for (const term of ['Oostende', '65 jaar', 'gedomicilieerd zijn in Oostende', '17.00 uur', '21.00 uur', '€ 5', 'negen ontmoetingscentra']) assert.ok(text.includes(term), term);
   for (const question of ['Hoe schrijf ik me in?', 'Wat kost het kerstfeest?']) {
     assert.equal(await page.locator('#welkom summary').filter({ hasText: question }).count(), 1);
   }
@@ -48,7 +48,7 @@ try {
   assert.deepEqual(graph.map(node => node['@type']).sort(), ['Event', 'Organization', 'WebPage', 'WebSite']);
   const event = graph.find(node => node['@type'] === 'Event');
   assert.equal(event.startDate, '2026-12-24T16:00:00.000Z');
-  assert.equal(event.endDate, '2026-12-24T20:30:00.000Z');
+  assert.equal(event.endDate, '2026-12-24T20:00:00.000Z');
   assert.equal(event.eventStatus, 'https://schema.org/EventScheduled');
   assert.equal(event.location.address.addressCountry, 'BE');
   assert.equal(event.location.address.postalCode, '8400');

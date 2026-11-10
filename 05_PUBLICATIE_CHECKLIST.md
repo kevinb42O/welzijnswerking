@@ -13,7 +13,8 @@ Actuele invul- en deploystappen: `DEPLOY_MORGEN.md` (21 oktober 2026). De fotogr
 - [ ] Toegankelijkheid voor rolstoelgebruikers, lift, dichtstbijzijnde ingang, assistentie.
 - [ ] Eventueel georganiseerd vervoer en voorwaarden — géén 2008-regeling aannemen.
 - [ ] Animatie/muziek en eventuele foto's/video's van de zaal voor 2026.
-- [ ] Officieel contact-e-mailadres en telefoonnummer van de **vzw**.
+- [x] Officieel contact-e-mailadres van de **vzw**: `info@welzijnswerking.be`.
+- [ ] Eventueel telefoonnummer van de **vzw** bevestigen.
 - [ ] Gecontroleerde juridische footer, privacycontact, eventueel ondernemingsnummer.
 
 ## B. Sponsoroverzicht

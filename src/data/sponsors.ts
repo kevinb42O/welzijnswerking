@@ -10,7 +10,6 @@ export interface Sponsor {
   logoAlt: string;
   confirmedFor2026: boolean;
   verified: boolean;
-  logoUsageApproved: boolean;
   displayOrder: number;
 }
 // Vul uitsluitend confirmedSponsors in data/sponsors_2026.template.json aan.

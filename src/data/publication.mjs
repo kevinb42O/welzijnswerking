@@ -23,11 +23,11 @@ export function publishedPhotos(photos) {
     photo.alt?.trim().length > 0 && photo.credit?.trim().length > 0 && photo.permissionEvidence?.trim().length > 0 &&
     photo.src.startsWith('/images/event/') && hasLocalImage(photo.src));
 }
-/** @param {{confirmedFor2026: boolean, logoUsageApproved: boolean, verified: boolean, logo: string, tier: string, displayOrder: number}[]} sponsors */
+/** @param {{confirmedFor2026: boolean, verified: boolean, logo: string, tier: string, displayOrder: number}[]} sponsors */
 export function publishedSponsors(sponsors) {
-  return sponsors.filter(sponsor => sponsor.confirmedFor2026 === true && sponsor.logoUsageApproved === true &&
+  return sponsors.filter(sponsor => sponsor.confirmedFor2026 === true &&
     sponsor.verified === true && ['main', 'partner', 'support', 'in_kind'].includes(sponsor.tier) &&
-    sponsor.logo.startsWith('/images/sponsors/') && hasLocalImage(sponsor.logo)).sort((a, b) => a.displayOrder - b.displayOrder);
+    (!sponsor.logo || (sponsor.logo.startsWith('/images/sponsors/') && hasLocalImage(sponsor.logo)))).sort((a, b) => a.displayOrder - b.displayOrder);
 }
 /** @param {string} status @param {string | null} url */
 export function ticketState(status, url) {

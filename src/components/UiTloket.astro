@@ -1,0 +1,21 @@
+---
+import { uitloket } from '../data/uitloket';
+import { event } from '../data/event';
+---
+<section id="uitloket" class="uitloket-info" aria-labelledby="uitloket-title">
+  <h3 id="uitloket-title">Liever cash betalen? Ga naar het UiTloket.</h3>
+  <p>{uitloket.address}</p>
+  <details class="uitloket-details">
+    <summary>Adres, openingsuren en contact</summary>
+    <p class="uitloket-start-note">Vanaf <time datetime={event.registrationStartDate}>{event.registrationStartLabel}</time> kun je cash betalen aan het UiTloket, tijdens de openingsuren.</p>
+    <dl class="uitloket-hours">{uitloket.hours.map(([day,hours])=><div><dt>{day}</dt><dd>{hours}</dd></div>)}</dl>
+    <p>Bij feestdagen of uitzonderlijke sluitingen kunnen de uren afwijken. Controleer de actuele uren of bel voor je vertrekt.</p>
+    <div class="uitloket-links">
+      <a class="text-link" href={uitloket.phoneHref}>Bel {uitloket.phone}</a>
+      <a class="text-link" href={uitloket.freePhoneHref}>Gratis: {uitloket.freePhone}</a>
+      <a class="text-link" href={`mailto:${uitloket.email}`}>{uitloket.email}</a>
+      <a class="text-link" href={uitloket.routeUrl} target="_blank" rel="noopener noreferrer">Plan je route</a>
+    </div>
+    <p class="uitloket-source">Bron: <a href={uitloket.contactUrl} target="_blank" rel="noopener noreferrer">Stad Oostende · actuele openingsuren</a> en <a href={uitloket.ticketInfoUrl} target="_blank" rel="noopener noreferrer">officiële ticketinformatie</a>. Gecontroleerd op <time datetime={uitloket.checkedOn}>10 november 2026</time>.</p>
+  </details>
+</section>

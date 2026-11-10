@@ -14,12 +14,13 @@ test('foto’s vereisen expliciete toestemming, jaar, bewijs en een lokaal besta
     assert.equal(publishedPhotos([{...good,...patch}]).length, 0);
   }
 });
-test('sponsors vereisen actuele bevestiging, verificatie en goedgekeurd bestaand logo', () => {
-  const good = { logo, tier:'partner', confirmedFor2026:true, verified:true, logoUsageApproved:true, displayOrder:2 };
+test('sponsors vereisen actuele bevestiging, verificatie en een lokaal logo indien aanwezig', () => {
+  const good = { logo, tier:'partner', confirmedFor2026:true, verified:true, displayOrder:2 };
   assert.equal(publishedSponsors([good]).length, 1);
-  for (const patch of [{confirmedFor2026:false}, {verified:false}, {logoUsageApproved:false}, {logo:'/images/ontbreekt.svg'}]) {
+  for (const patch of [{confirmedFor2026:false}, {verified:false}, {logo:'/images/ontbreekt.svg'}]) {
     assert.equal(publishedSponsors([{...good,...patch}]).length, 0);
   }
+  assert.equal(publishedSponsors([{...good, logo:''}]).length, 1);
   assert.deepEqual(publishedSponsors([good,{...good,displayOrder:1}]).map(s => s.displayOrder),[1,2]);
 });
 test('afbeeldingspaden kunnen niet buiten de publieke beeldmap gaan', () => {

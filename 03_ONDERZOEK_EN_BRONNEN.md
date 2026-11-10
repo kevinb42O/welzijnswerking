@@ -17,7 +17,7 @@
 - **Historische doelgroep:** alleenstaande **65-plussers** (2025). Niet zonder bevestiging op 2026 projecteren.
 - **Historische opkomst:** tot circa 1.500 bezoekers in de hoogdagen; dit betreft niet 2025/2026.
 - **2025 voorzitter:** Niko Geldhof, genoemd door KW. Omdat functies kunnen veranderen, de voorzitter niet prominent op de 2026-website vermelden zonder recent akkoord.
-- **Juridisch:** Companyweb vermeldt BE 0456.164.274 en Voorzienigheidstraat 16, 8400 Oostende. Niet gebruiken als bezoekersadres of evenementadres.
+- **Juridisch:** Companyweb vermeldt ondernemingsnummer BE 0456.164.274. Het privéadres van de organisatie wordt niet gepubliceerd.
 
 **Bronnen:**
 - Krant van West-Vlaanderen via nieuwsaggregatie (14-11-2025): https://www.nieuwskoppen.be/2025/11/14/opnieuw-kerstfeest-voor-alleenstaande-senioren-in-het-kursaal-van-oostende-veel-mensen-hadden-heimwee-naar-het-avondfeest/
@@ -142,3 +142,9 @@ Communiceer het sociale karakter positief, uitnodigend en respectvol. Geen drama
 - De spelling **Sam Vancoppenolle** wordt ook ondersteund door Toerisme Oostende: https://www.visitoostende.be/nl/sam-de-bruyn-ontmoet-oostendse-chefs en het Ostendaise-organisatorprofiel: https://ostendaise.be/nl/restaurants/gastrobar-sam . Geen huidige 2026-sponsorclaim afgeleid uit deze vermelding.
 
 De bestaande bron-URL's hierboven blijven de herleidbare basis. Geen nieuwe onbevestigde evenementgegevens voor 2026 toegevoegd.
+
+## UiTloket en inschrijven — geverifieerd 10 november 2026
+
+Opdrachtgever bevestigt in chat: inschrijven vanaf maandag 16 november 2026 (correctie van de aanvankelijk genoemde 14 november); in de ontmoetingscentra uitsluitend betalen via overschrijving; ook inschrijven en cash betalen via het UiTloket. Geen uiterste inschrijfdatum of bankgegevens opgegeven.
+
+Officiële bronnen: https://www.oostende.be/contact-uitloket en https://www.uitinoostende.be/content/detail/19/ticketinfo . UiTloket in het stadhuis, Vindictivelaan 1, 8400 Oostende; 059 25 81 41; gratis 0800 1 8400; uit@oostende.be. Gewone uren: maandag–woensdag 8.30–12.00 en 13.00–16.30; donderdag 8.30–12.00 en 16.30–19.30; vrijdag 8.30–13.00; weekend en feestdagen gesloten. Uitzonderingen via de actuele officiële contactpagina controleren. De algemene cashmogelijkheid blijkt uit de ticketinformatie; de verkoop voor dit specifieke feest is door de opdrachtgever bevestigd. Geen online verkoop of kaartbetaling voor dit feest afgeleid uit algemene loketmogelijkheden.

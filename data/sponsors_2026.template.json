@@ -1,9 +1,99 @@
 {
   "edition": 2026,
-  "updatedAt": "2026-10-18",
-  "verifiedWithOrganizer": false,
-  "note": "Er is nog geen volledige, goedgekeurde 2026-sponsorlijst. Voeg uitsluitend schriftelijk bevestigde partners toe aan confirmedSponsors.",
-  "confirmedSponsors": [],
+  "updatedAt": "2026-11-10",
+  "verifiedWithOrganizer": true,
+  "note": "Partners voor 2026 bevestigd door de opdrachtgever; logo’s afkomstig van de officiële websites waar beschikbaar.",
+  "confirmedSponsors": [
+    {
+      "id": "stad-oostende",
+      "name": "Stad Oostende",
+      "tier": "partner",
+      "website": "https://www.oostende.be/",
+      "logo": "/images/sponsors/stad-oostende.svg",
+      "logoAlt": "Logo van Stad Oostende",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 10
+    },
+    {
+      "id": "revi-food",
+      "name": "Revi Food",
+      "tier": "partner",
+      "website": "https://www.revifood.be/",
+      "logo": "/images/sponsors/revi-food.svg",
+      "logoAlt": "Logo van Revi Food",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 20
+    },
+    {
+      "id": "restaurant-north",
+      "name": "Restaurant North",
+      "tier": "partner",
+      "website": "https://www.restaurant-north.be/",
+      "logo": "/images/sponsors/restaurant-north.png",
+      "logoAlt": "Logo van Restaurant North",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 30
+    },
+    {
+      "id": "rederij-desmit",
+      "name": "Rederij Desmit",
+      "tier": "partner",
+      "website": "",
+      "logo": "/images/sponsors/rederij-desmit-tekst.png",
+      "logoAlt": "Rederij Desmit",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 40
+    },
+    {
+      "id": "gastrobar-sam",
+      "name": "Gastrobar Sam / Quel Bordel",
+      "tier": "partner",
+      "website": "https://quelbordel.be/",
+      "logo": "/images/sponsors/quel-bordel.png",
+      "logoAlt": "Logo van Gastrobar Sam / Quel Bordel",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 50
+    },
+    {
+      "id": "kursaal-oostende",
+      "name": "Kursaal Oostende",
+      "tier": "partner",
+      "website": "https://www.kursaaloostende.be/nl/",
+      "logo": "/images/sponsors/kursaal-oostende.svg",
+      "logoAlt": "Logo van Kursaal Oostende",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 60
+    },
+    {
+      "id": "rode-kruis-vlaanderen",
+      "name": "Rode Kruis-Vlaanderen",
+      "tier": "partner",
+      "website": "https://www.rodekruis.be/",
+      "logo": "/images/sponsors/rode-kruis-vlaanderen.svg",
+      "logoAlt": "Logo van Rode Kruis-Vlaanderen",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 70
+    },
+    {
+      "id": "webaanzee",
+      "name": "Webaanzee",
+      "tier": "partner",
+      "description": "Websitepartner",
+      "website": "https://www.webaanzee.be/",
+      "logo": "/images/sponsors/webaanzee.webp",
+      "logoAlt": "Logo van Webaanzee",
+      "confirmedFor2026": true,
+      "verified": true,
+      "displayOrder": 80
+    }
+  ],
   "recommendedSchema": {
     "id": "slug-zonder-spaties",
     "name": "Exacte handelsnaam",
@@ -13,7 +103,6 @@
     "logo": "/images/sponsors/slug.svg",
     "logoAlt": "Logo van Exacte handelsnaam",
     "confirmedFor2026": true,
-    "logoUsageApproved": true,
     "displayOrder": 10,
     "verified": false
   },

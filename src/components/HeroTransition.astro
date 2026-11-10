@@ -1,10 +1,12 @@
 ---
 import EventHero from './EventHero.astro';
-import PracticalInfo from './PracticalInfo.astro';
+
 ---
 <div class="hero-transition" data-hero-transition>
   <div class="hero-transition-stage">
     <EventHero />
-    <PracticalInfo />
+    <figure class="christmas-reveal" aria-label="Een plaats voor jou aan de kersttafel">
+      <img class="christmas-reveal-photo" src="/images/event/plaats-voor-jou-1800.webp" srcset="/images/event/plaats-voor-jou-720.webp 720w, /images/event/plaats-voor-jou-1800.webp 1800w" sizes="100vw" width="1800" height="1200" alt="Een lege stoel aan een warme kersttafel. Op het bord ligt een kaartje: Voor jou gereserveerd." decoding="async" />
+    </figure>
   </div>
 </div>

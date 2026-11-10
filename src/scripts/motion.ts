@@ -52,6 +52,7 @@ export function startPageMotion() {
   startHero();
   startHeroParallax();
   startHeroTransition();
+  startTableParallax();
   startFactsMotion();
   startReveals();
 }
@@ -172,7 +173,7 @@ function startHeroTransition() {
   const invitation = hero?.querySelector<HTMLElement>('.hero-invitation');
   const left = hero?.querySelector<HTMLElement>('.hero-inner');
   const right = hero?.querySelector<HTMLElement>('.hero-photo');
-  const practical = stage?.querySelector<HTMLElement>('.practical');
+  const practical = stage?.querySelector<HTMLElement>('.christmas-reveal');
   if (!scene || !stage || !hero || !invitation || !left || !right || !practical) return;
   const image = right.querySelector<HTMLImageElement>('img');
   const smooth = (value: number) => {
@@ -187,9 +188,9 @@ function startHeroTransition() {
     if (!enabled || document.body.classList.contains('menu-open')) return;
     const distance = -scene.getBoundingClientRect().top;
     const progress = distance >= travel - .5 ? 1 : Math.min(1, Math.max(0, distance / travel));
-    // Left opens first; the room follows a fraction later and settles before release.
-    const leftProgress = smooth((progress - .02) / .86);
-    const rightProgress = smooth((progress - .10) / .86);
+    // Open in the first 30%; hold the table until 65%, then release into the paper.
+    const leftProgress = smooth(progress / .28);
+    const rightProgress = smooth((progress - .02) / .28);
     if (progress > 0) finishHeroEntrance();
     left.style.transform = `translate3d(${-leftProgress * 101}%, 0, 0)`;
     right.style.transform = `translate3d(${rightProgress * 101}%, 0, 0)`;
@@ -198,11 +199,11 @@ function startHeroTransition() {
       image.style.translate = `${-rightProgress * 1.5}% 0`;
       image.style.scale = `${1 + rightProgress * .04}`;
     }
-    hero.style.visibility = progress === 1 ? 'hidden' : 'visible';
+    hero.style.visibility = progress >= .30 ? 'hidden' : 'visible';
     hero.style.pointerEvents = progress > 0 ? 'none' : '';
     hero.inert = progress > 0;
 
-    const moving = progress > 0 && progress < 1;
+    const moving = progress > 0 && progress < .30;
     left.style.willChange = right.style.willChange = moving ? 'transform' : 'auto';
   };
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
@@ -226,9 +227,10 @@ function startHeroTransition() {
     enabled = !reducedMotion.matches && matchMedia('(min-width: 1001px)').matches;
     if (!enabled) return;
     const height = Math.max(invitation.getBoundingClientRect().height, innerHeight);
-    travel = Math.round(innerHeight * 1.1);
+    travel = Math.round(innerHeight * 1.2);
     scene.style.setProperty('--split-hero-height', `${height}px`);
-    scene.style.setProperty('--split-travel', `${travel}px`);
+    // The final 35% is ordinary page scrolling, bringing the overlapping paper in.
+    scene.style.setProperty('--split-travel', `${Math.round(travel * .65)}px`);
     scene.dataset.splitActive = 'true';
     scene.style.setProperty('--split-stage-height', `${stage.getBoundingClientRect().height}px`);
     update();
@@ -278,6 +280,59 @@ function startHeroTransition() {
   reducedMotion.addEventListener('change', measure);
   measure();
   void document.fonts.ready.then(() => { measure(); revealAnchor(); });
+}
+
+// The place card is the optical anchor for the opening zoom and table parallax.
+function startTableParallax() {
+  const table = document.querySelector<HTMLElement>('.christmas-reveal');
+  const photo = table?.querySelector<HTMLImageElement>('.christmas-reveal-photo');
+  const scene = table?.closest<HTMLElement>('[data-hero-transition]');
+  if (!table || !photo || !scene) return;
+  let frame = 0;
+  let offset: number | undefined;
+  let lastTime = 0;
+  let lastScroll = scrollY;
+  const update = (now: number) => {
+    frame = 0;
+    if (reducedMotion.matches) {
+      photo.style.removeProperty('transform');
+      photo.style.removeProperty('will-change');
+      offset = undefined;
+      return;
+    }
+    if (document.hidden || document.body.classList.contains('menu-open')) return;
+    const rect = table.getBoundingClientRect();
+    const visible = rect.bottom > 0 && rect.top < innerHeight;
+    photo.style.willChange = visible ? 'transform' : 'auto';
+    if (!visible) { offset = undefined; return; }
+    const pinned = scene.hasAttribute('data-split-active');
+    const pinnedDistance = pinned ? Math.max(0, -scene.getBoundingClientRect().top) : 0;
+    const opening = pinned ? Math.min(1, pinnedDistance / (innerHeight * 1.2 * .30)) : 1;
+    const openingEase = opening * opening * (3 - 2 * opening);
+    const scale = 1.50 - .22 * openingEase;
+    // A soft bound preserves motion through the paper handoff without hitting a stop.
+    // As the frame leaves upward, use that space to keep the card visible longer.
+    const limit = Math.min(160, rect.height * .09 + Math.max(0, -rect.top) * .22);
+    const drift = (innerHeight / 2 - rect.top - rect.height / 2) * .50
+      + pinnedDistance * .04 - (pinned ? limit * .25 : 0);
+    const target = limit * Math.tanh(drift / limit);
+    const jumped = Math.abs(scrollY - lastScroll) > innerHeight * .6;
+    const elapsed = Math.min(64, Math.max(1, now - lastTime));
+    offset = offset === undefined || jumped ? target
+      : offset + (target - offset) * (1 - Math.exp(-elapsed / 85));
+    lastTime = now;
+    lastScroll = scrollY;
+    photo.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
+    // Settle briefly after input, then stop; no idle animation loop.
+    if (Math.abs(target - offset) > .05) frame = requestAnimationFrame(update);
+  };
+  const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('pageshow', schedule);
+  document.addEventListener('visibilitychange', schedule);
+  reducedMotion.addEventListener('change', schedule);
+  schedule();
 }
 
 // A real, locally hosted Lottie team pulls the whole summary into its final slot.

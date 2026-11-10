@@ -2,20 +2,24 @@
 name: "Welzijnswerking Oostende"
 description: "Warme Oostendse uitnodiging met Cooper Hewitt, zachte oppervlakken en echte fotografie."
 colors:
-  page: "#fdfbf7"
-  surface: "#fdfbf7"
-  surface-soft: "#f3efe7"
-  brand: "#273a7c"
-  accent: "#187ac9"
-  link: "#2369a2"
-  action-hover: "#1c2b60"
+  page: "#fdf9f1"
+  surface: "#fdf9f1"
+  surface-soft: "#f4ede0"
+  brand: "#801e29"
+  accent: "#a32b32"
+  link: "#801e29"
+  action-hover: "#5f1620"
   surface-tint: "#ede3d2"
-  text: "#343936"
-  text-muted: "#646760"
-  action: "#273a7c"
-  border: "#dddcd4"
-  control-border: "#7d8ba2"
-  focus: "#2369a2"
+  gold: "#f2ba43"
+  gold-hover: "#dfa62e"
+  gold-ink: "#0d1e7b"
+  gold-detail: "#9a6f2d"
+  text: "#4b423c"
+  text-muted: "#68605a"
+  action: "#801e29"
+  border: "#d9cbb6"
+  control-border: "#8c7770"
+  focus: "#801e29"
   focus-on-dark: "#ffffff"
   overlay: "rgb(30 29 27 / .22)"
   overlay-clear: "rgb(30 29 27 / 0)"
@@ -31,8 +35,8 @@ colors:
   hero-shade-edge: "rgb(30 26 22 / .80)"
   hero-label: "#f8f3eb"
   hero-copy: "#ffffff"
-  action-line: "#7d8ba2"
-  control-line: "#7d8ba2"
+  action-line: "#8c7770"
+  control-line: "#8c7770"
 typography:
   display:
     fontFamily: "Cooper Hewitt, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -121,14 +125,14 @@ spacing:
   "72": "72px"
 components:
   button-primary:
-    backgroundColor: "{colors.action}"
-    textColor: "{colors.page}"
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.gold-ink}"
     typography: "{typography.button}"
     rounded: "{rounded.control}"
     padding: "12px 18px"
   button-primary-hover:
-    backgroundColor: "{colors.action-hover}"
-    textColor: "{colors.page}"
+    backgroundColor: "{colors.gold-hover}"
+    textColor: "{colors.gold-ink}"
   button-inverse:
     backgroundColor: "{colors.page}"
     textColor: "{colors.action}"
@@ -169,6 +173,10 @@ components:
 ---
 
 # Design System: Welzijnswerking Oostende
+
+## Kleurafstemming — 10 november 2026
+
+De kerstcampagne gebruikt over de hele pagina dezelfde warme papiertinten, bordeaux voor koppen, links, focus en functionele accenten, en goud met donkerblauwe tekst voor primaire knoppen. Het officiële blauwe woordmerk blijft behouden. De neutraal donkere fotoviewer blijft een functionele uitzondering. Deze actuele kleurrollen vervangen de oudere blauwe kleurinstructies hieronder; de overige historische ontwerpkeuzes blijven ter referentie staan.
 
 ## Toegankelijkheidsherstel — 21 oktober 2026
 
@@ -495,3 +503,45 @@ De herotekst vervaagt in het eerste kwart van de scrollbeweging. Het ivoren pane
 ### Correctie: inhoud blijft zichtbaar tijdens het openen — 27 oktober 2026
 
 De gebruiker wijst de vervagingen en lege tussenbeelden expliciet af. De linker herotekst blijft daarom volledig zichtbaar en beweegt met het ivoren paneel mee uit beeld. De praktische titel en alle informatie staan vanaf het begin volledig zichtbaar achter de panelen, zonder opacity- of binnenkomstanimatie. Alleen het openschuiven bepaalt wat zichtbaar wordt. Dit vervangt de vervagings- en onthullingstiming uit de vorige paragraaf. De verschillende paneeltiming, subtiele fotobeweging en afhandeling van lopende hero-entrees blijven behouden.
+
+## Uitnodiging die opengaat — 10 november 2026
+
+De hero opent als een gelaagde kerstuitnodiging. Het linker papier met bestaande bokeh overlapt de ongewijzigde poster op desktop met 26px. De bijna rechte contour gebruikt een asymmetrische elliptische afronding (22px / 48% boven en 15px / 52% onder) en een zachte, naar rechts vallende papierschaduw. Dit vervangt de gouden lichtnaad. De bestaande scrollbeweging blijft omkeerbaar; de inhoud erachter verschijnt met opacity en maximaal 18px verticale verplaatsing. Mobiel en reduced motion tonen gewone documentflow.
+
+De binnenkant gebruikt hero-ivoor #fbf5e9, bordeaux #801e29, tekst #4b423c en dunne goudkleurige lijnen (rgb(196 154 82 / .35)). “Een plaats aan onze kersttafel” leidt naar inschrijven via de ontmoetingscentra. Datum en prijs blijven op de voorkant; de binnenkant behandelt inschrijven, avondprogramma, bereikbaarheid en aanvullende gegevens. De deelname-informatie staat open op het papier, zonder afzonderlijke bokehkaart of eigen schaduw.
+
+De binnenrand van de poster heeft eveneens een asymmetrische papiercontour: 24px / 44% boven en 18px / 56% onder, met een zachte schaduw naar links (−10px horizontaal, 4px verticaal, 24px vervaging, −8px spreiding, rgb(66 31 18 / .32)). De poster loopt 26px onder het linker papier door, zodat zijn contour in de gesloten stand bedekt blijft en pas tijdens het openen zichtbaar wordt. Deze contour geldt uitsluitend voor de tweekolomsweergave vanaf 1001px.
+
+## Kersttafel als onthulling — 10 november 2026
+
+De eerder beschreven praktische binnenkant is vervangen door een fotografische onthulling. De twee bestaande herohelften met papiercontouren en schaduwen openen op een rustige kersttafel: de reeds lokaal beschikbare foto van Nicole Michalou / Pexels, met zichtbare bronvermelding en aanduiding als sfeerbeeld. Een diepe bordeauxkleurige overlay beschermt ivoorkleurige tekst; de foto blijft rechts helder. Er worden geen externe referentiebeelden overgenomen.
+
+De uitnodiging luidt “Er is ook voor jou een plaats aan tafel.” met een korte begeleidende zin en één gouden actie “Zo schrijf je je in”. Tijdens de eerste 36% van de scrollovergang verschijnt alleen de tafel; tussen 36% en 80% verschijnt de uitnodiging met opacity en maximaal 18px verticale beweging. Terugscrollen keert dezelfde voortgang om. De lichte inschrijfsectie staat nu buiten de sticky scène. De ontmoetingscentra volgen onmiddellijk daarop, vóór de bestaande doelgroepsectie. Mobiel, zonder JavaScript en bij reduced motion blijven tafel en informatie in gewone documentflow zichtbaar.
+
+Het inschrijfgedeelte heet “Schuif gezellig aan.”. Inschrijven is de primaire actie, de agenda een bescheiden tekstlink. Aanvullende deelnamevoorwaarden en menu-informatie zijn bereikbaar via het native disclosure “Bereid je bezoek voor”. Bestaande centrale evenementgegevens en inschrijfstatus blijven de feitelijke bron; er is geen formulier toegevoegd.
+
+## Een vrijgehouden stoel — 10 november 2026
+
+De vorige fotografische hero met kop, ondertitel en knop is vervangen door een beeldmoment zonder tekstoverlay of actie. Een gegenereerd, zichtbaar als illustratief aangeduid sfeerbeeld toont een centrale lege stoel en een kaartje “Voor jou gereserveerd.” op het bord. Het is geen registratiebevestiging of foto van het echte evenement. De bronmaster staat in assets/sfeerbeelden/plaats-voor-jou-2026-11-10.png; de twee WebP-varianten staan in public/images/event. De bestaande archieffoto’s blijven als historische foto’s behouden.
+
+De desktopopening gebruikt nu .85 viewporthoogte scrollafstand in plaats van 1.1. Na het openen is er geen extra wachtruimte: de foto schuift met de pagina omhoog naar “Zo schuif je aan.”. De inschrijfsectie heeft drie semantische stappen: centrum vinden, daar inschrijven, de kerstavond bezoeken. Onder 1001px staan de stappen verticaal met een afzonderlijke nummerkolom. Er is één hoofdactie naar de negen ontmoetingscentra; agenda, menu, voorwaarden en bereikbaarheid blijven bereikbaar via het bezoekdisclosure. De onthulling bevat geen knop of marketingkop. Mobiel is het foto-moment 62svh, minimaal 380px. De centrale uitsnede bewaart stoel en kaartje.
+
+## Doorlopende kerstsfeer en papierovergang — 10 november 2026
+
+De bestaande onthulling met de vrijgehouden stoel blijft behouden. De scrollcompositie opent de panelen in de eerste 30%, geeft de foto het podium tot 65% en laat daarna de normale paginastroom het inschrijfvlak omhoogbrengen. De totale ontwerpafstand is 1.2 viewporthoogte; alleen de eerste 65% daarvan (0.78 viewporthoogte) houdt de foto vast. Terugscrollen keert dit om. Er is geen automatische duur of extra pauzeblokkade.
+
+Het ivoorkleurige inschrijfvlak overlapt de foto 76px op desktop en 64px op mobiel, met zachte bovenhoeken en een subtiele schaduw. “Zo schuif je aan.” groeit naar maximaal 3rem; stapnummers gebruiken 2.5rem, stapkoppen 1.375rem en lopende tekst 19px/1.75 (mobiel 18px). De sfeerbeeldvermelding blijft boven de overlap zichtbaar.
+
+De belangrijkste hoofdsectiekoppen in de vervolgpagina gebruiken nu kerstbordeaux #801e29; champagnegoud (rgb(196 154 82 / .3)) vormt dunne accenten, en de primaire inschrijf- en vrijwilligersacties zijn warm geel #f2ba43 met donkerblauwe tekst #0d1e7b. Functionele links, formulierlabels, centrumselectie en overige bediening behouden het Oostendse blauw. Echte editiebeelden blijven herkenbaar aan hun jaartal en krijgen royale ruimte in welkom en vrijwilligers. Deze goedgekeurde kerstrichting verfijnt de eerdere regel met blauwe hoofdsectiekoppen voor deze campagnepagina.
+
+### Parallax van de kersttafel
+
+De tafel krijgt een beperkte, scrollgestuurde verticale drift, op desktop ook tijdens de vastgezette fotofase. Het beeld heeft 16% overscan en maximaal 52px verticale verplaatsing (op lagere beelden begrensd tot 6,5% van de hoogte), zodat de uitsnede geen lege randen toont en stoel en kaartje centraal blijven. Alleen transform wordt in één requestAnimationFrame per scrollupdate gewijzigd. Buiten beeld, met geopend menu en bij verborgen tab wordt geen beweging bijgewerkt; will-change geldt alleen zolang de foto in beeld is. Reduced motion verwijdert de parallax en de extra vergroting, ook bij een live voorkeurwijziging. Zonder JavaScript blijft het oorspronkelijke beeld zichtbaar.
+
+### Parallaxverfijning en label verwijderd
+
+Op verzoek is het zichtbare label “Illustratief sfeerbeeld” van de foto verwijderd. De afbeeldingsherkomst en generatieprompt blijven in de projectbestanden bewaard. De parallax gebruikt nu 12% vergroting en een vloeiende begrenzing via tanh, met maximaal 5,2% van de beeldhoogte (hoogstens 64px) verticale drift. De beweging loopt tijdens de opening door naar de papierovergang en volgt scrollinvoer met een korte, tijdgebaseerde demping van 85ms. Het bijwerken stopt zodra het beeld tot rust komt. Grote sprongen via ankers nemen meteen de juiste positie in. Reduced motion toont de foto zonder extra transform.
+
+### Kaartje als focus van de onthulling
+
+Het kaartje, niet de stoel, bepaalt de uitsnede en bewegingsfocus. De foto gebruikt bovenuitlijning met een optisch zoomanker op 50% / 38%. Terwijl de panelen in de eerste 30% openen, zoomt de foto rustig uit van 1.50 naar 1.28 met smoothstep-voortgang. Daarna volgt de bestaande gedempte parallax. Bij het omhoogschuiven van het fotokader neemt de toegestane neerwaartse drift toe (tot 160px), zodat het kaartje langer in het nog zichtbare fotodeel blijft; de stoel mag worden afgesneden. Op mobiel wordt alleen de parallax gebruikt; reduced motion schakelt beide effecten uit.

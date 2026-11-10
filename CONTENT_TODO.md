@@ -8,13 +8,13 @@ Bijgewerkt op 20 oktober 2026. De site gebruikt nu een rustige fotografische her
 - **Aanvullende deelnamevoorwaarden:** eventuele woonplaatsvereisten en begeleiders. Alleenstaanden vanaf 50 jaar is bevestigd voor 2026.
 - **Inschrijven:** via de negen OC’s bevestigd. Alle negen centra staan nu op de site met wijk, adres, belknop, route en officiële informatie, gecontroleerd bij Stad Oostende op 20 oktober 2026. Nog nodig: startdatum/deadline, betalingswijze, mogelijkheid tot telefonisch inschrijven en eventuele specifieke loketafspraken. Een online ticketlink is niet vereist voor deze inschrijvingswijze. Alleen na bevestiging `ticketSalesStatus: "available"` instellen en de toelichting bijwerken; een knop voor online reserveren verschijnt uitsluitend met een echte ticketlink.
 - **Menu en dranken:** alle gerechten, eventueel aantal gangen, inbegrepen dranken, dieet- en allergenenafspraken. Er zijn nog geen gerechten bevestigd; het menu wordt later bekendgemaakt.
-- **Vzw-contact:** goedgekeurd e-mailadres en/of telefoonnummer bij `brand`; geen gegevens van de locatie als organisatorcontact gebruiken.
+- **Vzw-contact:** het bevestigde e-mailadres `info@welzijnswerking.be` staat bij `brand`; een eventueel telefoonnummer volgt na bevestiging. Geen gegevens van de locatie als organisatorcontact gebruiken.
 - **Evenementafspraken:** specifieke toegankelijkheid en vervoer, uitsluitend na bevestiging.
 
 ## Aanvullingen die automatisch zichtbaar kunnen worden
 
 - **Extra foto's van eigen edities**, optioneel: de volledige reeks van 38 foto's uit 2025 is al lokaal beschikbaar en de eerste selectie staat op de site. Per foto: jaar, omschrijving, credit, toestemming, bewijsreferentie en publicatiekeuze. Webversies in `public/images/event/`; records in `images.galleryPreviousYears`. Zonder foto's blijft het bronnenarchief het volwaardige terugblikgedeelte.
-- **Bevestigde sponsors voor 2026**, exacte namen, categorie, volgorde, officiële URL, originele logo's en schriftelijke toestemming. Logo's in `public/images/sponsors/`; records in `data/sponsors_2026.template.json`. Alleen met editiebevestiging, verificatie én logogoedkeuring zichtbaar. De huidige bedanking betreft uitsluitend 2025.
+- **Sponsorlogo’s:** de opdrachtgever bevestigde op 10 november de partners van 2025 behalve Vesalius, aangevuld met Rode Kruis-Vlaanderen. De zeven partners staan in `data/sponsors_2026.template.json`. Vraag het originele logo van Rederij Desmit en bij voorkeur een origineel bestand van Restaurant North op en controleer de gebruiksrechten van alle logo’s. Gastrobar Sam heet inmiddels Quel Bordel; bevestig desgewenst welke naam de partner verkiest.
 
 Bevestigd: donderdag 24 december 2026, Kursaal Oostende, Kursaal-Westhelling 12, 8400 Oostende, feestelijk meergangenetentje, € 5 per persoon, vzw Welzijnswerking Oostende.
 

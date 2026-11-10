@@ -1,8 +1,8 @@
 /* A softly lit face and one restrained shadow give actions gentle depth. */
 .button {
-  --button-top: #3a5197;
-  --button-bottom: #273a7c;
-  --button-edge: #192957;
+  --button-top: var(--gold);
+  --button-bottom: var(--gold);
+  --button-edge: var(--gold);
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -15,7 +15,7 @@
   border-radius: var(--radius-control);
   background: linear-gradient(180deg, var(--button-top), var(--button-bottom));
   box-shadow: 0 4px 12px rgba(20, 35, 75, 0.16);
-  color: var(--page);
+  color: var(--gold-ink);
   font-size: var(--type-action);
   font-weight: 600;
   line-height: 1.4;
@@ -44,7 +44,7 @@
   .button:hover {
     background: linear-gradient(180deg, var(--button-top), var(--button-bottom));
     box-shadow: 0 5px 14px rgba(20, 35, 75, 0.18);
-    filter: brightness(1.05);
+    filter: brightness(.92);
     transform: translateY(-1px);
     text-decoration: none;
   }

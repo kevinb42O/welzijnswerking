@@ -1,0 +1,53 @@
+<section id="vrijwilliger" class="volunteer section" aria-labelledby="volunteer-title">
+  <div class="container volunteer-layout">
+    <div class="volunteer-intro">
+      <h2 id="volunteer-title">Maak mee het verschil op kerstavond</h2>
+      <p>Een warm kerstfeest maken we samen. Wil jij meehelpen als vrijwilliger? Laat ons weten wie je bent en wat je graag zou doen.</p>
+      <figure class="volunteer-photo">
+        <img src="/images/event/2025-facebook-07-960.webp" srcset="/images/event/2025-facebook-07-480.webp 480w, /images/event/2025-facebook-07-960.webp 960w" sizes="(min-width: 900px) 460px, calc(100vw - 40px)" width="960" height="720" loading="lazy" alt="Vrijwilligers bij de warme maaltijd achter de schermen van het kerstfeest in 2025." />
+        <figcaption>Onze vrijwilligers op kerstavond 2025 · <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02mnYXrpdC19N5fsG8AepACcd7QGvm1z3ucA3NtRZPXMGPviJKsGgHrPiZ4EnR3xyRl&amp;id=100066480021669" target="_blank" rel="noopener noreferrer">Welzijnswerking Oostende / Facebook</a></figcaption>
+      </figure>
+    </div>
+    <div class="volunteer-panel">
+      <form id="volunteer-form" action="https://formsubmit.co/info@welzijnswerking.be" method="POST">
+        <input type="hidden" name="_subject" value="Aanmelding als vrijwilliger" />
+        <input type="hidden" name="_template" value="table" />
+        <div class="volunteer-form-heading">
+          <h3>Meld je aan als vrijwilliger</h3>
+          <p>Vul je gegevens in en vertel ons hoe je graag wilt helpen. Alle velden zijn verplicht.</p>
+        </div>
+        <div class="volunteer-fields">
+          <label>Voornaam <input name="voornaam" autocomplete="given-name" required /></label>
+          <label>Naam <input name="naam" autocomplete="family-name" required /></label>
+          <label>E-mailadres <input type="email" name="email" autocomplete="email" required /></label>
+          <label>Gsmnummer <input type="tel" name="gsm" autocomplete="tel" required /></label>
+          <label class="volunteer-role">Gewenste functie <span class="volunteer-field-hint" id="volunteer-role-hint">Bijvoorbeeld in de keuken of bij de bediening.</span><textarea name="functie" rows="4" aria-describedby="volunteer-role-hint" required></textarea></label>
+        </div>
+        <button class="button volunteer-submit" type="submit">Verstuur mijn aanmelding <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M12 4l8 8-8 8" /></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+<style>
+  .volunteer{background:var(--page);scroll-margin-top:24px}
+  .volunteer-layout{display:grid;gap:32px}
+  .volunteer-intro{max-width:32rem}
+  .volunteer h2{color:var(--section-heading-color);font:var(--section-heading-weight) var(--heading-editorial)/1.15 var(--display);letter-spacing:-.02em}
+  .volunteer-intro>p{font-size:1.125rem;line-height:1.7;margin-top:20px;max-width:29rem}
+  .volunteer-photo{margin-top:28px}
+  .volunteer-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px 32px 12px 12px}
+  .volunteer-photo figcaption{margin-top:10px;font-size:var(--type-caption);line-height:1.6;color:var(--text-muted)}
+  .volunteer-photo figcaption a{color:var(--link)}
+  .volunteer-panel{align-self:start;background:var(--surface-soft);border-radius:16px;padding:24px}
+  .volunteer-form-heading h3{color:var(--brand);font-size:1.375rem;line-height:1.25;font-weight:600}
+  .volunteer-form-heading p{margin-top:10px;line-height:1.6}
+  .volunteer-fields{display:grid;gap:20px;margin-top:28px}
+  .volunteer label{display:grid;gap:8px;color:var(--brand);font-size:1rem;font-weight:500;line-height:1.4}
+  .volunteer-field-hint{color:var(--text);font-size:1rem;font-weight:400;line-height:1.5}
+  .volunteer input:not([type="hidden"]),.volunteer textarea{width:100%;min-width:0;min-height:52px;padding:10px 12px;background:#fff;color:var(--text);border:1px solid var(--control-border);border-radius:10px;font:inherit;font-weight:400;caret-color:var(--brand)}
+  .volunteer textarea{min-height:120px;resize:vertical;line-height:1.5}
+  .volunteer input:focus-visible,.volunteer textarea:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+  .volunteer-submit{margin-top:28px;max-width:100%}
+  @media(min-width:600px){.volunteer-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.volunteer-role{grid-column:1/-1}.volunteer-panel{padding:32px}}
+  @media(min-width:900px){.volunteer-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px}}
+</style>

@@ -14,8 +14,8 @@ try {
     await page.evaluate(() => document.fonts.ready);
     await expect(page.locator('.hero-hours')).toContainText('17.00 uur');
     await expect(page.locator('.participation-note')).toContainText('negen ontmoetingscentra');
-    await expect(page.locator('#welkom')).toContainText('50 jaar');
-    await expect(page.locator('#praktisch')).toContainText('Het menu wordt later bekendgemaakt.');
+    await expect(page.locator('#welkom')).toContainText('65 jaar');
+    await expect(page.locator('#praktisch')).toContainText('Dat houden we nog even als kerstverrassing!');
     await expect(page.locator('main')).not.toContainText(/erwtensoep|garnaalkroketten/i);
     await expect(page.locator('#praktisch')).toContainText('Patrick');
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overflow at ${width}px`);

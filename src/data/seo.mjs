@@ -17,7 +17,7 @@ export function createSeo(source, pathname = '/') {
     ? 'Het kerstfeest is uitverkocht.'
     : closed ? 'De inschrijvingen zijn afgesloten.'
     : event.registrationChannel === 'meeting_centres'
-      ? 'Inschrijven via een ontmoetingscentrum.'
+      ? 'Inschrijven via een ontmoetingscentrum of het UiTloket.'
       : event.registrationMethod || 'Bekijk de actuele informatie over deelname.';
   const title = `Kerstfeest ${event.year} voor alleenstaanden in Oostende | ${brand.shortName}`;
   const description = `Vier kerstavond in ${event.venueName} op ${date}. ${event.eligibilityRules || ''} ${price} per persoon. ${registration}`.replace(/\s+/g, ' ').trim();

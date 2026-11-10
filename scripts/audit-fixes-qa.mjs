@@ -25,9 +25,9 @@ for (const [name,engine] of [['chromium',chromium],['webkit',webkit]]) {
     for(const [width,height]of sizes) {
       await page.setViewportSize({width,height});await page.goto(base);await page.evaluate(()=>document.fonts.ready);
       await expect(page.locator('.hero-eligibility')).toBeVisible();
-      await expect(page.locator('.hero-eligibility')).toContainText('Voor alleenstaanden vanaf 50 jaar.');
+      await expect(page.locator('.hero-eligibility')).toContainText('Voor alleenstaanden vanaf 65 jaar die gedomicilieerd zijn in Oostende.');
       assert.ok(await page.locator('.hero-eligibility').evaluate(e=>e.getBoundingClientRect().bottom<document.querySelector('.hero .button').getBoundingClientRect().top));
-      await expect(page.locator('.archive-footnote')).toContainText('2026: Voor alleenstaanden vanaf 50 jaar.');
+      await expect(page.locator('.archive-footnote')).toContainText('2026: Voor alleenstaanden vanaf 65 jaar die gedomicilieerd zijn in Oostende.');
       await expect(page.locator('.archive-footnote')).not.toContainText('worden apart bekendgemaakt');
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
       assert.ok(await page.locator('.footer-nav a').evaluateAll(links=>links.every(a=>a.getBoundingClientRect().height>=44)));
