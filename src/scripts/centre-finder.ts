@@ -3,6 +3,25 @@ import centrePhotos from '../data/centre-photos.json';
 export function setupCentreFinder() {
   const root = document.querySelector<HTMLElement>('[data-centre-finder]');
   if (!root) return;
+  const directory = root.querySelector<HTMLDetailsElement>('[data-centre-directory]')!;
+  const summary = directory.querySelector<HTMLElement>(':scope > summary')!;
+  const heading = root.querySelector<HTMLElement>('#meeting-centres-title')!;
+  summary.addEventListener('click', event => {
+    event.preventDefault();
+    directory.open = true;
+    heading.focus({ preventScroll: true });
+  });
+  const directoryHash = `#${root.id}`;
+  const openFromHash = () => {
+    if (location.hash === directoryHash) directory.open = true;
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+  // Expand before the browser scrolls to the section.
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (event.target instanceof Element && event.target.closest(`a[href="${directoryHash}"]`)) directory.open = true;
+  });
   const picker = root.querySelector<HTMLElement>('[data-district-picker]')!;
   const select = root.querySelector<HTMLSelectElement>('[data-district-select]')!;
   const buttons = [...root.querySelectorAll<HTMLButtonElement>('[data-district]')];

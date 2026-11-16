@@ -22,6 +22,7 @@ for (const [engineName, engine] of [['chromium', chromium], ['webkit', webkit]])
    await page.setViewportSize({ width, height: 1000 });
    await page.goto(base);
    await expect(page.locator('[data-centre-finder]')).toHaveClass(/centre-finder-enhanced/);
+   await page.locator('.centre-directory-toggle').click();
    await expect(image).toHaveAttribute('src', fallback);
    await expect(photo).toBeVisible();
    await expect(credit).toBeHidden();
@@ -62,12 +63,13 @@ for (const [engineName, engine] of [['chromium', chromium], ['webkit', webkit]])
   await expect(page.locator('.centre-map-marker')).toHaveCount(9);
   await page.locator('[data-map-choice]').selectOption('kasteeltje');
   await expect(photo).toHaveAttribute('data-selected-centre', 'kasteeltje');
-  await page.getByRole('button', { name: 'Toon De Boeie, Centrum', exact: true }).focus();
+  await page.getByRole('button', { name: /Toon De Boeie, Centrum$/ }).focus();
   await page.keyboard.press('Enter');
   await expect(photo).toHaveAttribute('data-selected-centre', 'de-boeie');
   // A late image response must not overwrite a newer selection.
   await page.route('**/schaperye.webp', async route => { await new Promise(resolve => setTimeout(resolve, 300)); await route.continue(); });
   await page.goto(base);
+  await page.locator('.centre-directory-toggle').click();
   await page.locator('[data-district-select]').selectOption('Konterdam');
   await page.locator('[data-district-select]').selectOption('Stene');
   await expect(photo).toHaveAttribute('data-selected-centre', 'de-blomme');

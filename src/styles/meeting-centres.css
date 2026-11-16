@@ -1,5 +1,15 @@
 /* A welcoming local contact, with the complete directory available without scripts. */
 .meeting-centres{background:var(--page)}
+.meeting-centres:has(.centre-directory:not([open])){padding-block:24px}
+.centre-directory-toggle{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:36rem;min-height:72px;padding:12px clamp(16px,3vw,24px);list-style:none;cursor:pointer;border-radius:var(--radius-panel);background:var(--action);color:var(--page)}
+.centre-directory-toggle::-webkit-details-marker{display:none}
+.centre-directory-toggle:hover{background:var(--action-hover)}
+.centre-directory-label,.centre-directory-caption{display:block}
+.centre-directory-label{font-size:clamp(1.125rem,2vw,1.375rem);font-weight:600;line-height:1.25}
+.centre-directory-caption{margin-top:3px;font-size:1rem;line-height:1.4}
+.centre-directory-arrow{display:grid;place-items:center;flex:0 0 40px;height:40px;border-radius:50%;background:var(--gold);color:var(--gold-ink)}
+.centre-directory-arrow svg{rotate:90deg}
+.centre-directory[open]>.centre-directory-toggle{display:none}
 .centres-heading{margin-bottom:32px}
 .centres-heading h2{max-width:740px;font-size:var(--heading-editorial);font-weight:var(--section-heading-weight);text-transform:none;letter-spacing:-.02em;line-height:1.18;color:var(--brand)}
 .centres-heading-copy>p{margin-top:20px;max-width:560px;font-size:1.125rem;line-height:1.7}

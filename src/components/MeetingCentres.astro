@@ -17,10 +17,17 @@ const districts = [...new Set(meetingCentres.map(centre => centre.district))].ma
 
 {event.registrationChannel === 'meeting_centres' && (
   <section id="ontmoetingscentra" class="meeting-centres section" aria-labelledby="meeting-centres-title" tabindex="-1" data-centre-finder>
-    <div class="container">
+    <details class="container centre-directory" data-centre-directory>
+      <summary class="centre-directory-toggle">
+        <span>
+          <span class="centre-directory-label">Vind een ontmoetingscentrum</span>
+          <span class="centre-directory-caption">{meetingCentres.length} locaties in Oostende</span>
+        </span>
+        <span class="centre-directory-arrow" aria-hidden="true"><Icon name="arrow" /></span>
+      </summary>
       <header class="centres-heading">
         <div class="centres-heading-copy">
-        <h2 id="meeting-centres-title">Een ontmoetingscentrum<br class="centres-title-break" /> dicht bij jou.</h2>
+        <h2 id="meeting-centres-title" tabindex="-1">Een ontmoetingscentrum<br class="centres-title-break" /> dicht bij jou.</h2>
         <p class="centre-finder-intro">Kies je wijk en vind een centrum in jouw buurt. Een vraag over inschrijven? Bel gerust even.</p>
         <noscript><style is:inline>.centre-finder-intro{display:none}</style><p>Kies een centrum voor het adres, telefoonnummer en de openingsuren.</p></noscript>
         </div>
@@ -94,7 +101,7 @@ const districts = [...new Set(meetingCentres.map(centre => centre.district))].ma
         <p>Bron: Stad Oostende. Openingsuren gecontroleerd op <time datetime={centreHoursCheckedOn}>{centreHoursCheckedOnLabel}</time>. Bij feestdagen of uitzonderlijke sluitingen kunnen de uren afwijken; bel bij twijfel.</p>
         <a class="text-link" href={meetingCentresOverviewUrl} target="_blank" rel="noopener noreferrer">Alle ontmoetingscentra bij Stad Oostende<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
       </footer>
-    </div>
+    </details>
   </section>
 )}
 
