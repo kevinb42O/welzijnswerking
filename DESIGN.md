@@ -557,3 +557,8 @@ De favicon gebruikt een afgeleide gesloten hartcontour met dikkere zwarte lijn o
 ### Gegenereerde favicon v2 — 20 november 2026
 
 Op expliciet verzoek vervangt een met imagegen gegenereerd hart de eerste handgetekende favicon. Referentie is het aangeleverde zwarte hartlogo. De gekozen master staat in `assets/branding/favicon-hart-generated-v2.png`: een breed, licht organisch hart met royale lobben, zachte middendip, gesloten contour en een stevige zwarte lijn op wit. De geëxporteerde formaten gebruiken dezelfde gegenereerde afbeelding; de SVG is een rastercontainer en geen vectortracé. Cacheversie: `hart-generated-v2-20261120`. De eerste faviconbeschrijving hierboven is hiermee vervangen. Het volledige aangeleverde woordmerk blijft behouden.
+
+
+### Bescheidener headerlogo — 20 november 2026
+
+Na feedback dat het nieuwe hartlogo te fors oogt, is de headerbreedte teruggebracht van 250 naar 200px op desktop en van 190 naar 160px op mobiel en tablet. Het mobiele menu gebruikt eveneens maximaal 160px. Dit geeft het hogere hartbeeldmerk meer vrije ruimte binnen de bestaande header en bewaart de navigatiehiërarchie. Het logo zelf, de favicon en het footerformaat blijven behouden.

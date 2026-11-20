@@ -132,10 +132,10 @@ body.menu-open{position:fixed;top:var(--menu-scroll-offset);width:100%;overflow:
 
 /* Supplied black wordmark; multiply lets the original white canvas match the paper. */
 .brand-logo{display:block;width:100%;height:auto;mix-blend-mode:multiply}
-.header-wordmark{display:block;flex:0 1 190px;min-width:0;width:190px;padding-block:8px}
-.mobile-menu-brand{display:block;width:min(190px,100%)}
+.header-wordmark{display:block;flex:0 1 160px;min-width:0;width:160px;padding-block:8px}
+.mobile-menu-brand{display:block;width:min(160px,100%)}
 .footer-brand{display:block;width:250px;max-width:100%}
-@media(min-width:1001px){.header-wordmark{flex-basis:250px;width:250px}}
+@media(min-width:1001px){.header-wordmark{flex-basis:200px;width:200px}}
 @media(max-width:600px){.header-inner{gap:12px}.menu-toggle{flex-shrink:0;white-space:nowrap}}
 
 /* Keep the registration action readable before there is room for two columns. */
