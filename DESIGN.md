@@ -545,3 +545,15 @@ Op verzoek is het zichtbare label “Illustratief sfeerbeeld” van de foto verw
 ### Kaartje als focus van de onthulling
 
 Het kaartje, niet de stoel, bepaalt de uitsnede en bewegingsfocus. De foto gebruikt bovenuitlijning met een optisch zoomanker op 50% / 38%. Terwijl de panelen in de eerste 30% openen, zoomt de foto rustig uit van 1.50 naar 1.28 met smoothstep-voortgang. Daarna volgt de bestaande gedempte parallax. Bij het omhoogschuiven van het fotokader neemt de toegestane neerwaartse drift toe (tot 160px), zodat het kaartje langer in het nog zichtbare fotodeel blijft; de stoel mag worden afgesneden. Op mobiel wordt alleen de parallax gebruikt; reduced motion schakelt beide effecten uit.
+
+
+## Aangeleverd zwart hartlogo — 20 november 2026
+
+Op verzoek van de gebruiker vervangt het nieuwe zwarte beeldwoordmerk met hart het kleurenlogo in header, mobiele navigatiedialoog en footer. De oorspronkelijke PNG blijft ongewijzigd bewaard in `public/images/branding/welzijnswerking-hart-aangeleverd.png`. De gedeelde `BrandLogo.astro` verbergt uitsluitend de lege buitenruimte met een SVG-viewport en behoudt alle aangeleverde letters en lijnen. Multiply laat het witte canvas aansluiten op de warme ondergrond. De bestaande responsieve logobreedtes blijven gelden.
+
+De favicon gebruikt een afgeleide gesloten hartcontour met dikkere zwarte lijn op wit, zonder tekst, voor leesbaarheid op 16–48px en in lichte en donkere browsertabs. De vectorbron is `public/favicon.svg`; `scripts/generate-favicons.mjs` genereert PNG op 16, 32 en 48px, een ICO met drie resoluties en het Apple-touch-icon op 180px. Cacheversie: `hart-20261120`. Deze gerichte merkvervanging vervangt de eerdere logo- en faviconinstructies; de overige campagnevormgeving blijft behouden.
+
+
+### Gegenereerde favicon v2 — 20 november 2026
+
+Op expliciet verzoek vervangt een met imagegen gegenereerd hart de eerste handgetekende favicon. Referentie is het aangeleverde zwarte hartlogo. De gekozen master staat in `assets/branding/favicon-hart-generated-v2.png`: een breed, licht organisch hart met royale lobben, zachte middendip, gesloten contour en een stevige zwarte lijn op wit. De geëxporteerde formaten gebruiken dezelfde gegenereerde afbeelding; de SVG is een rastercontainer en geen vectortracé. Cacheversie: `hart-generated-v2-20261120`. De eerste faviconbeschrijving hierboven is hiermee vervangen. Het volledige aangeleverde woordmerk blijft behouden.

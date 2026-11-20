@@ -2,32 +2,12 @@ import sharp from 'sharp';
 import { readFile, writeFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
-// Convert the supplied logo deterministically; never redraw or recolor the mark.
-const source = 'public/images/branding/welzijnswerking-oostende-kleuren.png';
-const { data, info } = await sharp(source).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-// The three-person mark ends at x=544; the lettering begins at x=552.
-const split = 549;
-let left = split, top = info.height, right = 0, bottom = 0;
-for (let y = 0; y < info.height; y++) {
-  for (let x = 0; x < split; x++) {
-    if (data[(y * info.width + x) * 4 + 3] > 8) {
-      left = Math.min(left, x); right = Math.max(right, x);
-      top = Math.min(top, y); bottom = Math.max(bottom, y);
-    }
-  }
-}
-assert.ok(right < split && right > left && bottom > top);
-const width = right - left + 1, height = bottom - top + 1;
-const symbol = await sharp(source).extract({ left, top, width, height }).png().toBuffer();
-await writeFile('public/images/branding/welzijnswerking-beeldmerk.png', symbol);
-
-// Center the original artwork, with 5% breathing room on each side.
-const size = 512, available = 464;
-const markHeight = Math.round(available * height / width);
-const x = (size - available) / 2, y = (size - markHeight) / 2;
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><image x="${x}" y="${y}" width="${available}" height="${markHeight}" href="data:image/png;base64,${symbol.toString('base64')}"/></svg>\n`;
+// Generated brand derivative; preserve the selected artwork when exporting sizes.
+const source = 'assets/branding/favicon-hart-generated-v2.png';
+const master = await sharp(await readFile(source)).resize(512, 512).ensureAlpha().png().toBuffer();
+// SVG compatibility container embeds the same generated raster, not a vector trace.
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><image width="512" height="512" href="data:image/png;base64,${master.toString('base64')}"/></svg>\n`;
 await writeFile('public/favicon.svg', svg);
-const master = await sharp(Buffer.from(svg)).png().toBuffer();
 const frames = [];
 for (const pixels of [16, 32, 48]) {
   const png = await sharp(master).resize(pixels, pixels, { kernel: 'lanczos3' }).png().toBuffer();
@@ -62,4 +42,4 @@ for (let i = 0; i < 3; i++) {
   const metadata = await sharp(ico.subarray(offset, offset + length)).metadata();
   assert.equal(metadata.width, ico[entry]); assert.equal(metadata.height, ico[entry + 1]);
 }
-console.log(JSON.stringify({ source, crop: { left, top, width, height }, faviconSizes: frames.map(f => f.pixels), appleTouch: 180 }, null, 2));
+console.log(JSON.stringify({ source, faviconSizes: frames.map(f => f.pixels), appleTouch: 180 }, null, 2));

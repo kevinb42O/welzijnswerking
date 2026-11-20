@@ -1,0 +1,27 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "logoWidth": 165.5625
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "logoWidth": 190
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "logoWidth": 190
+  },
+  {
+    "width": 1001,
+    "overflow": false,
+    "logoWidth": 245.765625
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "logoWidth": 250
+  }
+]
